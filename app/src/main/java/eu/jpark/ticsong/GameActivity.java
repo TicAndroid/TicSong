@@ -535,6 +535,11 @@ public class GameActivity extends Activity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            try {
+                mPlayer.prepare();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             mPlayer.start();
         }
     }
