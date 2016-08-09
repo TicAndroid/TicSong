@@ -158,7 +158,7 @@ public class GameActivity extends Activity {
         // 패스 버튼 확인 시 오답 처리하고 정답 공개
         frame_pass.setVisibility(View.GONE); // 팝업 제거
         gameMode = 3;
-        txt_msg.setText("정답은 " + artistArray.get(quizNum-1) + "의 " + answerArray.get(quizNum - 1) + "였습니다!");
+        txt_msg.setText("정답은 " + artistArray.get(quizNum-1) + "의 " + answerArray.get(quizNum - 1) + "입니다!");
         correctArray.add((quizNum-1), 0); // 오답 문제 기록
         musicPlay(-1);
     }
@@ -350,7 +350,7 @@ public class GameActivity extends Activity {
                     edit_ans.setText(""); // EditText 초기화
                 } else { // 기회 모두 사용 시 오답 처리 후 정답 공개
                     gameMode = 3;
-                    txt_msg.setText("틀렸습니다! 정답은 " + artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + "였습니다!");
+                    txt_msg.setText("틀렸습니다! 정답은 " + artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + "입니다!");
                     correctArray.add((quizNum - 1), 0); // 오답 문제 기록
                     musicPlay(-1);
                 }

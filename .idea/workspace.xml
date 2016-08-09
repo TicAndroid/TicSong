@@ -57,13 +57,13 @@
       <file leaf-file-name="GameActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eu/jpark/ticsong/GameActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5555556">
-              <caret line="541" column="13" selection-start-line="541" selection-start-column="13" selection-end-line="541" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.116959065">
+              <caret line="347" column="48" selection-start-line="347" selection-start-column="48" selection-end-line="347" selection-end-column="48" />
               <folding>
-                <element signature="e#19716#20292#0" expanded="true" />
-                <element signature="e#19957#20258#0" expanded="true" />
-                <element signature="e#20257#20258#0" expanded="true" />
-                <element signature="e#20291#20292#0" expanded="true" />
+                <element signature="e#19714#20290#0" expanded="true" />
+                <element signature="e#19955#20256#0" expanded="true" />
+                <element signature="e#20255#20256#0" expanded="true" />
+                <element signature="e#20289#20290#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2200,13 +2200,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/eu/jpark/ticsong/GameActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5555556">
-          <caret line="541" column="13" selection-start-line="541" selection-start-column="13" selection-end-line="541" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.116959065">
+          <caret line="347" column="48" selection-start-line="347" selection-start-column="48" selection-end-line="347" selection-end-column="48" />
           <folding>
-            <element signature="e#19716#20292#0" expanded="true" />
-            <element signature="e#19957#20258#0" expanded="true" />
-            <element signature="e#20257#20258#0" expanded="true" />
-            <element signature="e#20291#20292#0" expanded="true" />
+            <element signature="e#19714#20290#0" expanded="true" />
+            <element signature="e#19955#20256#0" expanded="true" />
+            <element signature="e#20255#20256#0" expanded="true" />
+            <element signature="e#20289#20290#0" expanded="true" />
           </folding>
         </state>
       </provider>
