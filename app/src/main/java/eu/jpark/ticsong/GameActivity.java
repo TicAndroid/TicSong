@@ -2,6 +2,7 @@ package eu.jpark.ticsong;
 
 import android.app.Activity;
 import android.content.Context;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -114,7 +115,7 @@ public class GameActivity extends Activity {
         frame_exit.setVisibility(View.VISIBLE); // 팝업
     }
 
-    @OnClick(R.id.btn_exit)
+    @OnClick (R.id.btn_exit)
     void exitClick() {
         // 나가기 버튼 클릭 시 지금 메인화면으로 돌아가면 경험치를 얻을 수 없다는 알림을 띄우고 다시 확인
         downKeyboard(this, edit_ans);
@@ -157,12 +158,9 @@ public class GameActivity extends Activity {
         // 패스 버튼 확인 시 오답 처리하고 정답 공개
         frame_pass.setVisibility(View.GONE); // 팝업 제거
         gameMode = 3;
-        btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
         txt_msg.setText("정답은 " + artistArray.get(quizNum-1) + "의 " + answerArray.get(quizNum - 1) + "였습니다!");
-        correctArray.set((quizNum-1), 0); // 오답 문제 기록
-        mPlayer = new MediaPlayer(); // 정답 음악 재생
-        mPlayer = MediaPlayer.create(this, R.raw.sample); // 임시 셋팅
-        mPlayer.start();
+        correctArray.add((quizNum-1), 0); // 오답 문제 기록
+        musicPlay(-1);
     }
 
     @OnClick (R.id.btn_pass_cancel)
@@ -318,9 +316,11 @@ public class GameActivity extends Activity {
             if (textChanger(edit_ans.getText().toString()).equals(textChanger(answerArray.get(quizNum - 1)))) {
                 // 정답 시
                 gameMode = 3;
-                btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
                 int nowScore = 0;
                 switch (life) { // 남은 기회에 따른 점수 계산
+                    case 4: // 기회 추가 아이템 사용 시
+                        nowScore = 100;
+                        break;
                     case 3:
                         nowScore = 100;
                         break;
@@ -336,10 +336,8 @@ public class GameActivity extends Activity {
                 }
                 txt_msg.setText(artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + " 정답입니다! " + nowScore + "점 획득!");
                 score += nowScore; // 누적 점수에 이번 점수 추가
-                correctArray.set((quizNum - 1), life); // 남은 라이프 기록
-                mPlayer = new MediaPlayer(); // 정답 음악 재생
-                mPlayer = MediaPlayer.create(this, R.raw.sample); // 임시 셋팅
-                mPlayer.start();
+                correctArray.add((quizNum - 1), life); // 남은 라이프 기록
+                musicPlay(-1);
             } else if (textChanger(edit_ans.getText().toString()).equals("")) {
                 // 정답이 비어있을 때
                 Toast.makeText(this, "정답을 입력해주세요.", Toast.LENGTH_SHORT).show();
@@ -352,12 +350,9 @@ public class GameActivity extends Activity {
                     edit_ans.setText(""); // EditText 초기화
                 } else { // 기회 모두 사용 시 오답 처리 후 정답 공개
                     gameMode = 3;
-                    btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
                     txt_msg.setText("틀렸습니다! 정답은 " + artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + "였습니다!");
-                    correctArray.set((quizNum - 1), 0); // 오답 문제 기록
-                    mPlayer = new MediaPlayer(); // 정답 음악 재생
-                    mPlayer = MediaPlayer.create(this, R.raw.sample); // 임시 셋팅
-                    mPlayer.start();
+                    correctArray.add((quizNum - 1), 0); // 오답 문제 기록
+                    musicPlay(-1);
                 }
             }
         }
@@ -365,11 +360,104 @@ public class GameActivity extends Activity {
 
     public void quizSetting() {
         // 문제 준비
-        for(int i = 0; i < MAX_QUIZ_NUM; i++) {
-            answerArray.add(i, "너랑 나");
-            artistArray.add(i, "아이유");
-            addressArray.add(i, "url");
-            correctArray.add(i, 0);
+        for(int i = 0; i < MAX_QUIZ_NUM; i++) { // 문제와 답 5개씩 설정
+            int soundNum = 10 + ((int) (Math.random() * 46));
+            switch (soundNum) {
+                case 10:
+                    answerArray.add("스토커"); artistArray.add("10cm"); break;
+                case 11:
+                    answerArray.add("위아래"); artistArray.add("EXID"); break;
+                case 12:
+                    answerArray.add("니가알던내가아냐"); artistArray.add("AOMG"); break;
+                case 13:
+                    answerArray.add("버스안에서"); artistArray.add("자자"); break;
+                case 14:
+                    answerArray.add("꺼내먹어요"); artistArray.add("자이언티"); break;
+                case 15:
+                    answerArray.add("양화대교"); artistArray.add("자이언티"); break;
+                case 16:
+                    answerArray.add("쿵"); artistArray.add("자이언티"); break;
+                case 17:
+                    answerArray.add("핑계"); artistArray.add("김건모"); break;
+                case 18:
+                    answerArray.add("잘못된만남"); artistArray.add("김건모"); break;
+                case 19:
+                    answerArray.add("허니"); artistArray.add("박진영"); break;
+                case 20:
+                    answerArray.add("야생화"); artistArray.add("박효신"); break;
+                case 21:
+                    answerArray.add("바보"); artistArray.add("박효신"); break;
+                case 22:
+                    answerArray.add("쏘쏘"); artistArray.add("백아연"); break;
+                case 23:
+                    answerArray.add("이럴거면그러지말지"); artistArray.add("백아연"); break;
+                case 24:
+                    answerArray.add("우주를건너"); artistArray.add("백예린"); break;
+                case 25:
+                    answerArray.add("벚꽃엔딩"); artistArray.add("버스커버스커"); break;
+                case 26:
+                    answerArray.add("점점"); artistArray.add("브라운아이드소울"); break;
+                case 27:
+                    answerArray.add("한"); artistArray.add("샤크라"); break;
+                case 28:
+                    answerArray.add("썸"); artistArray.add("소유&정기고"); break;
+                case 29:
+                    answerArray.add("이밤의끝을잡고"); artistArray.add("솔리드"); break;
+                case 30:
+                    answerArray.add("겁"); artistArray.add("송민호"); break;
+                case 31:
+                    answerArray.add("챔피언"); artistArray.add("싸이"); break;
+                case 32:
+                    answerArray.add("금요일에만나요"); artistArray.add("아이유"); break;
+                case 33:
+                    answerArray.add("스물셋"); artistArray.add("아이유"); break;
+                case 34:
+                    answerArray.add("너의의미"); artistArray.add("아이유"); break;
+                case 35:
+                    answerArray.add("널사랑하지않아"); artistArray.add("어반자카파"); break;
+                case 36:
+                    answerArray.add("시간을달려서"); artistArray.add("여자친구"); break;
+                case 37:
+                    answerArray.add("오늘부터우리는"); artistArray.add("여자친구"); break;
+                case 38:
+                    answerArray.add("너그리고나"); artistArray.add("여자친구"); break;
+                case 39:
+                    answerArray.add("파도"); artistArray.add("UN"); break;
+                case 40:
+                    answerArray.add("와"); artistArray.add("이정현"); break;
+                case 41:
+                    answerArray.add("한숨"); artistArray.add("이하이"); break;
+                case 42:
+                    answerArray.add("여름아부탁해"); artistArray.add("인디고"); break;
+                case 43:
+                    answerArray.add("또다시사랑"); artistArray.add("임창정"); break;
+                case 44:
+                    answerArray.add("기억의습작"); artistArray.add("전람회"); break;
+                case 45:
+                    answerArray.add("실연"); artistArray.add("코요태"); break;
+                case 46:
+                    answerArray.add("파란"); artistArray.add("코요태"); break;
+                case 47:
+                    answerArray.add("순정"); artistArray.add("코요태"); break;
+                case 48:
+                    answerArray.add("잊어버리지마"); artistArray.add("크러쉬"); break;
+                case 49:
+                    answerArray.add("오아시스"); artistArray.add("크러쉬"); break;
+                case 50:
+                    answerArray.add("우아해"); artistArray.add("크러쉬"); break;
+                case 51:
+                    answerArray.add("꿍따리샤바라"); artistArray.add("클론"); break;
+                case 52:
+                    answerArray.add("초련"); artistArray.add("클론"); break;
+                case 53:
+                    answerArray.add("영원한사랑"); artistArray.add("핑클"); break;
+                case 54:
+                    answerArray.add("위잉위잉"); artistArray.add("혁오"); break;
+                case 55:
+                    answerArray.add("흔들린우정"); artistArray.add("홍경민"); break;
+            }//http://52.78.10.41/unithon/seven/sound/21.mp3
+            String soundUrl = "http://52.78.10.41/unithon/seven/sound/" + soundNum + ".mp3";
+            addressArray.add(soundUrl);
         }
 
         nextQuiz();
@@ -404,29 +492,51 @@ public class GameActivity extends Activity {
     }
 
     public void musicPlay(int time) {
-        // time ms만큼 음악 재생
-        gameMode = 1; // 문제 내는 중 모드로 변경
-        btn_play.setVisibility(View.INVISIBLE); // 임시로 보이지 않게 함 -> 나중에 프로그레시브 들어갈 부분
-        btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
-        mPlayer = new MediaPlayer();
-        mPlayer = MediaPlayer.create(this, R.raw.sample); // 임시 셋팅
-        mPlayer.start();
-        Handler mHandler = new Handler();
-        mHandler.postDelayed(new Runnable() { // time ms 후 음악 정지
-            @Override
-            public void run() {
-                mPlayer.stop();
-                mPlayer.release();
-                gameMode = 2;
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        btn_play.setVisibility(View.VISIBLE); // 다시 나타나게 함
-                        btn_pass.setVisibility(View.VISIBLE); // 패스 버튼 드러내기
-                    }
-                });
+        // time ms만큼 음악 재생, time = -1일 경우 계속 재생
+        if (time >= 0) {
+            gameMode = 1; // 문제 내는 중 모드로 변경
+            btn_play.setVisibility(View.INVISIBLE); // 임시로 보이지 않게 함 -> 나중에 프로그레시브 들어갈 부분
+            btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
+            mPlayer = new MediaPlayer();
+            mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            try {
+                mPlayer.setDataSource(addressArray.get(quizNum - 1));
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        }, time);
+            try {
+                mPlayer.prepare();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            mPlayer.start();
+            Handler mHandler = new Handler();
+            mHandler.postDelayed(new Runnable() { // time ms 후 음악 정지
+                @Override
+                public void run() {
+                    mPlayer.stop();
+                    mPlayer.release();
+                    gameMode = 2;
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            btn_play.setVisibility(View.VISIBLE); // 다시 나타나게 함
+                            btn_pass.setVisibility(View.VISIBLE); // 패스 버튼 드러내기
+                        }
+                    });
+                }
+            }, time);
+        } else {
+            btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
+            mPlayer = new MediaPlayer();
+            mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            try {
+                mPlayer.setDataSource(addressArray.get(quizNum - 1));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            mPlayer.start();
+        }
     }
 
     public void textWatching() {
