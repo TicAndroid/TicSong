@@ -1,42 +1,42 @@
 [
     {
-        "merged": "/Users/yPeA/Desktop/TicDemo/app/build/intermediates/res/merged/debug/layout/statusbar.xml",
-        "source": "/Users/yPeA/Desktop/TicDemo/app/src/main/res/layout/statusbar.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_game.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_game.xml"
     },
     {
-        "merged": "/Users/yPeA/Desktop/TicDemo/app/build/intermediates/res/merged/debug/layout/activity_difficulty.xml",
-        "source": "/Users/yPeA/Desktop/TicDemo/app/src/main/res/layout/activity_difficulty.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/yPeA/Desktop/TicDemo/app/build/intermediates/res/merged/debug/layout/activity_game.xml",
-        "source": "/Users/yPeA/Desktop/TicDemo/app/src/main/res/layout/activity_game.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_login.xml"
     },
     {
-        "merged": "/Users/yPeA/Desktop/TicDemo/app/build/intermediates/res/merged/debug/layout/activity_splash2.xml",
-        "source": "/Users/yPeA/Desktop/TicDemo/app/src/main/res/layout/activity_splash2.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_genre.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_genre.xml"
     },
     {
-        "merged": "/Users/yPeA/Desktop/TicDemo/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
-        "source": "/Users/yPeA/Desktop/TicDemo/app/src/main/res/layout/activity_login.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_shop.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_shop.xml"
     },
     {
-        "merged": "/Users/yPeA/Desktop/TicDemo/app/build/intermediates/res/merged/debug/layout/activity_server_test.xml",
-        "source": "/Users/yPeA/Desktop/TicDemo/app/src/main/res/layout/activity_server_test.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_difficulty.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_difficulty.xml"
     },
     {
-        "merged": "/Users/yPeA/Desktop/TicDemo/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
-        "source": "/Users/yPeA/Desktop/TicDemo/app/src/main/res/layout/activity_main.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/statusbar.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/statusbar.xml"
     },
     {
-        "merged": "/Users/yPeA/Desktop/TicDemo/app/build/intermediates/res/merged/debug/layout/activity_shop.xml",
-        "source": "/Users/yPeA/Desktop/TicDemo/app/src/main/res/layout/activity_shop.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_server_test.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_server_test.xml"
     },
     {
-        "merged": "/Users/yPeA/Desktop/TicDemo/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
-        "source": "/Users/yPeA/Desktop/TicDemo/app/src/main/res/layout/activity_splash.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_splash2.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_splash2.xml"
     },
     {
-        "merged": "/Users/yPeA/Desktop/TicDemo/app/build/intermediates/res/merged/debug/layout/activity_genre.xml",
-        "source": "/Users/yPeA/Desktop/TicDemo/app/src/main/res/layout/activity_genre.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_splash.xml"
     }
 ]
