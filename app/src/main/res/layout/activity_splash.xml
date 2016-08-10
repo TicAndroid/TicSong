@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ani_off"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="anyStringValue"
+        android:visibility="invisible"
+        android:background="@drawable/background2" />
+
+    <ImageView
+        android:id="@+id/ani_on"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="anyStringValue"
+        android:background="@drawable/background1" />
+
+
+
+</FrameLayout>

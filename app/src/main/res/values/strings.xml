@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TicSong</string>
+    <string name="str_start">Start</string>
+    <string name="str_listening">listening</string>
+
+</resources>
