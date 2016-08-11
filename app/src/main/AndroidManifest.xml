@@ -55,16 +55,8 @@
             android:label="상점화면"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".MainActivity"
+        <activity android:name=".FBActivity"
             android:label="메인화면"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".DifficultyActivity"
-            android:label="난이도화면"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".GameActivity"
-            android:label="게임화면"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -73,10 +65,38 @@
             </intent-filter>
         </activity>
 
+
+        <activity android:name=".MainActivity"
+            android:label="메인화면"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity android:name=".DifficultyActivity"
+            android:label="난이도화면"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".GameActivity"
+            android:label="게임화면"
+            android:screenOrientation="portrait">
+        </activity>
+
         <activity android:name=".ServerTestActivity"
             android:label="서버 테스트"
             android:screenOrientation="portrait">
         </activity>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
 
     </application>
 

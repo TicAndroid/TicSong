@@ -12,21 +12,29 @@ import android.widget.TextView;
 import android.view.*;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
 
 public class MainActivity extends Activity {
+
+    // 테스트를 위한 계정 데이터 변수 부분, 나중에 로그인 페이지로 옮길 것
+    public String user_name;
+    public int user_lv, user_exp;
+    public ArrayList<Integer> user_itemArray = new ArrayList<Integer>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setUserData();
+
         ImageButton btn_start = (ImageButton) findViewById(R.id.btn_start);
 
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplication(), GenreActivity.class));
+                startActivity(new Intent(getApplication(), GameActivity.class));
             }
         });
 
@@ -98,4 +106,16 @@ public class MainActivity extends Activity {
         });*/
 
     }
+
+    public void setUserData () { // DB 연결 테스트
+        user_name = "틱송님";
+        user_lv = 3;
+        user_exp = 1500;
+        user_itemArray.add(0, 1); // 아티스트 보여주기 아이템 개수
+        user_itemArray.add(1, 1); // 3초 듣기 아이템 개수
+        user_itemArray.add(2, 2); // 정답 1회 증가 아이템 개수
+        user_itemArray.add(3, 1); // 제목 한 글자 보여주기 아이템 개수
+    }
+
+
 }

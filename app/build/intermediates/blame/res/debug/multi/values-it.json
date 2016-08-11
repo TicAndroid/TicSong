@@ -7,8 +7,335 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 105,
+                    "endColumn": 173,
+                    "endOffset": 274
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 173,
+                        "endOffset": 224
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 279,
+                    "endLine": 4,
+                    "endColumn": 45,
+                    "endOffset": 410
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endLine": 4,
+                        "endColumn": 45,
+                        "endOffset": 360
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 415,
+                    "endLine": 6,
+                    "endColumn": 43,
+                    "endOffset": 552
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 365,
+                        "endLine": 6,
+                        "endColumn": 43,
+                        "endOffset": 502
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 557,
+                    "endColumn": 94,
+                    "endOffset": 647
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 507,
+                        "endColumn": 94,
+                        "endOffset": 597
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 652,
+                    "endColumn": 67,
+                    "endOffset": 715
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 602,
+                        "endColumn": 67,
+                        "endOffset": 665
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 720,
+                    "endColumn": 71,
+                    "endOffset": 787
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 670,
+                        "endColumn": 71,
+                        "endOffset": 737
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 792,
+                    "endColumn": 63,
+                    "endOffset": 851
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 742,
+                        "endColumn": 63,
+                        "endOffset": 801
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 856,
+                    "endColumn": 72,
+                    "endOffset": 924
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 806,
+                        "endColumn": 72,
+                        "endOffset": 874
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 929,
+                    "endColumn": 71,
+                    "endOffset": 996
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 879,
+                        "endColumn": 71,
+                        "endOffset": 946
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1001,
+                    "endColumn": 89,
+                    "endOffset": 1086
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 951,
+                        "endColumn": 89,
+                        "endOffset": 1036
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1091,
+                    "endColumn": 70,
+                    "endOffset": 1157
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1041,
+                        "endColumn": 70,
+                        "endOffset": 1107
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1162,
+                    "endColumn": 70,
+                    "endOffset": 1228
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1112,
+                        "endColumn": 70,
+                        "endOffset": 1178
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1233,
+                    "endColumn": 93,
+                    "endOffset": 1322
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1183,
+                        "endColumn": 93,
+                        "endOffset": 1272
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1327,
+                    "endColumn": 107,
+                    "endOffset": 1430
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1277,
+                        "endColumn": 107,
+                        "endOffset": 1380
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1435,
+                    "endColumn": 63,
+                    "endOffset": 1494
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1385,
+                        "endColumn": 63,
+                        "endOffset": 1444
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1499,
+                    "endColumn": 68,
+                    "endOffset": 1563
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1449,
+                        "endColumn": 68,
+                        "endOffset": 1513
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1568,
+                    "endColumn": 154,
+                    "endOffset": 1718
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1518,
+                        "endColumn": 154,
+                        "endOffset": 1668
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1723,
                     "endColumn": 192,
-                    "endOffset": 293
+                    "endOffset": 1911
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -23,11 +350,11 @@
             },
             {
                 "to": {
-                    "startLine": 3,
+                    "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 298,
+                    "startOffset": 1916,
                     "endColumn": 175,
-                    "endOffset": 469
+                    "endOffset": 2087
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -42,11 +369,11 @@
             },
             {
                 "to": {
-                    "startLine": 4,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 474,
+                    "startOffset": 2092,
                     "endColumn": 112,
-                    "endOffset": 582
+                    "endOffset": 2200
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -61,11 +388,11 @@
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 587,
+                    "startOffset": 2205,
                     "endColumn": 270,
-                    "endOffset": 853
+                    "endOffset": 2471
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -80,11 +407,11 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 858,
+                    "startOffset": 2476,
                     "endColumn": 127,
-                    "endOffset": 981
+                    "endOffset": 2599
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -99,11 +426,11 @@
             },
             {
                 "to": {
-                    "startLine": 7,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 986,
+                    "startOffset": 2604,
                     "endColumn": 182,
-                    "endOffset": 1164
+                    "endOffset": 2782
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -118,11 +445,11 @@
             },
             {
                 "to": {
-                    "startLine": 8,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1169,
+                    "startOffset": 2787,
                     "endColumn": 125,
-                    "endOffset": 1290
+                    "endOffset": 2908
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -137,11 +464,11 @@
             },
             {
                 "to": {
-                    "startLine": 9,
+                    "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 1295,
+                    "startOffset": 2913,
                     "endColumn": 168,
-                    "endOffset": 1459
+                    "endOffset": 3077
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -156,11 +483,11 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 1464,
+                    "startOffset": 3082,
                     "endColumn": 130,
-                    "endOffset": 1590
+                    "endOffset": 3208
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -175,11 +502,11 @@
             },
             {
                 "to": {
-                    "startLine": 11,
+                    "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 1595,
+                    "startOffset": 3213,
                     "endColumn": 212,
-                    "endOffset": 1803
+                    "endOffset": 3421
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -194,11 +521,11 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 1808,
+                    "startOffset": 3426,
                     "endColumn": 210,
-                    "endOffset": 2014
+                    "endOffset": 3632
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -213,11 +540,11 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 2019,
+                    "startOffset": 3637,
                     "endColumn": 127,
-                    "endOffset": 2142
+                    "endOffset": 3760
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -232,11 +559,11 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 2147,
+                    "startOffset": 3765,
                     "endColumn": 188,
-                    "endOffset": 2331
+                    "endOffset": 3949
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -251,11 +578,11 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 2336,
+                    "startOffset": 3954,
                     "endColumn": 126,
-                    "endOffset": 2458
+                    "endOffset": 4076
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -270,11 +597,11 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 2463,
+                    "startOffset": 4081,
                     "endColumn": 172,
-                    "endOffset": 2631
+                    "endOffset": 4249
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -289,11 +616,11 @@
             },
             {
                 "to": {
-                    "startLine": 17,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 2636,
+                    "startOffset": 4254,
                     "endColumn": 178,
-                    "endOffset": 2810
+                    "endOffset": 4428
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -308,11 +635,11 @@
             },
             {
                 "to": {
-                    "startLine": 18,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 2815,
+                    "startOffset": 4433,
                     "endColumn": 120,
-                    "endOffset": 2931
+                    "endOffset": 4549
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -327,11 +654,11 @@
             },
             {
                 "to": {
-                    "startLine": 19,
+                    "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 2936,
+                    "startOffset": 4554,
                     "endColumn": 185,
-                    "endOffset": 3117
+                    "endOffset": 4735
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -346,11 +673,11 @@
             },
             {
                 "to": {
-                    "startLine": 20,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 3122,
+                    "startOffset": 4740,
                     "endColumn": 133,
-                    "endOffset": 3251
+                    "endOffset": 4869
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -365,11 +692,11 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 3256,
+                    "startOffset": 4874,
                     "endColumn": 182,
-                    "endOffset": 3434
+                    "endOffset": 5052
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -384,11 +711,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 3439,
+                    "startOffset": 5057,
                     "endColumn": 127,
-                    "endOffset": 3562
+                    "endOffset": 5180
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -403,11 +730,11 @@
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 3567,
+                    "startOffset": 5185,
                     "endColumn": 146,
-                    "endOffset": 3709
+                    "endOffset": 5327
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -422,11 +749,11 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 3714,
+                    "startOffset": 5332,
                     "endColumn": 259,
-                    "endOffset": 3969
+                    "endOffset": 5587
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -441,11 +768,11 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 3974,
+                    "startOffset": 5592,
                     "endColumn": 124,
-                    "endOffset": 4094
+                    "endOffset": 5712
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -460,11 +787,11 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 4099,
+                    "startOffset": 5717,
                     "endColumn": 108,
-                    "endOffset": 4203
+                    "endOffset": 5821
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -479,11 +806,11 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 4208,
+                    "startOffset": 5826,
                     "endColumn": 184,
-                    "endOffset": 4388
+                    "endOffset": 6006
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -498,11 +825,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 4393,
+                    "startOffset": 6011,
                     "endColumn": 128,
-                    "endOffset": 4517
+                    "endOffset": 6135
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -517,11 +844,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 4522,
+                    "startOffset": 6140,
                     "endColumn": 214,
-                    "endOffset": 4732
+                    "endOffset": 6350
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -536,11 +863,11 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 4737,
+                    "startOffset": 6355,
                     "endColumn": 137,
-                    "endOffset": 4870
+                    "endOffset": 6488
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -555,11 +882,11 @@
             },
             {
                 "to": {
-                    "startLine": 31,
+                    "startLine": 50,
                     "startColumn": 4,
-                    "startOffset": 4875,
+                    "startOffset": 6493,
                     "endColumn": 95,
-                    "endOffset": 4966
+                    "endOffset": 6584
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -574,11 +901,11 @@
             },
             {
                 "to": {
-                    "startLine": 32,
+                    "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 4971,
+                    "startOffset": 6589,
                     "endColumn": 90,
-                    "endOffset": 5057
+                    "endOffset": 6675
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -593,11 +920,11 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 5062,
+                    "startOffset": 6680,
                     "endColumn": 106,
-                    "endOffset": 5164
+                    "endOffset": 6782
                 },
                 "from": {
                     "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-it/common_strings.xml",
@@ -607,6 +934,25 @@
                         "startOffset": 4485,
                         "endColumn": 106,
                         "endOffset": 4587
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 6787,
+                    "endColumn": 60,
+                    "endOffset": 6843
+                },
+                "from": {
+                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/values-it/values-it.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1673,
+                        "endColumn": 60,
+                        "endOffset": 1729
                     }
                 }
             }

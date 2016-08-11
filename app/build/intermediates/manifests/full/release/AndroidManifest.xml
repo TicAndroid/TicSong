@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ticcorp.ticsong"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <receiver
+            android:name="com.ticcorp.ticsong.utils.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.ticcorp.ticsong.SplashActivity"
+            android:screenOrientation="portrait" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.SplashActivity2"
+            android:label="로딩2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ticcorp.ticsong.GenreActivity"
+            android:label="장르화면"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ticcorp.ticsong.LoginActivity"
+            android:label="로그인화면"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ticcorp.ticsong.ShopAcitivty"
+            android:label="상점화면"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ticcorp.ticsong.MainActivity"
+            android:label="메인화면"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.DifficultyActivity"
+            android:label="난이도화면"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ticcorp.ticsong.GameActivity"
+            android:label="게임화면"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.ServerTestActivity"
+            android:label="서버 테스트"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true" >
+        </activity>
+    </application>
+
+</manifest>

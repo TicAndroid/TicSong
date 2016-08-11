@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/release/anim/alpha_anim.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/anim/alpha_anim.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/release/anim/alpha_anim_opposite.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/anim/alpha_anim_opposite.xml"
+    }
+]

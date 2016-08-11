@@ -1,7 +1,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout android:id="@+id/frame_main"
         android:layout_width="match_parent"
@@ -66,13 +67,33 @@
 
         </FrameLayout>
 
-        <ImageView android:id="@+id/btn_play"
+        <FrameLayout
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginTop="150dp"
-            android:text="PLAY"
-            android:layout_gravity="top|center_horizontal"
-            android:src="@drawable/btn_play"/>
+            android:layout_gravity="top|center_horizontal">
+
+            <ImageView android:id="@+id/btn_play"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="PLAY"
+                android:src="@drawable/btn_play"/>
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/btn_progress"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:textColor="@color/cpb_white"
+                android:textSize="36sp"
+                android:layout_gravity="center"
+                app:cpb_cornerRadius="96dp"
+                android:background="@drawable/btn_play"
+                app:cpb_colorIndicator="#5298be"
+                app:cpb_colorIndicatorBackground="@color/cpb_white"
+                app:cpb_colorProgress="#00FFFFFF"
+                android:visibility="invisible"/>
+
+        </FrameLayout>
 
         <FrameLayout
             android:layout_width="210dp"

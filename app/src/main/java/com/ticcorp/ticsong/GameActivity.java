@@ -1,5 +1,6 @@
 package com.ticcorp.ticsong;
 
+import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.media.AudioManager;
@@ -11,6 +12,7 @@ import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dd.CircularProgressButton;
 import com.naver.speech.clientapi.SpeechConfig;
 import com.ticcorp.ticsong.utils.AudioWriterPCM;
 
@@ -47,6 +50,7 @@ public class GameActivity extends Activity {
     public ArrayList<String> artistArray = new ArrayList<String>(); // 아티스트 리스트
     public ArrayList<String> addressArray = new ArrayList<String>(); // 음원 주소 리스트
     public ArrayList<Integer> correctArray = new ArrayList<Integer>(); // 정답 여부 리스트, 맞출 때의 남은 기회 기록
+    public ArrayList<Integer> itemNumArray = new ArrayList<Integer>(); // 아이템 개수 리스트
 
     public MediaPlayer mPlayer;
     public TextWatcher textWatcher;
@@ -63,6 +67,7 @@ public class GameActivity extends Activity {
     @Bind(R.id.txt_msg) TextView txt_msg;
     @Bind(R.id.edit_ans) EditText edit_ans;
     @Bind(R.id.btn_play) ImageView btn_play;
+    @Bind(R.id.btn_progress) CircularProgressButton btn_progress;
     @Bind(R.id.img_life1) ImageView img_life1;
     @Bind(R.id.img_life2) ImageView img_life2;
     @Bind(R.id.img_life3) ImageView img_life3;
@@ -373,7 +378,7 @@ public class GameActivity extends Activity {
     }
 
     public void quizSetting() {
-        // 문제 준비
+        // 문제 준비 및 유저 정보 받아오기
         for(int i = 0; i < MAX_QUIZ_NUM; i++) { // 문제와 답 5개씩 설정
             int soundNum = 10 + ((int) (Math.random() * 46));
             switch (soundNum) {
@@ -474,6 +479,7 @@ public class GameActivity extends Activity {
             addressArray.add(soundUrl);
         }
 
+        setUserData();
         nextQuiz();
     }
 
@@ -506,11 +512,16 @@ public class GameActivity extends Activity {
         gameMode = 0; // 문제 대기 중 모드로 변경
     }
 
+    public void setUserData() {
+        // 유저 정보 받아오기
+    }
+
     public void musicPlay(int time) {
         // time ms만큼 음악 재생, time = -1일 경우 계속 재생
         if (time >= 0) {
             gameMode = 1; // 문제 내는 중 모드로 변경
-            btn_play.setVisibility(View.INVISIBLE); // 임시로 보이지 않게 함 -> 나중에 프로그레시브 들어갈 부분
+            btn_progress.setVisibility(View.VISIBLE);
+            btn_play.setVisibility(View.INVISIBLE); // 플레이 버튼 숨기고 프로그레스 버튼 진행
             btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
             mPlayer = new MediaPlayer();
             mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -525,17 +536,21 @@ public class GameActivity extends Activity {
                 e.printStackTrace();
             }
             mPlayer.start();
+            simulateSuccessProgress(btn_progress, time);
             Handler mHandler = new Handler();
             mHandler.postDelayed(new Runnable() { // time ms 후 음악 정지
                 @Override
                 public void run() {
                     mPlayer.stop();
                     mPlayer.release();
+                    //프로그레스 바 초기화
                     gameMode = 2;
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            btn_play.setVisibility(View.VISIBLE); // 다시 나타나게 함
+                            btn_play.setVisibility(View.VISIBLE); // 프로그레스 버튼 숨기고 플레이 버튼 드러내기
+                            btn_progress.setVisibility(View.INVISIBLE);
+                            btn_progress.setProgress(0); // 프로그레스 초기화
                             btn_pass.setVisibility(View.VISIBLE); // 패스 버튼 드러내기
                             frame_ans.setVisibility(View.VISIBLE); // 정답창 드러내기
                             // 문제를 한 번 들어야 정답창이 드러나도록 함
@@ -636,6 +651,21 @@ public class GameActivity extends Activity {
         resultTxt = resultTxt.replaceAll("9", "구");
         resultTxt = resultTxt.replaceAll("0", "영");
         return resultTxt;
+    }
+
+    // 프로그레스 바
+    private void simulateSuccessProgress(final CircularProgressButton button, int duration) {
+        ValueAnimator widthAnimation = ValueAnimator.ofInt(1, 100);
+        widthAnimation.setDuration(duration);
+        widthAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
+        widthAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                Integer value = (Integer) animation.getAnimatedValue();
+                button.setProgress(value);
+            }
+        });
+        widthAnimation.start();
     }
 
     //이하 음성인식

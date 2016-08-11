@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/messenger_button_send_white_small.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/layout/messenger_button_send_white_small.xml"
+    },
+    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_game.xml",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_game.xml"
     },
@@ -8,8 +12,28 @@
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_main.xml"
     },
     {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/messenger_button_send_white_large.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/layout/messenger_button_send_white_large.xml"
+    },
+    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/com_facebook_device_auth_dialog_fragment.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/layout/com_facebook_device_auth_dialog_fragment.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/messenger_button_send_white_round.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/layout/messenger_button_send_white_round.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_large.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/layout/messenger_button_send_blue_large.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_round.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/layout/messenger_button_send_blue_round.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_genre.xml",
@@ -18,6 +42,10 @@
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_shop.xml",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_shop.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/com_facebook_login_fragment.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/layout/com_facebook_login_fragment.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_difficulty.xml",
@@ -36,7 +64,19 @@
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_splash2.xml"
     },
     {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/com_facebook_tooltip_bubble.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/layout/com_facebook_tooltip_bubble.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/com_facebook_activity_layout.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/layout/com_facebook_activity_layout.xml"
+    },
+    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_small.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/layout/messenger_button_send_blue_small.xml"
     }
 ]
