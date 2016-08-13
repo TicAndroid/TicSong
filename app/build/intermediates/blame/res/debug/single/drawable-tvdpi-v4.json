@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_tall_off_client.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-plus\\7.8.0\\res\\drawable-tvdpi\\ic_plusone_tall_off_client.png"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_standard_off_client.png",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-plus\\7.8.0\\res\\drawable-tvdpi\\ic_plusone_standard_off_client.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_tall_off_client.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-plus\\7.8.0\\res\\drawable-tvdpi\\ic_plusone_tall_off_client.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\ic_plusone_medium_off_client.png",

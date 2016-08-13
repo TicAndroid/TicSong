@@ -4,76 +4,35 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="272274210616595"
-    token="28693691338866827"
-    verifier="COMPATIBLE" >
+    timestamp="275318544583142"
+    token="28693691338866827" >
 
     <task
         name="javac"
-        duration="849" />
+        duration="718" />
     <task
         name="instant-run-dex"
-        duration="1034" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="88" />
+        duration="22" />
     <task
         name="verifier"
-        duration="27" />
+        duration="5" />
 
     <artifact
-        location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+        type="DEX" />
 
-    <build timestamp="267618697912064" >
+    <build timestamp="274248062893361" >
         <artifact
             location="C:\Users\JPark\Documents\TicMaster\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="268322899748924" >
-        <artifact
-            location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-    </build>
-    <build timestamp="271244009164197" >
+    <build timestamp="275318544583142" >
         <artifact
             location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
             type="DEX" />
-    </build>
-    <build
-        timestamp="271671393261199"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\builds\debug\271671393261199\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="271744788206928"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\builds\debug\271744788206928\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="271803776976306"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\builds\debug\271803776976306\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="272078141161739"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\builds\debug\272078141161739\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="272274210616595"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

@@ -14,13 +14,11 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,6 +35,7 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class GameActivity extends Activity {
 
@@ -245,17 +244,38 @@ public class GameActivity extends Activity {
     @OnClick(R.id.btn_exit)
     void exitOkClick() {
         // 나가기 버튼 확인 시 게임 종료
-        try {
-            if (mPlayer != null) {// 음악 재생 중일 경우 음악 종료
-                if (mPlayer.isPlaying()) {
-                    mPlayer.stop();
-                    mPlayer.release();
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        finish();
+        new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText("정말로 나가시겠습니까?")
+                .setContentText("현재까지 획득한 점수를 모두 잃습니다!")
+                .setCancelText("아니요, 계속 할래요!")
+                .setConfirmText("네, 나갈래요!")
+                .showCancelButton(true)
+                .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+                        sDialog.cancel();
+                    }
+                })
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+                        try {
+                            if (mPlayer != null) {// 음악 재생 중일 경우 음악 종료
+                                if (mPlayer.isPlaying()) {
+                                    mPlayer.stop();
+                                    mPlayer.release();
+                                }
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        finish();
+                    }
+                })
+                .show();
+
+
+
     }
 
     @OnClick(R.id.btn_pass)

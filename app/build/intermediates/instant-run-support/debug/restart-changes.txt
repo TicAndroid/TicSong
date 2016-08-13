@@ -1,7 +1,0 @@
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\ticcorp\ticsong\GameActivity$6$1.class
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\ticcorp\ticsong\GameActivity$RecognitionHandler.class
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\ticcorp\ticsong\GameActivity$7.class
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\ticcorp\ticsong\GameActivity$5.class
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\ticcorp\ticsong\GameActivity$6.class
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\ticcorp\ticsong\GameActivity.class
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\ticcorp\ticsong\GameActivity$8.class

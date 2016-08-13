@@ -7,8 +7,293 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 105,
+                    "endColumn": 116,
+                    "endOffset": 217
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 116,
+                        "endOffset": 168
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 222,
+                    "endColumn": 107,
+                    "endOffset": 325
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 173,
+                        "endColumn": 107,
+                        "endOffset": 276
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 330,
+                    "endColumn": 122,
+                    "endOffset": 448
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 281,
+                        "endColumn": 122,
+                        "endOffset": 399
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 453,
+                    "endColumn": 106,
+                    "endOffset": 555
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 404,
+                        "endColumn": 106,
+                        "endOffset": 506
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 560,
+                    "endColumn": 110,
+                    "endOffset": 666
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 511,
+                        "endColumn": 110,
+                        "endOffset": 617
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 671,
+                    "endColumn": 85,
+                    "endOffset": 752
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 622,
+                        "endColumn": 85,
+                        "endOffset": 703
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 757,
+                    "endColumn": 101,
+                    "endOffset": 854
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 708,
+                        "endColumn": 101,
+                        "endOffset": 805
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 859,
+                    "endColumn": 116,
+                    "endOffset": 971
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 810,
+                        "endColumn": 116,
+                        "endOffset": 922
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 976,
+                    "endColumn": 110,
+                    "endOffset": 1082
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 927,
+                        "endColumn": 110,
+                        "endOffset": 1033
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1087,
+                    "endColumn": 104,
+                    "endOffset": 1187
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1038,
+                        "endColumn": 104,
+                        "endOffset": 1138
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1192,
+                    "endColumn": 98,
+                    "endOffset": 1286
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1143,
+                        "endColumn": 98,
+                        "endOffset": 1237
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1291,
+                    "endColumn": 109,
+                    "endOffset": 1396
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1242,
+                        "endColumn": 109,
+                        "endOffset": 1347
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1401,
+                    "endColumn": 100,
+                    "endOffset": 1497
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1352,
+                        "endColumn": 100,
+                        "endOffset": 1448
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1502,
+                    "endColumn": 102,
+                    "endOffset": 1600
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1453,
+                        "endColumn": 102,
+                        "endOffset": 1551
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1605,
+                    "endColumn": 127,
+                    "endOffset": 1728
+                },
+                "from": {
+                    "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\values-et-rEE\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1556,
+                        "endColumn": 127,
+                        "endOffset": 1679
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1733,
                     "endColumn": 193,
-                    "endOffset": 294
+                    "endOffset": 1922
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -23,11 +308,11 @@
             },
             {
                 "to": {
-                    "startLine": 3,
+                    "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 299,
+                    "startOffset": 1927,
                     "endColumn": 192,
-                    "endOffset": 487
+                    "endOffset": 2115
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -42,11 +327,11 @@
             },
             {
                 "to": {
-                    "startLine": 4,
+                    "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 492,
+                    "startOffset": 2120,
                     "endColumn": 127,
-                    "endOffset": 615
+                    "endOffset": 2243
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -61,11 +346,11 @@
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 620,
+                    "startOffset": 2248,
                     "endColumn": 274,
-                    "endOffset": 890
+                    "endOffset": 2518
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -80,11 +365,11 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 895,
+                    "startOffset": 2523,
                     "endColumn": 127,
-                    "endOffset": 1018
+                    "endOffset": 2646
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -99,11 +384,11 @@
             },
             {
                 "to": {
-                    "startLine": 7,
+                    "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1023,
+                    "startOffset": 2651,
                     "endColumn": 193,
-                    "endOffset": 1212
+                    "endOffset": 2840
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -118,11 +403,11 @@
             },
             {
                 "to": {
-                    "startLine": 8,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 1217,
+                    "startOffset": 2845,
                     "endColumn": 125,
-                    "endOffset": 1338
+                    "endOffset": 2966
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -137,11 +422,11 @@
             },
             {
                 "to": {
-                    "startLine": 9,
+                    "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 1343,
+                    "startOffset": 2971,
                     "endColumn": 171,
-                    "endOffset": 1510
+                    "endOffset": 3138
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -156,11 +441,11 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 1515,
+                    "startOffset": 3143,
                     "endColumn": 129,
-                    "endOffset": 1640
+                    "endOffset": 3268
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -175,11 +460,11 @@
             },
             {
                 "to": {
-                    "startLine": 11,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 1645,
+                    "startOffset": 3273,
                     "endColumn": 216,
-                    "endOffset": 1857
+                    "endOffset": 3485
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -194,11 +479,11 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1862,
+                    "startOffset": 3490,
                     "endColumn": 220,
-                    "endOffset": 2078
+                    "endOffset": 3706
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -213,11 +498,11 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 2083,
+                    "startOffset": 3711,
                     "endColumn": 126,
-                    "endOffset": 2205
+                    "endOffset": 3833
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -232,11 +517,11 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 2210,
+                    "startOffset": 3838,
                     "endColumn": 168,
-                    "endOffset": 2374
+                    "endOffset": 4002
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -251,11 +536,11 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 2379,
+                    "startOffset": 4007,
                     "endColumn": 118,
-                    "endOffset": 2493
+                    "endOffset": 4121
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -270,11 +555,11 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 2498,
+                    "startOffset": 4126,
                     "endColumn": 172,
-                    "endOffset": 2666
+                    "endOffset": 4294
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -289,11 +574,11 @@
             },
             {
                 "to": {
-                    "startLine": 17,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 2671,
+                    "startOffset": 4299,
                     "endColumn": 175,
-                    "endOffset": 2842
+                    "endOffset": 4470
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -308,11 +593,11 @@
             },
             {
                 "to": {
-                    "startLine": 18,
+                    "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 2847,
+                    "startOffset": 4475,
                     "endColumn": 116,
-                    "endOffset": 2959
+                    "endOffset": 4587
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -327,11 +612,11 @@
             },
             {
                 "to": {
-                    "startLine": 19,
+                    "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 2964,
+                    "startOffset": 4592,
                     "endColumn": 181,
-                    "endOffset": 3141
+                    "endOffset": 4769
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -346,11 +631,11 @@
             },
             {
                 "to": {
-                    "startLine": 20,
+                    "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 3146,
+                    "startOffset": 4774,
                     "endColumn": 132,
-                    "endOffset": 3274
+                    "endOffset": 4902
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -365,11 +650,11 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 3279,
+                    "startOffset": 4907,
                     "endColumn": 170,
-                    "endOffset": 3445
+                    "endOffset": 5073
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -384,11 +669,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 3450,
+                    "startOffset": 5078,
                     "endColumn": 132,
-                    "endOffset": 3578
+                    "endOffset": 5206
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -403,11 +688,11 @@
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 3583,
+                    "startOffset": 5211,
                     "endColumn": 139,
-                    "endOffset": 3718
+                    "endOffset": 5346
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -422,11 +707,11 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 3723,
+                    "startOffset": 5351,
                     "endColumn": 245,
-                    "endOffset": 3964
+                    "endOffset": 5592
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -441,11 +726,11 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 3969,
+                    "startOffset": 5597,
                     "endColumn": 124,
-                    "endOffset": 4089
+                    "endOffset": 5717
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -460,11 +745,11 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 4094,
+                    "startOffset": 5722,
                     "endColumn": 109,
-                    "endOffset": 4199
+                    "endOffset": 5827
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -479,11 +764,11 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 4204,
+                    "startOffset": 5832,
                     "endColumn": 194,
-                    "endOffset": 4394
+                    "endOffset": 6022
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -498,11 +783,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 4399,
+                    "startOffset": 6027,
                     "endColumn": 132,
-                    "endOffset": 4527
+                    "endOffset": 6155
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -517,11 +802,11 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 4532,
+                    "startOffset": 6160,
                     "endColumn": 213,
-                    "endOffset": 4741
+                    "endOffset": 6369
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -536,11 +821,11 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 4746,
+                    "startOffset": 6374,
                     "endColumn": 136,
-                    "endOffset": 4878
+                    "endOffset": 6506
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -555,11 +840,11 @@
             },
             {
                 "to": {
-                    "startLine": 31,
+                    "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 4883,
+                    "startOffset": 6511,
                     "endColumn": 91,
-                    "endOffset": 4970
+                    "endOffset": 6598
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -574,11 +859,11 @@
             },
             {
                 "to": {
-                    "startLine": 32,
+                    "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 4975,
+                    "startOffset": 6603,
                     "endColumn": 94,
-                    "endOffset": 5065
+                    "endOffset": 6693
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
@@ -593,11 +878,11 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 5070,
+                    "startOffset": 6698,
                     "endColumn": 111,
-                    "endOffset": 5177
+                    "endOffset": 6805
                 },
                 "from": {
                     "file": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-et-rEE\\common_strings.xml",
