@@ -43,20 +43,8 @@
             -->
         </activity>
         <activity
-            android:name="com.ticcorp.ticsong.SplashActivity2"
-            android:label="로딩2"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.ticcorp.ticsong.GenreActivity"
-            android:label="장르화면"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.ticcorp.ticsong.LoginActivity"
             android:label="로그인화면"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.ticcorp.ticsong.ShopAcitivty"
-            android:label="상점화면"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.ticcorp.ticsong.FBActivity"
@@ -81,10 +69,6 @@
             </intent-filter>
             -->
         </activity>
-        <activity
-            android:name="com.ticcorp.ticsong.DifficultyActivity"
-            android:label="난이도화면"
-            android:screenOrientation="portrait" />
         <activity
             android:name="com.ticcorp.ticsong.GameActivity"
             android:label="게임화면"

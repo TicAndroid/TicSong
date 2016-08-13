@@ -21,7 +21,6 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
-
         <receiver
             android:name=".utils.NetworkChangeReceiver"
             android:label="NetworkChangeReceiver" >
@@ -39,20 +38,8 @@
             </intent-filter>-->
         </activity>
 
-        <activity android:name=".SplashActivity2"
-            android:label="로딩2"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".GenreActivity"
-            android:label="장르화면"
-            android:screenOrientation="portrait"/>
-
         <activity android:name=".LoginActivity"
             android:label="로그인화면"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".ShopAcitivty"
-            android:label="상점화면"
             android:screenOrientation="portrait"/>
 
         <activity android:name=".FBActivity"
@@ -75,10 +62,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
         </activity>
-
-        <activity android:name=".DifficultyActivity"
-            android:label="난이도화면"
-            android:screenOrientation="portrait"/>
 
         <activity android:name=".GameActivity"
             android:label="게임화면"

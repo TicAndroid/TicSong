@@ -1,27 +1,15 @@
 [
     {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_device_auth_dialog_fragment.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\com_facebook_device_auth_dialog_fragment.xml"
+    },
+    {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_large.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\messenger_button_send_blue_large.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splash.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\layout\\activity_splash.xml"
-    },
-    {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_device_auth_dialog_fragment.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\com_facebook_device_auth_dialog_fragment.xml"
-    },
-    {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_difficulty.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\layout\\activity_difficulty.xml"
-    },
-    {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_shop.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\layout\\activity_shop.xml"
-    },
-    {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splash2.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\layout\\activity_splash2.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_game.xml",
@@ -32,20 +20,16 @@
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\messenger_button_send_blue_small.xml"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\statusbar.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\layout\\statusbar.xml"
-    },
-    {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_login_fragment.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\com_facebook_login_fragment.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_server_test.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\layout\\activity_server_test.xml"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_login_fragment.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\com_facebook_login_fragment.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_large.xml",
@@ -56,24 +40,20 @@
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\messenger_button_send_white_round.xml"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_genre.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\layout\\activity_genre.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\com_facebook_tooltip_bubble.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_small.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\messenger_button_send_white_small.xml"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\layout\\activity_login.xml"
-    },
-    {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\com_facebook_tooltip_bubble.xml"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_round.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\messenger_button_send_blue_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_activity_layout.xml",
