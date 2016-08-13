@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class ServerTestActivity$$ViewBinder<T extends com.ticcorp.ticsong.ServerTestActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131296320, "field 'testBtn' and method 'onTestBtnClicked'");
-    target.testBtn = finder.castView(view, 2131296320, "field 'testBtn'");
+    view = finder.findRequiredView(source, 2131296326, "field 'testBtn' and method 'onTestBtnClicked'");
+    target.testBtn = finder.castView(view, 2131296326, "field 'testBtn'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

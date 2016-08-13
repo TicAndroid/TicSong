@@ -1,218 +1,222 @@
 [
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/splash_1.jpg",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/splash_1.jpg"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_send_button_icon.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_send_button_icon.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/icon.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/icon.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_main_shop.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\icon_main_shop.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/background2.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/background2.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_selector.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\messenger_button_white_bg_selector.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_send_background.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_button_send_background.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sad.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\sad.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_recording.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_recording.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_icon.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_button_icon.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/background_base2.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/background_base2.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_login.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\background_login.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_cancel_background.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_auth_dialog_cancel_background.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_base.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\background_base.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/button_littlebig.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/button_littlebig.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_background.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_button_like_background.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_record.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_record.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chara.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\chara.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/status_bar3.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/status_bar3.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_signin_btn_icon_light.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable\\common_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/money.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/money.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_background.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_button_background.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/icon_character.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/icon_character.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\happy.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\happy.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/messenger_button_blue_bg_selector.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/messenger_button_blue_bg_selector.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\carrot.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\carrot.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_send_button_icon.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_send_button_icon.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\back.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/button_base.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/button_base.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\money.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\money.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/background1.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/background1.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\firstbar.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\firstbar.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/button_google.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/button_google.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\secondbar.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\secondbar.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_round.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/messenger_button_white_bg_round.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_signin_btn_text_light.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable\\common_signin_btn_text_light.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/main_bar_up.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/main_bar_up.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pass.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\pass.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_like_background.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_button_like_background.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cpb_background.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.github.dmytrodanylyk.circular-progress-button\\library\\1.1.3\\res\\drawable\\cpb_background.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/background_base.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/background_base.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\icon.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/cpb_background.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.github.dmytrodanylyk.circular-progress-button/library/1.1.3/res/drawable/cpb_background.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_round.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\messenger_button_blue_bg_round.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/back.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/back.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_littlebig.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\button_littlebig.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/background_login.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/background_login.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_play.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\btn_play.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/icon_main_shop.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/icon_main_shop.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background2.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\background2.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/character.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/character.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_header_background.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_auth_dialog_header_background.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/main_bar_bottom.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/main_bar_bottom.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_base.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\button_base.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/sad.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/sad.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\splash_1.jpg",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\splash_1.jpg"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/status_bar2.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/status_bar2.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\heart.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\heart.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/status_bar1.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/status_bar1.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\status_bar2.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\status_bar2.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_icon.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_button_icon.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_signin_btn_icon_dark.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable\\common_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/common_signin_btn_text_dark.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/drawable/common_signin_btn_text_dark.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable\\common_signin_btn_text_dark.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/messenger_button_blue_bg_round.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/messenger_button_blue_bg_round.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background1.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\background1.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/firstbar.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/firstbar.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_recording.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\btn_recording.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/common_signin_btn_icon_dark.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/drawable/common_signin_btn_icon_dark.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_round.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\messenger_button_white_bg_round.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_background.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_button_background.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\blackstage.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\blackstage.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_background.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_auth_dialog_background.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\background.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/secondbar.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/secondbar.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_google.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\button_google.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/common_signin_btn_text_light.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/drawable/common_signin_btn_text_light.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_selector.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\messenger_button_blue_bg_selector.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/character_main.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/character_main.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_background.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_auth_dialog_background.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/background.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/background.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_send_background.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_button_send_background.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_header_background.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_auth_dialog_header_background.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\status_bar1.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\status_bar1.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/common_signin_btn_icon_light.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/drawable/common_signin_btn_icon_light.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_start.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\button_start.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_login_silver_background.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/com_facebook_button_login_silver_background.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\main_bar_bottom.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\main_bar_bottom.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_selector.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/drawable/messenger_button_white_bg_selector.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_base2.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\background_base2.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/button_start.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/button_start.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_record.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\btn_record.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/chara.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/chara.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fab_label_background.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\fab_label_background.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/pass.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/pass.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_character.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\icon_character.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/button_arrow.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/button_arrow.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\character.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\character.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/blackstage.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/blackstage.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_cancel_background.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/happy.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/happy.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_arrow.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\button_arrow.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_play.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_play.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_silver_background.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_button_login_silver_background.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/carrot.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/carrot.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\character_main.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\character_main.png"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/heart.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/heart.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\main_bar_up.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\main_bar_up.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\status_bar3.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\drawable\\status_bar3.png"
     }
 ]
