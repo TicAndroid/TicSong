@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/alpha_anim_opposite.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/anim/alpha_anim_opposite.xml"
-    },
-    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
@@ -16,16 +12,28 @@
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_slide_in_bottom.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/alpha_anim.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/anim/alpha_anim.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/scale_anim2.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/anim/scale_anim2.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/error_x_in.xml",
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/cn.pedant.sweetalert/library/1.3/res/anim/error_x_in.xml"
     },
     {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/alpha_anim.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/anim/alpha_anim.xml"
+    },
+    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/error_frame_in.xml",
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/cn.pedant.sweetalert/library/1.3/res/anim/error_frame_in.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_slide_out_bottom.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
@@ -36,16 +44,12 @@
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/cn.pedant.sweetalert/library/1.3/res/anim/modal_in.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_slide_out_bottom.xml"
-    },
-    {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_popup_exit.xml"
-    },
-    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/scale_anim.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/anim/scale_anim.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
@@ -64,11 +68,19 @@
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/cn.pedant.sweetalert/library/1.3/res/anim/modal_out.xml"
     },
     {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/scale_anim3.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/anim/scale_anim3.xml"
+    },
+    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_fade_out.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/success_bow_roate.xml",
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/cn.pedant.sweetalert/library/1.3/res/anim/success_bow_roate.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/rotate_anim.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/anim/rotate_anim.xml"
     }
 ]

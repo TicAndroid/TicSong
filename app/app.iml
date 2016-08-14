@@ -122,9 +122,15 @@
     <orderEntry type="library" exported="" name="butterknife-7.0.1" level="project" />
     <orderEntry type="library" exported="" name="google-http-client-android-1.22.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.4.0" level="project" />
+<<<<<<< HEAD
     <orderEntry type="library" exported="" name="google-api-client-android-1.22.0" level="project" />
     <orderEntry type="library" exported="" name="library-1.0.18" level="project" />
     <orderEntry type="library" exported="" name="google-http-client-gson-1.22.0" level="project" />
+=======
+    <orderEntry type="library" exported="" name="google-http-client-gson-1.22.0" level="project" />
+    <orderEntry type="library" exported="" name="library-1.0.18" level="project" />
+    <orderEntry type="library" exported="" name="google-api-client-android-1.22.0" level="project" />
+>>>>>>> 6c9d6786509648ca100cd49452dedc7a1c6fc7e9
     <orderEntry type="library" exported="" name="okio-1.6.0" level="project" />
     <orderEntry type="library" exported="" name="google-api-client-gson-1.22.0" level="project" />
     <orderEntry type="library" exported="" name="guava-jdk5-17.0" level="project" />
