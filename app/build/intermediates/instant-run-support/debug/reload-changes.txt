@@ -1,8 +1,6 @@
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\R$style$override.class
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\cn\pedant\SweetAlert\R$style$override.class
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\facebook\R$style$override.class
+CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\GameActivity$9$override.class
+CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\GameActivity$9$1$override.class
 CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\pnikosis\materialishprogress\R$style$override.class
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\v7\appcompat\R$style$override.class
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\R$styleable$override.class
-CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\R$override.class
+CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\GameActivity$RecognitionHandler$override.class
+CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\GameActivity$override.class
+CHANGED,C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\GameActivity$10$override.class

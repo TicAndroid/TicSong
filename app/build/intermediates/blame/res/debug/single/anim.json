@@ -8,6 +8,10 @@
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\anim\\abc_slide_in_top.xml"
     },
     {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\anim\\scale_anim3.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\anim\\scale_anim3.xml"
+    },
+    {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\anim\\abc_slide_in_bottom.xml"
     },
@@ -22,6 +26,10 @@
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\anim\\modal_in.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\cn.pedant.sweetalert\\library\\1.3\\res\\anim\\modal_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\anim\\scale_anim2.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\anim\\scale_anim2.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\anim\\error_frame_in.xml",
@@ -44,11 +52,19 @@
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\anim\\alpha_anim.xml"
     },
     {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\anim\\success_mask_layout.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\cn.pedant.sweetalert\\library\\1.3\\res\\anim\\success_mask_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\anim\\rotate_anim.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\anim\\rotate_anim.xml"
+    },
+    {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\anim\\error_x_in.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\cn.pedant.sweetalert\\library\\1.3\\res\\anim\\error_x_in.xml"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\anim\\success_mask_layout.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\cn.pedant.sweetalert\\library\\1.3\\res\\anim\\success_mask_layout.xml"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\anim\\scale_anim.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\src\\main\\res\\anim\\scale_anim.xml"
     }
 ]

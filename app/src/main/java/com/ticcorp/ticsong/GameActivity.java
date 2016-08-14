@@ -14,6 +14,8 @@ import android.text.TextWatcher;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -21,11 +23,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
-import android.widget.Scroller;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dd.CircularProgressButton;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.naver.speech.clientapi.SpeechConfig;
@@ -63,6 +63,16 @@ public class GameActivity extends Activity {
     public TextWatcher textWatcher;
 
     public ScrollView scrollView;
+    public ImageView recordImage;
+    public Animation anim;
+    public Animation anim_scale;
+    public Animation anim_scale2;
+    public Animation anim_scale3;
+
+    public ImageView progress;
+    public ImageView circle1;
+    public ImageView circle2;
+    public ImageView circle3;
 
     //fab버튼 & 아이템
     public FloatingActionsMenu menuMultipleActions;
@@ -87,8 +97,6 @@ public class GameActivity extends Activity {
     EditText edit_ans;
     @Bind(R.id.btn_play)
     ImageView btn_play;
-    @Bind(R.id.btn_progress)
-    CircularProgressButton btn_progress;
     @Bind(R.id.img_life1)
     ImageView img_life1;
     @Bind(R.id.img_life2)
@@ -132,15 +140,19 @@ public class GameActivity extends Activity {
                 return true;
             }
         });
+        progress = (ImageView) findViewById(R.id.progress);
 
+        circle1 = (ImageView) findViewById(R.id.circle_1);
+        circle2 = (ImageView) findViewById(R.id.circle_2);
+        circle3 = (ImageView) findViewById(R.id.circle_3);
 
         menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
         fabClick();
 
-        item1 = (FloatingActionButton) findViewById(R.id.action_a);  //아티스트 보여주기
-        item2 = (FloatingActionButton) findViewById(R.id.action_b);  //3초 듣기
-        item3 = (FloatingActionButton) findViewById(R.id.action_c);  //정답 1회 증가
-        item4 = (FloatingActionButton) findViewById(R.id.action_d);  //제목 한 글자 보여주기
+        item4 = (FloatingActionButton) findViewById(R.id.action_a);  //아티스트 보여주기 ->한글자
+        item1 = (FloatingActionButton) findViewById(R.id.action_b);  //3초 듣기 ->아티스트
+        item3 = (FloatingActionButton) findViewById(R.id.action_c);  //정답 1회 증가 ->그대로
+        item2 = (FloatingActionButton) findViewById(R.id.action_d);  //제목 한 글자 보여주기->3초
 
         item1.setOnClickListener(new View.OnClickListener() {
             @Override   //아티스트 공개
@@ -191,6 +203,12 @@ public class GameActivity extends Activity {
         });
         /////////////
 
+        recordImage = (ImageView) findViewById(R.id.record_pan);
+        anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_anim);
+        anim_scale = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale_anim);
+        anim_scale2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale_anim2);
+        anim_scale3 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale_anim3);
+
         //음성인식
         handler = new RecognitionHandler(this);
         naverRecognizer = new NaverRecognizer(this, handler, CLIENT_ID, SPEECH_CONFIG);
@@ -232,7 +250,7 @@ public class GameActivity extends Activity {
                     //menuMultipleActions.collapse();
                     Toast.makeText(getBaseContext(),"아이템이 이미 사용되었습니다!",Toast.LENGTH_SHORT).show();
                 }else{
-                    fabBackground.setBackgroundColor(getResources().getColor(R.color.black_semi_transparent));
+                    //fabBackground.setBackgroundColor(getResources().getColor(R.color.black_semi_transparent));
                     item1.setEnabled(true);
                     item2.setEnabled(true);
                     item3.setEnabled(true);
@@ -608,6 +626,12 @@ public class GameActivity extends Activity {
                 if (mPlayer.isPlaying()) {
                     mPlayer.stop();
                     mPlayer.release();
+                    progress.setVisibility(View.INVISIBLE);
+                    progress.clearAnimation();
+                    circle1.clearAnimation();
+                    circle2.clearAnimation();
+                    circle3.clearAnimation();
+
                 }
             }
         } catch (Exception e) {
@@ -639,8 +663,6 @@ public class GameActivity extends Activity {
         // time ms만큼 음악 재생, time = -1일 경우 계속 재생
         if (time >= 0) {
             gameMode = 1; // 문제 내는 중 모드로 변경
-            btn_progress.setVisibility(View.VISIBLE);
-            btn_play.setVisibility(View.INVISIBLE); // 플레이 버튼 숨기고 프로그레스 버튼 진행
             btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
             mPlayer = new MediaPlayer();
             mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -655,7 +677,11 @@ public class GameActivity extends Activity {
                 e.printStackTrace();
             }
             mPlayer.start();
-            simulateSuccessProgress(btn_progress, time);
+            progress.setVisibility(View.VISIBLE);
+            progress.startAnimation(anim);
+            circle1.startAnimation(anim_scale);
+            circle2.startAnimation(anim_scale2);
+            circle3.startAnimation(anim_scale3);
             Handler mHandler = new Handler();
             mHandler.postDelayed(new Runnable() { // time ms 후 음악 정지
                 @Override
@@ -667,9 +693,11 @@ public class GameActivity extends Activity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            btn_play.setVisibility(View.VISIBLE); // 프로그레스 버튼 숨기고 플레이 버튼 드러내기
-                            btn_progress.setVisibility(View.INVISIBLE);
-                            btn_progress.setProgress(0); // 프로그레스 초기화
+                            progress.setVisibility(View.INVISIBLE);
+                            progress.clearAnimation();
+                            circle1.clearAnimation();
+                            circle2.clearAnimation();
+                            circle3.clearAnimation();
                             btn_pass.setVisibility(View.VISIBLE); // 패스 버튼 드러내기
                             frame_ans.setVisibility(View.VISIBLE); // 정답창 드러내기
                             // 문제를 한 번 들어야 정답창이 드러나도록 함
@@ -683,6 +711,11 @@ public class GameActivity extends Activity {
             frame_ans.setVisibility(View.INVISIBLE); // 정답창 숨기기
             mPlayer = new MediaPlayer();
             mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            progress.setVisibility(View.VISIBLE);
+            progress.startAnimation(anim);
+            circle1.startAnimation(anim_scale);
+            circle2.startAnimation(anim_scale2);
+            circle3.startAnimation(anim_scale3);
             try {
                 mPlayer.setDataSource(addressArray.get(quizNum - 1));
             } catch (IOException e) {
@@ -777,21 +810,6 @@ public class GameActivity extends Activity {
         return resultTxt;
     }
 
-    // 프로그레스 바
-    private void simulateSuccessProgress(final CircularProgressButton button, int duration) {
-        ValueAnimator widthAnimation = ValueAnimator.ofInt(1, 100);
-        widthAnimation.setDuration(duration);
-        widthAnimation.setInterpolator(new AccelerateDecelerateInterpolator());
-        widthAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                Integer value = (Integer) animation.getAnimatedValue();
-                button.setProgress(value);
-            }
-        });
-        widthAnimation.start();
-    }
-
     //이하 음성인식
     @Override
     protected void onResume() {
@@ -836,6 +854,7 @@ public class GameActivity extends Activity {
                 // 지금부터 음성을 받음
                 txt_voice_result.setText("");
                 txt_voice_system.setText("지금 말해주세요!");
+                recordImage.startAnimation(anim);
                 writer = new AudioWriterPCM(
                         Environment.getExternalStorageDirectory().getAbsolutePath() + "/NaverSpeechTest");
                 writer.open("Test");

@@ -1,28 +1,39 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ScrollView
         android:id="@+id/scroll_part"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:focusableInTouchMode="true"
-        android:fadeScrollbars="true">
+        android:fadeScrollbars="true"
+        android:focusableInTouchMode="true">
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="@drawable/background_star3" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/background_star3" />
+        </FrameLayout>
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/star" />
 
     <LinearLayout
         android:id="@+id/game_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="@drawable/splash_back1"
+        android:orientation="vertical"
         android:weightSum="100">
 
         <LinearLayout
@@ -108,92 +119,85 @@
                     android:weightSum="100">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="0dp"
+                        android:layout_gravity="center"
                         android:layout_weight="40"
                         android:orientation="horizontal"
                         android:weightSum="100">
 
-                        <Space
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="30"/>
-
                         <FrameLayout
                             android:id="@+id/play"
-                            android:gravity="center"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="40">
+                            android:gravity="center">
 
                             <ImageView
                                 android:id="@+id/btn_play"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/a_play"
-                                android:text="PLAY" />
-
-                            <com.dd.CircularProgressButton
-                                android:id="@+id/btn_progress"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
                                 android:layout_gravity="center"
-                                android:background="#00000000"
-                                android:textColor="@color/cpb_white"
-                                android:textSize="36sp"
+                                android:src="@drawable/play_game" />
+
+                            <ImageView
+                                android:id="@+id/progress"
+                                android:layout_width="170dp"
+                                android:layout_height="170dp"
+                                android:layout_gravity="center"
                                 android:visibility="invisible"
-                                app:cpb_colorIndicator="#005298be"
-                                app:cpb_colorIndicatorBackground="@color/cpb_white"
-                                app:cpb_colorProgress="#00000000"
-                                app:cpb_cornerRadius="96dp" />
+                                android:background="@drawable/progressbar" />
+
+                            <ImageView
+                                android:id="@+id/circle_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/a_circle_1" />
+
+                            <ImageView
+                                android:id="@+id/circle_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/a_circle_2" />
+
+                            <ImageView
+                                android:id="@+id/circle_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/a_circle_3" />
 
                         </FrameLayout>
 
-                        <Space
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="30"/>
+
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="15"
+                        android:layout_height="80dp"
                         android:gravity="center"
-                        android:orientation="horizontal"
-                        android:padding="20dp"
-                        android:weightSum="100">
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:id="@+id/img_life1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="9"
-                            android:background="@drawable/heart" />
-
-                        <Space
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="15" />
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/start_heart" />
 
                         <ImageView
                             android:id="@+id/img_life2"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="9"
-                            android:background="@drawable/heart" />
-
-                        <Space
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="15" />
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/start_heart" />
 
                         <ImageView
                             android:id="@+id/img_life3"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="9"
-                            android:background="@drawable/heart" />
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/start_heart" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -215,44 +219,48 @@
                         fab:fab_addButtonColorNormal="@color/white"
                         fab:fab_addButtonColorPressed="@color/white_pressed"
                         fab:fab_addButtonPlusIconColor="@color/half_black"
-                        fab:fab_addButtonSize="mini"
+
                         fab:fab_labelStyle="@style/menu_labels_style">
 
                         <com.getbase.floatingactionbutton.FloatingActionButton
                             android:id="@+id/action_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            fab:fab_colorNormal="@color/white"
+                            android:src="@drawable/item_pen"
+                            fab:fab_colorNormal="#30000000"
                             fab:fab_colorPressed="@color/white_pressed"
-                            fab:fab_size="mini"
-                            fab:fab_title="아티스트 보여주기" />
+
+                            fab:fab_title="한 글자" />
 
                         <com.getbase.floatingactionbutton.FloatingActionButton
                             android:id="@+id/action_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            fab:fab_colorNormal="@color/white"
+                            android:src="@drawable/item_artist"
+                            fab:fab_colorNormal="#30000000"
                             fab:fab_colorPressed="@color/white_pressed"
-                            fab:fab_size="mini"
-                            fab:fab_title="3초 듣기" />
+
+                            fab:fab_title="아티스트" />
 
                         <com.getbase.floatingactionbutton.FloatingActionButton
                             android:id="@+id/action_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            fab:fab_colorNormal="@color/white"
+                            android:src="@drawable/item_star"
+                            fab:fab_colorNormal="#30000000"
                             fab:fab_colorPressed="@color/white_pressed"
-                            fab:fab_size="mini"
-                            fab:fab_title="정답 1회 증가" />
+
+                            fab:fab_title="목숨" />
 
                         <com.getbase.floatingactionbutton.FloatingActionButton
                             android:id="@+id/action_d"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            fab:fab_colorNormal="@color/white"
+                            android:src="@drawable/item_head"
+                            fab:fab_colorNormal="#30000000"
                             fab:fab_colorPressed="@color/white_pressed"
-                            fab:fab_size="mini"
-                            fab:fab_title="제목 한 글자 보여주기" />
+
+                            fab:fab_title="3초" />
 
                     </com.getbase.floatingactionbutton.FloatingActionsMenu>
                 </RelativeLayout>
@@ -317,43 +325,60 @@
 
         </LinearLayout>
 
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_voice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="#33000000">
 
         <FrameLayout
-            android:id="@+id/frame_voice"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="260dp"
             android:layout_gravity="bottom"
-            android:background="#33000000"
-            android:visibility="gone">
+            android:background="#FFF"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_gravity="bottom"
-                android:background="#FFF"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txt_voice_result"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="-"
-                    android:textColor="#000" />
+                    android:textColor="#000"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/txt_voice_system"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="연결 중입니다. 아직 말하지 마세요!"
-                    android:textColor="#999" />
+                    android:textColor="#999"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/record_pan"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/a_record" />
 
             </LinearLayout>
-
         </FrameLayout>
 
-    </LinearLayout>
+    </FrameLayout>
+
+
 </FrameLayout>
