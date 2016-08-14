@@ -25,7 +25,7 @@ public class SplashActivity extends Activity {
     SharedPreferences prefs;
     final String firstRunPrefs = "firstRun";
 
-    DBHelper dbHelper;
+  //  DBHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +39,7 @@ public class SplashActivity extends Activity {
         boolean firstRun = prefs.getBoolean(firstRunPrefs, true);
         /* Is the First Run */
         if(firstRun) {
-
             Log.d("FirstRun",firstRunPrefs);
-
 
             /* Change First Run prefs to FALSE */
             SharedPreferences.Editor editor = prefs.edit();
@@ -49,7 +47,8 @@ public class SplashActivity extends Activity {
             editor.commit();
         }
 
-        /* Init DB */
+
+        /* Init DB
         dbHelper = new DBHelper(this);
         Log.e("DBHelper",dbHelper.toString());
 
@@ -60,24 +59,19 @@ public class SplashActivity extends Activity {
 
             Log.e("DBHelper",c.getString(c.getColumnIndex("userId")));
         }
+*/
+
+        final ImageView iv = (ImageView)findViewById(R.id.ani_twinkle);
+        Animation anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.alpha_anim);
+        iv.startAnimation(anim);    //twinkle~
 
 
-        final ImageView iv = (ImageView)findViewById(R.id.ani_on);
-        Animation anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.alpha_anim_opposite);
-        iv.startAnimation(anim);
-
-        final ImageView iv2 = (ImageView)findViewById(R.id.ani_off);
-        //Animation anim2 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.alpha_anim);
-        //iv.startAnimation(anim2);
-
-
-        iv2.setVisibility(View.VISIBLE);
         Handler hd = new Handler();
-        hd.postDelayed(new splashhandler(), 2500);
+        hd.postDelayed(new splashhandler(), 3500);
     }
     private class splashhandler implements Runnable {
         public void run() {
-            startActivity(new Intent(getApplication(), LoginActivity.class)); // 로딩이 끝난후 이동할 Activity
+            startActivity(new Intent(getApplication(), FBActivity.class)); // 로딩이 끝난후 이동할 Activity
             SplashActivity.this.finish(); // 로딩페이지 Activity Stack에서 제거
         }
     }

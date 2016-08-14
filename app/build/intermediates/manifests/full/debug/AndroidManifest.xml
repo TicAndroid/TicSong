@@ -33,40 +33,21 @@
         <activity
             android:name="com.ticcorp.ticsong.SplashActivity"
             android:screenOrientation="portrait" >
-
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
         </activity>
-        <activity
-            android:name="com.ticcorp.ticsong.LoginActivity"
-            android:label="로그인화면"
-            android:screenOrientation="portrait" />
         <activity
             android:name="com.ticcorp.ticsong.FBActivity"
             android:label="메인화면"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.MainActivity"
             android:label="메인화면"
             android:screenOrientation="portrait" >
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.GameActivity"

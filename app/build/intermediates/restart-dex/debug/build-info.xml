@@ -4,7 +4,7 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="328588412999997"
+    timestamp="5573998110621"
     token="28693691338866827" >
 
     <task
@@ -24,22 +24,28 @@
         location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\res\resources-debug.ap_"
         type="RESOURCES" />
 
-    <build timestamp="328299558053387" >
+    <build timestamp="4568225317159" >
         <artifact
             location="C:\Users\JPark\Documents\TicMaster\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="328384728813914"
+        timestamp="5381987387606"
         verifier="R_CLASS_CHANGE" >
         <artifact
             location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
             type="DEX" />
         <artifact
+            location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
+            type="DEX" />
+        <artifact
             location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
             type="DEX" />
     </build>
-    <build timestamp="328588412999997" >
+    <build timestamp="5573998110621" >
         <artifact
             location="C:\Users\JPark\Documents\TicMaster\app\build\intermediates\res\resources-debug.ap_"
             type="RESOURCES" />

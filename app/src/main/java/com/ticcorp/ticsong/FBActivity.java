@@ -39,20 +39,8 @@ public class FBActivity extends Activity {
         super.onCreate(savedInstanceState);
         mContext = getApplicationContext();
 
-
         FacebookSdk.sdkInitialize(this.getApplicationContext());
-        setContentView(R.layout.activity_main);
-
-
-        ImageButton btn_start = (ImageButton) findViewById(R.id.btn_start);
-
-        btn_start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplication(), GameActivity.class));
-            }
-        });
-
+        setContentView(R.layout.activity_login);
 
         callbackManager = CallbackManager.Factory.create();
         LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
@@ -128,6 +116,7 @@ public class FBActivity extends Activity {
             @Override
             public void run() {
                 //loginBtn.setVisibility(View.INVISIBLE);
+                startActivity(new Intent(getApplication(), MainActivity.class));
             }
         });
 
