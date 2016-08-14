@@ -4,27 +4,27 @@
     api-level="19"
     density="xhdpi"
     format="7"
-    timestamp="274823725425617"
+    timestamp="275991525564716"
     token="-3161456651158814014" >
 
     <task
         name="javac"
-        duration="654" />
+        duration="476" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="53" />
+        duration="34" />
     <task
         name="verifier"
-        duration="12" />
+        duration="13" />
 
     <artifact
         location="/Users/yPeA/TicSong_Main/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="274823725425617" >
+    <build timestamp="275991525564716" >
         <artifact
             location="/Users/yPeA/TicSong_Main/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />

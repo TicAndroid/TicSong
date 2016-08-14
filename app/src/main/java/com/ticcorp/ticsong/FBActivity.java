@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
@@ -34,6 +35,8 @@ public class FBActivity extends Activity {
     String email = "";
     Context mContext;
 
+    TextView user_name;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,8 +46,9 @@ public class FBActivity extends Activity {
         FacebookSdk.sdkInitialize(this.getApplicationContext());
         setContentView(R.layout.activity_main);
 
-
+        user_name = (TextView) findViewById(R.id.name);
         ImageButton btn_start = (ImageButton) findViewById(R.id.btn_start);
+        user_name.setText(name);
 
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
