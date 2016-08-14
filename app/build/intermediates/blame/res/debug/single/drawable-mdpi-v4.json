@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_signin_btn_text_normal_dark.9.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable-mdpi\\common_signin_btn_text_normal_dark.9.png"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_signin_btn_text_focus_dark.9.png",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable-mdpi\\common_signin_btn_text_focus_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_signin_btn_text_normal_dark.9.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable-mdpi\\common_signin_btn_text_normal_dark.9.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png",
@@ -88,12 +88,12 @@
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\drawable-mdpi\\abc_ic_go_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\drawable-mdpi\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_signin_btn_icon_pressed_dark.9.png",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable-mdpi\\common_signin_btn_icon_pressed_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\drawable-mdpi\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_black_topnub.png",
@@ -132,12 +132,12 @@
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable-mdpi\\common_signin_btn_icon_pressed_light.9.png"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_signin_btn_icon_normal_dark.9.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable-mdpi\\common_signin_btn_icon_normal_dark.9.png"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_full_open_on_phone.png",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable-mdpi\\common_full_open_on_phone.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_signin_btn_icon_normal_dark.9.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable-mdpi\\common_signin_btn_icon_normal_dark.9.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
@@ -224,32 +224,32 @@
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable-mdpi-v4\\com_facebook_button_icon_blue.png"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\drawable-mdpi\\abc_ic_menu_selectall_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\common_signin_btn_text_pressed_dark.9.png",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable-mdpi\\common_signin_btn_text_pressed_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\drawable-mdpi\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_square.png",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_square.png"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\drawable-mdpi\\abc_ic_commit_search_api_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_plusone_tall_off_client.png",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-plus\\7.8.0\\res\\drawable-mdpi\\ic_plusone_tall_off_client.png"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\drawable-mdpi\\abc_btn_radio_to_on_mtrl_000.png"
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\drawable-mdpi\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_send_icon_white.png",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable-mdpi-v4\\com_facebook_button_send_icon_white.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\drawable-mdpi\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png",
@@ -316,12 +316,12 @@
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\drawable-mdpi\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_clear_mtrl_alpha.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\drawable-mdpi\\abc_ic_clear_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\fab_bg_mini.png",
         "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.getbase\\floatingactionbutton\\1.10.1\\res\\drawable-mdpi-v4\\fab_bg_mini.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_clear_mtrl_alpha.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.0\\res\\drawable-mdpi\\abc_ic_clear_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicMaster\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",

@@ -1,233 +1,273 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/game_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_base"
-    android:orientation="vertical"
-    android:weightSum="100">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_part"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:fadeScrollbars="true">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/background_star3" />
+    </ScrollView>
 
     <LinearLayout
-        android:id="@+id/first_part"
+        android:id="@+id/game_layout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="6"
-        android:background="@drawable/firstbar"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="5dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/splash_back1"
         android:weightSum="100">
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2" />
-
-        <ImageButton
-            android:id="@+id/btn_exit"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="6"
-            android:background="@drawable/back" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="71" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="15"
-            android:text="Pass"
-            android:textSize="20sp" />
-
-        <ImageButton
-            android:id="@+id/btn_pass"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="6"
-            android:background="@drawable/pass" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/msg_part"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="11"
-        android:background="#44000000">
-
-        <TextView
-            android:id="@+id/txt_msg"
+        <LinearLayout
+            android:id="@+id/first_part"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:singleLine="true"
-            android:text="메시지 출력 부분!"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:layout_height="33dp"
+            android:background="@drawable/firstbar"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="100">
 
-    </LinearLayout>
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
 
-    <LinearLayout
-        android:id="@+id/fab_background"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="83"
-        android:weightSum="100"
-        android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/btn_exit"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="6"
+                android:background="@drawable/back" />
 
-        <FrameLayout
-            android:id="@+id/play_part"
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="71" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="15"
+                android:text="Pass"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/btn_pass"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="6"
+                android:background="@drawable/pass" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/msg_part"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#22000000">
+
+            <TextView
+                android:id="@+id/txt_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="메시지 출력 부분!"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fab_background"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="90">
+            android:layout_weight="100"
+            android:orientation="vertical"
+            android:weightSum="100">
 
-            <LinearLayout
+            <FrameLayout
+                android:id="@+id/play_part"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <FrameLayout
-                    android:id="@+id/play"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/btn_play"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:src="@drawable/btn_play"
-                        android:text="PLAY" />
-
-                    <com.dd.CircularProgressButton
-                        android:id="@+id/btn_progress"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:layout_gravity="center"
-                        android:background="#00000000"
-                        android:textColor="@color/cpb_white"
-                        android:textSize="36sp"
-                        android:visibility="invisible"
-                        app:cpb_colorIndicator="#5298be"
-                        app:cpb_colorIndicatorBackground="@color/cpb_white"
-                        app:cpb_colorProgress="#00000000"
-                        app:cpb_cornerRadius="96dp" />
-
-                </FrameLayout>
+                android:layout_height="0dp"
+                android:layout_weight="100">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    android:padding="20dp"
+                    android:orientation="vertical"
                     android:weightSum="100">
 
-                    <ImageView
-                        android:id="@+id/img_life1"
-                        android:layout_width="0dp"
-                        android:layout_height="30dp"
-                        android:layout_weight="9"
-                        android:background="@drawable/heart" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="40"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
 
-                    <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="5" />
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"/>
 
-                    <ImageView
-                        android:id="@+id/img_life2"
-                        android:layout_width="0dp"
-                        android:layout_height="30dp"
-                        android:layout_weight="9"
-                        android:background="@drawable/heart" />
+                        <FrameLayout
+                            android:id="@+id/play"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40">
 
-                    <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="5" />
+                            <ImageView
+                                android:id="@+id/btn_play"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/a_play"
+                                android:text="PLAY" />
 
-                    <ImageView
-                        android:id="@+id/img_life3"
-                        android:layout_width="0dp"
-                        android:layout_height="30dp"
-                        android:layout_weight="9"
-                        android:background="@drawable/heart" />
+                            <com.dd.CircularProgressButton
+                                android:id="@+id/btn_progress"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:background="#00000000"
+                                android:textColor="@color/cpb_white"
+                                android:textSize="36sp"
+                                android:visibility="invisible"
+                                app:cpb_colorIndicator="#005298be"
+                                app:cpb_colorIndicatorBackground="@color/cpb_white"
+                                app:cpb_colorProgress="#00000000"
+                                app:cpb_cornerRadius="96dp" />
+
+                        </FrameLayout>
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="15"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        android:weightSum="100">
+
+                        <ImageView
+                            android:id="@+id/img_life1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="9"
+                            android:background="@drawable/heart" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15" />
+
+                        <ImageView
+                            android:id="@+id/img_life2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="9"
+                            android:background="@drawable/heart" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15" />
+
+                        <ImageView
+                            android:id="@+id/img_life3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="9"
+                            android:background="@drawable/heart" />
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="bottom">
-
-                <com.getbase.floatingactionbutton.FloatingActionsMenu
-                    android:id="@+id/multiple_actions"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginRight="5dp"
-                    fab:fab_addButtonColorNormal="@color/white"
-                    fab:fab_addButtonColorPressed="@color/white_pressed"
-                    fab:fab_addButtonPlusIconColor="@color/half_black"
-                    fab:fab_addButtonSize="mini"
-                    fab:fab_labelStyle="@style/menu_labels_style">
-
-                    <com.getbase.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/action_a"
+                    <com.getbase.floatingactionbutton.FloatingActionsMenu
+                        android:id="@+id/multiple_actions"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        fab:fab_colorNormal="@color/white"
-                        fab:fab_colorPressed="@color/white_pressed"
-                        fab:fab_size="mini"
-                        fab:fab_title="아티스트 보여주기" />
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        fab:fab_addButtonColorNormal="@color/white"
+                        fab:fab_addButtonColorPressed="@color/white_pressed"
+                        fab:fab_addButtonPlusIconColor="@color/half_black"
+                        fab:fab_addButtonSize="mini"
+                        fab:fab_labelStyle="@style/menu_labels_style">
 
-                    <com.getbase.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/action_b"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        fab:fab_colorNormal="@color/white"
-                        fab:fab_colorPressed="@color/white_pressed"
-                        fab:fab_size="mini"
-                        fab:fab_title="3초 듣기" />
+                        <com.getbase.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/action_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            fab:fab_colorNormal="@color/white"
+                            fab:fab_colorPressed="@color/white_pressed"
+                            fab:fab_size="mini"
+                            fab:fab_title="아티스트 보여주기" />
 
-                    <com.getbase.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/action_c"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        fab:fab_colorNormal="@color/white"
-                        fab:fab_colorPressed="@color/white_pressed"
-                        fab:fab_size="mini"
-                        fab:fab_title="정답 1회 증가" />
+                        <com.getbase.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/action_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            fab:fab_colorNormal="@color/white"
+                            fab:fab_colorPressed="@color/white_pressed"
+                            fab:fab_size="mini"
+                            fab:fab_title="3초 듣기" />
 
-                    <com.getbase.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/action_d"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        fab:fab_colorNormal="@color/white"
-                        fab:fab_colorPressed="@color/white_pressed"
-                        fab:fab_size="mini"
-                        fab:fab_title="제목 한 글자 보여주기" />
+                        <com.getbase.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/action_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            fab:fab_colorNormal="@color/white"
+                            fab:fab_colorPressed="@color/white_pressed"
+                            fab:fab_size="mini"
+                            fab:fab_title="정답 1회 증가" />
 
-                </com.getbase.floatingactionbutton.FloatingActionsMenu>
-            </RelativeLayout>
-        </FrameLayout>
+                        <com.getbase.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/action_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            fab:fab_colorNormal="@color/white"
+                            fab:fab_colorPressed="@color/white_pressed"
+                            fab:fab_size="mini"
+                            fab:fab_title="제목 한 글자 보여주기" />
+
+                    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+                </RelativeLayout>
+            </FrameLayout>
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/frame_ans"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="10"
+            android:layout_height="47dp"
             android:background="@android:color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingBottom="8dp"
@@ -276,44 +316,44 @@
             </FrameLayout>
 
         </LinearLayout>
-    </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/frame_voice"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:background="#33000000"
-        android:visibility="gone">
 
-        <LinearLayout
+        <FrameLayout
+            android:id="@+id/frame_voice"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
             android:layout_gravity="bottom"
-            android:background="#FFF"
-            android:orientation="vertical">
+            android:background="#33000000"
+            android:visibility="gone">
 
-            <TextView
-                android:id="@+id/txt_voice_result"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:text="-"
-                android:textColor="#000" />
+                android:layout_height="200dp"
+                android:layout_gravity="bottom"
+                android:background="#FFF"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txt_voice_system"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:text="연결 중입니다. 아직 말하지 마세요!"
-                android:textColor="#999" />
+                <TextView
+                    android:id="@+id/txt_voice_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="#000" />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/txt_voice_system"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="연결 중입니다. 아직 말하지 마세요!"
+                    android:textColor="#999" />
 
-    </FrameLayout>
+            </LinearLayout>
 
+        </FrameLayout>
 
-</LinearLayout>
+    </LinearLayout>
+</FrameLayout>

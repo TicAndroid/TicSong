@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
@@ -19,6 +20,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.Scroller;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -59,7 +62,7 @@ public class GameActivity extends Activity {
     public MediaPlayer mPlayer;
     public TextWatcher textWatcher;
 
-    public LinearLayout gameLayout;
+    public ScrollView scrollView;
 
     //fab버튼 & 아이템
     public FloatingActionsMenu menuMultipleActions;
@@ -122,6 +125,14 @@ public class GameActivity extends Activity {
         actionC.setTitle("Item 1");
 
         fabBackground = (LinearLayout) findViewById(R.id.fab_background);
+        scrollView = (ScrollView) findViewById(R.id.scroll_part);
+        scrollView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+
 
         menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
         fabClick();

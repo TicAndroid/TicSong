@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:2:1-88:12
+ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:2:1-89:12
 	xmlns:tools
 		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:3:5-51
 	xmlns:android
@@ -69,7 +69,7 @@ MERGED from [com.android.support:support-v4:23.4.0] C:\Users\JPark\Documents\Tic
 		INJECTED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:19:5-86:19
+ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:19:5-87:19
 MERGED from [com.google.android.gms:play-services-plus:7.8.0] C:\Users\JPark\Documents\TicMaster\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-base:7.8.0] C:\Users\JPark\Documents\TicMaster\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\JPark\Documents\TicMaster\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
@@ -92,7 +92,7 @@ MERGED from [com.android.support:support-v4:23.4.0] C:\Users\JPark\Documents\Tic
 		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:21:9-38
 		REJECTED from [com.pnikosis:materialish-progress:1.0] C:\Users\JPark\Documents\TicMaster\app\build\intermediates\exploded-aar\com.pnikosis\materialish-progress\1.0\AndroidManifest.xml:13:9-45
 	android:theme
-		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:24:9-67
+		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:24:9-56
 	tools:replace
 		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:23:9-51
 receiver#com.ticcorp.ticsong.utils.NetworkChangeReceiver
@@ -152,38 +152,40 @@ ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:5
 	android:name
 		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:58:19-47
 activity#com.ticcorp.ticsong.GameActivity
-ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:68:9-71:20
+ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:68:9-72:20
+	android:windowSoftInputMode
+		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:70:13-55
 	android:screenOrientation
-		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:70:13-49
+		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:71:13-49
 	android:label
 		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:69:13-33
 	android:name
 		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:68:19-47
 activity#com.ticcorp.ticsong.ServerTestActivity
-ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:73:9-76:20
+ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:74:9-77:20
 	android:screenOrientation
-		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:75:13-49
+		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:76:13-49
 	android:label
-		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:74:13-35
+		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:75:13-35
 	android:name
-		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:73:19-53
+		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:74:19-53
 activity#com.facebook.FacebookActivity
-ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:78:9-82:48
+ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:79:9-83:48
 MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] C:\Users\JPark\Documents\TicMaster\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:29:9-32:75
 	android:label
-		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:82:13-45
+		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:83:13-45
 	android:configChanges
-		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:79:13-114
+		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:80:13-114
 	android:theme
-		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:81:13-72
+		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:82:13-72
 	android:name
-		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:78:19-63
+		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:79:19-63
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:84:9-107
+ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:85:9-107
 	android:name
-		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:84:20-65
+		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:85:20-65
 	android:value
-		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:84:66-105
+		ADDED from C:\Users\JPark\Documents\TicMaster\app\src\main\AndroidManifest.xml:85:66-105
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-base:7.8.0] C:\Users\JPark\Documents\TicMaster\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:21:9-23:69
 	android:name

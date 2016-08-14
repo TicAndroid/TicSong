@@ -20,7 +20,7 @@
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        android:theme="@android:style/Theme.NoTitleBar" >
         <receiver
             android:name="com.ticcorp.ticsong.utils.NetworkChangeReceiver"
             android:label="NetworkChangeReceiver" >
@@ -71,7 +71,8 @@
         <activity
             android:name="com.ticcorp.ticsong.GameActivity"
             android:label="게임화면"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.ServerTestActivity"
