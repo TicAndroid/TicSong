@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c1d6db1f902b925fb1bae3bf0590a152dcaf4336">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_e3518efa8781b3f0b9058cfe8c51e00a2ad90319.jar" />
+    </item>
+
+</items>

@@ -46,9 +46,9 @@ public class FBActivity extends Activity {
         FacebookSdk.sdkInitialize(this.getApplicationContext());
         setContentView(R.layout.activity_main);
 
-        user_name = (TextView) findViewById(R.id.name);
+        //user_name = (TextView) findViewById(R.id.name);
         ImageButton btn_start = (ImageButton) findViewById(R.id.btn_start);
-        user_name.setText(name);
+        //user_name.setText(name);
 
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override

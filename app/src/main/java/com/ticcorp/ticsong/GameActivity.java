@@ -1,5 +1,6 @@
 package com.ticcorp.ticsong;
 
+import android.Manifest;
 import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
@@ -11,17 +12,25 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.Scroller;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dd.CircularProgressButton;
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
+import com.gun0912.tedpermission.PermissionListener;
+import com.gun0912.tedpermission.TedPermission;
 import com.naver.speech.clientapi.SpeechConfig;
 import com.ticcorp.ticsong.utils.AudioWriterPCM;
 
@@ -32,6 +41,7 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class GameActivity extends Activity {
 
@@ -55,39 +65,53 @@ public class GameActivity extends Activity {
     public MediaPlayer mPlayer;
     public TextWatcher textWatcher;
 
+    public ScrollView scrollView;
+
+    //fab버튼 & 아이템
+    public FloatingActionsMenu menuMultipleActions;
+    public FloatingActionButton item1;
+    public FloatingActionButton item2;
+    public FloatingActionButton item3;
+    public FloatingActionButton item4;
+    public LinearLayout fabBackground;
+
     //음성인식
     private static final String CLIENT_ID = "6IBqNmtyh17oLX3VbNej"; // 네이버 API ID 확인
-	private static final SpeechConfig SPEECH_CONFIG = SpeechConfig.OPENAPI_KR; // or SpeechConfig.OPENAPI_EN
+    private static final SpeechConfig SPEECH_CONFIG = SpeechConfig.OPENAPI_KR; // or SpeechConfig.OPENAPI_EN
     private RecognitionHandler handler;
     private NaverRecognizer naverRecognizer;
     private AudioWriterPCM writer;
     private boolean voiceRunning;
     private String vResult;
 
-    @Bind(R.id.txt_msg) TextView txt_msg;
-    @Bind(R.id.edit_ans) EditText edit_ans;
-    @Bind(R.id.btn_play) ImageView btn_play;
-    @Bind(R.id.btn_progress) CircularProgressButton btn_progress;
-    @Bind(R.id.img_life1) ImageView img_life1;
-    @Bind(R.id.img_life2) ImageView img_life2;
-    @Bind(R.id.img_life3) ImageView img_life3;
-    @Bind(R.id.img_life4) ImageView img_life4;
-    @Bind(R.id.frame_ans) FrameLayout frame_ans;
-    @Bind(R.id.frame_exit) FrameLayout frame_exit;
-    @Bind(R.id.txt_exit) TextView txt_exit;
-    @Bind(R.id.frame_pass) FrameLayout frame_pass;
-    @Bind(R.id.txt_pass) TextView txt_pass;
-    @Bind(R.id.btn_pass) FrameLayout btn_pass;
-    @Bind(R.id.btn_item) Button btn_item;
-    @Bind(R.id.btn_item_artist) Button btn_item_artist;
-    @Bind(R.id.btn_item_3sec) Button btn_item_3sec;
-    @Bind(R.id.btn_item_life) Button btn_item_life;
-    @Bind(R.id.btn_item_name) Button btn_item_name;
-    @Bind(R.id.btn_send) Button btn_send;
-    @Bind(R.id.btn_voice) Button btn_voice;
-    @Bind(R.id.frame_voice) FrameLayout frame_voice;
-    @Bind(R.id.txt_voice_result) TextView txt_voice_result;
-    @Bind(R.id.txt_voice_system) TextView txt_voice_system;
+    @Bind(R.id.txt_msg)
+    TextView txt_msg;
+    @Bind(R.id.edit_ans)
+    EditText edit_ans;
+    @Bind(R.id.btn_play)
+    ImageView btn_play;
+    @Bind(R.id.btn_progress)
+    CircularProgressButton btn_progress;
+    @Bind(R.id.img_life1)
+    ImageView img_life1;
+    @Bind(R.id.img_life2)
+    ImageView img_life2;
+    @Bind(R.id.img_life3)
+    ImageView img_life3;
+    @Bind(R.id.frame_ans)
+    LinearLayout frame_ans;
+    @Bind(R.id.btn_pass)
+    ImageButton btn_pass;
+    @Bind(R.id.btn_send)
+    ImageButton btn_send;
+    @Bind(R.id.btn_voice)
+    ImageButton btn_voice;
+    @Bind(R.id.frame_voice)
+    FrameLayout frame_voice;
+    @Bind(R.id.txt_voice_result)
+    TextView txt_voice_result;
+    @Bind(R.id.txt_voice_system)
+    TextView txt_voice_system;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,8 +119,90 @@ public class GameActivity extends Activity {
         setContentView(R.layout.activity_game);
         ButterKnife.bind(this);
 
+        new TedPermission(this)
+                .setPermissionListener(permissionlistener)
+                .setDeniedMessage("게임 진행을 위한 권한입니다.")
+                .setPermissions(Manifest.permission.INTERNET, Manifest.permission.ACCESS_NETWORK_STATE,
+                        Manifest.permission.GET_ACCOUNTS, Manifest.permission.WAKE_LOCK,
+                        Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.RECORD_AUDIO)
+                .check();
+
+
         quizSetting();
         textWatching();
+
+        /////////////
+        //Fab 버튼
+        FloatingActionButton actionC = new FloatingActionButton(getBaseContext());
+        actionC.setTitle("Item 1");
+
+        fabBackground = (LinearLayout) findViewById(R.id.fab_background);
+        scrollView = (ScrollView) findViewById(R.id.scroll_part);
+        scrollView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+
+
+        menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
+        fabClick();
+
+        item1 = (FloatingActionButton) findViewById(R.id.action_a);  //아티스트 보여주기
+        item2 = (FloatingActionButton) findViewById(R.id.action_b);  //3초 듣기
+        item3 = (FloatingActionButton) findViewById(R.id.action_c);  //정답 1회 증가
+        item4 = (FloatingActionButton) findViewById(R.id.action_d);  //제목 한 글자 보여주기
+
+        item1.setOnClickListener(new View.OnClickListener() {
+            @Override   //아티스트 공개
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
+                        + "'입니다.", Toast.LENGTH_SHORT).show();
+                itemUsed = 1;
+                edit_ans.setHint("이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
+                        + "'입니다.");
+                menuMultipleActions.collapse();
+            }
+
+        });
+
+        item2.setOnClickListener(new View.OnClickListener() {
+            @Override   //3초 들려주기
+            public void onClick(View view) {
+                musicPlay(3000);
+                itemUsed = 2;
+                menuMultipleActions.collapse();
+            }
+        });
+
+        item3.setOnClickListener(new View.OnClickListener() {
+            @Override   //생명력 증가
+            public void onClick(View view) {
+                if (life >= 3)
+                    Toast.makeText(view.getContext(), "현재 생명력 만땅입니다!", Toast.LENGTH_SHORT).show();
+                else {
+                    itemUsed = 3;
+                    life++;
+                    lifeRefresh();
+                    menuMultipleActions.collapse();
+                }
+            }
+        });
+
+        item4.setOnClickListener(new View.OnClickListener() {
+            @Override   //제목 한글자
+            public void onClick(View view) {
+                itemUsed = 4;
+                Toast.makeText(view.getContext(), "곡 제목의 첫 글자는 '" +
+                        textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
+                edit_ans.setHint("곡 제목의 첫 글자는 '" +
+                        textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.");
+                menuMultipleActions.collapse();
+            }
+        });
+        /////////////
 
         //음성인식
         handler = new RecognitionHandler(this);
@@ -108,70 +214,104 @@ public class GameActivity extends Activity {
         //super.onBackPressed();
         // 뒤로 가기 버튼 터치 시 지금 메인화면으로 돌아가면 경험치를 얻을 수 없다는 알림을 띄우고 다시 확인
         downKeyboard(this, edit_ans);
-        txt_exit.setText("지금 게임에서 나가실 경우 경험치를 얻을 수 없습니다. 그래도 나가시겠습니까?");
-        frame_exit.setVisibility(View.VISIBLE); // 팝업
+        exitOkClick();
     }
 
-    @OnClick (R.id.btn_exit)
-    void exitClick() {
-        // 나가기 버튼 클릭 시 지금 메인화면으로 돌아가면 경험치를 얻을 수 없다는 알림을 띄우고 다시 확인
-        downKeyboard(this, edit_ans);
-        txt_exit.setText("지금 게임에서 나가실 경우 경험치를 얻을 수 없습니다. 그래도 나가시겠습니까?");
-        frame_exit.setVisibility(View.VISIBLE); // 팝업
-    }
-
-    @OnClick (R.id.btn_exit_ok)
-    void exitOkClick() {
-        // 나가기 버튼 확인 시 게임 종료
-        try {
-            if (mPlayer != null) {// 음악 재생 중일 경우 음악 종료
-                if (mPlayer.isPlaying()) {
-                    mPlayer.stop();
-                    mPlayer.release();
+    void fabClick(){
+        //Fab 버튼 클릭시 화면 검/투명
+        menuMultipleActions.setOnFloatingActionsMenuUpdateListener(new FloatingActionsMenu.OnFloatingActionsMenuUpdateListener() {
+            @Override
+            public void onMenuExpanded() {
+                if(gameMode!=2){
+                    item1.setVisibility(View.INVISIBLE);
+                    item2.setVisibility(View.INVISIBLE);
+                    item3.setVisibility(View.INVISIBLE);
+                    item4.setVisibility(View.INVISIBLE);
+                    item1.setEnabled(false);
+                    item2.setEnabled(false);
+                    item3.setEnabled(false);
+                    item4.setEnabled(false);
+                    menuMultipleActions.collapse();
+                    Toast.makeText(getBaseContext(),"문제를 받고 눌러주세요!",Toast.LENGTH_SHORT).show();
+                }else if(itemUsed!=0){
+                    item1.setVisibility(View.INVISIBLE);
+                    item2.setVisibility(View.INVISIBLE);
+                    item3.setVisibility(View.INVISIBLE);
+                    item4.setVisibility(View.INVISIBLE);
+                    item1.setEnabled(false);
+                    item2.setEnabled(false);
+                    item3.setEnabled(false);
+                    item4.setEnabled(false);
+                    //menuMultipleActions.collapse();
+                    Toast.makeText(getBaseContext(),"아이템이 이미 사용되었습니다!",Toast.LENGTH_SHORT).show();
+                }else{
+                    fabBackground.setBackgroundColor(getResources().getColor(R.color.black_semi_transparent));
+                    item1.setEnabled(true);
+                    item2.setEnabled(true);
+                    item3.setEnabled(true);
+                    item4.setEnabled(true);
+                    item1.setVisibility(View.VISIBLE);
+                    item2.setVisibility(View.VISIBLE);
+                    item3.setVisibility(View.VISIBLE);
+                    item4.setVisibility(View.VISIBLE);
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        finish();
+
+            @Override
+            public void onMenuCollapsed() {
+                fabBackground.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+            }
+        });
     }
 
-    @OnClick (R.id.btn_exit_cancel)
-    void exitCancelClick() {
-        // 나가기 버튼 취소 시 팝업 닫고 게임 계속 진행
-        frame_exit.setVisibility(View.GONE); // 팝업 제거
+
+    @OnClick(R.id.btn_exit)
+    void exitOkClick() {
+        // 나가기 버튼 확인 시 게임 종료
+        new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText("정말로 나가시겠습니까?")
+                .setContentText("현재까지 획득한 점수를 모두 잃습니다!")
+                .setCancelText("아니요, 계속 할래요!")
+                .setConfirmText("네, 나갈래요!")
+                .showCancelButton(true)
+                .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+                        sDialog.cancel();
+                    }
+                })
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+                        try {
+                            if (mPlayer != null) {// 음악 재생 중일 경우 음악 종료
+                                if (mPlayer.isPlaying()) {
+                                    mPlayer.stop();
+                                    mPlayer.release();
+                                }
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        finish();
+                    }
+                })
+                .show();
+
+
+
     }
 
-    @OnClick (R.id.btn_pass)
-    void passClick() {
-        // 패스 버튼 클릭 시 확인 팝업을 띄움
-        downKeyboard(this, edit_ans);
-        txt_pass.setText("정말 이번 문제를 패스하시겠습니까?");
-        frame_pass.setVisibility(View.VISIBLE); // 팝업
-    }
-
-    @OnClick (R.id.btn_pass_ok)
+    @OnClick(R.id.btn_pass)
     void passOkClick() {
         // 패스 버튼 확인 시 오답 처리하고 정답 공개
-        frame_pass.setVisibility(View.GONE); // 팝업 제거
         gameMode = 3;
-        txt_msg.setText("정답은 " + artistArray.get(quizNum-1) + "의 " + answerArray.get(quizNum - 1) + "입니다!");
-        correctArray.add((quizNum-1), 0); // 오답 문제 기록
+        txt_msg.setText("정답은 " + artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + "입니다!");
+        correctArray.add((quizNum - 1), 0); // 오답 문제 기록
         musicPlay(-1);
     }
 
-    @OnClick (R.id.btn_pass_cancel)
-    void passCancelClick() {
-        // 패스 버튼 취소 시 팝업 닫고 게임 계속 진행
-        frame_pass.setVisibility(View.GONE); // 팝업 제거
-    }
-
-    @OnClick ({R.id.frame_exit, R.id.frame_pass})
-    void frameClick() {
-        // 팝업이 띄워져 있을 시 게임화면 클릭 방지하기 위한 함수
-    }
-
-    @OnClick (R.id.btn_play)
+    @OnClick(R.id.btn_play)
     void playClick() {
         downKeyboard(this, edit_ans);
         switch (gameMode) {
@@ -184,7 +324,8 @@ public class GameActivity extends Activity {
                 break;
             case 2:
                 // 문제 재생
-                musicPlay(1000);
+                if(itemUsed==2) musicPlay(3000);
+                else musicPlay(1000);
                 break;
             case 3:
                 // 다음 문제로
@@ -194,109 +335,7 @@ public class GameActivity extends Activity {
 
     }
 
-    @OnClick (R.id.btn_item)
-    void itemClick() {
-        // 아이템 사용
-        downKeyboard(this, edit_ans);
-        if (gameMode == 0 | gameMode == 2) { // 맞추는 중에만 사용 가능
-            switch (itemUsed) {
-                case 0: // 아이템을 사용하지 않은 경우
-                    // 아이템 fab
-                    // 이하 임시 구현
-                    if (btn_item_artist.getVisibility() == View.INVISIBLE) { // 아이템이 감춰져 있을 때
-                        btn_item_artist.setVisibility(View.VISIBLE);
-                        btn_item_3sec.setVisibility(View.VISIBLE);
-                        btn_item_life.setVisibility(View.VISIBLE);
-                        btn_item_name.setVisibility(View.VISIBLE);
-                    } else {
-                        btn_item_artist.setVisibility(View.INVISIBLE);
-                        btn_item_3sec.setVisibility(View.INVISIBLE);
-                        btn_item_life.setVisibility(View.INVISIBLE);
-                        btn_item_name.setVisibility(View.INVISIBLE);
-                    }
-                    break;
-                case 1: // 아티스트 보여주기 아이템을 사용한 경우
-                    Toast.makeText(this, "아이템은 한 문제에 한 번만 사용 가능합니다!" +
-                            "\n이 곡의 아티스트는 '" + artistArray.get(quizNum - 1) + "'입니다.", Toast.LENGTH_SHORT).show();
-                    break;
-                case 2: // 3초 듣기 아이템을 사용한 경우
-                    Toast.makeText(this, "아이템은 한 문제에 한 번만 사용 가능합니다!" +
-                            "\n3초 듣기 아이템을 이미 사용하셨습니다.", Toast.LENGTH_SHORT).show();
-                    break;
-                case 3: // 정답 1회 증가 아이템을 사용한 경우
-                    Toast.makeText(this, "아이템은 한 문제에 한 번만 사용 가능합니다!" +
-                            "\n정답 1회 증가 아이템을 이미 사용하셨습니다", Toast.LENGTH_SHORT).show();
-                    break;
-                case 4: // 제목 한 글자 보여주기 아이템을 사용한 경우
-                    Toast.makeText(this, "아이템은 한 문제에 한 번만 사용 가능합니다!" +
-                            "\n곡 제목의 첫 글자는 '" + textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
-                    break;
-            }
-        }
-    }
-
-    @OnClick (R.id.btn_item_artist)
-    void itemArtistClick() {
-        // 아티스트 보여주기 아이템
-        downKeyboard(this, edit_ans);
-        if (gameMode == 0 | gameMode == 2) { // 맞추는 중에만 사용 가능
-            itemUsed = 1;
-            Toast.makeText(this, "이 곡의 아티스트는 '" + artistArray.get(quizNum - 1) + "'입니다.", Toast.LENGTH_SHORT).show();
-            btn_item_artist.setVisibility(View.INVISIBLE);
-            btn_item_3sec.setVisibility(View.INVISIBLE);
-            btn_item_life.setVisibility(View.INVISIBLE);
-            btn_item_name.setVisibility(View.INVISIBLE);
-            btn_item.setText("USED");
-        }
-    }
-
-    @OnClick (R.id.btn_item_3sec)
-    void item3SecClick() {
-        // 3초 듣기 아이템
-        downKeyboard(this, edit_ans);
-        if (gameMode == 0 | gameMode == 2) { // 맞추는 중에만 사용 가능
-            itemUsed = 2;
-            musicPlay(3000);
-            btn_item_artist.setVisibility(View.INVISIBLE);
-            btn_item_3sec.setVisibility(View.INVISIBLE);
-            btn_item_life.setVisibility(View.INVISIBLE);
-            btn_item_name.setVisibility(View.INVISIBLE);
-            btn_item.setText("USED");
-        }
-    }
-
-    @OnClick (R.id.btn_item_life)
-    void itemLifeClick() {
-        // 정답 1회 증가 아이템
-        downKeyboard(this, edit_ans);
-        if (gameMode == 0 | gameMode == 2) { // 맞추는 중에만 사용 가능
-            itemUsed = 3;
-            life++;
-            lifeRefresh();
-            btn_item_artist.setVisibility(View.INVISIBLE);
-            btn_item_3sec.setVisibility(View.INVISIBLE);
-            btn_item_life.setVisibility(View.INVISIBLE);
-            btn_item_name.setVisibility(View.INVISIBLE);
-            btn_item.setText("USED");
-        }
-    }
-
-    @OnClick (R.id.btn_item_name)
-    void itemNameClick() {
-        // 제목 한 글자 보여주기 아이템
-        downKeyboard(this, edit_ans);
-        if (gameMode == 0 | gameMode == 2) { // 맞추는 중에만 사용 가능
-            itemUsed = 4;
-            Toast.makeText(this, "곡 제목의 첫 글자는 '" + textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
-            btn_item_artist.setVisibility(View.INVISIBLE);
-            btn_item_3sec.setVisibility(View.INVISIBLE);
-            btn_item_life.setVisibility(View.INVISIBLE);
-            btn_item_name.setVisibility(View.INVISIBLE);
-            btn_item.setText("USED");
-        }
-    }
-
-    @OnClick (R.id.btn_voice)
+    @OnClick(R.id.btn_voice)
     void voiceClick() {
         // 음성인식
         downKeyboard(this, edit_ans);
@@ -316,7 +355,7 @@ public class GameActivity extends Activity {
         }
     }
 
-    @OnClick (R.id.frame_voice)
+    @OnClick(R.id.frame_voice)
     void frameVoiceClick() {
         // 음성인식 취소하고 화면으로 되돌아감
         naverRecognizer.getSpeechRecognizer().stopImmediately();
@@ -327,7 +366,7 @@ public class GameActivity extends Activity {
         voiceRunning = false;
     }
 
-    @OnClick (R.id.btn_send)
+    @OnClick(R.id.btn_send)
     void sendClick() {
         // 정답 제출
         downKeyboard(this, edit_ans);
@@ -379,101 +418,193 @@ public class GameActivity extends Activity {
 
     public void quizSetting() {
         // 문제 준비 및 유저 정보 받아오기
-        for(int i = 0; i < MAX_QUIZ_NUM; i++) { // 문제와 답 5개씩 설정
+        for (int i = 0; i < MAX_QUIZ_NUM; i++) { // 문제와 답 5개씩 설정
             int soundNum = 10 + ((int) (Math.random() * 46));
             switch (soundNum) {
                 case 10:
-                    answerArray.add("스토커"); artistArray.add("10cm"); break;
+                    answerArray.add("스토커");
+                    artistArray.add("10cm");
+                    break;
                 case 11:
-                    answerArray.add("위아래"); artistArray.add("EXID"); break;
+                    answerArray.add("위아래");
+                    artistArray.add("EXID");
+                    break;
                 case 12:
-                    answerArray.add("니가알던내가아냐"); artistArray.add("AOMG"); break;
+                    answerArray.add("니가알던내가아냐");
+                    artistArray.add("AOMG");
+                    break;
                 case 13:
-                    answerArray.add("버스안에서"); artistArray.add("자자"); break;
+                    answerArray.add("버스안에서");
+                    artistArray.add("자자");
+                    break;
                 case 14:
-                    answerArray.add("꺼내먹어요"); artistArray.add("자이언티"); break;
+                    answerArray.add("꺼내먹어요");
+                    artistArray.add("자이언티");
+                    break;
                 case 15:
-                    answerArray.add("양화대교"); artistArray.add("자이언티"); break;
+                    answerArray.add("양화대교");
+                    artistArray.add("자이언티");
+                    break;
                 case 16:
-                    answerArray.add("쿵"); artistArray.add("자이언티"); break;
+                    answerArray.add("쿵");
+                    artistArray.add("자이언티");
+                    break;
                 case 17:
-                    answerArray.add("핑계"); artistArray.add("김건모"); break;
+                    answerArray.add("핑계");
+                    artistArray.add("김건모");
+                    break;
                 case 18:
-                    answerArray.add("잘못된만남"); artistArray.add("김건모"); break;
+                    answerArray.add("잘못된만남");
+                    artistArray.add("김건모");
+                    break;
                 case 19:
-                    answerArray.add("허니"); artistArray.add("박진영"); break;
+                    answerArray.add("허니");
+                    artistArray.add("박진영");
+                    break;
                 case 20:
-                    answerArray.add("야생화"); artistArray.add("박효신"); break;
+                    answerArray.add("야생화");
+                    artistArray.add("박효신");
+                    break;
                 case 21:
-                    answerArray.add("바보"); artistArray.add("박효신"); break;
+                    answerArray.add("바보");
+                    artistArray.add("박효신");
+                    break;
                 case 22:
-                    answerArray.add("쏘쏘"); artistArray.add("백아연"); break;
+                    answerArray.add("쏘쏘");
+                    artistArray.add("백아연");
+                    break;
                 case 23:
-                    answerArray.add("이럴거면그러지말지"); artistArray.add("백아연"); break;
+                    answerArray.add("이럴거면그러지말지");
+                    artistArray.add("백아연");
+                    break;
                 case 24:
-                    answerArray.add("우주를건너"); artistArray.add("백예린"); break;
+                    answerArray.add("우주를건너");
+                    artistArray.add("백예린");
+                    break;
                 case 25:
-                    answerArray.add("벚꽃엔딩"); artistArray.add("버스커버스커"); break;
+                    answerArray.add("벚꽃엔딩");
+                    artistArray.add("버스커버스커");
+                    break;
                 case 26:
-                    answerArray.add("점점"); artistArray.add("브라운아이드소울"); break;
+                    answerArray.add("점점");
+                    artistArray.add("브라운아이드소울");
+                    break;
                 case 27:
-                    answerArray.add("한"); artistArray.add("샤크라"); break;
+                    answerArray.add("한");
+                    artistArray.add("샤크라");
+                    break;
                 case 28:
-                    answerArray.add("썸"); artistArray.add("소유&정기고"); break;
+                    answerArray.add("썸");
+                    artistArray.add("소유&정기고");
+                    break;
                 case 29:
-                    answerArray.add("이밤의끝을잡고"); artistArray.add("솔리드"); break;
+                    answerArray.add("이밤의끝을잡고");
+                    artistArray.add("솔리드");
+                    break;
                 case 30:
-                    answerArray.add("겁"); artistArray.add("송민호"); break;
+                    answerArray.add("겁");
+                    artistArray.add("송민호");
+                    break;
                 case 31:
-                    answerArray.add("챔피언"); artistArray.add("싸이"); break;
+                    answerArray.add("챔피언");
+                    artistArray.add("싸이");
+                    break;
                 case 32:
-                    answerArray.add("금요일에만나요"); artistArray.add("아이유"); break;
+                    answerArray.add("금요일에만나요");
+                    artistArray.add("아이유");
+                    break;
                 case 33:
-                    answerArray.add("스물셋"); artistArray.add("아이유"); break;
+                    answerArray.add("스물셋");
+                    artistArray.add("아이유");
+                    break;
                 case 34:
-                    answerArray.add("너의의미"); artistArray.add("아이유"); break;
+                    answerArray.add("너의의미");
+                    artistArray.add("아이유");
+                    break;
                 case 35:
-                    answerArray.add("널사랑하지않아"); artistArray.add("어반자카파"); break;
+                    answerArray.add("널사랑하지않아");
+                    artistArray.add("어반자카파");
+                    break;
                 case 36:
-                    answerArray.add("시간을달려서"); artistArray.add("여자친구"); break;
+                    answerArray.add("시간을달려서");
+                    artistArray.add("여자친구");
+                    break;
                 case 37:
-                    answerArray.add("오늘부터우리는"); artistArray.add("여자친구"); break;
+                    answerArray.add("오늘부터우리는");
+                    artistArray.add("여자친구");
+                    break;
                 case 38:
-                    answerArray.add("너그리고나"); artistArray.add("여자친구"); break;
+                    answerArray.add("너그리고나");
+                    artistArray.add("여자친구");
+                    break;
                 case 39:
-                    answerArray.add("파도"); artistArray.add("UN"); break;
+                    answerArray.add("파도");
+                    artistArray.add("UN");
+                    break;
                 case 40:
-                    answerArray.add("와"); artistArray.add("이정현"); break;
+                    answerArray.add("와");
+                    artistArray.add("이정현");
+                    break;
                 case 41:
-                    answerArray.add("한숨"); artistArray.add("이하이"); break;
+                    answerArray.add("한숨");
+                    artistArray.add("이하이");
+                    break;
                 case 42:
-                    answerArray.add("여름아부탁해"); artistArray.add("인디고"); break;
+                    answerArray.add("여름아부탁해");
+                    artistArray.add("인디고");
+                    break;
                 case 43:
-                    answerArray.add("또다시사랑"); artistArray.add("임창정"); break;
+                    answerArray.add("또다시사랑");
+                    artistArray.add("임창정");
+                    break;
                 case 44:
-                    answerArray.add("기억의습작"); artistArray.add("전람회"); break;
+                    answerArray.add("기억의습작");
+                    artistArray.add("전람회");
+                    break;
                 case 45:
-                    answerArray.add("실연"); artistArray.add("코요태"); break;
+                    answerArray.add("실연");
+                    artistArray.add("코요태");
+                    break;
                 case 46:
-                    answerArray.add("파란"); artistArray.add("코요태"); break;
+                    answerArray.add("파란");
+                    artistArray.add("코요태");
+                    break;
                 case 47:
-                    answerArray.add("순정"); artistArray.add("코요태"); break;
+                    answerArray.add("순정");
+                    artistArray.add("코요태");
+                    break;
                 case 48:
-                    answerArray.add("잊어버리지마"); artistArray.add("크러쉬"); break;
+                    answerArray.add("잊어버리지마");
+                    artistArray.add("크러쉬");
+                    break;
                 case 49:
-                    answerArray.add("오아시스"); artistArray.add("크러쉬"); break;
+                    answerArray.add("오아시스");
+                    artistArray.add("크러쉬");
+                    break;
                 case 50:
-                    answerArray.add("우아해"); artistArray.add("크러쉬"); break;
+                    answerArray.add("우아해");
+                    artistArray.add("크러쉬");
+                    break;
                 case 51:
-                    answerArray.add("꿍따리샤바라"); artistArray.add("클론"); break;
+                    answerArray.add("꿍따리샤바라");
+                    artistArray.add("클론");
+                    break;
                 case 52:
-                    answerArray.add("초련"); artistArray.add("클론"); break;
+                    answerArray.add("초련");
+                    artistArray.add("클론");
+                    break;
                 case 53:
-                    answerArray.add("영원한사랑"); artistArray.add("핑클"); break;
+                    answerArray.add("영원한사랑");
+                    artistArray.add("핑클");
+                    break;
                 case 54:
-                    answerArray.add("위잉위잉"); artistArray.add("혁오"); break;
+                    answerArray.add("위잉위잉");
+                    artistArray.add("혁오");
+                    break;
                 case 55:
-                    answerArray.add("흔들린우정"); artistArray.add("홍경민"); break;
+                    answerArray.add("흔들린우정");
+                    artistArray.add("홍경민");
+                    break;
             }//http://52.78.10.41/unithon/seven/sound/21.mp3
             String soundUrl = "http://52.78.10.41/unithon/seven/sound/" + soundNum + ".mp3";
             addressArray.add(soundUrl);
@@ -495,10 +626,11 @@ public class GameActivity extends Activity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        edit_ans.setHint("정답을 입력하세요!");
         quizNum++; // 문제 번호 증가
         itemUsed = 0; // 아이템 사용 초기화
-        btn_item.setText("ITEM");
-        if(quizNum > MAX_QUIZ_NUM) {
+        // btn_item.setText("ITEM");
+        if (quizNum > MAX_QUIZ_NUM) {
             // 마지막 문제 완료 시 결과 화면으로 전환
             Toast.makeText(this, "게임 끝! " + score + "점 획득!", Toast.LENGTH_SHORT).show();
         } else {
@@ -584,7 +716,7 @@ public class GameActivity extends Activity {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 // 텍스트 입력 전 발생할 이벤트
-                if(textChanger(edit_ans.getText().toString()) == "") {
+                if (textChanger(edit_ans.getText().toString()) == "") {
                     // EditText가 비어있을 때 음성인식 버튼 보임
                     btn_voice.setVisibility(View.VISIBLE);
                     btn_send.setVisibility(View.INVISIBLE);
@@ -604,7 +736,7 @@ public class GameActivity extends Activity {
             @Override
             public void afterTextChanged(Editable editable) {
                 // 텍스트 입력 후 발생할 이벤트
-                if(textChanger(edit_ans.getText().toString()) == "") {
+                if (textChanger(edit_ans.getText().toString()) == "") {
                     // EditText가 비어있을 때 음성인식 버튼 보임
                     btn_voice.setVisibility(View.VISIBLE);
                     btn_send.setVisibility(View.INVISIBLE);
@@ -623,11 +755,16 @@ public class GameActivity extends Activity {
         img_life1.setVisibility(View.INVISIBLE);
         img_life2.setVisibility(View.INVISIBLE);
         img_life3.setVisibility(View.INVISIBLE);
-        img_life4.setVisibility(View.INVISIBLE);
-        if (life >= 1) { img_life1.setVisibility(View.VISIBLE); }
-        if (life >= 2) { img_life2.setVisibility(View.VISIBLE); }
-        if (life >= 3) { img_life3.setVisibility(View.VISIBLE); }
-        if (life >= 4) { img_life4.setVisibility(View.VISIBLE); }
+
+        if (life >= 1) {
+            img_life1.setVisibility(View.VISIBLE);
+        }
+        if (life >= 2) {
+            img_life2.setVisibility(View.VISIBLE);
+        }
+        if (life >= 3) {
+            img_life3.setVisibility(View.VISIBLE);
+        }
     }
 
     public void downKeyboard(Context context, EditText editText) {
@@ -759,4 +896,18 @@ public class GameActivity extends Activity {
                 break;
         }
     }
+
+    PermissionListener permissionlistener = new PermissionListener() {
+        @Override
+        public void onPermissionGranted() {
+            Toast.makeText(GameActivity.this, "Permission Granted", Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onPermissionDenied(ArrayList<String> deniedPermissions) {
+            Toast.makeText(GameActivity.this, "Permission Denied\n" + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
+        }
+
+
+    };
 }

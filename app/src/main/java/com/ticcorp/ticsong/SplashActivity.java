@@ -1,5 +1,6 @@
 package com.ticcorp.ticsong;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,8 +14,13 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.gun0912.tedpermission.PermissionListener;
+import com.gun0912.tedpermission.TedPermission;
 import com.ticcorp.ticsong.activitySupport.DBHelper;
+
+import java.util.ArrayList;
 
 
 /**
@@ -31,7 +37,6 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
 
         Log.d("스플레쉬"," ??? ");
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -81,6 +86,8 @@ public class SplashActivity extends Activity {
             SplashActivity.this.finish(); // 로딩페이지 Activity Stack에서 제거
         }
     }
+
+
 
 
 }
