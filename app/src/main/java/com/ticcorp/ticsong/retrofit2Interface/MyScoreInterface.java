@@ -1,6 +1,10 @@
 package com.ticcorp.ticsong.retrofit2Interface;
 
+import com.ticcorp.ticsong.DTO.FriendsScoreView;
 import com.ticcorp.ticsong.DTO.MyScoreDTO;
+import com.ticcorp.ticsong.DTO.ScoreView;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -44,4 +48,20 @@ public interface MyScoreInterface {
             @Field("userId") String userId
     );
 
+    @FormUrlEncoded
+    @POST("myscore.do")
+    Call<List<ScoreView>> retrieveScores(
+            @Field("service") String service,
+            @Field("userId") String userId
+    );
+
+
+    @FormUrlEncoded
+    @POST("myscore.do")
+    Call<List<FriendsScoreView>> retrieveFriendsScores(
+            @Field("service") String service,
+            @Field("userId") String userId,
+            @Field("friends") String friends
+    );
 }
+

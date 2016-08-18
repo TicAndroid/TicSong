@@ -59,9 +59,4 @@ public interface ItemInterface {
             @Field("userId") String userId
     );
 
-
-
-
-
-
 }

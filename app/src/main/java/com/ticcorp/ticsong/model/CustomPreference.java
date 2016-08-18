@@ -47,6 +47,18 @@ public class CustomPreference {
         editor.commit();
     }
 
+    public void put(String key, int value) {
+        SharedPreferences pref = mContext.getSharedPreferences(PREF_NAME,
+                mContext.MODE_PRIVATE);
+        //안을 보면 딱봐도 클래스 이름부터가 뭔가를 공유할거다 이말이잖아. 그러니깐 어떤 공유하기위한 데이터를
+        //만든다 이런식으로 생각하고 사용은 이런 방식으로 하면된다정도만 알아둬
+
+        SharedPreferences.Editor editor = pref.edit();
+
+        editor.putInt(key, value);
+        editor.commit();
+    }
+
     public void put(String key, Boolean value) {
         SharedPreferences pref = mContext.getSharedPreferences(PREF_NAME,
                 mContext.MODE_PRIVATE);
@@ -54,16 +66,6 @@ public class CustomPreference {
         SharedPreferences.Editor editor = pref.edit();
 
         editor.putBoolean(key, value);
-        editor.commit();
-    }
-
-    public void put(String key, int value) {
-        SharedPreferences pref = mContext.getSharedPreferences(PREF_NAME,
-                mContext.MODE_PRIVATE);
-
-        SharedPreferences.Editor editor = pref.edit();
-
-        editor.putInt(key, value);
         editor.commit();
     }
 

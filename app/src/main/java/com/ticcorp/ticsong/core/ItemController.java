@@ -195,6 +195,42 @@ public class ItemController {
     }
 
 
+    public boolean updateItem(String userId, int item1Cnt, int item2Cnt, int item3Cnt, int item4Cnt) {
+
+        retrofit = new Retrofit.Builder().baseUrl(StaticInfo.TICSONG_BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+
+        /*요청보낼 interface 객체 생성.*/
+        ItemInterface itemInterface = retrofit.create(ItemInterface.class);
+        /*서버로 요청을 보낼 객체생성.*/
+        Call<ItemDTO> call = itemInterface.updateItem("update", userId, item1Cnt,item2Cnt,item3Cnt,item4Cnt);
+        call.clone().enqueue(new Callback<ItemDTO>() {
+            @Override
+            public void onResponse(Call<ItemDTO> call, Response<ItemDTO> response) {
+                /* 응답코드가 200번대가 아니라면*/
+                if(!response.isSuccess()) {
+                    Log.d("Item Update 코드_",response.body().getResultCode()+"");
+                    return ; // 아무 코드를 실행하지 않고 리턴.
+                }
+                Log.d("Item Update_성공코드 -", response.code() + ""); // 디버깅용
+
+                ItemDTO itemDTO = response.body();
+                if(itemDTO.getResultCode().equals("0")) {
+                    return;
+                }
+                Log.e("ItemDTO Update 성공 ", itemDTO.getResultCode() + "");
+            }
+
+            @Override
+            public void onFailure(Call<ItemDTO> call, Throwable t) {
+                isSuccess = false;
+                Log.d("Item Update_실패코드-",call.toString()+"__"+t.getMessage());
+                Log.d("Item Update_왜실패?",t.toString());
+            }
+        });
+        return isSuccess;
+    }
+
+
     public boolean updateItem(final Activity activity, String userId, int item1Cnt, int item2Cnt, int item3Cnt, int item4Cnt) {
         /*
         원래코드

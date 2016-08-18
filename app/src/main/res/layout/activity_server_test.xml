@@ -4,17 +4,44 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/test_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Test"
-        />
-
     <TextView
-        android:id="@+id/test_text"
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"/>
+        android:text="login"/>
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="logout"/>
+
+    <Button
+        android:id="@+id/btn_gameover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gameover"/>
+    <Button
+        android:id="@+id/btn_get_top_rank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Top Rank"/>
+    <Button
+        android:id="@+id/btn_friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Friends"/>
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="select"/>
+
+
 
 </LinearLayout>

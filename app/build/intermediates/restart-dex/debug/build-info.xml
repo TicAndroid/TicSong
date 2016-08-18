@@ -4,45 +4,30 @@
     api-level="19"
     density="xhdpi"
     format="7"
-    timestamp="361758125004875"
-    token="-3161456651158814014"
-    verifier="COMPATIBLE" >
+    timestamp="48489859948989"
+    token="9060008219815714997" >
 
     <task
         name="javac"
-        duration="357" />
+        duration="5779" />
     <task
         name="instant-run-dex"
-        duration="594" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="7" />
+        duration="3932" />
     <task
         name="verifier"
-        duration="1" />
+        duration="4670" />
 
     <artifact
-        location="/Users/yPeA/TicSong_Main/app/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\Daesub Kim\Desktop\TicSong\backUps\0818\TicSong\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="360804974319965" >
+    <build timestamp="48489859948989" >
         <artifact
-            location="/Users/yPeA/TicSong_Main/app/build/outputs/apk/app-debug.apk"
+            location="C:\Users\Daesub Kim\Desktop\TicSong\backUps\0818\TicSong\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="361685593550223"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/yPeA/TicSong_Main/app/build/intermediates/builds/debug/361685593550223/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="361758125004875"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/yPeA/TicSong_Main/app/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

@@ -8,19 +8,74 @@ import butterknife.ButterKnife.ViewBinder;
 public class ServerTestActivity$$ViewBinder<T extends com.ticcorp.ticsong.ServerTestActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131427485, "field 'testBtn' and method 'onTestBtnClicked'");
-    target.testBtn = finder.castView(view, 2131427485, "field 'testBtn'");
+    view = finder.findRequiredView(source, 2131427486, "field 'loginBtn' and method 'loginBtn'");
+    target.loginBtn = finder.castView(view, 2131427486, "field 'loginBtn'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
           android.view.View p0
         ) {
-          target.onTestBtnClicked();
+          target.loginBtn();
+        }
+      });
+    view = finder.findRequiredView(source, 2131427487, "field 'logoutBtn' and method 'logoutBtn'");
+    target.logoutBtn = finder.castView(view, 2131427487, "field 'logoutBtn'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.logoutBtn();
+        }
+      });
+    view = finder.findRequiredView(source, 2131427490, "field 'selectBtn' and method 'selectBtnClicked'");
+    target.selectBtn = finder.castView(view, 2131427490, "field 'selectBtn'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.selectBtnClicked();
+        }
+      });
+    view = finder.findRequiredView(source, 2131427488, "field 'gameoverBtn' and method 'gameoverBtn'");
+    target.gameoverBtn = finder.castView(view, 2131427488, "field 'gameoverBtn'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.gameoverBtn();
+        }
+      });
+    view = finder.findRequiredView(source, 2131427489, "field 'btnGetTopRank' and method 'btnGetTopRankClicked'");
+    target.btnGetTopRank = finder.castView(view, 2131427489, "field 'btnGetTopRank'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.btnGetTopRankClicked();
+        }
+      });
+    view = finder.findRequiredView(source, 2131427477, "field 'friendBtn' and method 'friendBtnClicked'");
+    target.friendBtn = finder.castView(view, 2131427477, "field 'friendBtn'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.friendBtnClicked();
         }
       });
   }
 
   @Override public void unbind(T target) {
-    target.testBtn = null;
+    target.loginBtn = null;
+    target.logoutBtn = null;
+    target.selectBtn = null;
+    target.gameoverBtn = null;
+    target.btnGetTopRank = null;
+    target.friendBtn = null;
   }
 }
