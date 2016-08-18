@@ -1,0 +1,5 @@
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/FBActivity$2$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/FBActivity$1$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/FBActivity$1$1$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/FBActivity$override.class

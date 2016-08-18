@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -36,74 +37,79 @@ public class FBActivity extends Activity {
     Context mContext;
 
     TextView user_name;
+    AccessToken token; // 페이스북 로그인 토큰
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = getApplicationContext();
-
         FacebookSdk.sdkInitialize(this.getApplicationContext());
-
         setContentView(R.layout.activity_login);
 
-        callbackManager = CallbackManager.Factory.create();
-        LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
-        loginButton.setReadPermissions("email");
-        loginButton.registerCallback(callbackManager,
-                new FacebookCallback<LoginResult>() {
-                    @Override
-                    public void onSuccess(LoginResult loginResult) {//로그인이 성공되었을때 호출
-                        GraphRequest request = GraphRequest.newMeRequest(
-                                loginResult.getAccessToken(),
-                                new GraphRequest.GraphJSONObjectCallback() {
-                                    @Override
-                                    public void onCompleted(
-                                            JSONObject object,
-                                            GraphResponse response) {
-                                        // Application code
-                                        try {
-                                            //String id1=object.getString("id");
-                                            String email1=object.getString("email");
+        token = AccessToken.getCurrentAccessToken(); // 토큰을 가져옴옴
+       if(token == null) { // 로그인 되어있지 않을 경우 로그인 화면
+            callbackManager = CallbackManager.Factory.create();
+            LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
+            loginButton.setReadPermissions("email");
+            loginButton.registerCallback(callbackManager,
+                    new FacebookCallback<LoginResult>() {
+                        @Override
+                        public void onSuccess(LoginResult loginResult) {//로그인이 성공되었을때 호출
+                            GraphRequest request = GraphRequest.newMeRequest(
+                                    loginResult.getAccessToken(),
+                                    new GraphRequest.GraphJSONObjectCallback() {
+                                        @Override
+                                        public void onCompleted(
+                                                JSONObject object,
+                                                GraphResponse response) {
+                                            // Application code
+                                            try {
+                                                //String id1=object.getString("id");
+                                                String email1 = object.getString("email");
 
-                                            id = (String) response.getJSONObject().get("id");//페이스북 아이디값
-                                            name = (String) response.getJSONObject().get("name");//페이스북 이름
-                                            //email = (String) response.getJSONObject().get("email");//이메일
-                                            Log.i("id", id);
-                                            //Log.i("id1",id1);
-                                            Log.i("name", name);
-                                            //Log.i("email1",email1);
-                                            Log.i("email", email);
+                                                id = (String) response.getJSONObject().get("id");//페이스북 아이디값
+                                                name = (String) response.getJSONObject().get("name");//페이스북 이름
+                                                //email = (String) response.getJSONObject().get("email");//이메일
+                                                Log.i("id", id);
+                                                //Log.i("id1",id1);
+                                                Log.i("name", name);
+                                                //Log.i("email1",email1);
+                                                Log.i("email", email);
 
-                                        } catch (JSONException e) {
-                                            // TODO Auto-generated catch block
-                                            e.printStackTrace();
+                                            } catch (JSONException e) {
+                                                // TODO Auto-generated catch block
+                                                e.printStackTrace();
+                                            }
+                                            //서버에 id ,name,email등 정보를 보내고 조회후에 승인되면
+                                            //고유 키를 받아서 sharedPreference에 저장
+                                            //로그아웃하기 전까지 담아둠
+
+                                            // new joinTask().execute(); //자신의 서버에서 로그인 처리를 해줍니다
+
                                         }
-                                        //서버에 id ,name,email등 정보를 보내고 조회후에 승인되면
-                                        //고유 키를 받아서 sharedPreference에 저장
-                                        //로그아웃하기 전까지 담아둠
+                                    });
+                            Bundle parameters = new Bundle();
+                            parameters.putString("fields", "id,name,email,gender, birthday");
+                            request.setParameters(parameters);
+                            request.executeAsync();
+                        }
 
-                                        // new joinTask().execute(); //자신의 서버에서 로그인 처리를 해줍니다
+                        @Override
+                        public void onCancel() {
+                            Toast.makeText(FBActivity.this, "로그인을 취소 하였습니다!", Toast.LENGTH_SHORT).show();
+                            // App code
+                        }
 
-                                    }
-                                });
-                        Bundle parameters = new Bundle();
-                        parameters.putString("fields", "id,name,email,gender, birthday");
-                        request.setParameters(parameters);
-                        request.executeAsync();
-                    }
-
-                    @Override
-                    public void onCancel() {
-                        Toast.makeText(FBActivity.this, "로그인을 취소 하였습니다!", Toast.LENGTH_SHORT).show();
-                        // App code
-                    }
-
-                    @Override
-                    public void onError(FacebookException exception) {
-                        Toast.makeText(FBActivity.this, "에러가 발생하였습니다", Toast.LENGTH_SHORT).show();
-                        // App code
-                    }
-                });
+                        @Override
+                        public void onError(FacebookException exception) {
+                            Toast.makeText(FBActivity.this, "에러가 발생하였습니다", Toast.LENGTH_SHORT).show();
+                            // App code
+                        }
+                    });
+        } else { // 로그인 되어있으면 자동으로 게임화면으로
+            startActivity(new Intent(getApplication(), MainActivity.class));
+            FBActivity.this.finish();
+        }
     }
 
     @Override
@@ -122,7 +128,7 @@ public class FBActivity extends Activity {
                 //loginBtn.setVisibility(View.INVISIBLE);
                 startActivity(new Intent(getApplication(), MainActivity.class));
                 // 로그인 되면 현재 페이지 제거
-                finish();
+                FBActivity.this.finish();
             }
         });
 
