@@ -2,11 +2,19 @@ package com.ticcorp.ticsong;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ticcorp.ticsong.model.CustomPreference;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -19,6 +27,7 @@ public class ResultActivity extends Activity {
 
     public CustomPreference pref;
     public int now_exp;
+    public String address;
 
     @Bind(R.id.score)
     TextView score;
@@ -29,7 +38,7 @@ public class ResultActivity extends Activity {
 
     @OnClick(R.id.btn_share)
     void shareClick() {
-        takeScreenshot();
+        shareScreenshot();
     }
 
     @OnClick(R.id.btn_main)
@@ -45,7 +54,7 @@ public class ResultActivity extends Activity {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         ButterKnife.bind(this);
@@ -69,7 +78,32 @@ public class ResultActivity extends Activity {
 
     }
 
-    public void takeScreenshot() {
+    public void shareScreenshot() {
+        // 캡쳐하기
+        String absolutePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Android/data";
+        File dir = new File(absolutePath, "com.ticcorp.ticsong");
+        if(!dir.exists()) { // 폴더가 없을 경우 폴더 생성
+            dir.mkdir();
+        }
+        File capture = new File(dir, "capture.jpeg"); // 파일 위치 설정
 
+        View containter = getWindow().getDecorView();
+        containter.buildDrawingCache();
+        Bitmap captureView = containter.getDrawingCache();
+
+        FileOutputStream fostream;
+        try {
+            fostream = new FileOutputStream(capture);
+            captureView.compress(Bitmap.CompressFormat.JPEG, 100, fostream);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        // 공유하기
+        Uri uri = Uri.fromFile(new File(capture + ""));
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
+        shareIntent.setType("image/*");
+        startActivity(Intent.createChooser(shareIntent, "공유하기"));
     }
+
 }
