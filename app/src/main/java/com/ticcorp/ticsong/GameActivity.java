@@ -127,16 +127,6 @@ public class GameActivity extends Activity {
         setContentView(R.layout.activity_game);
         ButterKnife.bind(this);
 
-        new TedPermission(this)
-                .setPermissionListener(permissionlistener)
-                .setDeniedMessage("게임 진행을 위한 권한입니다.")
-                .setPermissions(Manifest.permission.INTERNET, Manifest.permission.ACCESS_NETWORK_STATE,
-                        Manifest.permission.GET_ACCOUNTS, Manifest.permission.WAKE_LOCK,
-                        Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                        Manifest.permission.RECORD_AUDIO)
-                .check();
-
-
         quizSetting();
         textWatching();
 
@@ -916,17 +906,4 @@ public class GameActivity extends Activity {
         }
     }
 
-    PermissionListener permissionlistener = new PermissionListener() {
-        @Override
-        public void onPermissionGranted() {
-            Toast.makeText(GameActivity.this, "Permission Granted", Toast.LENGTH_SHORT).show();
-        }
-
-        @Override
-        public void onPermissionDenied(ArrayList<String> deniedPermissions) {
-            Toast.makeText(GameActivity.this, "Permission Denied\n" + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
-        }
-
-
-    };
 }
