@@ -3,6 +3,7 @@ package com.ticcorp.ticsong;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -10,6 +11,13 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.view.*;
+
+import com.facebook.AccessToken;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.HttpMethod;
+import com.ticcorp.ticsong.model.CustomPreference;
+
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,10 +25,14 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
-    // 테스트를 위한 계정 데이터 변수 부분, 나중에 로그인 페이지로 옮길 것
+    // 테스트를 위한 계정 데이터 변수 부분
     public String user_name;
     public int user_lv, user_exp;
     public ArrayList<Integer> user_itemArray = new ArrayList<Integer>();
+
+    CustomPreference pref;
+
+    //페이스북
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +47,30 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplication(), GameActivity.class));
+                MainActivity.this.finish();
             }
         });
 
+        Button btn_friend = (Button) findViewById(R.id.btn_friend);
+
+
+        btn_friend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new GraphRequest(
+                        AccessToken.getCurrentAccessToken(),
+                        "/me/friends",
+                        null,
+                        HttpMethod.GET,
+                        new GraphRequest.Callback() {
+                            public void onCompleted(GraphResponse response) {
+            /* handle the result */
+                                Log.i("ticlog", "MainActivity" + response.toString());
+                            }
+                        }
+                ).executeAsync();
+            }
+        });
 
         /*final DBHelper dbHelper = new DBHelper(getApplicationContext(), "MoneyBook.db", null, 1);
 
@@ -106,8 +139,9 @@ public class MainActivity extends Activity {
 
     }
 
-    public void setUserData () { // DB 연결 테스트
-        user_name = "틱송님";
+    public void setUserData () { // DB 연결
+        pref = pref.getInstance(this.getApplicationContext());
+        user_name = pref.getValue("name", "-");
         user_lv = 3;
         user_exp = 1500;
         user_itemArray.add(0, 1); // 아티스트 보여주기 아이템 개수

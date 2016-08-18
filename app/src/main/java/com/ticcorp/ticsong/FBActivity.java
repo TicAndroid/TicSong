@@ -18,6 +18,8 @@ import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
+import com.facebook.HttpMethod;
+import com.facebook.Profile;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
@@ -31,6 +33,7 @@ import org.json.JSONObject;
 public class FBActivity extends Activity {
 
     private CallbackManager callbackManager;
+    private Profile profile;
     String id = "";
     String name = "";
     String email = "";
@@ -46,67 +49,90 @@ public class FBActivity extends Activity {
         FacebookSdk.sdkInitialize(this.getApplicationContext());
         setContentView(R.layout.activity_login);
 
-        token = AccessToken.getCurrentAccessToken(); // 토큰을 가져옴옴
-       if(token == null) { // 로그인 되어있지 않을 경우 로그인 화면
-            callbackManager = CallbackManager.Factory.create();
-            LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
-            loginButton.setReadPermissions("email");
-            loginButton.registerCallback(callbackManager,
-                    new FacebookCallback<LoginResult>() {
-                        @Override
-                        public void onSuccess(LoginResult loginResult) {//로그인이 성공되었을때 호출
-                            GraphRequest request = GraphRequest.newMeRequest(
-                                    loginResult.getAccessToken(),
-                                    new GraphRequest.GraphJSONObjectCallback() {
-                                        @Override
-                                        public void onCompleted(
-                                                JSONObject object,
-                                                GraphResponse response) {
-                                            // Application code
-                                            try {
-                                                //String id1=object.getString("id");
-                                                String email1 = object.getString("email");
+        token = AccessToken.getCurrentAccessToken(); // 토큰을 가져옴
 
-                                                id = (String) response.getJSONObject().get("id");//페이스북 아이디값
-                                                name = (String) response.getJSONObject().get("name");//페이스북 이름
-                                                //email = (String) response.getJSONObject().get("email");//이메일
-                                                Log.i("id", id);
-                                                //Log.i("id1",id1);
-                                                Log.i("name", name);
-                                                //Log.i("email1",email1);
-                                                Log.i("email", email);
+        callbackManager = CallbackManager.Factory.create();
+        LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
+        loginButton.setReadPermissions("user_freinds");
+        loginButton.registerCallback(callbackManager,
+                new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {//로그인이 성공되었을때 호출
+                        Log.i("ticlog", "onSuccess");
+                        GraphRequest request = GraphRequest.newMeRequest(
+                                loginResult.getAccessToken(),
+                                new GraphRequest.GraphJSONObjectCallback() {
+                                    @Override
+                                    public void onCompleted(
+                                            JSONObject object,
+                                            GraphResponse response) {
+                                        // Application code
+                                        try {
+                                            //String id1=object.getString("id");
+                                            //String email1 = object.getString("email");
 
-                                            } catch (JSONException e) {
-                                                // TODO Auto-generated catch block
-                                                e.printStackTrace();
-                                            }
-                                            //서버에 id ,name,email등 정보를 보내고 조회후에 승인되면
-                                            //고유 키를 받아서 sharedPreference에 저장
-                                            //로그아웃하기 전까지 담아둠
+                                            id = (String) response.getJSONObject().get("id");//페이스북 아이디값
+                                            name = (String) response.getJSONObject().get("name");//페이스북 이름
+                                            //email = (String) response.getJSONObject().get("email");//이메일
+                                            Log.i("ticlog id", id);
+                                            //Log.i("id1",id1);
+                                            Log.i("ticlog name", name);
+                                            //Log.i("email1",email1);
 
-                                            // new joinTask().execute(); //자신의 서버에서 로그인 처리를 해줍니다
-
+                                        } catch (JSONException e) {
+                                            // TODO Auto-generated catch block
+                                            e.printStackTrace();
                                         }
-                                    });
-                            Bundle parameters = new Bundle();
-                            parameters.putString("fields", "id,name,email,gender, birthday");
-                            request.setParameters(parameters);
-                            request.executeAsync();
-                        }
+                                        //서버에 id ,name,email등 정보를 보내고 조회후에 승인되면
+                                        //고유 키를 받아서 sharedPreference에 저장
+                                        //로그아웃하기 전까지 담아둠
 
-                        @Override
-                        public void onCancel() {
-                            Toast.makeText(FBActivity.this, "로그인을 취소 하였습니다!", Toast.LENGTH_SHORT).show();
-                            // App code
-                        }
+                                        // new joinTask().execute(); //자신의 서버에서 로그인 처리를 해줍니다
 
-                        @Override
-                        public void onError(FacebookException exception) {
-                            Toast.makeText(FBActivity.this, "에러가 발생하였습니다", Toast.LENGTH_SHORT).show();
-                            // App code
+                                    }
+                                });
+                        Bundle parameters = new Bundle();
+                        parameters.putString("fields", "id,name,email,gender, birthday");
+                        request.setParameters(parameters);
+                        request.executeAsync();
+                        Log.i("ticlog", "onSuccess End");
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        Toast.makeText(FBActivity.this, "로그인을 취소 하였습니다!", Toast.LENGTH_SHORT).show();
+                        // App code
+                        Log.i("ticlog", "onCancel");
+                    }
+
+                    @Override
+                    public void onError(FacebookException exception) {
+                        Toast.makeText(FBActivity.this, "에러가 발생하였습니다", Toast.LENGTH_SHORT).show();
+                        // App code
+                        Log.i("ticlog", "onError");
+                    }
+                });
+        if(token != null) {// 로그인 되어있으면 자동으로 게임화면으로
+            /*Log.i("ticlog", "token = " + token.getToken());
+
+            profile = Profile.getCurrentProfile();
+            id = profile.getId();
+            name = profile.getName();
+            Log.i("ticlog", id + "/" + name);*/
+
+            new GraphRequest(
+                    AccessToken.getCurrentAccessToken(),
+                    "/me/friends",
+                    null,
+                    HttpMethod.GET,
+                    new GraphRequest.Callback() {
+                        public void onCompleted(GraphResponse response) {
+            /* handle the result */
+                            Log.i("ticlog", response.toString());
                         }
-                    });
-        } else { // 로그인 되어있으면 자동으로 게임화면으로
+                    }
+            ).executeAsync();
+
             startActivity(new Intent(getApplication(), MainActivity.class));
             FBActivity.this.finish();
         }

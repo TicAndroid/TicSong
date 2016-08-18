@@ -4,6 +4,7 @@ import android.Manifest;
 import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -32,6 +33,7 @@ import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 import com.naver.speech.clientapi.SpeechConfig;
+import com.ticcorp.ticsong.model.CustomPreference;
 import com.ticcorp.ticsong.utils.AudioWriterPCM;
 
 import java.io.IOException;
@@ -49,18 +51,19 @@ public class GameActivity extends Activity {
     public int MAX_LIFE = 3; // 한 문제의 정답 기회
 
     public int gameMode = 0; // 0 : 문제 대기 중, 1 : 문제 내는 중, 2 : 맞추는 중, 3 : 정답 확인 중
-    public ArrayList<Integer> itemArray = new ArrayList<Integer>();
+    public ArrayList<Integer> itemArray = new ArrayList<Integer>(); // 아이템 개수 리스트
     // 아티스트 보여주기, 3초 듣기, 정답 1회 증가, 제목 한 글자 보여주기
     public int itemUsed = 0; // 한 노래에서 아이템은 한 번 사용 가능
     // 0 : 아이템 사용하지 않음, 1 : 아티스트 보여주기, 2 : 3초 듣기, 3 : 정답 1회 증가, 4 : 제목 한 글자 보여주기
     public int quizNum = 0; // 문제 번호
     public int life = MAX_LIFE; // 현재 정답 기회
     public int score = 0; // 누적 획득 점수
+
+    public CustomPreference pref;
     public ArrayList<String> answerArray = new ArrayList<String>(); // 정답 리스트
     public ArrayList<String> artistArray = new ArrayList<String>(); // 아티스트 리스트
     public ArrayList<String> addressArray = new ArrayList<String>(); // 음원 주소 리스트
-    public ArrayList<Integer> correctArray = new ArrayList<Integer>(); // 정답 여부 리스트, 맞출 때의 남은 기회 기록
-    public ArrayList<Integer> itemNumArray = new ArrayList<Integer>(); // 아이템 개수 리스트
+    //public ArrayList<Integer> correctArray = new ArrayList<Integer>(); // 정답 여부 리스트, 맞출 때의 남은 기회 기록
 
     public MediaPlayer mPlayer;
     public TextWatcher textWatcher;
@@ -315,7 +318,8 @@ public class GameActivity extends Activity {
         // 패스 버튼 확인 시 오답 처리하고 정답 공개
         gameMode = 3;
         txt_msg.setText("정답은 " + artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + "입니다!");
-        correctArray.add((quizNum - 1), 0); // 오답 문제 기록
+        //correctArray.add((quizNum - 1), 0); // 오답 문제 기록
+        pref.put("correct" + quizNum, 0); // 오답 문제 기록
         musicPlay(-1);
     }
 
@@ -402,7 +406,8 @@ public class GameActivity extends Activity {
                 }
                 txt_msg.setText(artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + " 정답입니다! " + nowScore + "점 획득!");
                 score += nowScore; // 누적 점수에 이번 점수 추가
-                correctArray.add((quizNum - 1), life); // 남은 라이프 기록
+                //correctArray.add((quizNum - 1), life); // 남은 라이프 기록
+                pref.put("correct" + quizNum, life); // 남은 라이프 기록
                 musicPlay(-1);
             } else if (textChanger(edit_ans.getText().toString()).equals("")) {
                 // 정답이 비어있을 때
@@ -417,7 +422,8 @@ public class GameActivity extends Activity {
                 } else { // 기회 모두 사용 시 오답 처리 후 정답 공개
                     gameMode = 3;
                     txt_msg.setText("틀렸습니다! 정답은 " + artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + "입니다!");
-                    correctArray.add((quizNum - 1), 0); // 오답 문제 기록
+                    //correctArray.add((quizNum - 1), 0); // 오답 문제 기록
+                    pref.put("correct" + quizNum, 0); // 오답 문제 기록
                     musicPlay(-1);
                 }
             }
@@ -646,7 +652,10 @@ public class GameActivity extends Activity {
         // btn_item.setText("ITEM");
         if (quizNum > MAX_QUIZ_NUM) {
             // 마지막 문제 완료 시 결과 화면으로 전환
-            Toast.makeText(this, "게임 끝! " + score + "점 획득!", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "게임 끝! " + score + "점 획득!", Toast.LENGTH_SHORT).show();
+            pref.put("score", score);
+            startActivity(new Intent(GameActivity.this, ResultActivity.class));
+            GameActivity.this.finish();
         } else {
             life = MAX_LIFE; // 라이프 초기화
             lifeRefresh();
@@ -660,6 +669,13 @@ public class GameActivity extends Activity {
 
     public void setUserData() {
         // 유저 정보 받아오기
+        pref = pref.getInstance(this.getApplicationContext());
+        itemArray.add(0, pref.getValue("item1Cnt", 0));
+        itemArray.add(1, pref.getValue("item2Cnt", 0));
+        itemArray.add(2, pref.getValue("item3Cnt", 0));
+        itemArray.add(3, pref.getValue("item4Cnt", 0));
+
+        pref.put("score", 0);
     }
 
     public void musicPlay(int time) {

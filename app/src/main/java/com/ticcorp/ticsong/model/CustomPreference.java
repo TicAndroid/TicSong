@@ -57,6 +57,16 @@ public class CustomPreference {
         editor.commit();
     }
 
+    public void put(String key, int value) {
+        SharedPreferences pref = mContext.getSharedPreferences(PREF_NAME,
+                mContext.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = pref.edit();
+
+        editor.putInt(key, value);
+        editor.commit();
+    }
+
     public void put(String key, long value) {
         SharedPreferences pref = mContext.getSharedPreferences(PREF_NAME,
                 mContext.MODE_PRIVATE);
@@ -73,6 +83,16 @@ public class CustomPreference {
                 mContext.MODE_PRIVATE);
         try {
             return pref.getString(key, dftValue);
+        } catch (Exception e) {
+            return dftValue;
+        }
+    }
+
+    public int getValue(String key, int dftValue) {
+        SharedPreferences pref = mContext.getSharedPreferences(PREF_NAME,
+                mContext.MODE_PRIVATE);
+        try {
+            return pref.getInt(key, dftValue);
         } catch (Exception e) {
             return dftValue;
         }
