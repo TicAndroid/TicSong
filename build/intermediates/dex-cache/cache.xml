@@ -2,11 +2,284 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\JPark\Documents\TicMaster2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="5169179a059ec4edb48e19a560fe9882fc245f0f">
-        <dex dex="C:\Users\JPark\Documents\TicMaster2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9256a55bcb1c28438fb0b605498df855ee5582da\classes.dex" />
+        sha1="68f3a699be46fc7130e7f8c660709218713779c4">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_e3518efa8781b3f0b9058cfe8c51e00a2ad90319.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_7d1eda6ecbcb28c71825c3c902abab41d58827fa.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.pnikosis/materialish-progress/1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="57487745ce450899f9f250d5ae5c092a682cd041">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/com.pnikosis-materialish-progress-1.0_6277034909b9a0b59e09ec8970151c525dc20460.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.0.1/b34c1f2d993044656e87f88970b6818e99e886ba/okhttp-3.0.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/okhttp-3.0.1_f512f01fe748211476ce1776c737d0adf4f87fc7.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.github.dmytrodanylyk.circular-progress-button/library/1.1.3/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8a6ed980c74ad35b2dfc4e1daf97bfc0eea5d7c9">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/com.github.dmytrodanylyk.circular-progress-button-library-1.1.3_c7972c6244811c76e5d1bd9a8a6f1d8004e73a17.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-jackson2/1.22.0/cc014d64ae11117e159d334c99d9c246d9b36f44/google-http-client-jackson2-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="cc014d64ae11117e159d334c99d9c246d9b36f44">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/google-http-client-jackson2-1.22.0_f596cd72b63c5ea0ba0eaffe0cf4c99663547f0b.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/jsr305-1.3.9_b0af8b1eaafe17a42a519cb7493ff17f20c0a1e4.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.0-beta4/de5935a367ba5e343e9df786ac8fc0c7d52b5f0c/converter-gson-2.0.0-beta4.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de5935a367ba5e343e9df786ac8fc0c7d52b5f0c">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/converter-gson-2.0.0-beta4_f9e9deabb606e2bb7fec52bfb190bee93bea5f21.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-android/1.22.0/6d1e1a76a16a244ab2f41775791be1dd0ec2878a/google-http-client-android-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="6d1e1a76a16a244ab2f41775791be1dd0ec2878a">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/google-http-client-android-1.22.0_5e6ce71052d58693ebade2ca5da8e754134b4cd9.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1_5d8a86bdbc158e9d3105c3518f3640da9a331f00.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_76f5a10258660597b3ab6e2ad9200409eae74646.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client/1.22.0/244350c0c845c583717ade13f5666a452fd0cfa/google-api-client-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="0244350c0c845c583717ade13f5666a452fd0cfa">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/google-api-client-1.22.0_277df1f347b977dd4fd2bd8f81f8083ff5741021.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_03b93ac5fdc0449dfdbff461caae0576c0b605fe.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/customtabs/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/com.android.support-customtabs-23.4.0_2a1d1cf5950e7a69cda3b3b443bb49ec0c0576a3.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/cn.pedant.sweetalert/library/1.3/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="0c3529d9491be892952749d252ae1defa9b1f937">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/cn.pedant.sweetalert-library-1.3_53896532e72f34d683d377e8bf96dbc4ca6057c8.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/gson-2.4_2c2d5a0732f0a74b299376d0b1b438e3196aaa2f.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-gson/1.22.0/826b874fa410a8135b7094c469951bf0dadb0c10/google-http-client-gson-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="826b874fa410a8135b7094c469951bf0dadb0c10">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/google-http-client-gson-1.22.0_d959239300c33ba278610b5ea1d985653ec65430.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/okio-1.6.0_828a86fbf89d03f79439ab756c86aacef08e61aa.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.0-beta4/739e00dea1f0ac04fdb9b6160d667e23cc50a791/retrofit-2.0.0-beta4.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="739e00dea1f0ac04fdb9b6160d667e23cc50a791">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta4_a56f975c5573dd44fec5b3eacd8ee52b20f8acb8.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.squareup/otto/1.3.7/69d90fd7fb70e54746e26c10454c220e40a775ce/otto-1.3.7.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="69d90fd7fb70e54746e26c10454c220e40a775ce">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/otto-1.3.7_42fc6bc165857684cece7eae6aca4eb487c240c4.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.github.ParkSangGwon/TedPermission/v1.0.12/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c57bdb041f84f83af4c0db27b0b0e2d2dd745890">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/com.github.ParkSangGwon-TedPermission-v1.0.12_46cd9c36c4a8a184471e0a7bae9f53ec0b7cad57.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client/1.22.0/1d63f369ac78e4838a3197147012026e791008cb/google-oauth-client-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1d63f369ac78e4838a3197147012026e791008cb">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/google-oauth-client-1.22.0_0d1d1d044a569014829a476be8103685f9ddcba4.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client-gson/1.22.0/ca557a4630f5d4690f008fe32231c7f41701c35d/google-api-client-gson-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ca557a4630f5d4690f008fe32231c7f41701c35d">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/google-api-client-gson-1.22.0_df4231cbc9025c11cff47c6a062ba94b03f075b2.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.1.3/f6c3aed1cdfa21b5c1737c915186ea93a95a58bd/jackson-core-2.1.3.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/jackson-core-2.1.3_aaf926a062aa2102d4c6680eca0d93049d469a83.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-7.8.0_5bca006d94ccdbe6234d84ded1931e00c0d9d609.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-youtube/v3-rev120-1.19.0/9befa937f06683ea4b038fc8667ec41f4480677f/google-api-services-youtube-v3-rev120-1.19.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="9befa937f06683ea4b038fc8667ec41f4480677f">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/google-api-services-youtube-v3-rev120-1.19.0_3876dad6891b57d1b8093695d1942cce90669336.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client-android/1.22.0/7a0fe12b7d8189a821934d6f9d6586d00180e461/google-api-client-android-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="7a0fe12b7d8189a821934d6f9d6586d00180e461">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/google-api-client-android-1.22.0_8316e88b257882d0d043b67c3f32696809dbc559.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.0/a7537446a030da8eb0da4c71424d16c2589f6c4a/glide-3.6.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a7537446a030da8eb0da4c71424d16c2589f6c4a">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/glide-3.6.0_719be4b8abef7ccf355b2d8961ee0288af932a37.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_610af8ddeb40bd87bbaeb527e4c7c355d726ba5c.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-plus-7.8.0_a0b613bc1f3e60523583f23d4458ecaf4fe56908.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_5589eed619cff9c30e36eb84c6971b561e15498e.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/libs/Naverspeech-1.0.4.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="da465f5d7754f74ebb5a76da98a8c5285c525f6f">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/Naverspeech-1.0.4_5ae7b24bd584a7d49d7dbdb8639d0c33705c7cae.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.google.guava/guava-jdk5/17.0/463f8378feba44df7ba7cd9272d01837dad62b36/guava-jdk5-17.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="463f8378feba44df7ba7cd9272d01837dad62b36">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/guava-jdk5-17.0_6b3642b187b92d9075488a752b14c3e96e3b89b2.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b50e05617a56489a807996693ef323b7d8ea9929">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/instant-run_60c057e6a4e0e058a84f261c1e5355b9e8d1aa53.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.22.0/d441fc58329c4a4c067acec04ac361627f66ecc8/google-http-client-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d441fc58329c4a4c067acec04ac361627f66ecc8">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/google-http-client-1.22.0_12d278a7adc50dd8975bc28928b580d9716341f0.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.18/38da306aafee11459cd935a01d2c92a98dc670a4/library-1.0.18.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="38da306aafee11459cd935a01d2c92a98dc670a4">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/library-1.0.18_b1ceb2b314407df8b81442003be5cc2376e7e953.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.getbase/floatingactionbutton/1.10.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="f40cf334cdc8b098b74312e21c7741c6eefbeb0e">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/com.getbase-floatingactionbutton-1.10.1_dee03c1ca5b30c67233cc6ae4d22184184445f55.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="42a3ae86dd3ae2876d3e95c2e6e104ae57a50a65">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-android-sdk-4.14.1_f88f7b7b855f0d1c00ddfaf4c599c6e871dd80a6.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0_c022f9ac8781f7eceff12a2794e42d6f1a913942.jar" />
+    </item>
+    <item
+        jar="/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/yPeA/TicSong_Main/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_7053a867fdd75dbad417f0d113811a71b5b32842.jar" />
     </item>
 
 </items>

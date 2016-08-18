@@ -45,6 +45,11 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name="com.ticcorp.ticsong.ResultActivity"
+            android:label="결과화면"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name="com.ticcorp.ticsong.MainActivity"
             android:label="메인화면"
             android:screenOrientation="portrait" >

@@ -43,7 +43,6 @@ public class FBActivity extends Activity {
         mContext = getApplicationContext();
 
         FacebookSdk.sdkInitialize(this.getApplicationContext());
-        setContentView(R.layout.activity_main);
 
         setContentView(R.layout.activity_login);
 
@@ -122,6 +121,8 @@ public class FBActivity extends Activity {
             public void run() {
                 //loginBtn.setVisibility(View.INVISIBLE);
                 startActivity(new Intent(getApplication(), MainActivity.class));
+                // 로그인 되면 현재 페이지 제거
+                finish();
             }
         });
 
