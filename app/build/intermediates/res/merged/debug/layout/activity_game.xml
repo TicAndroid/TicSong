@@ -18,7 +18,7 @@
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:background="@drawable/background_star3" />
+                android:background="@drawable/background_test" />
         </FrameLayout>
     </ScrollView>
 
@@ -368,8 +368,8 @@
 
                 <ImageView
                     android:id="@+id/record_pan"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
                     android:layout_gravity="center"
                     android:layout_marginBottom="20dp"
                     android:layout_marginTop="20dp"
