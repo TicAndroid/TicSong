@@ -2,11 +2,284 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.18\38da306aafee11459cd935a01d2c92a98dc670a4\library-1.0.18.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="38da306aafee11459cd935a01d2c92a98dc670a4">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\library-1.0.18_e061bf1c5422de0513ede05f2bdfc608bf26e50a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client-gson\1.22.0\ca557a4630f5d4690f008fe32231c7f41701c35d\google-api-client-gson-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ca557a4630f5d4690f008fe32231c7f41701c35d">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-api-client-gson-1.22.0_c8d54186c63aa09c874dd2d87d8de814088a836a\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client\1.22.0\244350c0c845c583717ade13f5666a452fd0cfa\google-api-client-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="0244350c0c845c583717ade13f5666a452fd0cfa">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-api-client-1.22.0_0e794ea305ee36118cc1f7e579f33a147f36a9b8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client\1.22.0\d441fc58329c4a4c067acec04ac361627f66ecc8\google-http-client-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d441fc58329c4a4c067acec04ac361627f66ecc8">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-1.22.0_0bff77c8cf4906fe7471db62f50e563d76d29f49\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-android\1.22.0\6d1e1a76a16a244ab2f41775791be1dd0ec2878a\google-http-client-android-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="6d1e1a76a16a244ab2f41775791be1dd0ec2878a">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-android-1.22.0_80cb54ba4d18f3ca54f074b57df5700f2d202bfe\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.github.ParkSangGwon\TedPermission\v1.0.12\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c57bdb041f84f83af4c0db27b0b0e2d2dd745890">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.ParkSangGwon-TedPermission-v1.0.12_4cd3e1a9ed23ca3de3a5db8de860a9c125a5fb6b\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-customtabs-23.4.0_a2256dcca358a14c314336eda9ef9f36e98594e7\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\libs\Naverspeech-1.0.4.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="da465f5d7754f74ebb5a76da98a8c5285c525f6f">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\2\Naverspeech-1.0.4_666ccd9b74693c186f13cab865e2733de1a0697d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.0.0-beta4\de5935a367ba5e343e9df786ac8fc0c7d52b5f0c\converter-gson-2.0.0-beta4.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de5935a367ba5e343e9df786ac8fc0c7d52b5f0c">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.0.0-beta4_849c14adc0243d23c09b36b40bc152b0d3576a5e\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.oauth-client\google-oauth-client\1.22.0\1d63f369ac78e4838a3197147012026e791008cb\google-oauth-client-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1d63f369ac78e4838a3197147012026e791008cb">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-oauth-client-1.22.0_0b8df04d90744766632e32db9b34bb1c44fb1f49\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\jsr305-1.3.9_a93f720de1f07ac5e824e52b288e2541869f0874\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.0.1\b34c1f2d993044656e87f88970b6818e99e886ba\okhttp-3.0.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.0.1_33af28898ad532cd1d169fa0946743422e53f9fd\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.0-beta4\739e00dea1f0ac04fdb9b6160d667e23cc50a791\retrofit-2.0.0-beta4.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="739e00dea1f0ac04fdb9b6160d667e23cc50a791">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.0.0-beta4_57395f32f5d40f3be897bd4e571ffd025dd8eb78\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-7.8.0_cedc32e9acde352af15b1cc0adfecc8ff234267e\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.guava\guava-jdk5\17.0\463f8378feba44df7ba7cd9272d01837dad62b36\guava-jdk5-17.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="463f8378feba44df7ba7cd9272d01837dad62b36">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\guava-jdk5-17.0_d62b206bccf2d3c70214fa388e74d5a27de5a934\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.1_8cb21be8700075441de222c48e4c205974a88a4d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.6.0_13c1e725949b056de0b9ac5ca88bfd253e0aa3bf\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.6.0\a7537446a030da8eb0da4c71424d16c2589f6c4a\glide-3.6.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a7537446a030da8eb0da4c71424d16c2589f6c4a">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.6.0_e44ca30e8b239ea37fd95f8a14eaded45be5f28c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.4.0_593a597b24dfbbf63d72152ab481ad13110d1b27\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\butterknife-7.0.1_8f18611832400bc38d0bc941a18957f10180e9e1\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client-android\1.22.0\7a0fe12b7d8189a821934d6f9d6586d00180e461\google-api-client-android-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="7a0fe12b7d8189a821934d6f9d6586d00180e461">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-api-client-android-1.22.0_053e5551faeffc626cf336f7d736be3b8f7871f6\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.apis\google-api-services-youtube\v3-rev120-1.19.0\9befa937f06683ea4b038fc8667ec41f4480677f\google-api-services-youtube-v3-rev120-1.19.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="9befa937f06683ea4b038fc8667ec41f4480677f">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-api-services-youtube-v3-rev120-1.19.0_9f84ea5568b44cf3ba359539edb31f9d94664010\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="0f8b1827af525ef1afaac6fe01c48d4cb2766d34">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_60f6f3ae68470e5cad30d128b2d33fa7b1daebf0\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.github.dmytrodanylyk.circular-progress-button\library\1.1.3\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8a6ed980c74ad35b2dfc4e1daf97bfc0eea5d7c9">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.dmytrodanylyk.circular-progress-button-library-1.1.3_7d203c03f1c9a44ea465a735e259689bc8f691d6\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.getbase\floatingactionbutton\1.10.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="f40cf334cdc8b098b74312e21c7741c6eefbeb0e">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.getbase-floatingactionbutton-1.10.1_25c6d9152aa1bd20e784820781afe6de1086bddd\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_2d31b1bee9bd9e5221b3b07babe2910bcc7611fd\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.pnikosis\materialish-progress\1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="57487745ce450899f9f250d5ae5c092a682cd041">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.pnikosis-materialish-progress-1.0_a2ae7d4f6a43e272df8cf4eb934e1225aab725f8\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.4.0_225c543d931223972b5f2cdae1188bf4f69f6853\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson2\1.22.0\cc014d64ae11117e159d334c99d9c246d9b36f44\google-http-client-jackson2-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="cc014d64ae11117e159d334c99d9c246d9b36f44">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-jackson2-1.22.0_d5ba570ae05b7500fb9d70ba0f862926f69393c3\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-gson\1.22.0\826b874fa410a8135b7094c469951bf0dadb0c10\google-http-client-gson-1.22.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="826b874fa410a8135b7094c469951bf0dadb0c10">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-http-client-gson-1.22.0_9045a5805d03dee7375b71b5a994aa85fe0e58e1\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\cn.pedant.sweetalert\library\1.3\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="0c3529d9491be892952749d252ae1defa9b1f937">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\cn.pedant.sweetalert-library-1.3_158825ae3e62286553276c14f71bdc9d81d1d220\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.4.0_a5c077ccf759882bced48b3d92d6a0593ed82a54\classes.dex" />
+    </item>
+    <item
         jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="50263c8248885d239e3743613dc8f79ce9c28567">
+        sha1="71f5c3be0b09a7b68538d22de615fefbe8e54e01">
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_42b5e81e71ebc24af598f3e0407a4cd6ef634ddd\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="42a3ae86dd3ae2876d3e95c2e6e104ae57a50a65">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.facebook.android-facebook-android-sdk-4.14.1_a3e48b6c9c0aab4aa853e299507b0e3036bdfc72\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-applinks-1.4.0_242f43e7204dfb7710e2f9327bec17348b1df48c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.1.3\f6c3aed1cdfa21b5c1737c915186ea93a95a58bd\jackson-core-2.1.3.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-core-2.1.3_194f97e9c84762426bca466df25a690a34d14f11\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-7.8.0_b1216f39f568802a33d4e858995209fcf56a84c2\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.squareup\otto\1.3.7\69d90fd7fb70e54746e26c10454c220e40a775ce\otto-1.3.7.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="69d90fd7fb70e54746e26c10454c220e40a775ce">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\otto-1.3.7_595f9587fd45a6a1aa51c5dd06da4d8778e90579\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_36c9d2dbdf9b96548320a2ac31ec1d5df180a49d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.4\695b63d702f505b9b916e02272e3b6381bade7f\gson-2.4.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.4_8f34ce62f1386fad964bd40b1600b6d58486fe67\classes.dex" />
     </item>
 
 </items>

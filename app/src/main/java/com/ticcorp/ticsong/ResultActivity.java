@@ -69,7 +69,7 @@ public class ResultActivity extends Activity {
         now_exp = pref.getValue("exp", 0) + pref.getValue("score", 0);
         pref.put("exp", now_exp);
 
-        score.setText(pref.getValue("score", 0) + "점 획득");
+        score.setText("You've got "+pref.getValue("score", 0) + " score !");
         exp.setText("exp " + pref.getValue("exp", 0));
         level.setText("Lv." + pref.getValue("userLevel", 1));
     }

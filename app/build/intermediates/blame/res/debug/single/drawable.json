@@ -20,12 +20,12 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\score_0.png"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\score_60.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\score_60.png"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_send_button_icon.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\drawable\\com_facebook_send_button_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\score_60.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\score_60.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\score_100.png",
@@ -56,12 +56,12 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\firstbar.png"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_test.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\background_test.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_record_style.xml",
@@ -184,12 +184,12 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\cn.pedant.sweetalert\\library\\1.3\\res\\drawable\\dialog_background.xml"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_30.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\star_30.png"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_recording.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\btn_recording.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_30.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\star_30.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_signin_btn_icon_dark.xml",
@@ -290,6 +290,10 @@
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\a_circle_1.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\a_circle_1.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\text_result_style.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\text_result_style.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_main_shop.png",
