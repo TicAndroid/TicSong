@@ -7,6 +7,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +32,12 @@ public class ResultActivity extends Activity {
     public CustomPreference pref;
     public int now_exp;
     public String address;
+
+    ImageView cloudPanel;
+    LinearLayout resultPanel;
+
+    Animation ani_cloud2;
+    Animation panel;
 
     @Bind(R.id.score)
     TextView score;
@@ -59,8 +69,16 @@ public class ResultActivity extends Activity {
         setContentView(R.layout.activity_result);
         ButterKnife.bind(this);
 
+        ani_cloud2 = AnimationUtils.loadAnimation(this, R.anim.translate_cloud2);
+        panel = AnimationUtils.loadAnimation(this, R.anim.alpha_anim_result);
+
+        cloudPanel = (ImageView) findViewById(R.id.cloud_panel);
+        resultPanel = (LinearLayout) findViewById(R.id.result_panel);
+
         getResult(); // 게임 결과 받아오기
         sendResult(); // 게임 결과 DB 전송
+        cloudPanel.startAnimation(ani_cloud2);
+        resultPanel.startAnimation(panel);
     }
 
     public void getResult() {

@@ -4,30 +4,40 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="342704153660354"
+    timestamp="354827289656033"
     token="-8719231681308812603" >
 
     <task
         name="javac"
-        duration="1721" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1453" />
+        duration="0" />
     <task
         name="verifier"
-        duration="892" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\JPark\Documents\TicSong\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\JPark\Documents\TicSong\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="342704153660354" >
+    <build timestamp="353014581032091" >
         <artifact
             location="C:\Users\JPark\Documents\TicSong\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="354042812226969" >
+        <artifact
+            location="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="354827289656033" >
+        <artifact
+            location="C:\Users\JPark\Documents\TicSong\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

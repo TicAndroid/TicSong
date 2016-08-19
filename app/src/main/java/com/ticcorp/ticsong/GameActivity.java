@@ -19,6 +19,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
@@ -114,7 +115,7 @@ public class GameActivity extends Activity {
     @Bind(R.id.btn_pass)
     ImageButton btn_pass;
     @Bind(R.id.btn_send)
-    ImageButton btn_send;
+    Button btn_send;
     @Bind(R.id.btn_voice)
     ImageButton btn_voice;
     @Bind(R.id.frame_voice)
@@ -283,7 +284,7 @@ public class GameActivity extends Activity {
                 .setTitleText("정말로 나가시겠습니까?")
                 .setContentText("현재까지 획득한 점수를 모두 잃습니다!")
                 .setCancelText("아니요, 계속 할래요!")
-                .setConfirmText("네, 나갈래요!")
+                .setConfirmText("나가요..")
                 .showCancelButton(true)
                 .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override

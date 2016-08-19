@@ -282,7 +282,7 @@
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:paddingTop="8dp"
-            android:visibility="invisible"
+
             android:weightSum="100">
 
             <EditText
@@ -290,10 +290,11 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="85"
+                android:gravity="center_vertical"
                 android:background="@drawable/edix_style"
                 android:ems="12"
                 android:hint="정답을 입력하세요!"
-                android:padding="10dp"
+                android:paddingLeft="10dp"
                 android:singleLine="true"
                 android:textSize="12sp" />
 
@@ -312,13 +313,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/btn_record_style"
+                    android:src="@drawable/a_mic"
                     android:visibility="visible" />
 
-                <ImageButton
+                <Button
                     android:id="@+id/btn_send"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/btn_send_style"
+                    android:text="Send"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFF"
                     android:visibility="invisible" />
 
             </FrameLayout>
@@ -339,7 +344,8 @@
             android:layout_height="260dp"
             android:layout_gravity="bottom"
             android:background="#FFF"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
