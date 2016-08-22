@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -30,6 +32,7 @@ import org.json.JSONObject;
 /**
  * Created by Jeon on 2016-08-10.
  */
+//Login Activity
 public class FBActivity extends Activity {
 
     private CallbackManager callbackManager;
@@ -52,7 +55,7 @@ public class FBActivity extends Activity {
         token = AccessToken.getCurrentAccessToken(); // 토큰을 가져옴
 
         callbackManager = CallbackManager.Factory.create();
-        LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
+        final LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions("user_freinds");
         loginButton.registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {

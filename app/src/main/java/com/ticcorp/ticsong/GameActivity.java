@@ -75,6 +75,7 @@ public class GameActivity extends Activity {
     public Animation anim_scale;
     public Animation anim_scale2;
     public Animation anim_scale3;
+    public Animation btn_click;
 
     public ImageView progress;
     public ImageView circle1;
@@ -88,6 +89,7 @@ public class GameActivity extends Activity {
     public FloatingActionButton item3;
     public FloatingActionButton item4;
     public LinearLayout fabBackground;
+    public ImageButton btn_exit;
 
     //음성인식
     private static final String CLIENT_ID = "6IBqNmtyh17oLX3VbNej"; // 네이버 API ID 확인
@@ -131,6 +133,8 @@ public class GameActivity extends Activity {
         setContentView(R.layout.activity_game);
         ButterKnife.bind(this);
 
+        btn_click = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
+
         quizSetting();
         textWatching();
 
@@ -152,6 +156,8 @@ public class GameActivity extends Activity {
         circle1 = (ImageView) findViewById(R.id.circle_1);
         circle2 = (ImageView) findViewById(R.id.circle_2);
         circle3 = (ImageView) findViewById(R.id.circle_3);
+
+        btn_exit = (ImageButton) findViewById(R.id.btn_exit);
 
         menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
         fabClick();
@@ -280,8 +286,9 @@ public class GameActivity extends Activity {
     @OnClick(R.id.btn_exit)
     void exitOkClick() {
         // 나가기 버튼 확인 시 게임 종료
+        btn_exit.startAnimation(btn_click);
         new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
-                .setTitleText("정말로 나가시겠습니까?")
+                .setTitleText("메인화면으로 나가시겠습니까?")
                 .setContentText("현재까지 획득한 점수를 모두 잃습니다!")
                 .setCancelText("아니요, 계속 할래요!")
                 .setConfirmText("나가요..")
@@ -317,6 +324,7 @@ public class GameActivity extends Activity {
     @OnClick(R.id.btn_pass)
     void passOkClick() {
         // 패스 버튼 확인 시 오답 처리하고 정답 공개
+        btn_pass.startAnimation(btn_click);
         gameMode = 3;
         txt_msg.setText("정답은 " + artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + "입니다!");
         //correctArray.add((quizNum - 1), 0); // 오답 문제 기록
@@ -327,6 +335,7 @@ public class GameActivity extends Activity {
     @OnClick(R.id.btn_play)
     void playClick() {
         downKeyboard(this, edit_ans);
+        //btn_play.startAnimation(btn_click);
         switch (gameMode) {
             case 0:
                 // 문제 1초 재생
@@ -351,6 +360,7 @@ public class GameActivity extends Activity {
     @OnClick(R.id.btn_voice)
     void voiceClick() {
         // 음성인식
+        btn_voice.startAnimation(btn_click);
         downKeyboard(this, edit_ans);
         if (gameMode == 0 | gameMode == 2) { // 맞추는 중에만 사용 가능
             downKeyboard(this, edit_ans);
@@ -382,6 +392,7 @@ public class GameActivity extends Activity {
     @OnClick(R.id.btn_send)
     void sendClick() {
         // 정답 제출
+        btn_send.startAnimation(btn_click);
         downKeyboard(this, edit_ans);
         if (gameMode == 0 | gameMode == 2) { // 맞추는 중에만 사용 가능
             if (textChanger(edit_ans.getText().toString()).equals(textChanger(answerArray.get(quizNum - 1)))) {

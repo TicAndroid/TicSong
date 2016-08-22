@@ -5,7 +5,6 @@
     <rotate
         android:fromDegrees="0"
         android:toDegrees="1080"
-
         android:repeatCount="infinite"
         android:pivotX="50%"
         android:pivotY="50%"

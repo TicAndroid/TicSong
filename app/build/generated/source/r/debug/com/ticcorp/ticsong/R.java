@@ -21,17 +21,18 @@ public final class R {
         public static final int abc_slide_out_top=0x7f040009;
         public static final int alpha_anim=0x7f04000a;
         public static final int alpha_anim_result=0x7f04000b;
-        public static final int error_frame_in=0x7f04000c;
-        public static final int error_x_in=0x7f04000d;
-        public static final int modal_in=0x7f04000e;
-        public static final int modal_out=0x7f04000f;
-        public static final int rotate_anim=0x7f040010;
-        public static final int scale_anim=0x7f040011;
-        public static final int scale_anim2=0x7f040012;
-        public static final int scale_anim3=0x7f040013;
-        public static final int success_bow_roate=0x7f040014;
-        public static final int success_mask_layout=0x7f040015;
-        public static final int translate_cloud2=0x7f040016;
+        public static final int button_click_animation=0x7f04000c;
+        public static final int error_frame_in=0x7f04000d;
+        public static final int error_x_in=0x7f04000e;
+        public static final int modal_in=0x7f04000f;
+        public static final int modal_out=0x7f040010;
+        public static final int rotate_anim=0x7f040011;
+        public static final int scale_anim=0x7f040012;
+        public static final int scale_anim2=0x7f040013;
+        public static final int scale_anim3=0x7f040014;
+        public static final int success_bow_roate=0x7f040015;
+        public static final int success_mask_layout=0x7f040016;
+        public static final int translate_cloud2=0x7f040017;
     }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"

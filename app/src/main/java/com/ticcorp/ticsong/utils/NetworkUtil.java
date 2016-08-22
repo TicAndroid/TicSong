@@ -33,11 +33,11 @@ public class NetworkUtil {
         int conn = NetworkUtil.getConnectivityStatus(context);
         String status = null;
         if (conn == NetworkUtil.TYPE_WIFI) {
-            status = "Wifi enabled";
+            status = "WiFi를 사용합니다.";
         } else if (conn == NetworkUtil.TYPE_MOBILE) {
-            status = "Mobile data enabled";
+            status = "데이터을 사용합니다.";
         } else if (conn == NetworkUtil.TYPE_NOT_CONNECTED) {
-            status = "Not connected to Internet";
+            status = "인터넷 사용이 불가능합니다.";
         }
         return status;
     }

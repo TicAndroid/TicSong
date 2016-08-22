@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -30,6 +32,8 @@ public class MainActivity extends Activity {
     public int user_lv, user_exp;
     public ArrayList<Integer> user_itemArray = new ArrayList<Integer>();
 
+    Animation button_anim;
+
     CustomPreference pref;
 
     //페이스북
@@ -41,18 +45,19 @@ public class MainActivity extends Activity {
 
         setUserData();
 
-        ImageButton btn_start = (ImageButton) findViewById(R.id.btn_start);
+        button_anim = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
+        final ImageButton btn_start = (ImageButton) findViewById(R.id.btn_start);
 
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn_start.startAnimation(button_anim);
                 startActivity(new Intent(getApplication(), GameActivity.class));
-                MainActivity.this.finish();
+                //MainActivity.this.finish();
             }
         });
 
         Button btn_friend = (Button) findViewById(R.id.btn_friend);
-
 
         btn_friend.setOnClickListener(new View.OnClickListener() {
             @Override

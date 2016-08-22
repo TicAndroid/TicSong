@@ -344,8 +344,7 @@
             android:layout_height="260dp"
             android:layout_gravity="bottom"
             android:background="#FFF"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
