@@ -22,15 +22,6 @@
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar" >
-        <receiver
-            android:name="com.ticcorp.ticsong.utils.NetworkChangeReceiver"
-            android:label="NetworkChangeReceiver" >
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
-            </intent-filter>
-        </receiver>
-
         <activity
             android:name="com.ticcorp.ticsong.SplashActivity"
             android:screenOrientation="portrait" >
@@ -43,8 +34,7 @@
         <activity
             android:name="com.ticcorp.ticsong.FBActivity"
             android:label="페북테스트"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.ticcorp.ticsong.ResultActivity"
             android:label="결과화면"
@@ -58,8 +48,7 @@
         <activity
             android:name="com.ticcorp.ticsong.MainActivity"
             android:label="메인화면"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.ticcorp.ticsong.GameActivity"
             android:label="게임화면"
@@ -74,8 +63,7 @@
         <activity
             android:name="com.ticcorp.ticsong.ServerTestActivity"
             android:label="서버 테스트"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -93,6 +81,7 @@
             android:name="com.facebook.CustomTabActivity"
             android:exported="true" >
         </activity>
+        <activity android:name="com.facebook.CustomTabMainActivity" />
         <activity
             android:name="com.gun0912.tedpermission.TedPermissionActivity"
             android:theme="@style/Theme.Transparent" />
