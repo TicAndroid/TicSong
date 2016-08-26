@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+/*
         setUserData();
 
         button_anim = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
@@ -69,14 +69,14 @@ public class MainActivity extends Activity {
                         HttpMethod.GET,
                         new GraphRequest.Callback() {
                             public void onCompleted(GraphResponse response) {
-            /* handle the result */
+            // handle the result
                                 Log.i("ticlog", "MainActivity" + response.toString());
                             }
                         }
                 ).executeAsync();
             }
         });
-
+/*
         /*final DBHelper dbHelper = new DBHelper(getApplicationContext(), "MoneyBook.db", null, 1);
 
         // 테이블에 있는 모든 데이터 출력

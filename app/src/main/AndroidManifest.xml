@@ -34,7 +34,8 @@
         <activity
             android:name=".FBActivity"
             android:label="페북테스트"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+        </activity>
 
         <activity
             android:name=".ResultActivity"
@@ -49,7 +50,12 @@
         <activity
             android:name=".MainActivity"
             android:label="메인화면"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".GameActivity"
@@ -65,7 +71,8 @@
         <activity
             android:name=".ServerTestActivity"
             android:label="서버 테스트"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+        </activity>
 
         <activity
             android:name="com.facebook.FacebookActivity"

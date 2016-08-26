@@ -22,12 +22,6 @@
         </FrameLayout>
     </ScrollView>
 
-    <ImageView
-        android:id="@+id/star"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/star" />
-
     <LinearLayout
         android:id="@+id/game_layout"
         android:layout_width="match_parent"
@@ -56,7 +50,7 @@
                 android:layout_width="0dp"
                 android:layout_height="20dp"
                 android:layout_weight="6"
-                android:background="@drawable/back" />
+                android:background="@drawable/com_facebook_close" />
 
             <Space
                 android:layout_width="0dp"
@@ -98,174 +92,186 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/fab_background"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="100"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:weightSum="100">
 
-            <FrameLayout
-                android:id="@+id/play_part"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="100">
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_play"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/star_30" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="90"
+                android:background="#FFFFFF"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="25"
+                    android:background="#33000000"
+                    android:gravity="center"
+                    android:text="보유 아이템"
+                    android:textColor="#000000" />
 
                 <LinearLayout
+                    android:id="@+id/item_box"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="75"
                     android:gravity="center"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:weightSum="100">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="40"
-                        android:orientation="horizontal"
-                        android:weightSum="100">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:gravity="center">
 
-                        <FrameLayout
-                            android:id="@+id/play"
+                        <ImageView
+                            android:id="@+id/item1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/star_60" />
+
+                        <TextView
+                            android:id="@+id/item1_cnt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center">
+                            android:layout_alignTop="@id/item1"
+                            android:layout_alignRight="@id/item1"
+                            android:layout_alignEnd="@id/item1"
+                            android:text="0"
+                            android:paddingEnd="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingLeft="8dp"
+                            android:gravity="center"
+                            android:textColor="#FFF"
+                            android:textSize="11sp"
+                            android:background="@drawable/badge_item_count"/>
 
-                            <ImageView
-                                android:id="@+id/btn_play"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/play_game" />
+                    </RelativeLayout>
 
-                            <ImageView
-                                android:id="@+id/progress"
-                                android:layout_width="170dp"
-                                android:layout_height="170dp"
-                                android:layout_gravity="center"
-                                android:visibility="invisible"
-                                android:background="@drawable/progressbar" />
-
-                            <ImageView
-                                android:id="@+id/circle_1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/a_circle_1" />
-
-                            <ImageView
-                                android:id="@+id/circle_2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/a_circle_2" />
-
-                            <ImageView
-                                android:id="@+id/circle_3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:src="@drawable/a_circle_3" />
-
-                        </FrameLayout>
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:gravity="center">
 
                         <ImageView
-                            android:id="@+id/img_life1"
+                            android:id="@+id/item2"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:layout_marginRight="10dp"
-                            android:background="@drawable/start_heart" />
+                            android:background="@drawable/star_60" />
+
+                        <TextView
+                            android:id="@+id/item2_cnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/item2"
+                            android:layout_alignRight="@id/item2"
+                            android:layout_alignEnd="@id/item2"
+                            android:text="99"
+                            android:paddingEnd="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingLeft="8dp"
+                            android:gravity="center"
+                            android:textColor="#FFF"
+                            android:textSize="11sp"
+                            android:background="@drawable/badge_item_count"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:gravity="center">
 
                         <ImageView
-                            android:id="@+id/img_life2"
+                            android:id="@+id/item3"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:layout_marginRight="10dp"
-                            android:background="@drawable/start_heart" />
+                            android:background="@drawable/star_60" />
+
+                        <TextView
+                            android:id="@+id/item3_cnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/item3"
+                            android:layout_alignRight="@id/item3"
+                            android:layout_alignEnd="@id/item3"
+                            android:text="12"
+                            android:paddingEnd="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingLeft="8dp"
+                            android:gravity="center"
+                            android:textColor="#FFF"
+                            android:textSize="11sp"
+                            android:background="@drawable/badge_item_count"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="25"
+                        android:gravity="center">
 
                         <ImageView
-                            android:id="@+id/img_life3"
+                            android:id="@+id/item4"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:background="@drawable/start_heart" />
-                    </LinearLayout>
+                            android:background="@drawable/star_60" />
+
+                        <TextView
+                            android:id="@+id/item4_cnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/item4"
+                            android:layout_alignRight="@id/item4"
+                            android:layout_alignEnd="@id/item4"
+                            android:text="10"
+                            android:paddingEnd="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingLeft="8dp"
+                            android:gravity="center"
+                            android:textColor="#FFF"
+                            android:textSize="11sp"
+                            android:background="@drawable/badge_item_count"/>
+
+                    </RelativeLayout>
 
                 </LinearLayout>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="bottom">
 
-                    <com.getbase.floatingactionbutton.FloatingActionsMenu
-                        android:id="@+id/multiple_actions"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginRight="5dp"
-                        fab:fab_addButtonColorNormal="@color/white"
-                        fab:fab_addButtonColorPressed="@color/white_pressed"
-                        fab:fab_addButtonPlusIconColor="@color/half_black"
-
-                        fab:fab_labelStyle="@style/menu_labels_style">
-
-                        <com.getbase.floatingactionbutton.FloatingActionButton
-                            android:id="@+id/action_a"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/item_pen"
-                            fab:fab_colorNormal="#30000000"
-                            fab:fab_colorPressed="@color/white_pressed"
-
-                            fab:fab_title="한 글자" />
-
-                        <com.getbase.floatingactionbutton.FloatingActionButton
-                            android:id="@+id/action_b"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/item_artist"
-                            fab:fab_colorNormal="#30000000"
-                            fab:fab_colorPressed="@color/white_pressed"
-
-                            fab:fab_title="아티스트" />
-
-                        <com.getbase.floatingactionbutton.FloatingActionButton
-                            android:id="@+id/action_c"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/item_star"
-                            fab:fab_colorNormal="#30000000"
-                            fab:fab_colorPressed="@color/white_pressed"
-
-                            fab:fab_title="목숨" />
-
-                        <com.getbase.floatingactionbutton.FloatingActionButton
-                            android:id="@+id/action_d"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/item_head"
-                            fab:fab_colorNormal="#30000000"
-                            fab:fab_colorPressed="@color/white_pressed"
-
-                            fab:fab_title="3초" />
-
-                    </com.getbase.floatingactionbutton.FloatingActionsMenu>
-                </RelativeLayout>
-            </FrameLayout>
-
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -282,7 +288,6 @@
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:paddingTop="8dp"
-
             android:weightSum="100">
 
             <EditText
@@ -290,9 +295,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="85"
-                android:gravity="center_vertical"
                 android:background="@drawable/edix_style"
                 android:ems="12"
+                android:gravity="center_vertical"
                 android:hint="정답을 입력하세요!"
                 android:paddingLeft="10dp"
                 android:singleLine="true"
@@ -322,8 +327,8 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/btn_send_style"
                     android:text="Send"
-                    android:textSize="14sp"
                     android:textColor="#FFFFFF"
+                    android:textSize="14sp"
                     android:visibility="invisible" />
 
             </FrameLayout>
@@ -337,7 +342,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
-        android:background="#33000000">
+        android:background="#66000000">
 
         <FrameLayout
             android:layout_width="match_parent"

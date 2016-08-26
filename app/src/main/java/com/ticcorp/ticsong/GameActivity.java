@@ -1,10 +1,11 @@
 package com.ticcorp.ticsong;
 
-import android.Manifest;
-import android.animation.ValueAnimator;
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipDescription;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -13,9 +14,11 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
+import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
@@ -25,12 +28,11 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.getbase.floatingactionbutton.FloatingActionButton;
-import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 import com.naver.speech.clientapi.SpeechConfig;
@@ -77,17 +79,16 @@ public class GameActivity extends Activity {
     public Animation anim_scale3;
     public Animation btn_click;
 
-    public ImageView progress;
-    public ImageView circle1;
-    public ImageView circle2;
-    public ImageView circle3;
+    public ImageView item1;
+    public ImageView item2;
+    public ImageView item3;
+    public ImageView item4;
 
-    //fab버튼 & 아이템
-    public FloatingActionsMenu menuMultipleActions;
-    public FloatingActionButton item1;
-    public FloatingActionButton item2;
-    public FloatingActionButton item3;
-    public FloatingActionButton item4;
+    private static final String item1_tag = "아티스트 공개";
+    private static final String item2_tag = "3초 듣기";
+    private static final String item3_tag = "생명력 회복";
+    private static final String item4_tag = "한 글자 공개";
+
     public LinearLayout fabBackground;
     public ImageButton btn_exit;
 
@@ -104,14 +105,17 @@ public class GameActivity extends Activity {
     TextView txt_msg;
     @Bind(R.id.edit_ans)
     EditText edit_ans;
+
     @Bind(R.id.btn_play)
     ImageView btn_play;
-    @Bind(R.id.img_life1)
-    ImageView img_life1;
-    @Bind(R.id.img_life2)
-    ImageView img_life2;
-    @Bind(R.id.img_life3)
-    ImageView img_life3;
+    /*
+       @Bind(R.id.img_life1)
+       ImageView img_life1;
+       @Bind(R.id.img_life2)
+       ImageView img_life2;
+       @Bind(R.id.img_life3)
+       ImageView img_life3;
+     */
     @Bind(R.id.frame_ans)
     LinearLayout frame_ans;
     @Bind(R.id.btn_pass)
@@ -138,12 +142,6 @@ public class GameActivity extends Activity {
         quizSetting();
         textWatching();
 
-        /////////////
-        //Fab 버튼
-        FloatingActionButton actionC = new FloatingActionButton(getBaseContext());
-        actionC.setTitle("Item 1");
-
-        fabBackground = (LinearLayout) findViewById(R.id.fab_background);
         scrollView = (ScrollView) findViewById(R.id.scroll_part);
         scrollView.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -151,22 +149,27 @@ public class GameActivity extends Activity {
                 return true;
             }
         });
-        progress = (ImageView) findViewById(R.id.progress);
-
-        circle1 = (ImageView) findViewById(R.id.circle_1);
-        circle2 = (ImageView) findViewById(R.id.circle_2);
-        circle3 = (ImageView) findViewById(R.id.circle_3);
-
         btn_exit = (ImageButton) findViewById(R.id.btn_exit);
 
-        menuMultipleActions = (FloatingActionsMenu) findViewById(R.id.multiple_actions);
-        fabClick();
+        item1 = (ImageView) findViewById(R.id.item1); //아티스트 공개
+        item2 = (ImageView) findViewById(R.id.item2); //3초
+        item3 = (ImageView) findViewById(R.id.item3); //생명
+        item4 = (ImageView) findViewById(R.id.item4); //한글
 
-        item4 = (FloatingActionButton) findViewById(R.id.action_a);  //아티스트 보여주기 ->한글자
-        item1 = (FloatingActionButton) findViewById(R.id.action_b);  //3초 듣기 ->아티스트
-        item3 = (FloatingActionButton) findViewById(R.id.action_c);  //정답 1회 증가 ->그대로
-        item2 = (FloatingActionButton) findViewById(R.id.action_d);  //제목 한 글자 보여주기->3초
+        item1.setTag(item1_tag);
+        item2.setTag(item2_tag);
+        item3.setTag(item3_tag);
+        item4.setTag(item4_tag);
 
+        item1.setOnLongClickListener(new LongClickListener());
+        item2.setOnLongClickListener(new LongClickListener());
+        item3.setOnLongClickListener(new LongClickListener());
+        item4.setOnLongClickListener(new LongClickListener());
+
+        findViewById(R.id.btn_play).setOnDragListener(
+                new DragListener());
+
+        /*
         item1.setOnClickListener(new View.OnClickListener() {
             @Override   //아티스트 공개
             public void onClick(View view) {
@@ -175,7 +178,6 @@ public class GameActivity extends Activity {
                 itemUsed = 1;
                 edit_ans.setHint("이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
                         + "'입니다.");
-                menuMultipleActions.collapse();
             }
 
         });
@@ -185,7 +187,6 @@ public class GameActivity extends Activity {
             public void onClick(View view) {
                 musicPlay(3000);
                 itemUsed = 2;
-                menuMultipleActions.collapse();
             }
         });
 
@@ -197,8 +198,7 @@ public class GameActivity extends Activity {
                 else {
                     itemUsed = 3;
                     life++;
-                    lifeRefresh();
-                    menuMultipleActions.collapse();
+                    //lifeRefresh();
                 }
             }
         });
@@ -211,16 +211,13 @@ public class GameActivity extends Activity {
                         textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
                 edit_ans.setHint("곡 제목의 첫 글자는 '" +
                         textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.");
-                menuMultipleActions.collapse();
+
             }
         });
-        /////////////
+        */////////////
 
         recordImage = (ImageView) findViewById(R.id.record_pan);
         anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_anim);
-        anim_scale = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale_anim);
-        anim_scale2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale_anim2);
-        anim_scale3 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale_anim3);
 
         //음성인식
         handler = new RecognitionHandler(this);
@@ -234,54 +231,6 @@ public class GameActivity extends Activity {
         downKeyboard(this, edit_ans);
         exitOkClick();
     }
-
-    void fabClick(){
-        //Fab 버튼 클릭시 화면 검/투명
-        menuMultipleActions.setOnFloatingActionsMenuUpdateListener(new FloatingActionsMenu.OnFloatingActionsMenuUpdateListener() {
-            @Override
-            public void onMenuExpanded() {
-                if(gameMode!=2){
-                    item1.setVisibility(View.INVISIBLE);
-                    item2.setVisibility(View.INVISIBLE);
-                    item3.setVisibility(View.INVISIBLE);
-                    item4.setVisibility(View.INVISIBLE);
-                    item1.setEnabled(false);
-                    item2.setEnabled(false);
-                    item3.setEnabled(false);
-                    item4.setEnabled(false);
-                    menuMultipleActions.collapse();
-                    Toast.makeText(getBaseContext(),"문제를 받고 눌러주세요!",Toast.LENGTH_SHORT).show();
-                }else if(itemUsed!=0){
-                    item1.setVisibility(View.INVISIBLE);
-                    item2.setVisibility(View.INVISIBLE);
-                    item3.setVisibility(View.INVISIBLE);
-                    item4.setVisibility(View.INVISIBLE);
-                    item1.setEnabled(false);
-                    item2.setEnabled(false);
-                    item3.setEnabled(false);
-                    item4.setEnabled(false);
-                    //menuMultipleActions.collapse();
-                    Toast.makeText(getBaseContext(),"아이템이 이미 사용되었습니다!",Toast.LENGTH_SHORT).show();
-                }else{
-                    //fabBackground.setBackgroundColor(getResources().getColor(R.color.black_semi_transparent));
-                    item1.setEnabled(true);
-                    item2.setEnabled(true);
-                    item3.setEnabled(true);
-                    item4.setEnabled(true);
-                    item1.setVisibility(View.VISIBLE);
-                    item2.setVisibility(View.VISIBLE);
-                    item3.setVisibility(View.VISIBLE);
-                    item4.setVisibility(View.VISIBLE);
-                }
-            }
-
-            @Override
-            public void onMenuCollapsed() {
-                fabBackground.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-            }
-        });
-    }
-
 
     @OnClick(R.id.btn_exit)
     void exitOkClick() {
@@ -318,7 +267,6 @@ public class GameActivity extends Activity {
                 .show();
 
 
-
     }
 
     @OnClick(R.id.btn_pass)
@@ -346,7 +294,7 @@ public class GameActivity extends Activity {
                 break;
             case 2:
                 // 문제 재생
-                if(itemUsed==2) musicPlay(3000);
+                if (itemUsed == 2) musicPlay(3000);
                 else musicPlay(1000);
                 break;
             case 3:
@@ -427,7 +375,7 @@ public class GameActivity extends Activity {
             } else {
                 // 오답 시
                 life--;
-                lifeRefresh();
+                //lifeRefresh();
                 if (life > 0) { // 아직 기회가 남았을 경우
                     txt_msg.setText("틀렸습니다! " + life + "번 남았습니다!");
                     edit_ans.setText(""); // EditText 초기화
@@ -647,11 +595,6 @@ public class GameActivity extends Activity {
                 if (mPlayer.isPlaying()) {
                     mPlayer.stop();
                     mPlayer.release();
-                    progress.setVisibility(View.INVISIBLE);
-                    progress.clearAnimation();
-                    circle1.clearAnimation();
-                    circle2.clearAnimation();
-                    circle3.clearAnimation();
 
                 }
             }
@@ -670,7 +613,7 @@ public class GameActivity extends Activity {
             GameActivity.this.finish();
         } else {
             life = MAX_LIFE; // 라이프 초기화
-            lifeRefresh();
+            //lifeRefresh();
             txt_msg.setText(quizNum + "번째 문제입니다! 문제를 들어주세요!");
         }
         edit_ans.setText(""); // EditText 초기화
@@ -708,11 +651,7 @@ public class GameActivity extends Activity {
                 e.printStackTrace();
             }
             mPlayer.start();
-            progress.setVisibility(View.VISIBLE);
-            progress.startAnimation(anim);
-            circle1.startAnimation(anim_scale);
-            circle2.startAnimation(anim_scale2);
-            circle3.startAnimation(anim_scale3);
+
             Handler mHandler = new Handler();
             mHandler.postDelayed(new Runnable() { // time ms 후 음악 정지
                 @Override
@@ -724,11 +663,6 @@ public class GameActivity extends Activity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            progress.setVisibility(View.INVISIBLE);
-                            progress.clearAnimation();
-                            circle1.clearAnimation();
-                            circle2.clearAnimation();
-                            circle3.clearAnimation();
                             btn_pass.setVisibility(View.VISIBLE); // 패스 버튼 드러내기
                             frame_ans.setVisibility(View.VISIBLE); // 정답창 드러내기
                             // 문제를 한 번 들어야 정답창이 드러나도록 함
@@ -742,11 +676,7 @@ public class GameActivity extends Activity {
             frame_ans.setVisibility(View.INVISIBLE); // 정답창 숨기기
             mPlayer = new MediaPlayer();
             mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-            progress.setVisibility(View.VISIBLE);
-            progress.startAnimation(anim);
-            circle1.startAnimation(anim_scale);
-            circle2.startAnimation(anim_scale2);
-            circle3.startAnimation(anim_scale3);
+
             try {
                 mPlayer.setDataSource(addressArray.get(quizNum - 1));
             } catch (IOException e) {
@@ -801,23 +731,24 @@ public class GameActivity extends Activity {
         edit_ans.addTextChangedListener(textWatcher);
     }
 
-    public void lifeRefresh() {
-        // 남은 회수 UI 새로고침
-        img_life1.setVisibility(View.INVISIBLE);
-        img_life2.setVisibility(View.INVISIBLE);
-        img_life3.setVisibility(View.INVISIBLE);
+    /*
+        public void lifeRefresh() {
+            // 남은 회수 UI 새로고침
+            img_life1.setVisibility(View.INVISIBLE);
+            img_life2.setVisibility(View.INVISIBLE);
+            img_life3.setVisibility(View.INVISIBLE);
 
-        if (life >= 1) {
-            img_life1.setVisibility(View.VISIBLE);
+            if (life >= 1) {
+                img_life1.setVisibility(View.VISIBLE);
+            }
+            if (life >= 2) {
+                img_life2.setVisibility(View.VISIBLE);
+            }
+            if (life >= 3) {
+                img_life3.setVisibility(View.VISIBLE);
+            }
         }
-        if (life >= 2) {
-            img_life2.setVisibility(View.VISIBLE);
-        }
-        if (life >= 3) {
-            img_life3.setVisibility(View.VISIBLE);
-        }
-    }
-
+    */
     public void downKeyboard(Context context, EditText editText) {
         //키보드 내리기
         InputMethodManager imm = (InputMethodManager) getSystemService(context.INPUT_METHOD_SERVICE);
@@ -931,6 +862,84 @@ public class GameActivity extends Activity {
                 frame_voice.setVisibility(View.GONE);
                 voiceRunning = false;
                 break;
+        }
+    }
+
+    private final class LongClickListener implements
+            View.OnLongClickListener {
+
+        public boolean onLongClick(View view) {
+
+            // 태그 생성
+            ClipData.Item item = new ClipData.Item(
+                    (CharSequence) view.getTag());
+
+            String[] mimeTypes = { ClipDescription.MIMETYPE_TEXT_PLAIN };
+            ClipData data = new ClipData(view.getTag().toString(),
+                    mimeTypes, item);
+            View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(
+                    view);
+
+            view.startDrag(data, // data to be dragged
+                    shadowBuilder, // drag shadow
+                    view, // 드래그 드랍할  Vew
+                    0 // 필요없은 플래그
+            );
+
+            return true;
+        }
+    }
+
+    class DragListener implements View.OnDragListener {
+        Drawable normalShape = getResources().getDrawable(
+                R.drawable.normal_shape);
+        Drawable targetShape = getResources().getDrawable(
+                R.drawable.target_shape);
+
+        public boolean onDrag(View v, DragEvent event) {
+
+            // 이벤트 시작
+            switch (event.getAction()) {
+
+                // 이미지를 드래그 시작될때
+                case DragEvent.ACTION_DRAG_STARTED:
+                    Log.d("DragClickListener", "ACTION_DRAG_STARTED");
+                    break;
+
+                // 드래그한 이미지를 옮길려는 지역으로 들어왔을때
+                case DragEvent.ACTION_DRAG_ENTERED:
+                    Log.d("DragClickListener", "ACTION_DRAG_ENTERED");
+                    // 이미지가 들어왔다는 것을 알려주기 위해 배경이미지 변경
+                    v.setBackground(targetShape);
+                    break;
+
+                // 드래그한 이미지가 영역을 빠져 나갈때
+                case DragEvent.ACTION_DRAG_EXITED:
+                    Log.d("DragClickListener", "ACTION_DRAG_EXITED");
+                    v.setBackground(normalShape);
+                    break;
+
+                // 이미지를 드래그해서 드랍시켰을때
+                case DragEvent.ACTION_DROP:
+                    Log.d("DragClickListener", "ACTION_DROP");
+
+                    if (v == findViewById(R.id.btn_play)) {
+                        View view = (View) event.getLocalState();
+
+
+                        view.setVisibility(View.VISIBLE);
+
+                    }
+                    break;
+
+                case DragEvent.ACTION_DRAG_ENDED:
+                    Log.d("DragClickListener", "ACTION_DRAG_ENDED");
+                    v.setBackground(normalShape); // go back to normal shape
+
+                default:
+                    break;
+            }
+            return true;
         }
     }
 
