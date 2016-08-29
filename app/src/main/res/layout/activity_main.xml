@@ -214,7 +214,8 @@
                 android:layout_weight="10"
                 android:background="#EEFFFFFF"/>
 
-            <ImageButton
+            <ImageButton android:id="@+id/btn_start"
+                android:onClick="onClick"
                 android:layout_width="0dp"
                 android:layout_weight="80"
                 android:layout_height="match_parent"

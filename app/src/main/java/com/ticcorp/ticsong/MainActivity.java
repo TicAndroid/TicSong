@@ -2,6 +2,7 @@ package com.ticcorp.ticsong;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -11,14 +12,18 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.view.*;
+import android.widget.Toast;
 
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.HttpMethod;
 import com.ticcorp.ticsong.model.CustomPreference;
+import com.ticcorp.ticsong.model.DBManager;
+import com.ticcorp.ticsong.model.StaticSQLite;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;
@@ -29,10 +34,13 @@ public class MainActivity extends Activity {
 
     // 테스트를 위한 계정 데이터 변수 부분
     public String user_name;
-    public int user_lv, user_exp;
+    public int user_id, user_lv, user_exp, next_exp;
     public ArrayList<Integer> user_itemArray = new ArrayList<Integer>();
 
     Animation button_anim;
+
+    TextView profile_id, profile_level;
+    ProgressBar profile_progressbar;
 
     CustomPreference pref;
 
@@ -42,7 +50,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-/*
+
         setUserData();
 
         button_anim = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
@@ -56,7 +64,7 @@ public class MainActivity extends Activity {
                 //MainActivity.this.finish();
             }
         });
-
+/*
         Button btn_friend = (Button) findViewById(R.id.btn_friend);
 
         btn_friend.setOnClickListener(new View.OnClickListener() {
@@ -145,14 +153,45 @@ public class MainActivity extends Activity {
     }
 
     public void setUserData () { // DB 연결
+        profile_id = (TextView) findViewById(R.id.profile_id);
+        profile_level = (TextView) findViewById(R.id.profile_level);
+        profile_progressbar = (ProgressBar) findViewById(R.id.profile_progressbar);
+
         pref = pref.getInstance(this.getApplicationContext());
+        DBManager db = new DBManager(this.getApplicationContext(), StaticSQLite.TICSONG_DB, null, 1 );
+        Cursor cursor = null;
+        cursor = db.retrieve(StaticSQLite.retrieveUserSQL(pref.getValue("userId", "userId")));
+        while(cursor.moveToNext()) {
+            user_name = cursor.getString(1);
+        }
+
+        cursor = db.retrieve(StaticSQLite.retrieveMyScoreSQL(pref.getValue("userId", "userId")));
+        while(cursor.moveToNext()) {
+            user_exp = cursor.getInt(1);
+            user_lv = cursor.getInt(2);
+        }
+        cursor.close();
+        db.close();
+
+        profile_id.setText(user_name);
+        profile_level.setText(user_lv + "");
+
+        next_exp = getResources().getInteger(getResources().getIdentifier("lv" + user_lv, "integer", MainActivity.this.getPackageName()));
+
+        Log.i("ticlog Main", user_lv + "/" + next_exp);
+
+        profile_progressbar.setMax(next_exp);
+        profile_progressbar.setProgress(user_exp);
+
+        /*
+
         user_name = pref.getValue("name", "-");
         user_lv = 3;
         user_exp = 1500;
         user_itemArray.add(0, 1); // 아티스트 보여주기 아이템 개수
         user_itemArray.add(1, 1); // 3초 듣기 아이템 개수
         user_itemArray.add(2, 2); // 정답 1회 증가 아이템 개수
-        user_itemArray.add(3, 1); // 제목 한 글자 보여주기 아이템 개수
+        user_itemArray.add(3, 1); // 제목 한 글자 보여주기 아이템 개수 */
     }
 
 
