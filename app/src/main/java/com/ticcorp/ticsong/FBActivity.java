@@ -25,9 +25,13 @@ import com.facebook.Profile;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.ticcorp.ticsong.model.CustomPreference;
+import com.ticcorp.ticsong.module.ServerAccessModule;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Arrays;
 
 /**
  * Created by Jeon on 2016-08-10.
@@ -45,6 +49,8 @@ public class FBActivity extends Activity {
     TextView user_name;
     AccessToken token; // 페이스북 로그인 토큰
 
+    CustomPreference pref;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,9 +58,16 @@ public class FBActivity extends Activity {
         FacebookSdk.sdkInitialize(this.getApplicationContext());
         setContentView(R.layout.activity_login);
 
+        pref = pref.getInstance(this.getApplicationContext());
+
         token = AccessToken.getCurrentAccessToken(); // 토큰을 가져옴
 
+        FacebookSdk.sdkInitialize(getApplicationContext());;
+        LoginManager.getInstance().logOut();
+
         callbackManager = CallbackManager.Factory.create();
+
+        LoginManager.getInstance().logInWithReadPermissions(FBActivity.this, Arrays.asList("public_profile", "email"));
         final LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions("user_freinds");
         loginButton.registerCallback(callbackManager,
@@ -81,6 +94,12 @@ public class FBActivity extends Activity {
                                             //Log.i("id1",id1);
                                             Log.i("ticlog name", name);
                                             //Log.i("email1",email1);
+
+                                            ServerAccessModule.getInstance().login(FBActivity.this.getApplicationContext(), id, name, 0);
+                                            pref.put("userId", id);
+                                            startActivity(new Intent(getApplication(), MainActivity.class));
+                                            // 로그인 되면 현재 페이지 제거
+                                            FBActivity.this.finish();
 
                                         } catch (JSONException e) {
                                             // TODO Auto-generated catch block

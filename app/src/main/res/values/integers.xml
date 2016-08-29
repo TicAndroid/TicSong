@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 해당 레벨에서 레벨 업하기까지 요구 경험치 -->
+    <integer name="lv1">150</integer>
+    <integer name="lv2">500</integer>
+    <integer name="lv3">600</integer>
+    <integer name="lv4">700</integer>
+    <integer name="lv5">800</integer>
+    <integer name="lv6">900</integer>
+    <integer name="lv7">1000</integer>
+    <integer name="lv8">1100</integer>
+    <integer name="lv9">1200</integer>
+    <integer name="lv10">1300</integer>
+    <integer name="lv11">1400</integer>
+    <integer name="lv12">1500</integer>
+    <integer name="lv13">1600</integer>
+    <integer name="lv14">1700</integer>
+    <integer name="lv15">1800</integer>
+    <integer name="lv16">1900</integer>
+    <integer name="lv17">2000</integer>
+    <integer name="lv18">2500</integer>
+    <integer name="lv19">3000</integer>
+    <integer name="lv20">100000</integer>
+
+</resources>

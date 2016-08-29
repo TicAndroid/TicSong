@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="23"
-    density="xxxhdpi"
+    abi="armeabi-v7a,armeabi"
+    api-level="19"
+    density="xhdpi"
     format="7"
-    timestamp="201165868447702"
-    token="-8719231681308812603" >
+    timestamp="640107581191157"
+    token="-3161456651158814014" >
 
     <task
         name="javac"
@@ -15,29 +15,19 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="168" />
+        duration="26" />
     <task
         name="verifier"
-        duration="53" />
+        duration="3" />
 
     <artifact
-        location="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-        type="DEX" />
+        location="/Users/yPeA/TicSong_Main/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="200326727189373" >
+    <build timestamp="640107581191157" >
         <artifact
-            location="C:\Users\JPark\Documents\TicSong\app\build\outputs\apk\app-debug.apk"
+            location="/Users/yPeA/TicSong_Main/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build timestamp="200875703632063" >
-        <artifact
-            location="C:\Users\JPark\Documents\TicSong\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-    </build>
-    <build timestamp="201165868447702" >
-        <artifact
-            location="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

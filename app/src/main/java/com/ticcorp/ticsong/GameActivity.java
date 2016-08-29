@@ -5,6 +5,7 @@ import android.content.ClipData;
 import android.content.ClipDescription;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -37,6 +38,10 @@ import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 import com.naver.speech.clientapi.SpeechConfig;
 import com.ticcorp.ticsong.model.CustomPreference;
+import com.ticcorp.ticsong.model.DBManager;
+import com.ticcorp.ticsong.model.StaticSQLite;
+import com.ticcorp.ticsong.module.SQLiteAccessModule;
+import com.ticcorp.ticsong.module.ServerAccessModule;
 import com.ticcorp.ticsong.utils.AudioWriterPCM;
 
 import java.io.IOException;
@@ -52,6 +57,10 @@ public class GameActivity extends Activity {
 
     public int MAX_QUIZ_NUM = 5; // 한 게임의 문제 개수
     public int MAX_LIFE = 3; // 한 문제의 정답 기회
+
+    public String userId;
+    public int userLevel;
+    public int userExp;
 
     public int gameMode = 0; // 0 : 문제 대기 중, 1 : 문제 내는 중, 2 : 맞추는 중, 3 : 정답 확인 중
     public ArrayList<Integer> itemArray = new ArrayList<Integer>(); // 아이템 개수 리스트
@@ -88,6 +97,11 @@ public class GameActivity extends Activity {
     private static final String item2_tag = "3초 듣기";
     private static final String item3_tag = "생명력 회복";
     private static final String item4_tag = "한 글자 공개";
+
+    public TextView item1_cnt;
+    public TextView item2_cnt;
+    public TextView item3_cnt;
+    public TextView item4_cnt;
 
     public LinearLayout fabBackground;
     public ImageButton btn_exit;
@@ -139,9 +153,6 @@ public class GameActivity extends Activity {
 
         btn_click = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
 
-        quizSetting();
-        textWatching();
-
         scrollView = (ScrollView) findViewById(R.id.scroll_part);
         scrollView.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -161,6 +172,11 @@ public class GameActivity extends Activity {
         item3.setTag(item3_tag);
         item4.setTag(item4_tag);
 
+        item1_cnt = (TextView) findViewById(R.id.item1_cnt);
+        item2_cnt = (TextView) findViewById(R.id.item2_cnt);
+        item3_cnt = (TextView) findViewById(R.id.item3_cnt);
+        item4_cnt = (TextView) findViewById(R.id.item4_cnt);
+
         item1.setOnLongClickListener(new LongClickListener());
         item2.setOnLongClickListener(new LongClickListener());
         item3.setOnLongClickListener(new LongClickListener());
@@ -169,15 +185,25 @@ public class GameActivity extends Activity {
         findViewById(R.id.btn_play).setOnDragListener(
                 new DragListener());
 
-        /*
+
         item1.setOnClickListener(new View.OnClickListener() {
             @Override   //아티스트 공개
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
-                        + "'입니다.", Toast.LENGTH_SHORT).show();
-                itemUsed = 1;
-                edit_ans.setHint("이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
-                        + "'입니다.");
+                if (itemArray.get(0) > 0) {
+                    itemArray.set(0, itemArray.get(0) - 1);
+                    ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
+                            itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
+                    SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
+                            itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
+                    item1_cnt.setText(itemArray.get(0) + "");
+                    Toast.makeText(view.getContext(), "이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
+                            + "'입니다.", Toast.LENGTH_SHORT).show();
+                    itemUsed = 1;
+                    edit_ans.setHint("이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
+                            + "'입니다.");
+                } else {
+                    Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
+                }
             }
 
         });
@@ -185,20 +211,40 @@ public class GameActivity extends Activity {
         item2.setOnClickListener(new View.OnClickListener() {
             @Override   //3초 들려주기
             public void onClick(View view) {
+                if (itemArray.get(1) > 0) {
+                    itemArray.set(1, itemArray.get(1) - 1);
+                    ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
+                            itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
+                    SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
+                            itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
+                    item2_cnt.setText(itemArray.get(1) + "");
                 musicPlay(3000);
                 itemUsed = 2;
+                } else {
+                    Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         item3.setOnClickListener(new View.OnClickListener() {
             @Override   //생명력 증가
             public void onClick(View view) {
-                if (life >= 3)
-                    Toast.makeText(view.getContext(), "현재 생명력 만땅입니다!", Toast.LENGTH_SHORT).show();
-                else {
-                    itemUsed = 3;
-                    life++;
-                    //lifeRefresh();
+                if (itemArray.get(2) > 0) {
+                    if (life >= 3)
+                        Toast.makeText(view.getContext(), "현재 생명력 만땅입니다!", Toast.LENGTH_SHORT).show();
+                    else {
+                        itemArray.set(2, itemArray.get(2) - 1);
+                        ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
+                                itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
+                        SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
+                                itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
+                        item3_cnt.setText(itemArray.get(2) + "");
+                        itemUsed = 3;
+                        life++;
+                        //lifeRefresh();
+                    }
+                } else {
+                    Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -206,15 +252,23 @@ public class GameActivity extends Activity {
         item4.setOnClickListener(new View.OnClickListener() {
             @Override   //제목 한글자
             public void onClick(View view) {
-                itemUsed = 4;
-                Toast.makeText(view.getContext(), "곡 제목의 첫 글자는 '" +
-                        textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
-                edit_ans.setHint("곡 제목의 첫 글자는 '" +
-                        textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.");
-
+                if (itemArray.get(3) > 0) {
+                    itemArray.set(3, itemArray.get(3) - 1);
+                    ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
+                            itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
+                    SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
+                            itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
+                    item4_cnt.setText(itemArray.get(3) + "");
+                    itemUsed = 4;
+                    Toast.makeText(view.getContext(), "곡 제목의 첫 글자는 '" +
+                            textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
+                    edit_ans.setHint("곡 제목의 첫 글자는 '" +
+                            textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.");
+                } else {
+                    Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
-        */////////////
 
         recordImage = (ImageView) findViewById(R.id.record_pan);
         anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_anim);
@@ -222,6 +276,9 @@ public class GameActivity extends Activity {
         //음성인식
         handler = new RecognitionHandler(this);
         naverRecognizer = new NaverRecognizer(this, handler, CLIENT_ID, SPEECH_CONFIG);
+
+        quizSetting();
+        textWatching();
     }
 
     @Override
@@ -404,11 +461,11 @@ public class GameActivity extends Activity {
                     artistArray.add("EXID");
                     break;
                 case 12:
-                    answerArray.add("니가알던내가아냐");
+                    answerArray.add("니가 알던 내가 아냐");
                     artistArray.add("AOMG");
                     break;
                 case 13:
-                    answerArray.add("버스안에서");
+                    answerArray.add("버스 안에서");
                     artistArray.add("자자");
                     break;
                 case 14:
@@ -428,7 +485,7 @@ public class GameActivity extends Activity {
                     artistArray.add("김건모");
                     break;
                 case 18:
-                    answerArray.add("잘못된만남");
+                    answerArray.add("잘못된 만남");
                     artistArray.add("김건모");
                     break;
                 case 19:
@@ -448,11 +505,11 @@ public class GameActivity extends Activity {
                     artistArray.add("백아연");
                     break;
                 case 23:
-                    answerArray.add("이럴거면그러지말지");
+                    answerArray.add("이럴 거면 그러지 말지");
                     artistArray.add("백아연");
                     break;
                 case 24:
-                    answerArray.add("우주를건너");
+                    answerArray.add("우주를 건너");
                     artistArray.add("백예린");
                     break;
                 case 25:
@@ -472,7 +529,7 @@ public class GameActivity extends Activity {
                     artistArray.add("소유&정기고");
                     break;
                 case 29:
-                    answerArray.add("이밤의끝을잡고");
+                    answerArray.add("이밤의 끝을 잡고");
                     artistArray.add("솔리드");
                     break;
                 case 30:
@@ -484,7 +541,7 @@ public class GameActivity extends Activity {
                     artistArray.add("싸이");
                     break;
                 case 32:
-                    answerArray.add("금요일에만나요");
+                    answerArray.add("금요일에 만나요");
                     artistArray.add("아이유");
                     break;
                 case 33:
@@ -492,23 +549,23 @@ public class GameActivity extends Activity {
                     artistArray.add("아이유");
                     break;
                 case 34:
-                    answerArray.add("너의의미");
+                    answerArray.add("너의 의미");
                     artistArray.add("아이유");
                     break;
                 case 35:
-                    answerArray.add("널사랑하지않아");
+                    answerArray.add("널 사랑하지 않아");
                     artistArray.add("어반자카파");
                     break;
                 case 36:
-                    answerArray.add("시간을달려서");
+                    answerArray.add("시간을 달려서");
                     artistArray.add("여자친구");
                     break;
                 case 37:
-                    answerArray.add("오늘부터우리는");
+                    answerArray.add("오늘부터 우리는");
                     artistArray.add("여자친구");
                     break;
                 case 38:
-                    answerArray.add("너그리고나");
+                    answerArray.add("너 그리고 나");
                     artistArray.add("여자친구");
                     break;
                 case 39:
@@ -524,7 +581,7 @@ public class GameActivity extends Activity {
                     artistArray.add("이하이");
                     break;
                 case 42:
-                    answerArray.add("여름아부탁해");
+                    answerArray.add("여름아 부탁해");
                     artistArray.add("인디고");
                     break;
                 case 43:
@@ -532,7 +589,7 @@ public class GameActivity extends Activity {
                     artistArray.add("임창정");
                     break;
                 case 44:
-                    answerArray.add("기억의습작");
+                    answerArray.add("기억의 습작");
                     artistArray.add("전람회");
                     break;
                 case 45:
@@ -568,7 +625,7 @@ public class GameActivity extends Activity {
                     artistArray.add("클론");
                     break;
                 case 53:
-                    answerArray.add("영원한사랑");
+                    answerArray.add("영원한 사랑");
                     artistArray.add("핑클");
                     break;
                 case 54:
@@ -576,7 +633,7 @@ public class GameActivity extends Activity {
                     artistArray.add("혁오");
                     break;
                 case 55:
-                    answerArray.add("흔들린우정");
+                    answerArray.add("흔들린 우정");
                     artistArray.add("홍경민");
                     break;
             }//http://52.78.10.41/unithon/seven/sound/21.mp3
@@ -625,10 +682,30 @@ public class GameActivity extends Activity {
     public void setUserData() {
         // 유저 정보 받아오기
         pref = pref.getInstance(this.getApplicationContext());
-        itemArray.add(0, pref.getValue("item1Cnt", 0));
-        itemArray.add(1, pref.getValue("item2Cnt", 0));
-        itemArray.add(2, pref.getValue("item3Cnt", 0));
-        itemArray.add(3, pref.getValue("item4Cnt", 0));
+        DBManager db = new DBManager(this.getApplicationContext(), StaticSQLite.TICSONG_DB, null, 1 );
+        userId = pref.getValue("userId", "userId");
+        Cursor cursor = null;
+        cursor = db.retrieve(StaticSQLite.retrieveMyScoreSQL(userId));
+        while(cursor.moveToNext()) {
+            userExp = cursor.getInt(1);
+            userLevel = cursor.getInt(2);
+        }
+
+        cursor = db.retrieve(StaticSQLite.retrieveItemSQL(userId));
+
+        while(cursor.moveToNext()) {
+            itemArray.add(0, cursor.getInt(1));
+            itemArray.add(1, cursor.getInt(2));
+            itemArray.add(2, cursor.getInt(3));
+            itemArray.add(3, cursor.getInt(4));
+        }
+        cursor.close();
+        db.close();
+
+        item1_cnt.setText(itemArray.get(0) + "");
+        item2_cnt.setText(itemArray.get(1) + "");
+        item3_cnt.setText(itemArray.get(2) + "");
+        item4_cnt.setText(itemArray.get(3) + "");
 
         pref.put("score", 0);
     }
