@@ -40,17 +40,30 @@
             android:name="com.ticcorp.ticsong.ResultActivity"
             android:label="결과화면"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.MainActivity"
             android:label="메인화면"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.GameActivity"
-            android:label="게임화면"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize" >
+            android:label="게임화면" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.ServerTestActivity"
