@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       setUserData();
+       //setUserData();
 
         button_anim = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
         final ImageButton btn_start = (ImageButton) findViewById(R.id.btn_start);

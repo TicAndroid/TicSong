@@ -62,7 +62,8 @@ public class FBActivity extends Activity {
 
         token = AccessToken.getCurrentAccessToken(); // 토큰을 가져옴
 
-        FacebookSdk.sdkInitialize(getApplicationContext());;
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        ;
         LoginManager.getInstance().logOut();
 
         callbackManager = CallbackManager.Factory.create();
@@ -134,7 +135,7 @@ public class FBActivity extends Activity {
                         Log.i("ticlog", "onError");
                     }
                 });
-        if(token != null) {// 로그인 되어있으면 자동으로 게임화면으로
+        if (token != null) {// 로그인 되어있으면 자동으로 게임화면으로
             /*Log.i("ticlog", "token = " + token.getToken());
 
             profile = Profile.getCurrentProfile();
@@ -169,7 +170,7 @@ public class FBActivity extends Activity {
         Log.d("myLog", "resultCode" + resultCode);
         Log.d("myLog", "data  " + data.toString());
 
-        final Button loginBtn = (Button)findViewById(R.id.login_button);
+        final Button loginBtn = (Button) findViewById(R.id.login_button);
         loginBtn.post(new Runnable() {
             @Override
             public void run() {

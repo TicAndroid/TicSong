@@ -8,12 +8,12 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\com_facebook_activity_layout.xml"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_large.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_blue_large.xml"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_large.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_blue_large.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_round.xml",

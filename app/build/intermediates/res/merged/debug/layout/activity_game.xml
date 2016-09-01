@@ -18,7 +18,7 @@
             <ImageView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:background="@drawable/background_test" />
+                android:background="@drawable/background_base" />
         </FrameLayout>
     </ScrollView>
 
@@ -26,7 +26,7 @@
         android:id="@+id/game_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/splash_back1"
+        android:background="@drawable/background_spot"
         android:orientation="vertical"
         android:weightSum="100">
 
@@ -34,7 +34,7 @@
             android:id="@+id/first_part"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@drawable/firstbar"
+
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="5dp"
@@ -151,7 +151,7 @@
                                 android:id="@+id/item1"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/star_60" />
+                                android:background="@drawable/item_artist" />
 
                             <TextView
                                 android:id="@+id/item1_cnt"
@@ -163,8 +163,9 @@
                                 android:background="@drawable/badge_item_count"
                                 android:gravity="center"
                                 android:paddingEnd="8dp"
-                                android:paddingLeft="8dp"
+                                android:paddingLeft="6dp"
                                 android:paddingRight="8dp"
+                                android:paddingTop="6dp"
                                 android:text="0"
                                 android:textColor="#000000"
                                 android:textSize="11sp" />
@@ -181,7 +182,7 @@
                                 android:id="@+id/item2"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/star_60" />
+                                android:background="@drawable/item_onemore" />
 
                             <TextView
                                 android:id="@+id/item2_cnt"
@@ -193,8 +194,9 @@
                                 android:background="@drawable/badge_item_count"
                                 android:gravity="center"
                                 android:paddingEnd="8dp"
-                                android:paddingLeft="8dp"
+                                android:paddingLeft="6dp"
                                 android:paddingRight="8dp"
+                                android:paddingTop="6dp"
                                 android:text="99"
                                 android:textColor="#000000"
                                 android:textSize="11sp" />
@@ -211,7 +213,7 @@
                                 android:id="@+id/item3"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/star_60" />
+                                android:background="@drawable/item_onechar" />
 
                             <TextView
                                 android:id="@+id/item3_cnt"
@@ -223,8 +225,9 @@
                                 android:background="@drawable/badge_item_count"
                                 android:gravity="center"
                                 android:paddingEnd="8dp"
-                                android:paddingLeft="8dp"
+                                android:paddingLeft="6dp"
                                 android:paddingRight="8dp"
+                                android:paddingTop="6dp"
                                 android:text="12"
                                 android:textColor="#000000"
                                 android:textSize="11sp" />
@@ -241,7 +244,7 @@
                                 android:id="@+id/item4"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/star_60" />
+                                android:background="@drawable/item_thirdsecond" />
 
                             <TextView
                                 android:id="@+id/item4_cnt"
@@ -253,8 +256,9 @@
                                 android:background="@drawable/badge_item_count"
                                 android:gravity="center"
                                 android:paddingEnd="8dp"
-                                android:paddingLeft="8dp"
+                                android:paddingLeft="6dp"
                                 android:paddingRight="8dp"
+                                android:paddingTop="6dp"
                                 android:text="10"
                                 android:textColor="#000000"
                                 android:textSize="11sp" />

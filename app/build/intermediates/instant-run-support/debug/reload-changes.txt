@@ -1,0 +1,17 @@
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\google\android\gms\plus\R$drawable$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\google\android\gms\R$drawable$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\R$integer$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\gun0912\tedpermission\R$drawable$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\R$string$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\cn\pedant\SweetAlert\R$drawable$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\v7\appcompat\R$drawable$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\R$layout$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\pnikosis\materialishprogress\R$drawable$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\R$styleable$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\facebook\R$drawable$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\R$style$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\R$drawable$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\GameActivity$DragListener$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\ResultActivity$override.class
+CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\R$id$override.class

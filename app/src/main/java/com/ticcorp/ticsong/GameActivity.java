@@ -83,9 +83,6 @@ public class GameActivity extends Activity {
     public ScrollView scrollView;
     public ImageView recordImage;
     public Animation anim;
-    public Animation anim_scale;
-    public Animation anim_scale2;
-    public Animation anim_scale3;
     public Animation btn_click;
 
     public ImageView item1;
@@ -152,6 +149,7 @@ public class GameActivity extends Activity {
         ButterKnife.bind(this);
 
         btn_click = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
+
 
         scrollView = (ScrollView) findViewById(R.id.scroll_part);
         scrollView.setOnTouchListener(new View.OnTouchListener() {
@@ -644,7 +642,7 @@ public class GameActivity extends Activity {
             addressArray.add(soundUrl);
         }
 
-        setUserData();
+        //setUserData();
         nextQuiz();
     }
 
@@ -993,6 +991,7 @@ public class GameActivity extends Activity {
                     View view = (View) event.getLocalState();
                     switch (item_selected){
                         case 1:
+                            /*
                             if (itemArray.get(0) > 0) {
                                 itemArray.set(0, itemArray.get(0) - 1);
                                 ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
@@ -1000,30 +999,32 @@ public class GameActivity extends Activity {
                                 SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
                                         itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
                                 item1_cnt.setText(itemArray.get(0) + "");
+                                */
                                 Toast.makeText(view.getContext(), "이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
                                         + "'입니다.", Toast.LENGTH_SHORT).show();
                                 itemUsed = 1;
                                 edit_ans.setHint("이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
                                         + "'입니다.");
+                            /*
                             } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }
+                            }*/
                             break;
-                        case 2:
+                        case 2:/*
                             if (itemArray.get(1) > 0) {
                                 itemArray.set(1, itemArray.get(1) - 1);
                                 ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
                                         itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
                                 SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
                                         itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
-                                item2_cnt.setText(itemArray.get(1) + "");
+                                item2_cnt.setText(itemArray.get(1) + "");*/
                                 musicPlay(3000);
                                 itemUsed = 2;
-                            } else {
+                           /* } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }
+                            }*/
                             break;
-                        case 3:
+                        case 3:/*
                             if (itemArray.get(2) > 0) {
                                 if (life >= 3)
                                     Toast.makeText(view.getContext(), "현재 생명력 만땅입니다!", Toast.LENGTH_SHORT).show();
@@ -1033,16 +1034,16 @@ public class GameActivity extends Activity {
                                             itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
                                     SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
                                             itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
-                                    item3_cnt.setText(itemArray.get(2) + "");
+                                    item3_cnt.setText(itemArray.get(2) + "");*/
                                     itemUsed = 3;
                                     life++;
-                                    //lifeRefresh();
-                                }
+                                    lifeRefresh();
+                               /* }
                             } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }
+                            }*/
                             break;
-                        case 4:
+                        case 4:/*
                             if (itemArray.get(3) > 0) {
                                 itemArray.set(3, itemArray.get(3) - 1);
                                 ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
@@ -1050,14 +1051,14 @@ public class GameActivity extends Activity {
                                 SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
                                         itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
                                 item4_cnt.setText(itemArray.get(3) + "");
-                                itemUsed = 4;
+                              */  itemUsed = 4;
                                 Toast.makeText(view.getContext(), "곡 제목의 첫 글자는 '" +
                                         textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
                                 edit_ans.setHint("곡 제목의 첫 글자는 '" +
                                         textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.");
-                            } else {
+                         /*   } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }
+                            }*/
                             break;
                         case 0:
                         default:

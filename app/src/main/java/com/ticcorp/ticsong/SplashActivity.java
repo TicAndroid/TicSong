@@ -38,7 +38,6 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-
         new TedPermission(this)
                 .setPermissionListener(permissionlistener)
                 .setDeniedMessage("게임 진행을 위한 권한입니다.")
@@ -76,11 +75,6 @@ public class SplashActivity extends Activity {
             Log.e("DBHelper",c.getString(c.getColumnIndex("userId")));
         }
 */
-
-        final ImageView iv = (ImageView)findViewById(R.id.ani_twinkle);
-        Animation anim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.alpha_anim);
-        iv.startAnimation(anim);    //twinkle~
-
 
         Handler hd = new Handler();
         hd.postDelayed(new splashhandler(), 3500);

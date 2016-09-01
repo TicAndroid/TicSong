@@ -4,8 +4,6 @@
     android:thickness="9dp"
     android:useLevel="false">
 
-    <solid android:color="#FFFFFF" />
-
     <padding
         android:bottom="2dp"
         android:top="2dp" />
