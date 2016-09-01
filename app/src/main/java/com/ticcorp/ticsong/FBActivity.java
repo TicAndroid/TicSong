@@ -156,8 +156,8 @@ public class FBActivity extends Activity {
                     }
             ).executeAsync();
 
-            startActivity(new Intent(getApplication(), MainActivity.class));
-            FBActivity.this.finish();
+            //startActivity(new Intent(getApplication(), MainActivity.class));
+            //FBActivity.this.finish();
         }
     }
 
@@ -175,9 +175,9 @@ public class FBActivity extends Activity {
             @Override
             public void run() {
                 //loginBtn.setVisibility(View.INVISIBLE);
-                startActivity(new Intent(getApplication(), MainActivity.class));
+                //startActivity(new Intent(getApplication(), MainActivity.class));
                 // 로그인 되면 현재 페이지 제거
-                FBActivity.this.finish();
+                //FBActivity.this.finish();
             }
         });
 

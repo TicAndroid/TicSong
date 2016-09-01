@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       //setUserData();
+       setUserData();
 
         button_anim = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
         final ImageButton btn_start = (ImageButton) findViewById(R.id.btn_start);
@@ -158,6 +158,13 @@ public class MainActivity extends Activity {
         profile_progressbar = (ProgressBar) findViewById(R.id.profile_progressbar);
 
         pref = pref.getInstance(this.getApplicationContext());
+
+        //강제 레벨/경험치 주입
+        /*
+        ServerAccessModule.getInstance().gameFinished(pref.getValue("userId", "userId"), 22, 2, 3, 3, 3, 3);
+        SQLiteAccessModule.getInstance(MainActivity.this.getApplicationContext()).gameFinished(pref.getValue("userId", "userId"), 22, 2, 3, 3, 3, 3);
+        */
+
         DBManager db = new DBManager(this.getApplicationContext(), StaticSQLite.TICSONG_DB, null, 1 );
         Cursor cursor = null;
         cursor = db.retrieve(StaticSQLite.retrieveUserSQL(pref.getValue("userId", "userId")));
@@ -182,16 +189,6 @@ public class MainActivity extends Activity {
 
         profile_progressbar.setMax(next_exp);
         profile_progressbar.setProgress(user_exp);
-
-        /*
-
-        user_name = pref.getValue("name", "-");
-        user_lv = 3;
-        user_exp = 1500;
-        user_itemArray.add(0, 1); // 아티스트 보여주기 아이템 개수
-        user_itemArray.add(1, 1); // 3초 듣기 아이템 개수
-        user_itemArray.add(2, 2); // 정답 1회 증가 아이템 개수
-        user_itemArray.add(3, 1); // 제목 한 글자 보여주기 아이템 개수 */
     }
 
 
