@@ -96,11 +96,17 @@ public class FBActivity extends Activity {
                                             Log.i("ticlog name", name);
                                             //Log.i("email1",email1);
 
-                                            ServerAccessModule.getInstance().login(FBActivity.this.getApplicationContext(), id, name, 0);
+                                            ServerAccessModule.getInstance().login(getApplicationContext(), id, name, 0);
                                             pref.put("userId", id);
-                                            startActivity(new Intent(getApplication(), MainActivity.class));
+
+                                            Intent intent = new Intent(getApplication(), MainActivity.class);
+                                            intent.putExtra("userId",id);
+                                            intent.putExtra("name",name);
+                                            startActivity(intent);
+                                            //startActivity(new Intent(getApplication(), MainActivity.class));
                                             // 로그인 되면 현재 페이지 제거
                                             FBActivity.this.finish();
+
 
                                         } catch (JSONException e) {
                                             // TODO Auto-generated catch block

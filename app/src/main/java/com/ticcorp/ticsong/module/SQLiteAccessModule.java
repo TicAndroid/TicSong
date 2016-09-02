@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.util.Log;
 
 import com.ticcorp.ticsong.DTO.LoginView;
+import com.ticcorp.ticsong.model.CustomPreference;
 import com.ticcorp.ticsong.model.DBManager;
 import com.ticcorp.ticsong.model.StaticSQLite;
 

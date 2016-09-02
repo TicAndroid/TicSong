@@ -1,2 +1,3 @@
-CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
-CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/MainActivity$override.class
+CHANGED,C:\Users\Daesub Kim\Desktop\TicSong\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\Daesub Kim\Desktop\TicSong\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\ServerTestActivity$override.class
+CHANGED,C:\Users\Daesub Kim\Desktop\TicSong\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\ServerTestActivity$$ViewBinder$override.class

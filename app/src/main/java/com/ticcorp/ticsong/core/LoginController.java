@@ -62,6 +62,7 @@ public class LoginController {
         call.clone().enqueue(new Callback<LoginView>() {
             @Override
             public void onResponse(Call<LoginView> call, Response<LoginView> response) {
+
                 /* 응답코드가 200번대가 아니라면*/
                 if(!response.isSuccess()) {
                     Log.d("로그인 실패", "-1");

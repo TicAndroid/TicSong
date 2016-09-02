@@ -1,6 +1,7 @@
 package com.ticcorp.ticsong.module;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.ticcorp.ticsong.DTO.FriendsScoreView;
 import com.ticcorp.ticsong.DTO.ScoreView;

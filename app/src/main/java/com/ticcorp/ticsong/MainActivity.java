@@ -12,6 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.view.*;
@@ -24,10 +25,15 @@ import com.facebook.HttpMethod;
 import com.ticcorp.ticsong.model.CustomPreference;
 import com.ticcorp.ticsong.model.DBManager;
 import com.ticcorp.ticsong.model.StaticSQLite;
+import com.ticcorp.ticsong.module.ServerAccessModule;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class MainActivity extends Activity {
@@ -36,6 +42,9 @@ public class MainActivity extends Activity {
     public String user_name;
     public int user_id, user_lv, user_exp, next_exp;
     public ArrayList<Integer> user_itemArray = new ArrayList<Integer>();
+
+    @Bind(R.id.main_juke_img)
+    ImageView mainJukeBox;
 
     Animation button_anim;
 
@@ -51,7 +60,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       setUserData();
+        ButterKnife.bind(this);
+
+        setUserData();
 
         button_anim = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
         final ImageButton btn_start = (ImageButton) findViewById(R.id.btn_start);
@@ -159,13 +170,21 @@ public class MainActivity extends Activity {
 
         pref = pref.getInstance(this.getApplicationContext());
 
+        Intent intent = getIntent();
+        String userId = intent.getStringExtra("userId");
+        String name = intent.getStringExtra("name");
+        Log.i("Intent from FBActivity", userId + " / " +name);
+
+        ServerAccessModule.getInstance().login(getApplicationContext(), userId, name, 0);
+
+
         //강제 레벨/경험치 주입
         /*
         ServerAccessModule.getInstance().gameFinished(pref.getValue("userId", "userId"), 22, 2, 3, 3, 3, 3);
         SQLiteAccessModule.getInstance(MainActivity.this.getApplicationContext()).gameFinished(pref.getValue("userId", "userId"), 22, 2, 3, 3, 3, 3);
         */
 
-        DBManager db = new DBManager(this.getApplicationContext(), StaticSQLite.TICSONG_DB, null, 1 );
+        /*DBManager db = new DBManager(this.getApplicationContext(), StaticSQLite.TICSONG_DB, null, 1 );
         Cursor cursor = null;
         cursor = db.retrieve(StaticSQLite.retrieveUserSQL(pref.getValue("userId", "userId")));
         while(cursor.moveToNext()) {
@@ -178,18 +197,27 @@ public class MainActivity extends Activity {
             user_lv = cursor.getInt(2);
         }
         cursor.close();
-        db.close();
+        db.close();*/
+
+        user_name = pref.getValue("userId", "userId");
+        user_lv = pref.getValue("userLevel", 1);
+        next_exp = pref.getValue("exp", 0);
+        Log.e("ticlog Main", user_name + " / " + user_lv + " / " + next_exp);
 
         profile_id.setText(user_name);
         profile_level.setText(user_lv + "");
 
         next_exp = getResources().getInteger(getResources().getIdentifier("lv" + user_lv, "integer", MainActivity.this.getPackageName()));
 
-        Log.i("ticlog Main", user_lv + "/" + next_exp);
-
         profile_progressbar.setMax(next_exp);
         profile_progressbar.setProgress(user_exp);
+
     }
 
+    // JukeBox 이미지 클릭시 GameActivity로 이동
+    @OnClick(R.id.main_juke_img)
+    void mainJokeBoxClicked() {
+        startActivity(new Intent(getApplication(), GameActivity.class));
+    }
 
 }

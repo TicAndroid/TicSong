@@ -20,6 +20,7 @@
         android:background="@drawable/background_spot" />
 
     <ImageView
+        android:id="@+id/main_juke_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background_main_juke"/>
@@ -166,6 +167,25 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="54" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:layout_gravity="bottom">
+
+
+            <ImageButton
+                android:id="@+id/btn_start"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_gamestart"
+                android:onClick="onClick" />
+
+
+        </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -335,7 +355,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <!--<LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="9"
@@ -350,7 +370,7 @@
                 android:onClick="onClick" />
 
 
-        </LinearLayout>
+        </LinearLayout>-->
 
     </LinearLayout>
 </FrameLayout>

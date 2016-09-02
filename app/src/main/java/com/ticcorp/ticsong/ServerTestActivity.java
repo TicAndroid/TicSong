@@ -95,10 +95,11 @@ public class ServerTestActivity extends Activity {
     @OnClick(R.id.btn_logout)
     void logoutBtn() {
 
-        String userId = "5555";
+        //String userId = "5555";
+        CustomPreference pref = CustomPreference.getInstance(getApplicationContext());
 
         /* 호출 메소드 */
-        SQLiteAccessModule.getInstance(this.getApplicationContext()).logout(userId);
+        SQLiteAccessModule.getInstance(this.getApplicationContext()).logout(pref.getValue("userId", "userId"));
         // Argu : Preference에서 userId 뽑음.
         // 기능 : SQLite DB Table 에서 Retrieve, Drop 후, ServerAccessModule.gameFinished() 호출
     }
