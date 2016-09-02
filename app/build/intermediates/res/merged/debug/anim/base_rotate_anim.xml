@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:duration="5000">
+<set xmlns:android="http://schemas.android.com/apk/res/android">
 
     <rotate
         android:fromDegrees="0"
@@ -8,6 +7,14 @@
         android:repeatCount="infinite"
         android:pivotX="50%"
         android:pivotY="50%"
+        android:duration="150000"
+        />
+
+    <alpha
+        android:fromAlpha="1.0"
+        android:toAlpha="0.7"
+        android:repeatCount="infinite"
+        android:duration="3000"
         />
 
 </set>

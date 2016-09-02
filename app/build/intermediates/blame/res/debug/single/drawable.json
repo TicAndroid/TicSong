@@ -24,10 +24,6 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable\\common_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_0.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\star_0.png"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
@@ -84,12 +80,12 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\com_facebook_button_login_silver_background.xml"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_ratingbar_full_material.xml"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_main_juke.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\background_main_juke.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_character.png",
@@ -100,12 +96,12 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\icon_main_shop.png"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\main_item_pannel.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\main_item_pannel.png"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_icon.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\com_facebook_button_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\main_item_pannel.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\main_item_pannel.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_progress.xml",
@@ -124,12 +120,12 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_radio_material.xml"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_base.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\background_base.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
@@ -190,10 +186,6 @@
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_gamestart.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\btn_gamestart.png"
-    },
-    {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_30.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\star_30.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\game_item_panel.png",
@@ -276,10 +268,6 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\lvl_up.png"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\star.png"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_signin_btn_text_dark.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\drawable\\common_signin_btn_text_dark.xml"
     },
@@ -290,6 +278,10 @@
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edit_txt_test.png",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\edit_txt_test.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\score_30.png",
@@ -308,12 +300,12 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\cn.pedant.sweetalert\\library\\1.3\\res\\drawable\\blue_button_background.xml"
     },
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_colored_material.xml"
-    },
-    {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_home.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\btn_home.png"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_record_style.xml",
@@ -426,10 +418,6 @@
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\error_center_x.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\cn.pedant.sweetalert\\library\\1.3\\res\\drawable\\error_center_x.xml"
-    },
-    {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_60.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\star_60.png"
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\juke_tic.png",

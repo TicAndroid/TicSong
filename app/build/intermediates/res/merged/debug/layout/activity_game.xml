@@ -13,6 +13,7 @@
         android:background="@drawable/background_base" />
 
     <ImageView
+        android:id="@+id/background_star"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background_star" />
@@ -355,7 +356,7 @@
             android:layout_width="match_parent"
             android:layout_height="49dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/material_blue_grey_90"
+            android:background="#77000000"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:gravity="center_vertical"
@@ -371,10 +372,11 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="85"
-                android:background="@drawable/edix_style"
+                android:background="@drawable/edit_txt_test"
                 android:ems="15"
                 android:gravity="center_vertical"
                 android:hint="정답을 입력하세요!"
+                android:textColorHint="#FFFFFF"
                 android:paddingLeft="10dp"
                 android:singleLine="true"
                 android:textSize="13sp" />

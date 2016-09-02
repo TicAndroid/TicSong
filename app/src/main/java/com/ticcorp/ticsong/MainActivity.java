@@ -26,6 +26,7 @@ import com.ticcorp.ticsong.model.CustomPreference;
 import com.ticcorp.ticsong.model.DBManager;
 import com.ticcorp.ticsong.model.StaticSQLite;
 import com.ticcorp.ticsong.module.ServerAccessModule;
+import com.ticcorp.ticsong.utils.BackPressCloseHandler;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;
@@ -43,10 +44,12 @@ public class MainActivity extends Activity {
     public int user_id, user_lv, user_exp, next_exp;
     public ArrayList<Integer> user_itemArray = new ArrayList<Integer>();
 
+    private BackPressCloseHandler backPressCloseHandler;
+
     @Bind(R.id.main_juke_img)
     ImageView mainJukeBox;
 
-    Animation button_anim;
+    Animation button_anim, background_anim;
 
     TextView profile_id, profile_level;
     ProgressBar profile_progressbar;
@@ -64,8 +67,13 @@ public class MainActivity extends Activity {
 
         setUserData();
 
+        backPressCloseHandler = new BackPressCloseHandler(this);
+
+        background_anim = AnimationUtils.loadAnimation(this,R.anim.base_rotate_anim);
         button_anim = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
         final ImageButton btn_start = (ImageButton) findViewById(R.id.btn_start);
+        ImageView star_background = (ImageView) findViewById(R.id.background_star);
+        star_background.startAnimation(background_anim);
 
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -160,6 +168,12 @@ public class MainActivity extends Activity {
             }
         });*/
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        backPressCloseHandler.onBackPressed();
     }
 
     public void setUserData () { // DB 연결

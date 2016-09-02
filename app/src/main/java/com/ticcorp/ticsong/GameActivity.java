@@ -156,6 +156,10 @@ public class GameActivity extends Activity {
         setContentView(R.layout.activity_game);
         ButterKnife.bind(this);
 
+        Animation rotate_back = AnimationUtils.loadAnimation(this,R.anim.base_rotate_anim);
+        ImageView star_back = (ImageView) findViewById(R.id.background_star);
+
+        star_back.startAnimation(rotate_back);
         btn_click = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
 
         /*

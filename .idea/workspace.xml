@@ -29,14 +29,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="176" column="5" selection-start-line="176" selection-start-column="5" selection-end-line="176" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BackPressCloseHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/utils/BackPressCloseHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#326#327#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base_rotate_anim.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/base_rotate_anim.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.7352941">
+              <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="alpha_anim.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/alpha_anim.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.132353">
-              <caret line="279" column="54" selection-start-line="258" selection-start-column="24" selection-end-line="279" selection-end-column="54" />
+            <state vertical-scroll-proportion="-2.7205882">
+              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -45,26 +89,26 @@
       <file leaf-file-name="GameActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/GameActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7789116">
-              <caret line="947" column="42" selection-start-line="947" selection-start-column="42" selection-end-line="947" selection-end-column="42" />
+            <state vertical-scroll-proportion="-6.982993">
+              <caret line="161" column="44" selection-start-line="161" selection-start-column="44" selection-end-line="161" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6318#7151#0" expanded="true" />
-                <element signature="e#7150#7151#0" expanded="true" />
-                <element signature="e#7193#8026#0" expanded="true" />
-                <element signature="e#8025#8026#0" expanded="true" />
-                <element signature="e#8067#8900#0" expanded="true" />
-                <element signature="e#8899#8900#0" expanded="true" />
-                <element signature="e#8941#9774#0" expanded="true" />
-                <element signature="e#9773#9774#0" expanded="true" />
-                <element signature="e#11594#11819#0" expanded="true" />
-                <element signature="e#11818#11819#0" expanded="true" />
-                <element signature="e#11862#12533#0" expanded="true" />
-                <element signature="e#12532#12533#0" expanded="true" />
-                <element signature="e#27372#28121#0" expanded="true" />
-                <element signature="e#27647#28087#0" expanded="true" />
-                <element signature="e#28086#28087#0" expanded="true" />
-                <element signature="e#28120#28121#0" expanded="true" />
+                <element signature="e#6536#7369#0" expanded="true" />
+                <element signature="e#7368#7369#0" expanded="true" />
+                <element signature="e#7411#8244#0" expanded="true" />
+                <element signature="e#8243#8244#0" expanded="true" />
+                <element signature="e#8285#9118#0" expanded="true" />
+                <element signature="e#9117#9118#0" expanded="true" />
+                <element signature="e#9159#9992#0" expanded="true" />
+                <element signature="e#9991#9992#0" expanded="true" />
+                <element signature="e#11812#12037#0" expanded="true" />
+                <element signature="e#12036#12037#0" expanded="true" />
+                <element signature="e#12080#12751#0" expanded="true" />
+                <element signature="e#12750#12751#0" expanded="true" />
+                <element signature="e#27590#28339#0" expanded="true" />
+                <element signature="e#27865#28305#0" expanded="true" />
+                <element signature="e#28304#28305#0" expanded="true" />
+                <element signature="e#28338#28339#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,8 +120,18 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.9411764">
-              <caret line="402" column="59" selection-start-line="402" selection-start-column="59" selection-end-line="402" selection-end-column="59" />
+            <state vertical-scroll-proportion="-2.5735295">
+              <caret line="355" column="47" selection-start-line="355" selection-start-column="47" selection-end-line="355" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edix_style.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/edix_style.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.147059">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -111,52 +165,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.9411764">
-              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rotate_anim_thirdsec.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/rotate_anim_thirdsec.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4117646">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rotate_tic_anim_thirdsec.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/rotate_tic_anim_thirdsec.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4117646">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rotate_anim_infinte.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/rotate_anim_infinte.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.352941">
-              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="resourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -1849,9 +1864,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/ServerTestActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/module/SQLiteAccessModule.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/core/LoginController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/anim/base_rotate_anim.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/roatate_tic_anim.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/button_click_animation.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/rotate_anim.xml" />
@@ -1860,11 +1872,15 @@
         <option value="$PROJECT_DIR$/app/src/main/res/anim/rotate_anim_thirdsec.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/rotate_tic_anim_thirdsec.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/rotate_anim_infinte.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/GameActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_result.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/ResultActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/GameActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/anim/base_rotate_anim.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/utils/BackPressCloseHandler.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -1985,6 +2001,28 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="ticsong" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TicSong" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticsong" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2464,14 +2502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/rotate_tic_anim.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.088235">
@@ -2479,14 +2509,6 @@
           <folding>
             <marker date="1472829879530" expanded="true" signature="102:284" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/base_rotate_anim.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.823529">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2530,17 +2552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.132353">
-          <caret line="279" column="54" selection-start-line="258" selection-start-column="24" selection-end-line="279" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.9411764">
@@ -2578,39 +2589,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/alpha_anim.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7205882">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/base_rotate_anim.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7352941">
+          <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/edix_style.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.147059">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.9411764">
-          <caret line="402" column="59" selection-start-line="402" selection-start-column="59" selection-end-line="402" selection-end-column="59" />
+        <state vertical-scroll-proportion="-2.5735295">
+          <caret line="355" column="47" selection-start-line="355" selection-start-column="47" selection-end-line="355" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/utils/BackPressCloseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="176" column="5" selection-start-line="176" selection-start-column="5" selection-end-line="176" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/GameActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7789116">
-          <caret line="947" column="42" selection-start-line="947" selection-start-column="42" selection-end-line="947" selection-end-column="42" />
+        <state vertical-scroll-proportion="-6.982993">
+          <caret line="161" column="44" selection-start-line="161" selection-start-column="44" selection-end-line="161" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6318#7151#0" expanded="true" />
-            <element signature="e#7150#7151#0" expanded="true" />
-            <element signature="e#7193#8026#0" expanded="true" />
-            <element signature="e#8025#8026#0" expanded="true" />
-            <element signature="e#8067#8900#0" expanded="true" />
-            <element signature="e#8899#8900#0" expanded="true" />
-            <element signature="e#8941#9774#0" expanded="true" />
-            <element signature="e#9773#9774#0" expanded="true" />
-            <element signature="e#11594#11819#0" expanded="true" />
-            <element signature="e#11818#11819#0" expanded="true" />
-            <element signature="e#11862#12533#0" expanded="true" />
-            <element signature="e#12532#12533#0" expanded="true" />
-            <element signature="e#27372#28121#0" expanded="true" />
-            <element signature="e#27647#28087#0" expanded="true" />
-            <element signature="e#28086#28087#0" expanded="true" />
-            <element signature="e#28120#28121#0" expanded="true" />
+            <element signature="e#6536#7369#0" expanded="true" />
+            <element signature="e#7368#7369#0" expanded="true" />
+            <element signature="e#7411#8244#0" expanded="true" />
+            <element signature="e#8243#8244#0" expanded="true" />
+            <element signature="e#8285#9118#0" expanded="true" />
+            <element signature="e#9117#9118#0" expanded="true" />
+            <element signature="e#9159#9992#0" expanded="true" />
+            <element signature="e#9991#9992#0" expanded="true" />
+            <element signature="e#11812#12037#0" expanded="true" />
+            <element signature="e#12036#12037#0" expanded="true" />
+            <element signature="e#12080#12751#0" expanded="true" />
+            <element signature="e#12750#12751#0" expanded="true" />
+            <element signature="e#27590#28339#0" expanded="true" />
+            <element signature="e#27865#28305#0" expanded="true" />
+            <element signature="e#28304#28305#0" expanded="true" />
+            <element signature="e#28338#28339#0" expanded="true" />
           </folding>
         </state>
       </provider>
