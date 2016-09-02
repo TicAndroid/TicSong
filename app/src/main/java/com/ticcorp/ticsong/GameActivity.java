@@ -299,6 +299,7 @@ public class GameActivity extends Activity {
         handler = new RecognitionHandler(this);
         naverRecognizer = new NaverRecognizer(this, handler, CLIENT_ID, SPEECH_CONFIG);
 
+        pref = pref.getInstance(this.getApplicationContext());
         quizSetting();
         textWatching();
     }
@@ -355,7 +356,7 @@ public class GameActivity extends Activity {
         gameMode = 3;
         txt_msg.setText("정답은 " + artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + "입니다!");
         //correctArray.add((quizNum - 1), 0); // 오답 문제 기록
-//        pref.put("correct" + quizNum, 0); // 오답 문제 기록
+        pref.put("correct" + quizNum, 0); // 오답 문제 기록
         musicPlay(-1);
     }
 
@@ -714,7 +715,6 @@ public class GameActivity extends Activity {
 
     public void setUserData() {
         // 유저 정보 받아오기
-        pref = pref.getInstance(this.getApplicationContext());
         DBManager db = new DBManager(this.getApplicationContext(), StaticSQLite.TICSONG_DB, null, 1);
         userId = pref.getValue("userId", "userId");
         Cursor cursor = null;

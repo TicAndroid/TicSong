@@ -94,11 +94,11 @@ public class ResultActivity extends Activity {
         boom = (ImageView) findViewById(R.id.boom);
         item = (ImageView) findViewById(R.id.item2);
 
+        pref = pref.getInstance(this.getApplicationContext());
         setResult(); // 게임 결과 처리하기
     }
 
     public void setResult() {
-        pref = pref.getInstance(this.getApplicationContext());
         userId = pref.getValue("userId", "userId");
 
         DBManager db = new DBManager(this.getApplicationContext(), StaticSQLite.TICSONG_DB, null, 1 );
@@ -138,9 +138,9 @@ public class ResultActivity extends Activity {
 
         setImage();
 
-        score.setText(pref.getValue("score", 0));
+        score.setText(pref.getValue("score", 0) + "");
         //exp.setText("exp " + userExp);
-        level.setText(userLevel);
+        level.setText(userLevel + "");
     }
 
     public void setLevel() { // 경험치 보고 레벨 업 처리
