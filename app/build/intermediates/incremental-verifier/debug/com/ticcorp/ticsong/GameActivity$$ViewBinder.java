@@ -8,12 +8,12 @@ import butterknife.ButterKnife.ViewBinder;
 public class GameActivity$$ViewBinder<T extends com.ticcorp.ticsong.GameActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131427444, "field 'txt_msg'");
-    target.txt_msg = finder.castView(view, 2131427444, "field 'txt_msg'");
+    view = finder.findRequiredView(source, 2131427443, "field 'txt_msg'");
+    target.txt_msg = finder.castView(view, 2131427443, "field 'txt_msg'");
     view = finder.findRequiredView(source, 2131427460, "field 'edit_ans'");
     target.edit_ans = finder.castView(view, 2131427460, "field 'edit_ans'");
-    view = finder.findRequiredView(source, 2131427445, "field 'btn_play' and method 'playClick'");
-    target.btn_play = finder.castView(view, 2131427445, "field 'btn_play'");
+    view = finder.findRequiredView(source, 2131427444, "field 'btn_play' and method 'playClick'");
+    target.btn_play = finder.castView(view, 2131427444, "field 'btn_play'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -30,8 +30,8 @@ public class GameActivity$$ViewBinder<T extends com.ticcorp.ticsong.GameActivity
     target.img_life3 = finder.castView(view, 2131427458, "field 'img_life3'");
     view = finder.findRequiredView(source, 2131427459, "field 'frame_ans'");
     target.frame_ans = finder.castView(view, 2131427459, "field 'frame_ans'");
-    view = finder.findRequiredView(source, 2131427443, "field 'btn_pass' and method 'passOkClick'");
-    target.btn_pass = finder.castView(view, 2131427443, "field 'btn_pass'");
+    view = finder.findRequiredView(source, 2131427442, "field 'btn_pass' and method 'passOkClick'");
+    target.btn_pass = finder.castView(view, 2131427442, "field 'btn_pass'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -74,7 +74,7 @@ public class GameActivity$$ViewBinder<T extends com.ticcorp.ticsong.GameActivity
     target.txt_voice_result = finder.castView(view, 2131427464, "field 'txt_voice_result'");
     view = finder.findRequiredView(source, 2131427465, "field 'txt_voice_system'");
     target.txt_voice_system = finder.castView(view, 2131427465, "field 'txt_voice_system'");
-    view = finder.findRequiredView(source, 2131427442, "method 'exitOkClick'");
+    view = finder.findRequiredView(source, 2131427441, "method 'exitOkClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

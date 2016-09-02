@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
@@ -82,13 +83,20 @@ public class GameActivity extends Activity {
 
     public ScrollView scrollView;
     public ImageView recordImage;
-    public Animation anim;
     public Animation btn_click;
+    public Animation start_click;
+    public Animation tic_click;
+    public Animation start_click_third;
+    public Animation tic_click_third;
+    public Animation start_click_infinite;
+    public Animation tic_click_infinite;
 
     public ImageView item1;
     public ImageView item2;
     public ImageView item3;
     public ImageView item4;
+    public ImageView tictac;
+    public ImageView rotate;
 
     public int item_selected = 0; // 0 = 일반상태, 1 = 아티스트, 2 = 3초듣기, 3 = 생명회복, 4 = 한 글자
 
@@ -150,14 +158,14 @@ public class GameActivity extends Activity {
 
         btn_click = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
 
-
+        /*
         scrollView = (ScrollView) findViewById(R.id.scroll_part);
         scrollView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
             }
-        });
+        });*/
         btn_exit = (ImageButton) findViewById(R.id.btn_exit);
 
         item1 = (ImageView) findViewById(R.id.item1); //아티스트 공개
@@ -175,10 +183,10 @@ public class GameActivity extends Activity {
         item3_cnt = (TextView) findViewById(R.id.item3_cnt);
         item4_cnt = (TextView) findViewById(R.id.item4_cnt);
 
-        item1.setOnLongClickListener(new View.OnLongClickListener(){
+        item1.setOnLongClickListener(new View.OnLongClickListener() {
 
             @Override
-            public boolean onLongClick(View v){
+            public boolean onLongClick(View v) {
                 // 태그 생성
                 ClipData.Item item = new ClipData.Item(
                         (CharSequence) v.getTag());
@@ -199,10 +207,10 @@ public class GameActivity extends Activity {
         });
 
 
-        item2.setOnLongClickListener(new View.OnLongClickListener(){
+        item2.setOnLongClickListener(new View.OnLongClickListener() {
 
             @Override
-            public boolean onLongClick(View v){
+            public boolean onLongClick(View v) {
                 // 태그 생성
                 ClipData.Item item = new ClipData.Item(
                         (CharSequence) v.getTag());
@@ -222,10 +230,10 @@ public class GameActivity extends Activity {
             }
         });
 
-        item3.setOnLongClickListener(new View.OnLongClickListener(){
+        item3.setOnLongClickListener(new View.OnLongClickListener() {
 
             @Override
-            public boolean onLongClick(View v){
+            public boolean onLongClick(View v) {
                 // 태그 생성
                 ClipData.Item item = new ClipData.Item(
                         (CharSequence) v.getTag());
@@ -245,10 +253,10 @@ public class GameActivity extends Activity {
             }
         });
 
-        item4.setOnLongClickListener(new View.OnLongClickListener(){
+        item4.setOnLongClickListener(new View.OnLongClickListener() {
 
             @Override
-            public boolean onLongClick(View v){
+            public boolean onLongClick(View v) {
                 // 태그 생성
                 ClipData.Item item = new ClipData.Item(
                         (CharSequence) v.getTag());
@@ -271,8 +279,17 @@ public class GameActivity extends Activity {
         findViewById(R.id.btn_play).setOnDragListener(
                 new DragListener());
 
-        recordImage = (ImageView) findViewById(R.id.record_pan);
-        anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_anim);
+        tictac = (ImageView) findViewById(R.id.tictac);
+        rotate = (ImageView) findViewById(R.id.rotate);
+
+        //시계방향 rotate animation
+        start_click = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_anim);
+        start_click_third = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_anim_thirdsec);
+        start_click_infinite = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_anim_infinte);
+        //시계 반대방향 rotate animation
+        tic_click = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_tic_anim);
+        tic_click_third = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_tic_anim_thirdsec);
+        tic_click_infinite = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_tic_anim_infinite);
 
         //음성인식
         handler = new RecognitionHandler(this);
@@ -334,16 +351,17 @@ public class GameActivity extends Activity {
         gameMode = 3;
         txt_msg.setText("정답은 " + artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + "입니다!");
         //correctArray.add((quizNum - 1), 0); // 오답 문제 기록
-        pref.put("correct" + quizNum, 0); // 오답 문제 기록
+//        pref.put("correct" + quizNum, 0); // 오답 문제 기록
         musicPlay(-1);
     }
 
     @OnClick(R.id.btn_play)
     void playClick() {
         downKeyboard(this, edit_ans);
-        //btn_play.startAnimation(btn_click);
         switch (gameMode) {
             case 0:
+                rotate.startAnimation(start_click);
+                tictac.startAnimation(tic_click);
                 // 문제 1초 재생
                 musicPlay(1000);
                 break;
@@ -352,8 +370,16 @@ public class GameActivity extends Activity {
                 break;
             case 2:
                 // 문제 재생
-                if (itemUsed == 2) musicPlay(3000);
-                else musicPlay(1000);
+                if (itemUsed == 2) {
+                    rotate.startAnimation(start_click_third);
+                    tictac.startAnimation(tic_click_third);
+                    musicPlay(3000);
+                }
+                else{
+                    rotate.startAnimation(start_click);
+                    tictac.startAnimation(tic_click);
+                    musicPlay(1000);
+                }
                 break;
             case 3:
                 // 다음 문제로
@@ -659,6 +685,8 @@ public class GameActivity extends Activity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        rotate.clearAnimation();
+        tictac.clearAnimation();
         edit_ans.setHint("정답을 입력하세요!");
         quizNum++; // 문제 번호 증가
         itemUsed = 0; // 아이템 사용 초기화
@@ -754,7 +782,8 @@ public class GameActivity extends Activity {
             frame_ans.setVisibility(View.INVISIBLE); // 정답창 숨기기
             mPlayer = new MediaPlayer();
             mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-
+            rotate.startAnimation(start_click_infinite);
+            tictac.startAnimation(tic_click_infinite);
             try {
                 mPlayer.setDataSource(addressArray.get(quizNum - 1));
             } catch (IOException e) {
@@ -893,7 +922,7 @@ public class GameActivity extends Activity {
                 // 지금부터 음성을 받음
                 txt_voice_result.setText("");
                 txt_voice_system.setText("지금 말해주세요!");
-                recordImage.startAnimation(anim);
+
                 writer = new AudioWriterPCM(
                         Environment.getExternalStorageDirectory().getAbsolutePath() + "/NaverSpeechTest");
                 writer.open("Test");
@@ -943,11 +972,6 @@ public class GameActivity extends Activity {
     }
 
     class DragListener implements View.OnDragListener {
-        Drawable normalShape = getResources().getDrawable(
-                R.drawable.normal_shape);
-        Drawable targetShape = getResources().getDrawable(
-                R.drawable.target_shape);
-
         public boolean onDrag(View v, DragEvent event) {
 
             // 이벤트 시작
@@ -962,13 +986,11 @@ public class GameActivity extends Activity {
                 case DragEvent.ACTION_DRAG_ENTERED:
                     Log.d("DragClickListener", "ACTION_DRAG_ENTERED");
                     // 이미지가 들어왔다는 것을 알려주기 위해 배경이미지 변경
-                    v.setBackground(targetShape);
                     break;
 
                 // 드래그한 이미지가 영역을 빠져 나갈때
                 case DragEvent.ACTION_DRAG_EXITED:
                     Log.d("DragClickListener", "ACTION_DRAG_EXITED");
-                    v.setBackground(normalShape);
                     break;
 
                 // 이미지를 드래그해서 드랍시켰을때
@@ -978,8 +1000,6 @@ public class GameActivity extends Activity {
                     if (v == findViewById(R.id.btn_play)) {
                         View view = (View) event.getLocalState();
 
-
-
                         view.setVisibility(View.VISIBLE);
 
                     }
@@ -987,9 +1007,8 @@ public class GameActivity extends Activity {
 
                 case DragEvent.ACTION_DRAG_ENDED:
                     Log.d("DragClickListener", "ACTION_DRAG_ENDED");
-                    v.setBackground(normalShape); // go back to normal shape
                     View view = (View) event.getLocalState();
-                    switch (item_selected){
+                    switch (item_selected) {
                         case 1:
                             /*
                             if (itemArray.get(0) > 0) {
@@ -1000,11 +1019,11 @@ public class GameActivity extends Activity {
                                         itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
                                 item1_cnt.setText(itemArray.get(0) + "");
                                 */
-                                Toast.makeText(view.getContext(), "이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
-                                        + "'입니다.", Toast.LENGTH_SHORT).show();
-                                itemUsed = 1;
-                                edit_ans.setHint("이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
-                                        + "'입니다.");
+                            Toast.makeText(view.getContext(), "이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
+                                    + "'입니다.", Toast.LENGTH_SHORT).show();
+                            itemUsed = 1;
+                            edit_ans.setHint("이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
+                                    + "'입니다.");
                             /*
                             } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
@@ -1018,8 +1037,11 @@ public class GameActivity extends Activity {
                                 SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
                                         itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
                                 item2_cnt.setText(itemArray.get(1) + "");*/
-                                musicPlay(3000);
-                                itemUsed = 2;
+                            Toast.makeText(view.getContext(), "3초 재생 적용!", Toast.LENGTH_SHORT).show();
+                            rotate.startAnimation(start_click_third);
+                            tictac.startAnimation(tic_click_third);
+                            musicPlay(3000);
+                            itemUsed = 2;
                            /* } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
                             }*/
@@ -1035,9 +1057,9 @@ public class GameActivity extends Activity {
                                     SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
                                             itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
                                     item3_cnt.setText(itemArray.get(2) + "");*/
-                                    itemUsed = 3;
-                                    life++;
-                                    lifeRefresh();
+                            itemUsed = 3;
+                            life++;
+                            lifeRefresh();
                                /* }
                             } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
@@ -1051,11 +1073,12 @@ public class GameActivity extends Activity {
                                 SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
                                         itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
                                 item4_cnt.setText(itemArray.get(3) + "");
-                              */  itemUsed = 4;
-                                Toast.makeText(view.getContext(), "곡 제목의 첫 글자는 '" +
-                                        textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
-                                edit_ans.setHint("곡 제목의 첫 글자는 '" +
-                                        textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.");
+                              */
+                            itemUsed = 4;
+                            Toast.makeText(view.getContext(), "곡 제목의 첫 글자는 '" +
+                                    textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
+                            edit_ans.setHint("곡 제목의 첫 글자는 '" +
+                                    textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.");
                          /*   } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
                             }*/

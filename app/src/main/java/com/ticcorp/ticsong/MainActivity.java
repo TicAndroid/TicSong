@@ -72,7 +72,6 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 btn_start.startAnimation(button_anim);
                 startActivity(new Intent(getApplication(), GameActivity.class));
-                //MainActivity.this.finish();
             }
         });
 /*

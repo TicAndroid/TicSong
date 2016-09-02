@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,17 +47,17 @@ public class ResultActivity extends Activity {
     public ArrayList<Integer> itemArray = new ArrayList<Integer>(); // 아이템 개수 리스트
     // 아티스트 보여주기, 3초 듣기, 정답 1회 증가, 제목 한 글자 보여주기
 
-    ImageView cloudPanel, score_1, score_2, score_3, score_4, score_5,
-        star_1, star_2, star_3, star_4, star_5;
-    LinearLayout resultPanel;
-
-    Animation ani_cloud2;
-    Animation panel;
+    ImageView score_1, score_2, score_3, score_4, score_5;
+    LinearLayout lvl_panel;
+    ImageView lvl_up_txt, boom, item;
+    RelativeLayout item_gift;
 
     @Bind(R.id.score)
     TextView score;
+    /*
     @Bind(R.id.exp)
     TextView exp;
+    */
     @Bind(R.id.level)
     TextView level;
 
@@ -74,41 +76,24 @@ public class ResultActivity extends Activity {
         ResultActivity.this.finish();
     }
 
-    @OnClick(R.id.btn_restart)
-    void restartClick() {
-        /*pref.remove("score");
-        for(int i = 1; i <= 5; i++) {
-            pref.remove("correct" + i);
-        }*/
-        startActivity(new Intent(ResultActivity.this, GameActivity.class));
-        ResultActivity.this.finish();
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         ButterKnife.bind(this);
 
-        ani_cloud2 = AnimationUtils.loadAnimation(this, R.anim.translate_cloud2);
-        panel = AnimationUtils.loadAnimation(this, R.anim.alpha_anim_result);
-
-        cloudPanel = (ImageView) findViewById(R.id.cloud_panel);
-        resultPanel = (LinearLayout) findViewById(R.id.result_panel);
-
         score_1 = (ImageView) findViewById(R.id.score_1);
         score_2 = (ImageView) findViewById(R.id.score_2);
         score_3 = (ImageView) findViewById(R.id.score_3);
         score_4 = (ImageView) findViewById(R.id.score_4);
         score_5 = (ImageView) findViewById(R.id.score_5);
-        star_1 = (ImageView) findViewById(R.id.star_1);
-        star_2 = (ImageView) findViewById(R.id.star_2);
-        star_3 = (ImageView) findViewById(R.id.star_3);
-        star_4 = (ImageView) findViewById(R.id.star_4);
-        star_5 = (ImageView) findViewById(R.id.star_5);
 
-        cloudPanel.startAnimation(ani_cloud2);
-        resultPanel.startAnimation(panel);
+        lvl_panel = (LinearLayout) findViewById(R.id.lvl_panel);
+        lvl_up_txt = (ImageView) findViewById(R.id.lvl_up_txt);
+        item_gift = (RelativeLayout) findViewById(R.id.item_gift);
+        boom = (ImageView) findViewById(R.id.boom);
+        item = (ImageView) findViewById(R.id.item2);
+
         setResult(); // 게임 결과 처리하기
     }
 
@@ -153,9 +138,9 @@ public class ResultActivity extends Activity {
 
         setImage();
 
-        score.setText("You've got "+pref.getValue("score", 0) + " score !");
-        exp.setText("exp " + userExp);
-        level.setText("Lv." + userLevel);
+        score.setText(pref.getValue("score", 0));
+        //exp.setText("exp " + userExp);
+        level.setText(userLevel);
     }
 
     public void setLevel() { // 경험치 보고 레벨 업 처리
@@ -163,21 +148,30 @@ public class ResultActivity extends Activity {
         while(userExp >= nextExp) {
             userExp -= nextExp;
             userLevel++;
+            lvl_panel.setVisibility(View.VISIBLE);
+            item_gift.setVisibility(View.VISIBLE);
+            lvl_up_txt.setVisibility(View.VISIBLE);
+            boom.setVisibility(View.INVISIBLE);
+
             switch ((int) Math.random() * 4) {
                 case 0 :
                     itemArray.set(0, itemArray.get(0) + 1);
+                    item.setBackgroundResource(R.drawable.item_artist);
                     Toast.makeText(ResultActivity.this, "레벨 업!\n아티스트 보여주기 아이템 1개 획득!", Toast.LENGTH_SHORT).show();
                     break;
                 case 1 :
                     itemArray.set(1, itemArray.get(1) + 1);
+                    item.setBackgroundResource(R.drawable.item_thirdsecond);
                     Toast.makeText(ResultActivity.this, "레벨 업!\n3초 듣기 아이템 1개 획득!", Toast.LENGTH_SHORT).show();
                     break;
                 case 2 :
                     itemArray.set(2, itemArray.get(2) + 1);
+                    item.setBackgroundResource(R.drawable.item_onemore);
                     Toast.makeText(ResultActivity.this, "레벨 업!\n정답 1회 증가 아이템 1개 획득!", Toast.LENGTH_SHORT).show();
                     break;
                 case 3 :
                     itemArray.set(3, itemArray.get(3) + 1);
+                    item.setBackgroundResource(R.drawable.item_onechar);
                     Toast.makeText(ResultActivity.this, "레벨 업!\n제목 한 글자 보여주기 아이템 1개 획득!", Toast.LENGTH_SHORT).show();
                     break;
                 default:
@@ -191,19 +185,15 @@ public class ResultActivity extends Activity {
         // for문으로 간편화하고 싶으나 resource를 순차적으로 불러오는 방법을 찾아야 해서 우선은 나열해둠
         switch (pref.getValue("correct1", 0)) {
             case 3:
-                star_1.setBackgroundResource(R.drawable.star);
                 score_1.setBackgroundResource(R.drawable.score_100);
                 break;
             case 2:
-                star_1.setBackgroundResource(R.drawable.star_60);
                 score_1.setBackgroundResource(R.drawable.score_60);
                 break;
             case 1:
-                star_1.setBackgroundResource(R.drawable.star_30);
                 score_1.setBackgroundResource(R.drawable.score_30);
                 break;
             case 0:
-                star_1.setBackgroundResource(R.drawable.star_0);
                 score_1.setBackgroundResource(R.drawable.score_0);
                 break;
             default:
@@ -211,19 +201,15 @@ public class ResultActivity extends Activity {
         }
         switch (pref.getValue("correct2", 0)) {
             case 3:
-                star_2.setBackgroundResource(R.drawable.star);
                 score_2.setBackgroundResource(R.drawable.score_100);
                 break;
             case 2:
-                star_2.setBackgroundResource(R.drawable.star_60);
                 score_2.setBackgroundResource(R.drawable.score_60);
                 break;
             case 1:
-                star_2.setBackgroundResource(R.drawable.star_30);
                 score_2.setBackgroundResource(R.drawable.score_30);
                 break;
             case 0:
-                star_2.setBackgroundResource(R.drawable.star_0);
                 score_2.setBackgroundResource(R.drawable.score_0);
                 break;
             default:
@@ -231,19 +217,15 @@ public class ResultActivity extends Activity {
         }
         switch (pref.getValue("correct3", 0)) {
             case 3:
-                star_3.setBackgroundResource(R.drawable.star);
                 score_3.setBackgroundResource(R.drawable.score_100);
                 break;
             case 2:
-                star_3.setBackgroundResource(R.drawable.star_60);
                 score_3.setBackgroundResource(R.drawable.score_60);
                 break;
             case 1:
-                star_3.setBackgroundResource(R.drawable.star_30);
                 score_3.setBackgroundResource(R.drawable.score_30);
                 break;
             case 0:
-                star_3.setBackgroundResource(R.drawable.star_0);
                 score_3.setBackgroundResource(R.drawable.score_0);
                 break;
             default:
@@ -251,19 +233,15 @@ public class ResultActivity extends Activity {
         }
         switch (pref.getValue("correct4", 0)) {
             case 3:
-                star_4.setBackgroundResource(R.drawable.star);
                 score_4.setBackgroundResource(R.drawable.score_100);
                 break;
             case 2:
-                star_4.setBackgroundResource(R.drawable.star_60);
                 score_4.setBackgroundResource(R.drawable.score_60);
                 break;
             case 1:
-                star_4.setBackgroundResource(R.drawable.star_30);
                 score_4.setBackgroundResource(R.drawable.score_30);
                 break;
             case 0:
-                star_4.setBackgroundResource(R.drawable.star_0);
                 score_4.setBackgroundResource(R.drawable.score_0);
                 break;
             default:
@@ -271,19 +249,15 @@ public class ResultActivity extends Activity {
         }
         switch (pref.getValue("correct5", 0)) {
             case 3:
-                star_5.setBackgroundResource(R.drawable.star);
                 score_5.setBackgroundResource(R.drawable.score_100);
                 break;
             case 2:
-                star_5.setBackgroundResource(R.drawable.star_60);
                 score_5.setBackgroundResource(R.drawable.score_60);
                 break;
             case 1:
-                star_5.setBackgroundResource(R.drawable.star_30);
                 score_5.setBackgroundResource(R.drawable.score_30);
                 break;
             case 0:
-                star_5.setBackgroundResource(R.drawable.star_0);
                 score_5.setBackgroundResource(R.drawable.score_0);
                 break;
             default:

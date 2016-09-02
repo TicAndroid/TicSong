@@ -14,289 +14,269 @@
         android:layout_height="match_parent"
         android:background="@drawable/background_spot" />
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="100"
         android:orientation="vertical">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="49"/>
-
-        <ImageView
-            android:id="@+id/cloud_panel"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="50"
-            android:background="@drawable/result_cloud"/>
-    </LinearLayout>
-
-    <!--태호양꺼-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="90"
-            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
             android:orientation="vertical"
-            android:weightSum="100">
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="6" />
+            android:weightSum="100"
+            android:background="@drawable/boom_upstair">
 
             <LinearLayout
-                android:id="@+id/result_panel"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="75"
-                android:background="@drawable/a_result_result"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_weight="42"
+                android:background="#77000000"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txt_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/result"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="58"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/score_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/score_100"/>
+
+                <ImageView
+                    android:id="@+id/score_2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/score_100"/>
+
+                <ImageView
+                    android:id="@+id/score_3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/score_100"/>
+
+                <ImageView
+                    android:id="@+id/score_4"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/score_100"/>
+
+                <ImageView
+                    android:id="@+id/score_5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/score_100"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="80">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="100">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="38"
+                    android:background="@drawable/background_lvlup"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lvl_panel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@drawable/boom_downstair"
+                android:weightSum="100">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
+                    android:layout_height="0dp"
+                    android:layout_weight="15"
+                    android:orientation="horizontal"
+                    android:gravity="center"
                     android:weightSum="100">
 
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="24" />
-
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="70"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="88"
                         android:gravity="center"
+                        android:weightSum="100"
                         android:orientation="horizontal"
-                        android:weightSum="100">
+                        android:background="@drawable/score_panel">
 
                         <Space
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="4" />
+                            android:layout_weight="7"/>
 
-                        <!--result 내용물-->
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/score"
+                            android:gravity="center"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="75"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:weightSum="100">
+                            android:layout_weight="20"
+                            android:text="250"
+                            android:textSize="30sp"
+                            android:textColor="#000000"
+                            android:layout_marginBottom="2dp"/>
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="17"
-                                android:orientation="horizontal"
-                                android:weightSum="100">
-
-                                <ImageView android:id="@+id/star_1"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="20"
-                                    android:background="@drawable/star_60" />
-
-                                <ImageView android:id="@+id/star_2"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="20"
-                                    android:background="@drawable/star_60" />
-
-                                <ImageView android:id="@+id/star_3"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="20"
-                                    android:background="@drawable/star_60" />
-
-                                <ImageView android:id="@+id/star_4"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="20"
-                                    android:background="@drawable/star_60" />
-
-                                <ImageView android:id="@+id/star_5"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="20"
-                                    android:background="@drawable/star_60" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="5"
-                                android:orientation="horizontal"
-                                android:weightSum="100">
-
-                                <Space
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="5" />
-
-                                <ImageView android:id="@+id/score_1"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="12"
-                                    android:background="@drawable/score_60" />
-
-                                <Space
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="8" />
-
-                                <ImageView android:id="@+id/score_2"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="12"
-                                    android:background="@drawable/score_60" />
-
-                                <Space
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="8" />
-
-                                <ImageView android:id="@+id/score_3"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="12"
-                                    android:background="@drawable/score_60" />
-
-                                <Space
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="8" />
-
-                                <ImageView android:id="@+id/score_4"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="12"
-                                    android:background="@drawable/score_60" />
-
-                                <Space
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="8" />
-
-                                <ImageView android:id="@+id/score_5"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="12"
-                                    android:background="@drawable/score_100" />
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/score"
-                                android:layout_width="200dp"
-                                android:layout_height="0dp"
-                                android:layout_weight="12"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginBottom="15dp"
-                                android:gravity="center"
-                                android:textSize="16sp"
-                                android:background="@drawable/text_result_style"
-                                android:text="You've got 360 score!" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="25"
-                                android:gravity="center"
-                                android:orientation="horizontal"
-                                android:weightSum="100">
-
-                                <TextView
-                                    android:id="@+id/exp"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="exp 0" />
-
-                                <TextView
-                                    android:id="@+id/level"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Lv.1" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="40"
-                                android:gravity="center"
-                                android:orientation="horizontal"
-                                android:weightSum="100">
-
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:gravity="center"
-                                    android:orientation="vertical"
-                                    android:layout_weight="75"
-                                    android:weightSum="100">
-
-                                    <Button
-                                        android:id="@+id/btn_share"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="45"
-                                        android:onClick="onClick"
-                                        android:background="@drawable/result_share"/>
-
-                                    <Button
-                                        android:id="@+id/btn_main"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="45"
-                                        android:onClick="onClick"
-                                        android:background="@drawable/result_main" />
-                                </LinearLayout>
-                            </LinearLayout>
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="35"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/lvl_up_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="47"
+                        android:background="@drawable/lvl_up"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_marginTop="15dp"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/profile_main_image"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Lv. "
+                        android:textSize="28sp"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        android:id="@+id/level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="100"
+                        android:textSize="28sp"
+                        android:textColor="#FFFFFF"/>
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/profile_progressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progressDrawable="@drawable/custom_progress"
+                    android:layout_width="250dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:max="100"
+                    android:progress="100"
+                    android:padding="15dp" />
+
+                <RelativeLayout
+                    android:id="@+id/item_gift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="15">
+
+                    <ImageView
+                        android:id="@+id/item2"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:background="@drawable/item_onemore" />
+
+                    <ImageView
+                        android:id="@+id/item_gift_badge"
+                        android:layout_width="25dp"
+                        android:layout_height="36dp"
+                        android:layout_alignEnd="@id/item2"
+                        android:layout_alignRight="@id/item2"
+                        android:layout_alignTop="@id/item2"
+                        android:background="@drawable/badge_gift"
+                        android:gravity="center"
+                        android:paddingEnd="8dp"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="6dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="17"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btn_main"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/btn_home"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content" />
+
+                    <ImageButton
+                        android:id="@+id/btn_share"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/btn_share"/>
+
+                </LinearLayout>
+
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="12dp"
-                android:layout_weight="12"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="100">
 
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="7" />
+        </FrameLayout>
 
-                <ImageButton
-                    android:id="@+id/btn_restart"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="85"
-                    android:background="@drawable/a_result_game_start"
-                    android:onClick="onClick" />
-
-            </LinearLayout>
-        </LinearLayout>
 
 
     </LinearLayout>
+
 </FrameLayout>

@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class MainActivity$$ViewBinder<T extends com.ticcorp.ticsong.MainActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131427469, "field 'mainJukeBox' and method 'mainJokeBoxClicked'");
-    target.mainJukeBox = finder.castView(view, 2131427469, "field 'mainJukeBox'");
+    view = finder.findRequiredView(source, 2131427468, "field 'mainJukeBox' and method 'mainJokeBoxClicked'");
+    target.mainJukeBox = finder.castView(view, 2131427468, "field 'mainJukeBox'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
