@@ -183,13 +183,6 @@ public class MainActivity extends Activity {
 
         pref = pref.getInstance(this.getApplicationContext());
 
-        Intent intent = getIntent();
-        String userId = intent.getStringExtra("userId");
-        String name = intent.getStringExtra("name");
-        Log.i("Intent from FBActivity", userId + " / " +name);
-
-        ServerAccessModule.getInstance().login(getApplicationContext(), userId, name, 0);
-
 
         //강제 레벨/경험치 주입
         /*
@@ -212,7 +205,7 @@ public class MainActivity extends Activity {
         cursor.close();
         db.close();*/
 
-        user_name = pref.getValue("userId", "userId");
+        user_name = pref.getValue("name", "name");
         user_lv = pref.getValue("userLevel", 1);
         next_exp = pref.getValue("exp", 0);
         Log.e("ticlog Main", user_name + " / " + user_lv + " / " + next_exp);

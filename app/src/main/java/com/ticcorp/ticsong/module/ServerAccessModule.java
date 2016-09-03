@@ -8,6 +8,7 @@ import com.ticcorp.ticsong.DTO.ScoreView;
 import com.ticcorp.ticsong.core.ItemController;
 import com.ticcorp.ticsong.core.LoginController;
 import com.ticcorp.ticsong.core.MyScoreController;
+import com.ticcorp.ticsong.core.UserController;
 
 import java.util.List;
 
@@ -40,7 +41,8 @@ public class ServerAccessModule {
      */
     public void login(Context context, String userId, String name, int platform) {
         LoginController loginCon = LoginController.getInstance();
-        loginCon.requestLogin(context, userId, name, ""+platform);
+        //loginCon.requestLogin(context, userId, name, ""+platform);
+        loginCon.requestAsyncLogin(context, userId, name, ""+platform);
     }
 
     /**
@@ -49,6 +51,15 @@ public class ServerAccessModule {
      */
     public void logout(String userId, int exp, int userLevel, int item1Cnt, int item2Cnt, int item3Cnt, int item4Cnt) {
         gameFinished(userId, exp, userLevel, item1Cnt, item2Cnt, item3Cnt, item4Cnt);
+    }
+
+    /**
+     * User 탈퇴
+     * @param userId
+     */
+    public void deleteUser(String userId) {
+        UserController userCon = UserController.getInstance();
+        userCon.deleteUser(userId);
     }
 
     /**

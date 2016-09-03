@@ -97,13 +97,8 @@ public class FBActivity extends Activity {
                                             //Log.i("email1",email1);
 
                                             ServerAccessModule.getInstance().login(getApplicationContext(), id, name, 0);
-                                            pref.put("userId", id);
 
-                                            Intent intent = new Intent(getApplication(), MainActivity.class);
-                                            intent.putExtra("userId",id);
-                                            intent.putExtra("name",name);
-                                            startActivity(intent);
-                                            //startActivity(new Intent(getApplication(), MainActivity.class));
+                                            startActivity(new Intent(getApplication(), MainActivity.class));
                                             // 로그인 되면 현재 페이지 제거
                                             FBActivity.this.finish();
 

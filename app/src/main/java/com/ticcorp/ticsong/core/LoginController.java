@@ -20,6 +20,9 @@ import com.ticcorp.ticsong.DTO.UserDTO;
 
 
 import com.ticcorp.ticsong.StaticInfo;
+
+import java.io.IOException;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -51,7 +54,58 @@ public class LoginController {
         return loginController;
     }
 
+
     public boolean requestLogin(final Context context, String userId, String name, String platform) {
+
+        retrofit = new Retrofit.Builder().baseUrl(StaticInfo.TICSONG_BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+
+        LoginInterface loginInterface = retrofit.create(LoginInterface.class);
+        Call<LoginView> call = loginInterface.requestLogin(userId, name,platform);
+        LoginView loginView = null;
+        try {
+            loginView = call.execute().body();
+            if(loginView == null) {
+                Log.d("로그인_실패 -", "아이디 or 이름 오류"); // 디버깅용
+                return false;
+            }
+            /*if(call.execute().isSuccessful()) {
+
+            } else {
+                Log.d("로그인_실패 -", "isFail"); // 디버깅용
+                return false;
+            }*/
+
+            CustomPreference customPreference = CustomPreference.getInstance(context);
+
+            customPreference.put("login",true);
+            customPreference.put("userId",loginView.getUserId());
+            customPreference.put("name",loginView.getName());
+            customPreference.put("platform",loginView.getPlatform());
+            customPreference.put("exp",loginView.getExp());
+            customPreference.put("userLevel",loginView.getUserLevel());
+            customPreference.put("item1Cnt",loginView.getItem1Cnt());
+            customPreference.put("item2Cnt",loginView.getItem2Cnt());
+            customPreference.put("item3Cnt",loginView.getItem3Cnt());
+            customPreference.put("item4Cnt",loginView.getItem4Cnt());
+
+            Log.e("login_login","true");
+            Log.e("Login User Info", loginView.toString());
+
+                /* SQLite DB Insert */
+            //SQLiteAccessModule.getInstance(context).login(loginView);
+
+            return true;
+        } catch (IOException ie) {
+            ie.printStackTrace();
+            return false;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
+    public boolean requestAsyncLogin (final Context context, String userId, String name, String platform) {
 
         retrofit = new Retrofit.Builder().baseUrl(StaticInfo.TICSONG_BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
 

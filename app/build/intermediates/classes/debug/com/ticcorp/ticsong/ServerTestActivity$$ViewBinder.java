@@ -28,14 +28,14 @@ public class ServerTestActivity$$ViewBinder<T extends com.ticcorp.ticsong.Server
           target.logoutBtn();
         }
       });
-    view = finder.findRequiredView(source, 2131427502, "field 'selectBtn' and method 'selectBtnClicked'");
+    view = finder.findRequiredView(source, 2131427502, "field 'selectBtn' and method 'deleteUserBtnClicked'");
     target.selectBtn = finder.castView(view, 2131427502, "field 'selectBtn'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
           android.view.View p0
         ) {
-          target.selectBtnClicked();
+          target.deleteUserBtnClicked();
         }
       });
     view = finder.findRequiredView(source, 2131427499, "field 'gameoverBtn' and method 'gameoverBtn'");

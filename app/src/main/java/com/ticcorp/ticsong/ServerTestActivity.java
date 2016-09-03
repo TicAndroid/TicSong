@@ -99,7 +99,7 @@ public class ServerTestActivity extends Activity {
         CustomPreference pref = CustomPreference.getInstance(getApplicationContext());
 
         /* 호출 메소드 */
-        SQLiteAccessModule.getInstance(this.getApplicationContext()).logout(pref.getValue("userId", "userId"));
+        //SQLiteAccessModule.getInstance(this.getApplicationContext()).logout(pref.getValue("userId", "userId"));
         // Argu : Preference에서 userId 뽑음.
         // 기능 : SQLite DB Table 에서 Retrieve, Drop 후, ServerAccessModule.gameFinished() 호출
     }
@@ -122,7 +122,7 @@ public class ServerTestActivity extends Activity {
         ServerAccessModule.getInstance().gameFinished(userId, exp, userLevel, item1Cnt, item2Cnt, item3Cnt, item4Cnt);
         // Argu : Preference에서 값을 모두 가져옴(get)
         // 기능 : Server에   MyScore, Item 정보를 Update.
-        SQLiteAccessModule.getInstance(this.getApplicationContext()).gameFinished(userId, exp, userLevel, item1Cnt, item2Cnt, item3Cnt, item4Cnt);
+        //SQLiteAccessModule.getInstance(this.getApplicationContext()).gameFinished(userId, exp, userLevel, item1Cnt, item2Cnt, item3Cnt, item4Cnt);
         // Argu : Preference에서 값을 모두 가져옴(get)
         // 기능 : SQLite에   MyScore, Item 정보를 Update.
     }
@@ -164,32 +164,25 @@ public class ServerTestActivity extends Activity {
     }
 
 
-
-    // select 클릭시, Debug 용.
+    // DELETE USER 클릭시, Debug 용.
     @OnClick(R.id.btn_select)
-    void selectBtnClicked() {
+    void deleteUserBtnClicked() {
 
-        // 기능 :  CustomePreference에서 userId를 꺼내서, 해당 UserId 로  SQLite의 MyScore, Item 테이블을 조회한다.
-        CustomPreference customPreference = CustomPreference.getInstance(this.getApplicationContext());
-        DBManager db = new DBManager(this.getApplicationContext(), StaticSQLite.TICSONG_DB, null, 1 );
-        Cursor cursor = null;
-        cursor = db.retrieve(StaticSQLite.retrieveMyScoreSQL(customPreference.getValue("userId", "userId")));
+        String userId = "5555";
 
-        // SQLite  MyScore 테이블에서 값꺼냄
-        while(cursor.moveToNext()) {
-            Log.e("Login OK.  MyScore", customPreference.getValue("userId", "userId") + " / " + cursor.getInt(1) + " / " + cursor.getInt(2) );
-        }
-
-        // SQLite  Item 테이블에서 값꺼냄
-        cursor = db.retrieve(StaticSQLite.retrieveItemSQL(customPreference.getValue("userId", "userId")));
-        while(cursor.moveToNext()) {
-
-            Log.e("Login OK.  ITEM", customPreference.getValue("userId", "userId") + " / " +  cursor.getInt(1) + " / " +  cursor.getInt(2) +
-                    " / " +  cursor.getInt(3) + " / " + cursor.getInt(4) );
-        }
-        cursor.close();
-        db.close();
+        /* 호출 메소드 */
+        ServerAccessModule.getInstance().deleteUser(userId);
+        // Argu : userId = Preference에서 뽑음.
+        // 기능 : 서버에서 유저 삭제.
+        // return 1 : 삭제 성공  /  -1 : 삭제 실패
     }
+
+
+
+
+
+
+
 
 /*
 
