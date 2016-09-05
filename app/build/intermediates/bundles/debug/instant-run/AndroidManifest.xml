@@ -72,6 +72,15 @@
             -->
         </activity>
         <activity
+            android:name="com.ticcorp.ticsong.SettingActivity"
+            android:label="셋팅화면" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.ticcorp.ticsong.ServerTestActivity"
             android:label="서버 테스트"
             android:screenOrientation="portrait" >

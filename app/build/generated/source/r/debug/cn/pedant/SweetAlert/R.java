@@ -377,16 +377,16 @@ public final class R {
 		public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020043;
 		public static final int abc_textfield_search_material = 0x7f020044;
 		public static final int blue_button_background = 0x7f02004c;
-		public static final int dialog_background = 0x7f020090;
-		public static final int error_center_x = 0x7f020094;
-		public static final int error_circle = 0x7f020095;
-		public static final int gray_button_background = 0x7f020099;
-		public static final int ic_launcher = 0x7f02009a;
-		public static final int red_button_background = 0x7f0200bd;
-		public static final int success_bow = 0x7f0200c5;
-		public static final int success_circle = 0x7f0200c6;
-		public static final int warning_circle = 0x7f0200c9;
-		public static final int warning_sigh = 0x7f0200ca;
+		public static final int dialog_background = 0x7f020092;
+		public static final int error_center_x = 0x7f020096;
+		public static final int error_circle = 0x7f020097;
+		public static final int gray_button_background = 0x7f02009b;
+		public static final int ic_launcher = 0x7f02009c;
+		public static final int red_button_background = 0x7f0200bf;
+		public static final int success_bow = 0x7f0200c7;
+		public static final int success_circle = 0x7f0200c8;
+		public static final int warning_circle = 0x7f0200cc;
+		public static final int warning_sigh = 0x7f0200cd;
 	}
 	public static final class id {
 		public static final int action_bar = 0x7f0b005f;
@@ -496,8 +496,8 @@ public final class R {
 		public static final int abc_screen_toolbar = 0x7f030015;
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f030016;
 		public static final int abc_search_view = 0x7f030017;
-		public static final int alert_dialog = 0x7f03001f;
-		public static final int support_simple_spinner_dropdown_item = 0x7f030035;
+		public static final int alert_dialog = 0x7f030020;
+		public static final int support_simple_spinner_dropdown_item = 0x7f030036;
 	}
 	public static final class string {
 		public static final int LOADING = 0x7f050049;
