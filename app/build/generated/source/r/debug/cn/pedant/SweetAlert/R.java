@@ -382,11 +382,11 @@ public final class R {
 		public static final int error_circle = 0x7f020097;
 		public static final int gray_button_background = 0x7f02009b;
 		public static final int ic_launcher = 0x7f02009c;
-		public static final int red_button_background = 0x7f0200bf;
-		public static final int success_bow = 0x7f0200c7;
-		public static final int success_circle = 0x7f0200c8;
-		public static final int warning_circle = 0x7f0200cc;
-		public static final int warning_sigh = 0x7f0200cd;
+		public static final int red_button_background = 0x7f0200c0;
+		public static final int success_bow = 0x7f0200c8;
+		public static final int success_circle = 0x7f0200c9;
+		public static final int warning_circle = 0x7f0200ce;
+		public static final int warning_sigh = 0x7f0200cf;
 	}
 	public static final class id {
 		public static final int action_bar = 0x7f0b005f;
@@ -496,8 +496,8 @@ public final class R {
 		public static final int abc_screen_toolbar = 0x7f030015;
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f030016;
 		public static final int abc_search_view = 0x7f030017;
-		public static final int alert_dialog = 0x7f030020;
-		public static final int support_simple_spinner_dropdown_item = 0x7f030036;
+		public static final int alert_dialog = 0x7f030021;
+		public static final int support_simple_spinner_dropdown_item = 0x7f030037;
 	}
 	public static final class string {
 		public static final int LOADING = 0x7f050049;

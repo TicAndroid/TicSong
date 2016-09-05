@@ -64,7 +64,7 @@ public class ItemController {
             @Override
             public void onResponse(Call<ItemDTO> call, Response<ItemDTO> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("Get Item 코드_",response.body().getResultCode()+"");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
@@ -146,7 +146,7 @@ public class ItemController {
             @Override
             public void onResponse(Call<ItemDTO> call, Response<ItemDTO> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("Item Insert 코드_",response.body().getResultCode()+"");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
@@ -207,7 +207,7 @@ public class ItemController {
             @Override
             public void onResponse(Call<ItemDTO> call, Response<ItemDTO> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("Item Update 코드_",response.body().getResultCode()+"");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
@@ -254,7 +254,7 @@ public class ItemController {
             @Override
             public void onResponse(Call<ItemDTO> call, Response<ItemDTO> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("Item Update 코드_",response.body().getResultCode()+"");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }

@@ -76,7 +76,7 @@ public class MyScoreController {
             @Override
             public void onResponse(Call<MyScoreDTO> call, Response<MyScoreDTO> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("로그인 코드_",response.body().getResultCode()+"");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
@@ -153,7 +153,7 @@ public class MyScoreController {
             @Override
             public void onResponse(Call<MyScoreDTO> call, Response<MyScoreDTO> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("MyScore Insert 코드_",response.body().getResultCode()+"");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
@@ -212,7 +212,7 @@ public class MyScoreController {
             @Override
             public void onResponse(Call<MyScoreDTO> call, Response<MyScoreDTO> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("MyScore Update 코드_",response.body().getResultCode()+"");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
@@ -261,7 +261,7 @@ public class MyScoreController {
             @Override
             public void onResponse(Call<MyScoreDTO> call, Response<MyScoreDTO> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("MyScore Update 코드_",response.body().getResultCode()+"");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
@@ -315,7 +315,7 @@ public class MyScoreController {
             @Override
             public void onResponse(Call<List<ScoreView>> call, Response<List<ScoreView>> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("로그인 코드_","실패");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
@@ -365,7 +365,7 @@ public class MyScoreController {
             @Override
             public void onResponse(Call<List<ScoreView>> call, Response<List<ScoreView>> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("로그인 코드_","실패");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
@@ -380,9 +380,10 @@ public class MyScoreController {
                     Log.e("Name",scoreList.toString());
                     for(ScoreView score : scoreList) {
                         if(score!=null) {
-                            Log.e("Name", score.getName());
-                            Log.e("EXP", ""+score.getExp());
-                            Log.e("UserLevel", ""+score.getUserLevel());
+                            Log.e("F_id", score.getUserId());
+                            Log.e("F_Name", score.getName());
+                            Log.e("F_EXP", ""+score.getExp());
+                            Log.e("F_UserLevel", ""+score.getUserLevel());
                         }
                     }
                 }
@@ -412,47 +413,47 @@ public class MyScoreController {
         /*요청보낼 interface 객체 생성.*/
         MyScoreInterface myScoreInterface = retrofit.create(MyScoreInterface.class);
 
-        Call<List<FriendsScoreView>> call = null;
+        Call<List<ScoreView>> call = null;
         JSONArray friends = convertFriendListToJSONArray(friendIdList);
         if(friends != null) {
             /*서버로 요청을 보낼 객체생성.*/
             call = myScoreInterface.retrieveFriendsScores("friends", userId, friends.toString());
         }
-        call.clone().enqueue(new Callback<List<FriendsScoreView>>() {
+        call.clone().enqueue(new Callback<List<ScoreView>>() {
             @Override
-            public void onResponse(Call<List<FriendsScoreView>> call, Response<List<FriendsScoreView>> response) {
+            public void onResponse(Call<List<ScoreView>> call, Response<List<ScoreView>> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("로그인 코드_","실패");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
                 Log.d("로그인_성공코드 -", response.code() + ""); // 디버깅용
 
-                List<FriendsScoreView> scoreList = response.body();
+                List<ScoreView> scoreList = response.body();
                 ServerAccessModule.FRIEND_LIST = null;
                 if(scoreList != null) {
                     ServerAccessModule.FRIEND_LIST = scoreList;
 
-                    Collections.sort(ServerAccessModule.FRIEND_LIST, new Comparator<FriendsScoreView>() {
-                        public int compare(FriendsScoreView o1, FriendsScoreView o2) {
+                    Collections.sort(ServerAccessModule.FRIEND_LIST, new Comparator<ScoreView>() {
+                        public int compare(ScoreView o1, ScoreView o2) {
                             return o1.getExp() > o2.getExp() ? -1 : o1.getExp() == o2.getExp() ? 0 : 1;
                         }
                     });
 
                     Log.e("Name",ServerAccessModule.FRIEND_LIST.toString());
-                    for(FriendsScoreView score : ServerAccessModule.FRIEND_LIST) {
+                    for(ScoreView score : ServerAccessModule.FRIEND_LIST) {
                         if(score!=null) {
-                            Log.e("User ID", score.getUserId());
-                            Log.e("Name", score.getName());
-                            Log.e("EXP", ""+score.getExp());
-                            Log.e("UserLevel", ""+score.getUserLevel());
+                            Log.e("Top_ID", score.getUserId());
+                            Log.e("Top_Name", score.getName());
+                            Log.e("Top_EXP", ""+score.getExp());
+                            Log.e("Top_UserLevel", ""+score.getUserLevel());
                         }
                     }
                 }
             }
 
             @Override
-            public void onFailure(Call<List<FriendsScoreView>> call, Throwable t) {
+            public void onFailure(Call<List<ScoreView>> call, Throwable t) {
                 isSuccess = false;
                 Log.d("로그인_실패코드-",call.toString()+"__"+t.getMessage());
                 Log.d("로그인_왜실패?",t.toString());

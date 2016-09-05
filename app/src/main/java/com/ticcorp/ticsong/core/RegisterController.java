@@ -62,7 +62,7 @@ public class RegisterController {
             @Override
             public void onResponse(Call<UserDTO> call, Response<UserDTO> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("로그인 코드_",response.body().getResultCode()+"");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }

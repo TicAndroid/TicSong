@@ -63,12 +63,20 @@ public class ServerTestActivity extends Activity {
     @OnClick(R.id.btn_login)
     void loginBtn() {
 
-        String userId = "5555";
-        String name = "박태호";
-        int platform = 1;
+        final String userId = "2222";
+        final String name = "틱송유저";
+        final int platform = 1;
 
-        /* 호출 메소드 */
-        ServerAccessModule.getInstance().login(this.getApplicationContext(), userId, name, platform);
+        /* 호출 메소드 ( 주의사항 : deleteUser 메소드는 레트로핏 동기 통신이기때문에,
+        *            Worker Thread 에서 호출해야 함 !!! )
+        *            */
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                ServerAccessModule.getInstance().login(getApplicationContext(), userId, name, platform);
+            }
+        }).start();
+
         // Argu : 소셜로그인 후 (userId, name, platform) 값을 매개변수로 넣어준다.
         // 기능 : 서버 다녀와서, / SQLite DB Table Drop, Create, Insert, CustomPreference에 Put
         /*
@@ -160,7 +168,7 @@ public class ServerTestActivity extends Activity {
         ServerAccessModule.getInstance().retrieveFriendList(userId, fList);
         // Argu : userId = Preference 뽑음. / friendIdList = FaceBook의 친구Id 리스트를 List<String>에 담아서 보냄.
         // 기능 : 서버에서 친구/목록 데이터 가져옴.
-        // 친구 목록/점수는  [ ServerAccessModule.FRIEND_LIST ] 에 담겨있음 ( Type : List<FriendsScoreView> )
+        // 친구 목록/점수는  [ ServerAccessModule.FRIEND_LIST ] 에 담겨있음 ( Type : List<ScoreView> )
     }
 
 
@@ -168,10 +176,18 @@ public class ServerTestActivity extends Activity {
     @OnClick(R.id.btn_select)
     void deleteUserBtnClicked() {
 
-        String userId = "5555";
+        final String userId = "3333";
 
-        /* 호출 메소드 */
-        ServerAccessModule.getInstance().deleteUser(userId);
+        /* 호출 메소드
+        * ( 주의사항 : deleteUser 메소드는 레트로핏 동기 통신이기때문에,
+        *            Worker Thread 에서 호출해야 함 !!! ) */
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                ServerAccessModule.getInstance().deleteUser(userId);
+            }
+        }).start();
         // Argu : userId = Preference에서 뽑음.
         // 기능 : 서버에서 유저 삭제.
         // return 1 : 삭제 성공  /  -1 : 삭제 실패

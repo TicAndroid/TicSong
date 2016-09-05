@@ -58,7 +58,7 @@ public interface MyScoreInterface {
 
     @FormUrlEncoded
     @POST("myscore.do")
-    Call<List<FriendsScoreView>> retrieveFriendsScores(
+    Call<List<ScoreView>> retrieveFriendsScores(
             @Field("service") String service,
             @Field("userId") String userId,
             @Field("friends") String friends
