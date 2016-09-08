@@ -98,12 +98,12 @@ public class GameActivity extends Activity {
     public ImageView tictac;
     public ImageView rotate;
 
-    public int item_selected = 0; // 0 = 일반상태, 1 = 아티스트, 2 = 3초듣기, 3 = 생명회복, 4 = 한 글자
+    public int item_selected = 0; // 0 = 일반상태, 1 = 아티스트, 2 = 생명회복, 3 = 한 글자, 4 = 3초 듣기
 
     private static final String item1_tag = "아티스트 공개";
-    private static final String item2_tag = "3초 듣기";
-    private static final String item3_tag = "생명력 회복";
-    private static final String item4_tag = "한 글자 공개";
+    private static final String item2_tag = "생명력 회복";
+    private static final String item3_tag = "한 글자 공개";
+    private static final String item4_tag = "3초 듣기";
 
     public TextView item1_cnt;
     public TextView item2_cnt;
@@ -156,7 +156,7 @@ public class GameActivity extends Activity {
         setContentView(R.layout.activity_game);
         ButterKnife.bind(this);
 
-        Animation rotate_back = AnimationUtils.loadAnimation(this,R.anim.base_rotate_anim);
+        Animation rotate_back = AnimationUtils.loadAnimation(this, R.anim.base_rotate_anim);
         ImageView star_back = (ImageView) findViewById(R.id.background_star);
 
         star_back.startAnimation(rotate_back);
@@ -173,9 +173,9 @@ public class GameActivity extends Activity {
         btn_exit = (ImageButton) findViewById(R.id.btn_exit);
 
         item1 = (ImageView) findViewById(R.id.item1); //아티스트 공개
-        item2 = (ImageView) findViewById(R.id.item2); //3초
-        item3 = (ImageView) findViewById(R.id.item3); //생명
-        item4 = (ImageView) findViewById(R.id.item4); //한글
+        item2 = (ImageView) findViewById(R.id.item2); //생명증가
+        item3 = (ImageView) findViewById(R.id.item3); //한글자
+        item4 = (ImageView) findViewById(R.id.item4); //3초듣기
 
         item1.setTag(item1_tag);
         item2.setTag(item2_tag);
@@ -369,6 +369,14 @@ public class GameActivity extends Activity {
                 tictac.startAnimation(tic_click);
                 // 문제 1초 재생
                 musicPlay(1000);
+                item1.setBackgroundResource(R.drawable.item_artist);
+                item2.setBackgroundResource(R.drawable.item_onemore);
+                item3.setBackgroundResource(R.drawable.item_onechar);
+                item4.setBackgroundResource(R.drawable.item_thirdsecond);
+                item1.setEnabled(true);
+                item2.setEnabled(true);
+                item3.setEnabled(true);
+                item4.setEnabled(true);
                 break;
             case 1:
                 // 문제 재생 중이므로 반응 없음
@@ -379,8 +387,7 @@ public class GameActivity extends Activity {
                     rotate.startAnimation(start_click_third);
                     tictac.startAnimation(tic_click_third);
                     musicPlay(3000);
-                }
-                else{
+                } else {
                     rotate.startAnimation(start_click);
                     tictac.startAnimation(tic_click);
                     musicPlay(1000);
@@ -784,6 +791,14 @@ public class GameActivity extends Activity {
         } else {
             btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
             frame_ans.setVisibility(View.INVISIBLE); // 정답창 숨기기
+            item1.setBackgroundResource(R.drawable.item_artist_no);
+            item2.setBackgroundResource(R.drawable.item_onemore_no);
+            item3.setBackgroundResource(R.drawable.item_onechar_no);
+            item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
+            item1.setEnabled(false);
+            item2.setEnabled(false);
+            item3.setEnabled(false);
+            item4.setEnabled(false);
             mPlayer = new MediaPlayer();
             mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
             rotate.startAnimation(start_click_infinite);
@@ -1028,29 +1043,21 @@ public class GameActivity extends Activity {
                             itemUsed = 1;
                             edit_ans.setHint("이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
                                     + "'입니다.");
+                            item1.setEnabled(false);
+                            item2.setEnabled(false);
+                            item3.setEnabled(false);
+                            item4.setEnabled(false);
+                            item1.setBackgroundResource(R.drawable.item_artist);
+                            item2.setBackgroundResource(R.drawable.item_onemore_no);
+                            item3.setBackgroundResource(R.drawable.item_onechar_no);
+                            item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
                             /*
                             } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
                             }*/
                             break;
-                        case 2:/*
-                            if (itemArray.get(1) > 0) {
-                                itemArray.set(1, itemArray.get(1) - 1);
-                                ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
-                                        itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
-                                SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
-                                        itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
-                                item2_cnt.setText(itemArray.get(1) + "");*/
-                            Toast.makeText(view.getContext(), "3초 재생 적용!", Toast.LENGTH_SHORT).show();
-                            rotate.startAnimation(start_click_third);
-                            tictac.startAnimation(tic_click_third);
-                            musicPlay(3000);
-                            itemUsed = 2;
-                           /* } else {
-                                Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }*/
-                            break;
-                        case 3:/*
+                        case 2:
+                            /*
                             if (itemArray.get(2) > 0) {
                                 if (life >= 3)
                                     Toast.makeText(view.getContext(), "현재 생명력 만땅입니다!", Toast.LENGTH_SHORT).show();
@@ -1068,8 +1075,17 @@ public class GameActivity extends Activity {
                             } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
                             }*/
+                            item1.setEnabled(false);
+                            item2.setEnabled(false);
+                            item3.setEnabled(false);
+                            item4.setEnabled(false);
+                            item1.setBackgroundResource(R.drawable.item_artist_no);
+                            item2.setBackgroundResource(R.drawable.item_onemore);
+                            item3.setBackgroundResource(R.drawable.item_onechar_no);
+                            item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
                             break;
-                        case 4:/*
+                        case 3:
+                        /*
                             if (itemArray.get(3) > 0) {
                                 itemArray.set(3, itemArray.get(3) - 1);
                                 ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
@@ -1086,6 +1102,39 @@ public class GameActivity extends Activity {
                          /*   } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
                             }*/
+                            item1.setEnabled(false);
+                            item2.setEnabled(false);
+                            item3.setEnabled(false);
+                            item4.setEnabled(false);
+                            item1.setBackgroundResource(R.drawable.item_artist_no);
+                            item2.setBackgroundResource(R.drawable.item_onemore_no);
+                            item3.setBackgroundResource(R.drawable.item_onechar);
+                            item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
+                            break;
+                        case 4:/*
+                        if (itemArray.get(1) > 0) {
+                            itemArray.set(1, itemArray.get(1) - 1);
+                            ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
+                                    itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
+                            SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
+                                    itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
+                            item2_cnt.setText(itemArray.get(1) + "");*/
+                            Toast.makeText(view.getContext(), "3초 재생 적용!", Toast.LENGTH_SHORT).show();
+                            rotate.startAnimation(start_click_third);
+                            tictac.startAnimation(tic_click_third);
+                            musicPlay(3000);
+                            itemUsed = 2;
+                           /* } else {
+                                Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
+                            }*/
+                            item1.setEnabled(false);
+                            item2.setEnabled(false);
+                            item3.setEnabled(false);
+                            item4.setEnabled(false);
+                            item1.setBackgroundResource(R.drawable.item_artist_no);
+                            item2.setBackgroundResource(R.drawable.item_onemore_no);
+                            item3.setBackgroundResource(R.drawable.item_onechar);
+                            item4.setBackgroundResource(R.drawable.item_thirdsecond);
                             break;
                         case 0:
                         default:

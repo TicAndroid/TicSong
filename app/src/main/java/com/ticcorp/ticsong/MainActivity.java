@@ -48,6 +48,11 @@ public class MainActivity extends Activity {
 
     @Bind(R.id.main_juke_img)
     ImageView mainJukeBox;
+    @Bind(R.id.btn_ranking)
+    ImageButton btn_ranking;
+    @Bind(R.id.btn_setting)
+    ImageButton btn_setting;
+
 
     Animation button_anim, background_anim;
 
@@ -82,6 +87,14 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(getApplication(), GameActivity.class));
             }
         });
+
+        btn_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplication(), SettingActivity.class));
+            }
+        });
+
 /*
         Button btn_friend = (Button) findViewById(R.id.btn_friend);
 

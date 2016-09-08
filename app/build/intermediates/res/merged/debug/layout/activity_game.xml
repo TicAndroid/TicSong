@@ -162,7 +162,8 @@
                                 android:id="@+id/item1"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/item_artist" />
+                                android:enabled="false"
+                                android:background="@drawable/item_artist_no" />
 
                             <TextView
                                 android:id="@+id/item1_cnt"
@@ -193,7 +194,8 @@
                                 android:id="@+id/item2"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/item_onemore" />
+                                android:enabled="false"
+                                android:background="@drawable/item_onemore_no" />
 
                             <TextView
                                 android:id="@+id/item2_cnt"
@@ -224,7 +226,8 @@
                                 android:id="@+id/item3"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/item_onechar" />
+                                android:enabled="false"
+                                android:background="@drawable/item_onechar_no" />
 
                             <TextView
                                 android:id="@+id/item3_cnt"
@@ -255,7 +258,8 @@
                                 android:id="@+id/item4"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:background="@drawable/item_thirdsecond" />
+                                android:enabled="false"
+                                android:background="@drawable/item_thirdsecond_no" />
 
                             <TextView
                                 android:id="@+id/item4_cnt"
