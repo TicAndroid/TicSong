@@ -226,4 +226,10 @@ public class MainActivity extends Activity {
         startActivity(new Intent(getApplication(), GameActivity.class));
     }
 
+    @OnClick(R.id.btn_ranking)
+    void rankingClicked() {
+        startActivity(new Intent(getApplication(), RankingTestActivity.class));
+    }
+
+
 }

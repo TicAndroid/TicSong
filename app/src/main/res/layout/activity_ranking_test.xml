@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_exit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/btn_x" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RANKING"/>
+
+        <Button android:id="@+id/btn_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MODE_CHANGE"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:id="@+id/txt_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 친구"/>
+
+        <TextView android:id="@+id/txt_yourRank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"/>
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/profile_main_image" />
+
+    </LinearLayout>
+
+
+    <ListView android:id="@+id/list_rank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

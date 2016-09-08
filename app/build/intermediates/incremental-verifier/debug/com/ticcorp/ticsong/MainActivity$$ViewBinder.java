@@ -18,6 +18,15 @@ public class MainActivity$$ViewBinder<T extends com.ticcorp.ticsong.MainActivity
           target.mainJokeBoxClicked();
         }
       });
+    view = finder.findRequiredView(source, 2131427478, "method 'rankingClicked'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.rankingClicked();
+        }
+      });
   }
 
   @Override public void unbind(T target) {
