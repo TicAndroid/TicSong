@@ -1,9 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-ldrtl-xhdpi\\abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-ldrtl-xhdpi/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-ldrtl-xhdpi\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -14,5 +15,17 @@
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17\\abc_ic_ab_back_mtrl_am_alpha.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-ldrtl-xhdpi\\abc_ic_ab_back_mtrl_am_alpha.png"
+=======
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-ldrtl-xhdpi/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17/abc_ic_ab_back_mtrl_am_alpha.png",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-ldrtl-xhdpi/abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-ldrtl-xhdpi/abc_ic_menu_cut_mtrl_alpha.png"
+>>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
     }
 ]

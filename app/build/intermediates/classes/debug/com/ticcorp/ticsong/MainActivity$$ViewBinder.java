@@ -18,10 +18,22 @@ public class MainActivity$$ViewBinder<T extends com.ticcorp.ticsong.MainActivity
           target.mainJokeBoxClicked();
         }
       });
+<<<<<<< HEAD
     view = finder.findRequiredView(source, 2131427478, "field 'btn_ranking'");
     target.btn_ranking = finder.castView(view, 2131427478, "field 'btn_ranking'");
     view = finder.findRequiredView(source, 2131427479, "field 'btn_setting'");
     target.btn_setting = finder.castView(view, 2131427479, "field 'btn_setting'");
+=======
+    view = finder.findRequiredView(source, 2131427478, "method 'rankingClicked'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.rankingClicked();
+        }
+      });
+>>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
   }
 
   @Override public void unbind(T target) {

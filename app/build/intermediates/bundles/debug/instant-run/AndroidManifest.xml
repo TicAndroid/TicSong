@@ -81,6 +81,18 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.ticcorp.ticsong.RankingTestActivity"
+            android:label="랭킹 테스트"
+            android:screenOrientation="portrait" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
             android:name="com.ticcorp.ticsong.ServerTestActivity"
             android:label="서버 테스트"
             android:screenOrientation="portrait" >
