@@ -14,6 +14,7 @@ import com.ticcorp.ticsong.StaticInfo;
 import com.ticcorp.ticsong.model.DBManager;
 import com.ticcorp.ticsong.model.StaticSQLite;
 import com.ticcorp.ticsong.module.SQLiteAccessModule;
+import com.ticcorp.ticsong.module.ServiceGenerator;
 import com.ticcorp.ticsong.retrofit2Interface.LoginInterface;
 import com.ticcorp.ticsong.model.CustomPreference;
 import com.ticcorp.ticsong.DTO.UserDTO;
@@ -57,10 +58,16 @@ public class LoginController {
 
     public boolean requestLogin(final Context context, String userId, String name, String platform) {
 
-        retrofit = new Retrofit.Builder().baseUrl(StaticInfo.TICSONG_BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+        //retrofit = new Retrofit.Builder().baseUrl(StaticInfo.TICSONG_BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+        //LoginInterface loginInterface = retrofit.create(LoginInterface.class);
+        //Call<LoginView> call = loginInterface.requestLogin(userId, name,platform);
 
-        LoginInterface loginInterface = retrofit.create(LoginInterface.class);
-        Call<LoginView> call = loginInterface.requestLogin(userId, name,platform);
+        LoginInterface loginInterface = ServiceGenerator.createService(LoginInterface.class);
+
+        // Fetch and print a list of the contributors to this library.
+        Call<LoginView> call =
+                loginInterface.requestLogin(userId, name,platform);
+
         LoginView loginView = null;
         try {
             loginView = call.execute().body();
@@ -118,7 +125,7 @@ public class LoginController {
             public void onResponse(Call<LoginView> call, Response<LoginView> response) {
 
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("로그인 실패", "-1");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
@@ -144,7 +151,7 @@ public class LoginController {
                 customPreference.put("item4Cnt",loginView.getItem4Cnt());
 
                 /* SQLite DB Insert */
-                SQLiteAccessModule.getInstance(context).login(loginView);
+                //SQLiteAccessModule.getInstance(context).login(loginView);
 
                 /*DBManager db = new DBManager(context, StaticSQLite.TICSONG_DB, null, 1 );
                 db.insert(StaticSQLite.insertUserSQL(loginView.getUserId(), loginView.getName(), loginView.getPlatform()));
@@ -191,7 +198,7 @@ public class LoginController {
             @Override
             public void onResponse(Call<LoginView> call, Response<LoginView> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("로그인 실패", "-1");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
@@ -266,7 +273,7 @@ public class LoginController {
             @Override
             public void onResponse(Call<LoginView> call, Response<LoginView> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("로그인 실패", "-1");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }
@@ -354,7 +361,7 @@ public class LoginController {
             @Override
             public void onResponse(Call<UserDTO> call, Response<UserDTO> response) {
                 /* 응답코드가 200번대가 아니라면*/
-                if(!response.isSuccess()) {
+                if(!response.isSuccessful()) {
                     Log.d("로그인 코드_",response.body().getResultCode()+"");
                     return ; // 아무 코드를 실행하지 않고 리턴.
                 }

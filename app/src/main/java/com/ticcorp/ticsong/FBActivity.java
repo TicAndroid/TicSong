@@ -96,11 +96,23 @@ public class FBActivity extends Activity {
                                             Log.i("ticlog name", name);
                                             //Log.i("email1",email1);
 
-                                            ServerAccessModule.getInstance().login(getApplicationContext(), id, name, 0);
+                                            new Thread(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    ServerAccessModule.getInstance().login(getApplicationContext(), id, name, 0);
+
+                                                    startActivity(new Intent(getApplication(), MainActivity.class));
+                                                    //startActivity(new Intent(getApplication(), ServerTestActivity.class));
+                                                    // 로그인 되면 현재 페이지 제거
+                                                    FBActivity.this.finish();
+                                                }
+                                            }).start();
+
+                                            /*ServerAccessModule.getInstance().login(getApplicationContext(), id, name, 0);
 
                                             startActivity(new Intent(getApplication(), MainActivity.class));
                                             // 로그인 되면 현재 페이지 제거
-                                            FBActivity.this.finish();
+                                            FBActivity.this.finish();*/
 
 
                                         } catch (JSONException e) {

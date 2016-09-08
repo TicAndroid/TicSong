@@ -18,7 +18,7 @@ import java.util.List;
 public class ServerAccessModule {
 
     public static List<ScoreView> TOP_RANKER_LIST;
-    public static List<FriendsScoreView> FRIEND_LIST;
+    public static List<ScoreView> FRIEND_LIST;
 
     private static ServerAccessModule instance;
     static {
@@ -41,8 +41,8 @@ public class ServerAccessModule {
      */
     public void login(Context context, String userId, String name, int platform) {
         LoginController loginCon = LoginController.getInstance();
-        //loginCon.requestLogin(context, userId, name, ""+platform);
-        loginCon.requestAsyncLogin(context, userId, name, ""+platform);
+        loginCon.requestLogin(context, userId, name, ""+platform);
+        //loginCon.requestAsyncLogin(context, userId, name, ""+platform);
     }
 
     /**
