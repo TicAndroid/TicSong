@@ -2,6 +2,7 @@
 <resources>
 
     <!-- 해당 레벨에서 레벨 업하기까지 요구 경험치 -->
+    <integer name="lv0">0</integer>
     <integer name="lv1">150</integer>
     <integer name="lv2">500</integer>
     <integer name="lv3">600</integer>

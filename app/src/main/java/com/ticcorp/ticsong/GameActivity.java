@@ -76,7 +76,7 @@ public class GameActivity extends Activity {
     public ArrayList<String> answerArray = new ArrayList<String>(); // 정답 리스트
     public ArrayList<String> artistArray = new ArrayList<String>(); // 아티스트 리스트
     public ArrayList<String> addressArray = new ArrayList<String>(); // 음원 주소 리스트
-    public ArrayList<Integer> correctArray = new ArrayList<Integer>(); // 정답 여부 리스트, 맞출 때의 남은 기회 기록
+    //public ArrayList<Integer> correctArray = new ArrayList<Integer>(); // 정답 여부 리스트, 맞출 때의 남은 기회 기록
 
     public MediaPlayer mPlayer;
     public TextWatcher textWatcher;
@@ -340,6 +340,7 @@ public class GameActivity extends Activity {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+                        startActivity(new Intent(GameActivity.this, MainActivity.class));
                         finish();
                     }
                 })
@@ -461,7 +462,7 @@ public class GameActivity extends Activity {
                 }
                 txt_msg.setText(artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + " 정답입니다! " + nowScore + "점 획득!");
                 score += nowScore; // 누적 점수에 이번 점수 추가
-                correctArray.add((quizNum - 1), life); // 남은 라이프 기록
+                //correctArray.add((quizNum - 1), life); // 남은 라이프 기록
                 pref.put("correct" + quizNum, life); // 남은 라이프 기록
                 musicPlay(-1);
             } else if (textChanger(edit_ans.getText().toString()).equals("")) {
@@ -477,7 +478,7 @@ public class GameActivity extends Activity {
                 } else { // 기회 모두 사용 시 오답 처리 후 정답 공개
                     gameMode = 3;
                     txt_msg.setText("틀렸습니다! 정답은 " + artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + "입니다!");
-                    correctArray.add((quizNum - 1), 0); // 오답 문제 기록
+                    //correctArray.set((quizNum - 1), 0); // 오답 문제 기록
                     pref.put("correct" + quizNum, 0); // 오답 문제 기록
                     musicPlay(-1);
                 }
@@ -679,7 +680,7 @@ public class GameActivity extends Activity {
             addressArray.add(soundUrl);
         }
 
-        //setUserData();
+        setUserData();
         nextQuiz();
     }
 
@@ -721,7 +722,7 @@ public class GameActivity extends Activity {
 
     public void setUserData() {
         // 유저 정보 받아오기
-        DBManager db = new DBManager(this.getApplicationContext(), StaticSQLite.TICSONG_DB, null, 1);
+        /*DBManager db = new DBManager(this.getApplicationContext(), StaticSQLite.TICSONG_DB, null, 1);
         userId = pref.getValue("userId", "userId");
         Cursor cursor = null;
         cursor = db.retrieve(StaticSQLite.retrieveMyScoreSQL(userId));
@@ -744,9 +745,14 @@ public class GameActivity extends Activity {
         item1_cnt.setText(itemArray.get(0) + "");
         item2_cnt.setText(itemArray.get(1) + "");
         item3_cnt.setText(itemArray.get(2) + "");
-        item4_cnt.setText(itemArray.get(3) + "");
+        item4_cnt.setText(itemArray.get(3) + ""); */
 
         pref.put("score", 0);
+
+        item1_cnt.setText(pref.getValue("item1Cnt", 0) + "");
+        item2_cnt.setText(pref.getValue("item2Cnt", 0) + "");
+        item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
+        item4_cnt.setText(pref.getValue("item4Cnt", 0) + "");
     }
 
     public void musicPlay(int time) {
@@ -1028,15 +1034,16 @@ public class GameActivity extends Activity {
                     View view = (View) event.getLocalState();
                     switch (item_selected) {
                         case 1:
-                            /*
-                            if (itemArray.get(0) > 0) {
-                                itemArray.set(0, itemArray.get(0) - 1);
+                            if (pref.getValue("item1Cnt", 0) > 0) {
+                                pref.put("item1Cnt", pref.getValue("item1Cnt", 0) - 1);
                                 ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
-                                        itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
+                                        pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                                        pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
                                 SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
-                                        itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
-                                item1_cnt.setText(itemArray.get(0) + "");
-                                */
+                                        pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                                        pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                                item1_cnt.setText(pref.getValue("item1Cnt", 0) + "");
+
                             Toast.makeText(view.getContext(), "이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
                                     + "'입니다.", Toast.LENGTH_SHORT).show();
                             itemUsed = 1;
@@ -1050,30 +1057,28 @@ public class GameActivity extends Activity {
                             item2.setBackgroundResource(R.drawable.item_onemore_no);
                             item3.setBackgroundResource(R.drawable.item_onechar_no);
                             item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
-                            /*
+
                             } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }*/
+                            }
                             break;
                         case 2:
-                            /*
-                            if (itemArray.get(2) > 0) {
+                            if (pref.getValue("item2Cnt", 0) > 0) {
                                 if (life >= 3)
                                     Toast.makeText(view.getContext(), "현재 생명력 만땅입니다!", Toast.LENGTH_SHORT).show();
                                 else {
-                                    itemArray.set(2, itemArray.get(2) - 1);
+                                    pref.put("item2Cnt", pref.getValue("item2Cnt", 0) - 1);
                                     ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
-                                            itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
+                                            pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                                            pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
                                     SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
-                                            itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
-                                    item3_cnt.setText(itemArray.get(2) + "");*/
-                            itemUsed = 3;
+                                            pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                                            pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                                    item2_cnt.setText(pref.getValue("item2Cnt", 0) + "");
+
+                            itemUsed = 2;
                             life++;
                             lifeRefresh();
-                               /* }
-                            } else {
-                                Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }*/
                             item1.setEnabled(false);
                             item2.setEnabled(false);
                             item3.setEnabled(false);
@@ -1082,58 +1087,68 @@ public class GameActivity extends Activity {
                             item2.setBackgroundResource(R.drawable.item_onemore);
                             item3.setBackgroundResource(R.drawable.item_onechar_no);
                             item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
+                                }
+                            } else {
+                                Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
+                            }
                             break;
                         case 3:
-                        /*
-                            if (itemArray.get(3) > 0) {
-                                itemArray.set(3, itemArray.get(3) - 1);
-                                ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
-                                        itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
-                                SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
-                                        itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
-                                item4_cnt.setText(itemArray.get(3) + "");
-                              */
-                            itemUsed = 4;
+                            if (pref.getValue("item3Cnt", 0) > 0) {
+                            pref.put("item3Cnt", pref.getValue("item3Cnt", 0) - 1);
+                            ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
+                                    pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                                    pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                            SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
+                                    pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                                    pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                            item1_cnt.setText(pref.getValue("item3Cnt", 0) + "");
+
+                            itemUsed = 3;
                             Toast.makeText(view.getContext(), "곡 제목의 첫 글자는 '" +
                                     textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
                             edit_ans.setHint("곡 제목의 첫 글자는 '" +
                                     textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.");
-                         /*   } else {
+
+                                item1.setEnabled(false);
+                                item2.setEnabled(false);
+                                item3.setEnabled(false);
+                                item4.setEnabled(false);
+                                item1.setBackgroundResource(R.drawable.item_artist_no);
+                                item2.setBackgroundResource(R.drawable.item_onemore_no);
+                                item3.setBackgroundResource(R.drawable.item_onechar);
+                                item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
+
+                            } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }*/
-                            item1.setEnabled(false);
-                            item2.setEnabled(false);
-                            item3.setEnabled(false);
-                            item4.setEnabled(false);
-                            item1.setBackgroundResource(R.drawable.item_artist_no);
-                            item2.setBackgroundResource(R.drawable.item_onemore_no);
-                            item3.setBackgroundResource(R.drawable.item_onechar);
-                            item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
+                            }
                             break;
-                        case 4:/*
-                        if (itemArray.get(1) > 0) {
-                            itemArray.set(1, itemArray.get(1) - 1);
-                            ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
-                                    itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
-                            SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
-                                    itemArray.get(0), itemArray.get(1), itemArray.get(2), itemArray.get(3));
-                            item2_cnt.setText(itemArray.get(1) + "");*/
+                        case 4:
+                            if (pref.getValue("item4Cnt", 0) > 0) {
+                                pref.put("item4Cnt", pref.getValue("item4Cnt", 0) - 1);
+                                ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
+                                        pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                                        pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                                SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
+                                        pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                                        pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                                item1_cnt.setText(pref.getValue("item4Cnt", 0) + "");
                             Toast.makeText(view.getContext(), "3초 재생 적용!", Toast.LENGTH_SHORT).show();
                             rotate.startAnimation(start_click_third);
                             tictac.startAnimation(tic_click_third);
                             musicPlay(3000);
-                            itemUsed = 2;
-                           /* } else {
+                            itemUsed = 4;
+                                item1.setEnabled(false);
+                                item2.setEnabled(false);
+                                item3.setEnabled(false);
+                                item4.setEnabled(false);
+                                item1.setBackgroundResource(R.drawable.item_artist_no);
+                                item2.setBackgroundResource(R.drawable.item_onemore_no);
+                                item3.setBackgroundResource(R.drawable.item_onechar_no);
+                                item4.setBackgroundResource(R.drawable.item_thirdsecond);
+
+                            } else {
                                 Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }*/
-                            item1.setEnabled(false);
-                            item2.setEnabled(false);
-                            item3.setEnabled(false);
-                            item4.setEnabled(false);
-                            item1.setBackgroundResource(R.drawable.item_artist_no);
-                            item2.setBackgroundResource(R.drawable.item_onemore_no);
-                            item3.setBackgroundResource(R.drawable.item_onechar_no);
-                            item4.setBackgroundResource(R.drawable.item_thirdsecond);
+                            }
                             break;
                         case 0:
                         default:

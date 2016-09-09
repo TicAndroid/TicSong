@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
 
     // 테스트를 위한 계정 데이터 변수 부분
     public String user_name;
-    public int user_id, user_lv, user_exp, next_exp;
+    public int user_id, user_lv, user_exp, next_exp, now_exp, required_exp;
     public ArrayList<Integer> user_itemArray = new ArrayList<Integer>();
 
     private BackPressCloseHandler backPressCloseHandler;
@@ -54,6 +54,14 @@ public class MainActivity extends Activity {
     @Bind(R.id.btn_setting)
     ImageButton btn_setting;
 
+    @Bind(R.id.item1_cnt)
+    TextView item1_cnt;
+    @Bind(R.id.item2_cnt)
+    TextView item2_cnt;
+    @Bind(R.id.item3_cnt)
+    TextView item3_cnt;
+    @Bind(R.id.item4_cnt)
+    TextView item4_cnt;
 
     Animation button_anim, background_anim;
 
@@ -221,23 +229,39 @@ public class MainActivity extends Activity {
 
         user_name = pref.getValue("name", "name");
         user_lv = pref.getValue("userLevel", 1);
-        next_exp = pref.getValue("exp", 0);
-        Log.e("ticlog Main", user_name + " / " + user_lv + " / " + next_exp);
+        user_exp = pref.getValue("exp", 0);
 
         profile_id.setText(user_name);
         profile_level.setText(user_lv + "");
 
-        next_exp = getResources().getInteger(getResources().getIdentifier("lv" + user_lv, "integer", MainActivity.this.getPackageName()));
+        next_exp = 0;
+        for(int i = 1; i <= user_lv; i++) { // 누적 경험치를 구하는 함수
+            if (i == user_lv) {
+                // 경험치바에 표시할 현재 경험치는 현재 누적 경험치에서 이전 레벨까지의 누적 경험치를 뺀 수치
+                now_exp = user_exp - next_exp;
+            }
+            next_exp += getResources().getInteger(getResources().getIdentifier("lv" + i, "integer", MainActivity.this.getPackageName()));
+            Log.i("ticlog Main", "next_exp 계산중 : " + next_exp + "/" + i);
+        }
+        required_exp = getResources().getInteger(getResources().getIdentifier("lv" + user_lv, "integer", MainActivity.this.getPackageName()));
+        // required_exp는 현재 레벨에서 다음 레벨로 가기 위한 요구 경험치, next_exp는 다음 레벨로 가기 위한 총 누적 경험치
 
-        profile_progressbar.setMax(next_exp);
-        profile_progressbar.setProgress(user_exp);
+        profile_progressbar.setMax(required_exp);
+        profile_progressbar.setProgress(now_exp);
 
+        item1_cnt.setText(pref.getValue("item1Cnt", 0) + "");
+        item2_cnt.setText(pref.getValue("item2Cnt", 0) + "");
+        item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
+        item4_cnt.setText(pref.getValue("item4Cnt", 0) + "");
+
+        Log.e("ticlog Main", user_name + " / " + user_lv + " / " + now_exp + " / " + user_exp + " / " + required_exp + " / " + next_exp);
     }
 
     // JukeBox 이미지 클릭시 GameActivity로 이동
     @OnClick(R.id.main_juke_img)
     void mainJokeBoxClicked() {
         startActivity(new Intent(getApplication(), GameActivity.class));
+        this.finish(); // 피니시하지 않으면 ResultActivity에서 돌아올 때 MainActivity가 2개 떠 있는 것 방지
     }
 
     @OnClick(R.id.btn_ranking)

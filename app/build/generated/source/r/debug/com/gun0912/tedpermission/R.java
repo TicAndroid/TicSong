@@ -558,7 +558,7 @@ public final class R {
 		public static final int abc_config_activityShortDur = 0x7f090002;
 		public static final int abc_max_action_buttons = 0x7f090000;
 		public static final int cancel_button_image_alpha = 0x7f090003;
-		public static final int status_bar_notification_info_maxnum = 0x7f090019;
+		public static final int status_bar_notification_info_maxnum = 0x7f09001a;
 	}
 	public static final class layout {
 		public static final int abc_action_bar_title_item = 0x7f030000;

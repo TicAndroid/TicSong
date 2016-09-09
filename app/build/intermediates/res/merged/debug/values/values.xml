@@ -291,6 +291,7 @@
     <integer name="abc_max_action_buttons">2</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="google_play_services_version">7895000</integer>
+    <integer name="lv0">0</integer>
     <integer name="lv1">150</integer>
     <integer name="lv10">1300</integer>
     <integer name="lv11">1400</integer>

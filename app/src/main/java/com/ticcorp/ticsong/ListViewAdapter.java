@@ -3,6 +3,7 @@ package com.ticcorp.ticsong;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -81,9 +82,11 @@ public class ListViewAdapter extends BaseAdapter {
                     InputStream is = conn.getInputStream();
                     mPicBitmap = BitmapFactory.decodeStream(is);
                     // 이미지 불러오는 부분 끝
+                    Log.i("ticlog", "Img load success / " + mData.mPicURL);
 
                 } catch (IOException e) {
                     e.printStackTrace();
+                    Log.i("ticlog", "Img load fail");
                 }
             }
         };
