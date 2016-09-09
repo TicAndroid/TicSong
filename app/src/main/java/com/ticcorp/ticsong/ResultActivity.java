@@ -212,6 +212,10 @@ public class ResultActivity extends Activity {
                 default:
                     break;
             }
+            nextExp = 0;
+            for(int i = 1; i <= userLevel; i++) {
+                nextExp += getResources().getInteger(getResources().getIdentifier("lv" + i, "integer", ResultActivity.this.getPackageName()));
+            }
         }
 
     }
