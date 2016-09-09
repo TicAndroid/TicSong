@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Space;
 import android.widget.TextView;
 import android.view.*;
 import android.widget.Toast;
@@ -47,7 +48,7 @@ public class MainActivity extends Activity {
     private BackPressCloseHandler backPressCloseHandler;
 
     @Bind(R.id.main_juke_img)
-    ImageView mainJukeBox;
+    ImageButton mainJukeBox;
     @Bind(R.id.btn_ranking)
     ImageButton btn_ranking;
     @Bind(R.id.btn_setting)
@@ -241,7 +242,7 @@ public class MainActivity extends Activity {
 
     @OnClick(R.id.btn_ranking)
     void rankingClicked() {
-        startActivity(new Intent(getApplication(), RankingTestActivity.class));
+        startActivity(new Intent(getApplication(), RankingActivity.class));
     }
 
 

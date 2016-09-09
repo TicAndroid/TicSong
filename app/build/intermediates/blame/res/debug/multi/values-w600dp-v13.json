@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\values-w600dp-v13\\values-w600dp-v13.xml",
-=======
-        "outputFile": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/values-w600dp-v13/values-w600dp-v13.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 114
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-w600dp\\values-w600dp.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-w600dp/values-w600dp.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -38,11 +30,7 @@
                     "endOffset": 169
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-w600dp\\values-w600dp.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-w600dp/values-w600dp.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,

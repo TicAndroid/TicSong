@@ -30,8 +30,8 @@
             android:id="@+id/msg_part"
             android:layout_width="match_parent"
             android:layout_height="110dp"
-            android:orientation="vertical"
-            android:background="@drawable/game_upstair_panel">
+            android:background="@drawable/game_upstair_panel"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/first_part"
@@ -95,7 +95,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="100"
                     android:gravity="center">
-                    
+
                     <ImageButton
                         android:id="@+id/btn_play"
                         android:layout_width="250dp"
@@ -111,7 +111,7 @@
                         android:layout_gravity="center"
                         android:layout_marginRight="20dp"
                         android:background="@drawable/juke_tic" />
-                    
+
                     <ImageView
                         android:id="@+id/rotate"
                         android:layout_width="270dp"
@@ -119,7 +119,7 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="15dp"
                         android:layout_marginRight="5dp"
-                        android:background="@drawable/new_star"/>
+                        android:background="@drawable/new_star" />
 
                 </FrameLayout>
 
@@ -162,8 +162,8 @@
                                 android:id="@+id/item1"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:enabled="false"
-                                android:background="@drawable/item_artist_no" />
+                                android:background="@drawable/item_artist_no"
+                                android:enabled="false" />
 
                             <TextView
                                 android:id="@+id/item1_cnt"
@@ -194,8 +194,8 @@
                                 android:id="@+id/item2"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:enabled="false"
-                                android:background="@drawable/item_onemore_no" />
+                                android:background="@drawable/item_onemore_no"
+                                android:enabled="false" />
 
                             <TextView
                                 android:id="@+id/item2_cnt"
@@ -226,8 +226,8 @@
                                 android:id="@+id/item3"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:enabled="false"
-                                android:background="@drawable/item_onechar_no" />
+                                android:background="@drawable/item_onechar_no"
+                                android:enabled="false" />
 
                             <TextView
                                 android:id="@+id/item3_cnt"
@@ -258,8 +258,8 @@
                                 android:id="@+id/item4"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:enabled="false"
-                                android:background="@drawable/item_thirdsecond_no" />
+                                android:background="@drawable/item_thirdsecond_no"
+                                android:enabled="false" />
 
                             <TextView
                                 android:id="@+id/item4_cnt"
@@ -380,10 +380,11 @@
                 android:ems="15"
                 android:gravity="center_vertical"
                 android:hint="정답을 입력하세요!"
-                android:textColorHint="#FFFFFF"
                 android:paddingLeft="10dp"
                 android:singleLine="true"
-                android:textSize="13sp" />
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
 
             <Space
                 android:layout_width="0dp"
@@ -414,52 +415,64 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/frame_voice"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
-        android:background="#66000000">
+        android:background="@drawable/background_listen"
+        android:orientation="vertical"
+        android:weightSum="100">
 
-        <FrameLayout
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="74"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="260dp"
-            android:layout_gravity="bottom"
-            android:background="#FFF"
+            android:layout_height="0dp"
+            android:layout_weight="26"
+            android:weightSum="100"
             android:orientation="vertical"
-            >
+            android:gravity="center">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/txt_voice_system"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="잠시만 기다려주세요"
+                android:textColor="#999"
+                android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/txt_voice_result"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:text="-"
-                    android:textColor="#000"
-                    android:textSize="14sp" />
+            <TextView
+                android:id="@+id/txt_voice_result"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="#000"
+                android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/txt_voice_system"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:text="연결 중입니다. 아직 말하지 마세요!"
-                    android:textColor="#999"
-                    android:textSize="14sp" />
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/btn_mic"/>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="20"/>
 
 
+        </LinearLayout>
 
-            </LinearLayout>
-        </FrameLayout>
-
-    </FrameLayout>
+    </LinearLayout>
 
 
 </FrameLayout>

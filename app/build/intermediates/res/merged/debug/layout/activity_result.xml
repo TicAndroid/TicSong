@@ -225,7 +225,7 @@
                     android:layout_weight="10"
                     android:max="100"
                     android:padding="15dp"
-                    android:progress="100"
+                    android:progress="40"
                     android:progressDrawable="@drawable/custom_progress" />
 
                 <RelativeLayout

@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\values-sw\\values-sw.xml",
-=======
-        "outputFile": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 203
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -38,11 +30,7 @@
                     "endOffset": 311
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -61,11 +49,7 @@
                     "endOffset": 434
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -84,11 +68,7 @@
                     "endOffset": 532
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -107,11 +87,7 @@
                     "endOffset": 640
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -130,11 +106,7 @@
                     "endOffset": 730
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -153,11 +125,7 @@
                     "endOffset": 835
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -176,11 +144,7 @@
                     "endOffset": 952
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -199,11 +163,7 @@
                     "endOffset": 1034
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -222,11 +182,7 @@
                     "endOffset": 1117
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -245,11 +201,7 @@
                     "endOffset": 1199
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -268,11 +220,7 @@
                     "endOffset": 1300
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -291,11 +239,7 @@
                     "endOffset": 1409
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -314,11 +258,7 @@
                     "endOffset": 1508
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -337,11 +277,7 @@
                     "endOffset": 1615
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -360,11 +296,7 @@
                     "endOffset": 1724
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -383,11 +315,7 @@
                     "endOffset": 1829
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -406,11 +334,7 @@
                     "endOffset": 1948
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -429,11 +353,7 @@
                     "endOffset": 2045
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -452,11 +372,7 @@
                     "endOffset": 2234
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -475,11 +391,7 @@
                     "endOffset": 2413
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -498,11 +410,7 @@
                     "endOffset": 2525
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -521,11 +429,7 @@
                     "endOffset": 2796
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
@@ -544,11 +448,7 @@
                     "endOffset": 2926
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -567,11 +467,7 @@
                     "endOffset": 3110
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -590,11 +486,7 @@
                     "endOffset": 3238
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -613,11 +505,7 @@
                     "endOffset": 3406
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -636,11 +524,7 @@
                     "endOffset": 3534
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -659,11 +543,7 @@
                     "endOffset": 3755
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -682,11 +562,7 @@
                     "endOffset": 3986
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -705,11 +581,7 @@
                     "endOffset": 4111
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -728,11 +600,7 @@
                     "endOffset": 4300
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -751,11 +619,7 @@
                     "endOffset": 4423
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -774,11 +638,7 @@
                     "endOffset": 4584
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -797,11 +657,7 @@
                     "endOffset": 4767
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -820,11 +676,7 @@
                     "endOffset": 4893
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -843,11 +695,7 @@
                     "endOffset": 5068
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -866,11 +714,7 @@
                     "endOffset": 5212
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -889,11 +733,7 @@
                     "endOffset": 5410
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 34,
                         "startColumn": 4,
@@ -912,11 +752,7 @@
                     "endOffset": 5551
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 33,
                         "startColumn": 4,
@@ -935,11 +771,7 @@
                     "endOffset": 5698
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -958,11 +790,7 @@
                     "endOffset": 5946
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -981,11 +809,7 @@
                     "endOffset": 6072
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -1004,11 +828,7 @@
                     "endOffset": 6180
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -1027,11 +847,7 @@
                     "endOffset": 6365
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -1050,11 +866,7 @@
                     "endOffset": 6494
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -1073,11 +885,7 @@
                     "endOffset": 6702
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -1096,11 +904,7 @@
                     "endOffset": 6837
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -1119,11 +923,7 @@
                     "endOffset": 6934
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 31,
                         "startColumn": 4,
@@ -1142,11 +942,7 @@
                     "endOffset": 7024
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -1165,11 +961,7 @@
                     "endOffset": 7135
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\7.8.0\\res\\values-sw\\common_strings.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/values-sw/common_strings.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -1188,11 +980,7 @@
                     "endOffset": 7236
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-sw\\values-sw.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw/values-sw.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,

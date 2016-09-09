@@ -80,8 +80,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ticcorp.ticsong.RankingTestActivity"
-            android:label="랭킹 테스트"
+            android:name="com.ticcorp.ticsong.RankingActivity"
+            android:label="랭킹화면"
             android:screenOrientation="portrait" >
 
             <!--

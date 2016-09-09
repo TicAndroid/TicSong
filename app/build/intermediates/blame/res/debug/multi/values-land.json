@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\values-land\\values-land.xml",
-=======
-        "outputFile": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/values-land/values-land.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 112
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-land\\values-land.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-land/values-land.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -38,11 +30,7 @@
                     "endOffset": 184
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-land\\values-land.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-land/values-land.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -61,11 +49,7 @@
                     "endOffset": 254
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-land\\values-land.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-land/values-land.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -84,11 +68,7 @@
                     "endOffset": 318
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-land\\values-land.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-land/values-land.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -107,11 +87,7 @@
                     "endOffset": 389
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-land\\values-land.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-land/values-land.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -130,11 +106,7 @@
                     "endOffset": 457
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-land\\values-land.xml",
-=======
-                    "file": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-land/values-land.xml",
->>>>>>> 28269a3eac0d687413000f7ae329dbdc22e66454
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,

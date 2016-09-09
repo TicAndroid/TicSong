@@ -2,39 +2,76 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:background="@drawable/listview_item_style"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    android:padding="5dp">
 
-    <TextView android:id="@+id/txt_rank"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"/>
+    <TextView
+        android:id="@+id/txt_rank"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:gravity="center"
+        android:text="10"
+        android:textStyle="bold"
+        android:textColor="#eeFFFFFF"
+        android:textSize="24sp" />
 
-    <ImageView android:id="@+id/img_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/profile_main_image" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="14"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/profile_main_image" />
+    </LinearLayout>
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        android:layout_weight="62"
         android:orientation="vertical">
 
-        <TextView android:id="@+id/txt_name"
+        <TextView
+            android:id="@+id/txt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="NAME"/>
+            android:text="NAME"
+            android:textStyle="bold"
+            android:textColor="#eeFFFFFF"
+            android:textSize="20sp" />
 
-        <TextView android:id="@+id/txt_score"
+        <TextView
+            android:id="@+id/txt_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SCORE : -"/>
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:layout_marginTop="1dp"
+            android:text="SCORE : -"
+            android:textColor="#000066"
+            android:background="#eeFFFFFF"
+            android:textSize="10sp" />
 
     </LinearLayout>
 
-    <TextView android:id="@+id/txt_level"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lv. -"/>
+    <TextView
+        android:id="@+id/txt_level"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="14"
+        android:gravity="bottom"
+        android:text="Lv. 99"
+        android:textColor="#eeFFFFFF"
+        android:textSize="20sp" />
 
 </LinearLayout>

@@ -70,10 +70,10 @@ public class GameActivity$$ViewBinder<T extends com.ticcorp.ticsong.GameActivity
           target.frameVoiceClick();
         }
       });
-    view = finder.findRequiredView(source, 2131427465, "field 'txt_voice_result'");
-    target.txt_voice_result = finder.castView(view, 2131427465, "field 'txt_voice_result'");
-    view = finder.findRequiredView(source, 2131427466, "field 'txt_voice_system'");
-    target.txt_voice_system = finder.castView(view, 2131427466, "field 'txt_voice_system'");
+    view = finder.findRequiredView(source, 2131427466, "field 'txt_voice_result'");
+    target.txt_voice_result = finder.castView(view, 2131427466, "field 'txt_voice_result'");
+    view = finder.findRequiredView(source, 2131427465, "field 'txt_voice_system'");
+    target.txt_voice_system = finder.castView(view, 2131427465, "field 'txt_voice_system'");
     view = finder.findRequiredView(source, 2131427442, "method 'exitOkClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {

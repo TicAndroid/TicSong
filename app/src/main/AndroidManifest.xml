@@ -76,8 +76,8 @@
         </activity>
 
         <activity
-            android:name=".RankingTestActivity"
-            android:label="랭킹 테스트"
+            android:name=".RankingActivity"
+            android:label="랭킹화면"
             android:screenOrientation="portrait">
             <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />

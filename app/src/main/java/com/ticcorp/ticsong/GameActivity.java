@@ -110,7 +110,6 @@ public class GameActivity extends Activity {
     public TextView item3_cnt;
     public TextView item4_cnt;
 
-    public LinearLayout fabBackground;
     public ImageButton btn_exit;
 
     //음성인식
@@ -144,7 +143,7 @@ public class GameActivity extends Activity {
     @Bind(R.id.btn_voice)
     ImageButton btn_voice;
     @Bind(R.id.frame_voice)
-    FrameLayout frame_voice;
+    LinearLayout frame_voice;
     @Bind(R.id.txt_voice_result)
     TextView txt_voice_result;
     @Bind(R.id.txt_voice_system)
@@ -940,7 +939,7 @@ public class GameActivity extends Activity {
             case R.id.clientReady:
                 // 지금부터 음성을 받음
                 txt_voice_result.setText("");
-                txt_voice_system.setText("지금 말해주세요!");
+                txt_voice_system.setText("이야기 해주세요");
 
                 writer = new AudioWriterPCM(
                         Environment.getExternalStorageDirectory().getAbsolutePath() + "/NaverSpeechTest");
@@ -1133,7 +1132,7 @@ public class GameActivity extends Activity {
                             item4.setEnabled(false);
                             item1.setBackgroundResource(R.drawable.item_artist_no);
                             item2.setBackgroundResource(R.drawable.item_onemore_no);
-                            item3.setBackgroundResource(R.drawable.item_onechar);
+                            item3.setBackgroundResource(R.drawable.item_onechar_no);
                             item4.setBackgroundResource(R.drawable.item_thirdsecond);
                             break;
                         case 0:
