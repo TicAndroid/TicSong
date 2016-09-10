@@ -39,7 +39,8 @@
                 android:layout_height="40dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
                 android:weightSum="100">
 
                 <Space
@@ -50,19 +51,21 @@
                 <ImageButton
                     android:id="@+id/btn_exit"
                     android:layout_width="0dp"
-                    android:layout_height="20dp"
-                    android:layout_weight="6"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="9"
                     android:background="@drawable/btn_x" />
 
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="72" />
+                    android:layout_weight="69" />
 
                 <ImageButton
                     android:id="@+id/btn_pass"
                     android:layout_width="0dp"
                     android:layout_height="30dp"
+                    android:layout_marginTop="3dp"
                     android:layout_weight="18"
                     android:background="@drawable/btn_pass" />
             </LinearLayout>
@@ -78,342 +81,331 @@
 
         </LinearLayout>
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="100">
+            android:layout_weight="100"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="100">
+
+                <ImageButton
+                    android:id="@+id/btn_play"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/juke_main" />
+
+                <ImageView
+                    android:id="@+id/tictac"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/juke_tic" />
+
+                <ImageView
+                    android:id="@+id/rotate"
+                    android:layout_width="270dp"
+                    android:layout_height="270dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/new_star" />
+            </FrameLayout>
 
             <LinearLayout
+                android:id="@+id/item_box_panel"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_height="105dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/game_item_panel"
+                android:gravity="center_horizontal"
                 android:orientation="vertical"
                 android:weightSum="100">
 
-                <FrameLayout
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="100"
-                    android:gravity="center">
-
-                    <ImageButton
-                        android:id="@+id/btn_play"
-                        android:layout_width="250dp"
-                        android:layout_height="250dp"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="20dp"
-                        android:background="@drawable/juke_main" />
-
-                    <ImageView
-                        android:id="@+id/tictac"
-                        android:layout_width="250dp"
-                        android:layout_height="250dp"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="20dp"
-                        android:background="@drawable/juke_tic" />
-
-                    <ImageView
-                        android:id="@+id/rotate"
-                        android:layout_width="270dp"
-                        android:layout_height="270dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="15dp"
-                        android:layout_marginRight="5dp"
-                        android:background="@drawable/new_star" />
-
-                </FrameLayout>
-
+                    android:layout_weight="20"
+                    android:gravity="center" />
 
                 <LinearLayout
+                    android:id="@+id/item_box"
                     android:layout_width="match_parent"
-                    android:layout_height="105dp"
-                    android:background="@drawable/game_item_panel"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:weightSum="100">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="20"
-                        android:gravity="center" />
-
-                    <LinearLayout
-                        android:id="@+id/item_box"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="80"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        android:weightSum="100">
-
-                        <Space
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="8" />
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="21"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:id="@+id/item1"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:background="@drawable/item_artist_no"
-                                android:enabled="false" />
-
-                            <TextView
-                                android:id="@+id/item1_cnt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignEnd="@id/item1"
-                                android:layout_alignRight="@id/item1"
-                                android:layout_alignTop="@id/item1"
-                                android:background="@drawable/badge_item_count"
-                                android:gravity="center"
-                                android:paddingEnd="8dp"
-                                android:paddingLeft="6dp"
-                                android:paddingRight="8dp"
-                                android:paddingTop="6dp"
-                                android:text="0"
-                                android:textColor="#000000"
-                                android:textSize="11sp" />
-
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="21"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:id="@+id/item2"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:background="@drawable/item_onemore_no"
-                                android:enabled="false" />
-
-                            <TextView
-                                android:id="@+id/item2_cnt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignEnd="@id/item2"
-                                android:layout_alignRight="@id/item2"
-                                android:layout_alignTop="@id/item2"
-                                android:background="@drawable/badge_item_count"
-                                android:gravity="center"
-                                android:paddingEnd="8dp"
-                                android:paddingLeft="6dp"
-                                android:paddingRight="8dp"
-                                android:paddingTop="6dp"
-                                android:text="99"
-                                android:textColor="#000000"
-                                android:textSize="11sp" />
-
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="21"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:id="@+id/item3"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:background="@drawable/item_onechar_no"
-                                android:enabled="false" />
-
-                            <TextView
-                                android:id="@+id/item3_cnt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignEnd="@id/item3"
-                                android:layout_alignRight="@id/item3"
-                                android:layout_alignTop="@id/item3"
-                                android:background="@drawable/badge_item_count"
-                                android:gravity="center"
-                                android:paddingEnd="8dp"
-                                android:paddingLeft="6dp"
-                                android:paddingRight="8dp"
-                                android:paddingTop="6dp"
-                                android:text="12"
-                                android:textColor="#000000"
-                                android:textSize="11sp" />
-
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="21"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:id="@+id/item4"
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:background="@drawable/item_thirdsecond_no"
-                                android:enabled="false" />
-
-                            <TextView
-                                android:id="@+id/item4_cnt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignEnd="@id/item4"
-                                android:layout_alignRight="@id/item4"
-                                android:layout_alignTop="@id/item4"
-                                android:background="@drawable/badge_item_count"
-                                android:gravity="center"
-                                android:paddingEnd="8dp"
-                                android:paddingLeft="6dp"
-                                android:paddingRight="8dp"
-                                android:paddingTop="6dp"
-                                android:text="10"
-                                android:textColor="#000000"
-                                android:textSize="11sp" />
-
-                        </RelativeLayout>
-
-                        <Space
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="8" />
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="49dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="85" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="15"
-                    android:orientation="vertical"
+                    android:layout_height="0dp"
+                    android:layout_weight="80"
+                    android:gravity="center"
+                    android:orientation="horizontal"
                     android:weightSum="100">
 
                     <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="10" />
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="40"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/life1"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:background="@drawable/life" />
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="21"
+                        android:gravity="center">
 
                         <ImageView
-                            android:id="@+id/life2"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:background="@drawable/life" />
+                            android:id="@+id/item1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/item_artist_no"
+                            android:enabled="false" />
+
+                        <TextView
+                            android:id="@+id/item1_cnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@id/item1"
+                            android:layout_alignRight="@id/item1"
+                            android:layout_alignTop="@id/item1"
+                            android:background="@drawable/badge_item_count"
+                            android:gravity="center"
+                            android:paddingEnd="8dp"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="6dp"
+                            android:text="0"
+                            android:textColor="#000000"
+                            android:textSize="11sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="21"
+                        android:gravity="center">
 
                         <ImageView
-                            android:id="@+id/life3"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:background="@drawable/life" />
+                            android:id="@+id/item2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/item_onemore_no"
+                            android:enabled="false" />
 
-                    </LinearLayout>
+                        <TextView
+                            android:id="@+id/item2_cnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@id/item2"
+                            android:layout_alignRight="@id/item2"
+                            android:layout_alignTop="@id/item2"
+                            android:background="@drawable/badge_item_count"
+                            android:gravity="center"
+                            android:paddingEnd="8dp"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="6dp"
+                            android:text="99"
+                            android:textColor="#000000"
+                            android:textSize="11sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="21"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/item3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/item_onechar_no"
+                            android:enabled="false" />
+
+                        <TextView
+                            android:id="@+id/item3_cnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@id/item3"
+                            android:layout_alignRight="@id/item3"
+                            android:layout_alignTop="@id/item3"
+                            android:background="@drawable/badge_item_count"
+                            android:gravity="center"
+                            android:paddingEnd="8dp"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="6dp"
+                            android:text="12"
+                            android:textColor="#000000"
+                            android:textSize="11sp" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="21"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/item4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/item_thirdsecond_no"
+                            android:enabled="false" />
+
+                        <TextView
+                            android:id="@+id/item4_cnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@id/item4"
+                            android:layout_alignRight="@id/item4"
+                            android:layout_alignTop="@id/item4"
+                            android:background="@drawable/badge_item_count"
+                            android:gravity="center"
+                            android:paddingEnd="8dp"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="6dp"
+                            android:text="10"
+                            android:textColor="#000000"
+                            android:textSize="11sp" />
+
+
+                    </RelativeLayout>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8" />
                 </LinearLayout>
             </LinearLayout>
-        </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/frame_ans"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_alignParentBottom="true"
+                android:background="#77000000"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="8dp"
+                android:weightSum="100">
+
+                <EditText
+                    android:id="@+id/edit_ans"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="85"
+                    android:background="@drawable/edit_txt_test"
+                    android:ems="15"
+                    android:gravity="center_vertical"
+                    android:hint="정답을 입력하세요!"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="15sp" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="12">
+
+                    <ImageButton
+                        android:id="@+id/btn_voice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_mic"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btn_send"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_send"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="85" />
 
         <LinearLayout
-            android:id="@+id/frame_ans"
-            android:layout_width="match_parent"
-            android:layout_height="49dp"
-            android:layout_alignParentBottom="true"
-            android:background="#77000000"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingBottom="8dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="8dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:orientation="vertical"
             android:weightSum="100">
 
-            <EditText
-                android:id="@+id/edit_ans"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="85"
-                android:background="@drawable/edit_txt_test"
-                android:ems="15"
-                android:gravity="center_vertical"
-                android:hint="정답을 입력하세요!"
-                android:paddingLeft="10dp"
-                android:singleLine="true"
-                android:textColorHint="#FFFFFF"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp" />
-
             <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="3" />
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30" />
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="12">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/btn_voice"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/btn_mic"
-                    android:visibility="visible" />
+                <ImageView
+                    android:id="@+id/life1"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/life" />
 
-                <Button
-                    android:id="@+id/btn_send"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/btn_send"
-                    android:visibility="invisible" />
+                <ImageView
+                    android:id="@+id/life2"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/life" />
 
-            </FrameLayout>
+                <ImageView
+                    android:id="@+id/life3"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/life" />
 
+            </LinearLayout>
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/frame_voice"
@@ -427,48 +419,43 @@
         <Space
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_weight="74"/>
+            android:layout_weight="74" />
 
         <LinearLayout
+            android:id="@+id/listen"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="26"
-            android:weightSum="100"
+            android:gravity="center"
             android:orientation="vertical"
-            android:gravity="center">
+            android:weightSum="100">
 
             <TextView
                 android:id="@+id/txt_voice_system"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="30"
                 android:layout_marginTop="10dp"
+                android:layout_weight="30"
                 android:gravity="center"
                 android:text="잠시만 기다려주세요"
                 android:textColor="#999"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/txt_voice_result"
-                android:layout_width="match_parent"
+            <Space
+                android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="30"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="-"
-                android:textColor="#000"
-                android:textSize="14sp" />
+                android:layout_weight="20" />
 
             <ImageView
+                android:id="@+id/mic"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:background="@drawable/btn_mic"/>
+                android:background="@drawable/mic_listen_no" />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="20"/>
-
+                android:layout_weight="50" />
 
         </LinearLayout>
 

@@ -125,7 +125,10 @@ public class GameActivity extends Activity {
     TextView txt_msg;
     @Bind(R.id.edit_ans)
     EditText edit_ans;
-
+    @Bind(R.id.listen)
+    LinearLayout listen;
+    @Bind(R.id.mic)
+    ImageView mic;
     @Bind(R.id.btn_play)
     ImageView btn_play;
     @Bind(R.id.life1)
@@ -144,8 +147,6 @@ public class GameActivity extends Activity {
     ImageButton btn_voice;
     @Bind(R.id.frame_voice)
     LinearLayout frame_voice;
-    @Bind(R.id.txt_voice_result)
-    TextView txt_voice_result;
     @Bind(R.id.txt_voice_system)
     TextView txt_voice_system;
 
@@ -340,8 +341,10 @@ public class GameActivity extends Activity {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-                        startActivity(new Intent(GameActivity.this, MainActivity.class));
-                        finish();
+                        Intent intent = new Intent(getApplication(), MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
                     }
                 })
                 .show();
@@ -410,11 +413,11 @@ public class GameActivity extends Activity {
             downKeyboard(this, edit_ans);
             if (!voiceRunning) {
                 // 음성 팝업 창을 띄움
-                txt_voice_result.setText("연결 중...");
                 txt_voice_system.setText("연결 중입니다. 아직 말하지 마세요.");
                 frame_voice.setVisibility(View.VISIBLE); // 팝업
                 voiceRunning = true;
-
+                mic.setBackgroundResource(R.drawable.mic_listen_no);
+                listen.setBackgroundResource(0);
                 naverRecognizer.recognize();
             } else {
                 naverRecognizer.getSpeechRecognizer().stop();
@@ -428,7 +431,6 @@ public class GameActivity extends Activity {
         naverRecognizer.getSpeechRecognizer().stopImmediately();
         naverRecognizer.getSpeechRecognizer().release();
         vResult = "";
-        txt_voice_result.setText("");
         frame_voice.setVisibility(View.GONE); //팝업 제거
         voiceRunning = false;
     }
@@ -707,8 +709,10 @@ public class GameActivity extends Activity {
             // 마지막 문제 완료 시 결과 화면으로 전환
             //Toast.makeText(this, "게임 끝! " + score + "점 획득!", Toast.LENGTH_SHORT).show();
             pref.put("score", score);
-            startActivity(new Intent(GameActivity.this, ResultActivity.class));
-            GameActivity.this.finish();
+            Intent intent = new Intent(this, ResultActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         } else {
             life = MAX_LIFE; // 라이프 초기화
             lifeRefresh();
@@ -716,7 +720,7 @@ public class GameActivity extends Activity {
         }
         edit_ans.setText(""); // EditText 초기화
         btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
-        frame_ans.setVisibility(View.INVISIBLE); // 정답창 숨기기
+        frame_ans.setVisibility(View.GONE); // 정답창 숨기기
         gameMode = 0; // 문제 대기 중 모드로 변경
     }
 
@@ -795,7 +799,7 @@ public class GameActivity extends Activity {
             }, time);
         } else {
             btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
-            frame_ans.setVisibility(View.INVISIBLE); // 정답창 숨기기
+            frame_ans.setVisibility(View.GONE); // 정답창 숨기기
             item1.setBackgroundResource(R.drawable.item_artist_no);
             item2.setBackgroundResource(R.drawable.item_onemore_no);
             item3.setBackgroundResource(R.drawable.item_onechar_no);
@@ -909,7 +913,6 @@ public class GameActivity extends Activity {
         naverRecognizer.getSpeechRecognizer().initialize();
 
         vResult = "";
-        txt_voice_result.setText("");
         frame_voice.setVisibility(View.GONE); //팝업 제거
     }
 
@@ -919,7 +922,6 @@ public class GameActivity extends Activity {
         naverRecognizer.getSpeechRecognizer().stopImmediately();
         naverRecognizer.getSpeechRecognizer().release();
         vResult = "";
-        txt_voice_result.setText("");
         frame_voice.setVisibility(View.GONE); //팝업 제거
         voiceRunning = false;
     }
@@ -944,9 +946,9 @@ public class GameActivity extends Activity {
         switch (msg.what) {
             case R.id.clientReady:
                 // 지금부터 음성을 받음
-                txt_voice_result.setText("");
                 txt_voice_system.setText("이야기 해주세요");
-
+                listen.setBackgroundResource(R.drawable.listen_back);
+                mic.setBackgroundResource(R.drawable.mic_listen_yes);
                 writer = new AudioWriterPCM(
                         Environment.getExternalStorageDirectory().getAbsolutePath() + "/NaverSpeechTest");
                 writer.open("Test");
@@ -959,7 +961,7 @@ public class GameActivity extends Activity {
             case R.id.partialResult:
                 // Extract obj property typed with String.
                 vResult = (String) (msg.obj);
-                txt_voice_result.setText(vResult);
+                txt_voice_system.setText(vResult);
                 break;
 
             case R.id.finalResult:
@@ -967,7 +969,7 @@ public class GameActivity extends Activity {
                 // The first element is recognition result for speech.
                 String[] results = (String[]) msg.obj;
                 vResult = results[0];
-                txt_voice_result.setText(vResult);
+                txt_voice_system.setText(vResult);
                 // EditText에 반영
                 edit_ans.setText(vResult);
                 break;

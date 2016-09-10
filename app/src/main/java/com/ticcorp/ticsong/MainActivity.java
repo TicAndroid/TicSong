@@ -47,13 +47,16 @@ public class MainActivity extends Activity {
 
     private BackPressCloseHandler backPressCloseHandler;
 
-    @Bind(R.id.main_juke_img)
+    @Bind(R.id.btn_play)
     ImageButton mainJukeBox;
     @Bind(R.id.btn_ranking)
     ImageButton btn_ranking;
     @Bind(R.id.btn_setting)
     ImageButton btn_setting;
-
+    @Bind(R.id.juke_bold)
+    ImageView img_juke_bold;
+    @Bind(R.id.juke_sport)
+    ImageView img_juke_sport;
     @Bind(R.id.item1_cnt)
     TextView item1_cnt;
     @Bind(R.id.item2_cnt)
@@ -63,7 +66,7 @@ public class MainActivity extends Activity {
     @Bind(R.id.item4_cnt)
     TextView item4_cnt;
 
-    Animation button_anim, background_anim;
+    Animation button_anim, background_anim, juke_bold, juke_sport;
 
     TextView profile_id, profile_level;
     ProgressBar profile_progressbar;
@@ -85,17 +88,14 @@ public class MainActivity extends Activity {
 
         background_anim = AnimationUtils.loadAnimation(this,R.anim.base_rotate_anim);
         button_anim = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
-        final ImageButton btn_start = (ImageButton) findViewById(R.id.btn_start);
+        juke_bold = AnimationUtils.loadAnimation(this, R.anim.scale_juke);
+        juke_sport = AnimationUtils.loadAnimation(this, R.anim.alpha_juke);
+
+        img_juke_bold.startAnimation(juke_bold);
+        img_juke_sport.startAnimation(juke_sport);
+
         ImageView star_background = (ImageView) findViewById(R.id.background_star);
         star_background.startAnimation(background_anim);
-
-        btn_start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btn_start.startAnimation(button_anim);
-                startActivity(new Intent(getApplication(), GameActivity.class));
-            }
-        });
 
         btn_setting.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -258,10 +258,12 @@ public class MainActivity extends Activity {
     }
 
     // JukeBox 이미지 클릭시 GameActivity로 이동
-    @OnClick(R.id.main_juke_img)
+    @OnClick(R.id.btn_play)
     void mainJokeBoxClicked() {
-        startActivity(new Intent(getApplication(), GameActivity.class));
-        this.finish(); // 피니시하지 않으면 ResultActivity에서 돌아올 때 MainActivity가 2개 떠 있는 것 방지
+        Intent intent = new Intent(this, GameActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     @OnClick(R.id.btn_ranking)

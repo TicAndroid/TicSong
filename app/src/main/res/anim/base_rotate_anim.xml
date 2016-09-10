@@ -5,6 +5,7 @@
         android:fromDegrees="0"
         android:toDegrees="360"
         android:repeatCount="infinite"
+        android:repeatMode="restart"
         android:pivotX="50%"
         android:pivotY="50%"
         android:duration="150000"
@@ -14,6 +15,7 @@
         android:fromAlpha="1.0"
         android:toAlpha="0.7"
         android:repeatCount="infinite"
+        android:repeatMode="reverse"
         android:duration="3000"
         />
 

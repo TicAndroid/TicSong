@@ -4,7 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
@@ -50,8 +53,7 @@ public class ResultActivity extends Activity {
     // 아티스트 보여주기, 3초 듣기, 정답 1회 증가, 제목 한 글자 보여주기
 
     ImageView score_1, score_2, score_3, score_4, score_5;
-    LinearLayout lvl_panel;
-    ImageView lvl_up_txt, boom, item;
+    ImageView boom, item,lvl_panel;
     RelativeLayout item_gift;
     ProgressBar profile_progressbar;
 
@@ -75,8 +77,10 @@ public class ResultActivity extends Activity {
         for(int i = 1; i <= 5; i++) {
             pref.remove("correct" + i);
         }*/
-        startActivity(new Intent(ResultActivity.this, MainActivity.class));
-        ResultActivity.this.finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     @Override
@@ -91,8 +95,7 @@ public class ResultActivity extends Activity {
         score_4 = (ImageView) findViewById(R.id.score_4);
         score_5 = (ImageView) findViewById(R.id.score_5);
 
-        lvl_panel = (LinearLayout) findViewById(R.id.lvl_panel);
-        lvl_up_txt = (ImageView) findViewById(R.id.lvl_up_txt);
+        lvl_panel = (ImageView) findViewById(R.id.lvl_panel);
         item_gift = (RelativeLayout) findViewById(R.id.item_gift);
         boom = (ImageView) findViewById(R.id.boom);
         item = (ImageView) findViewById(R.id.item2);
@@ -136,8 +139,8 @@ public class ResultActivity extends Activity {
 
         userExp = pref.getValue("exp", 1);
         userLevel = pref.getValue("userLevel", 1);
-
-        userExp = userExp + pref.getValue("score", 0);
+        //경험치 자동 200씩 추가
+        userExp = userExp + pref.getValue("score", 0) + 200;
 
         setLevel();
 
@@ -185,7 +188,6 @@ public class ResultActivity extends Activity {
             userLevel++;
             lvl_panel.setVisibility(View.VISIBLE);
             item_gift.setVisibility(View.VISIBLE);
-            lvl_up_txt.setVisibility(View.VISIBLE);
             boom.setVisibility(View.INVISIBLE);
 
             switch ((int) Math.random() * 4) {
