@@ -8,12 +8,12 @@ import butterknife.ButterKnife.ViewBinder;
 public class RankingActivity$$ViewBinder<T extends com.ticcorp.ticsong.RankingActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131427483, "field 'txt_friend'");
-    target.txt_friend = finder.castView(view, 2131427483, "field 'txt_friend'");
-    view = finder.findRequiredView(source, 2131427484, "field 'txt_yourRank'");
-    target.txt_yourRank = finder.castView(view, 2131427484, "field 'txt_yourRank'");
-    view = finder.findRequiredView(source, 2131427485, "field 'img_profile' and method 'changeClick'");
-    target.img_profile = finder.castView(view, 2131427485, "field 'img_profile'");
+    view = finder.findRequiredView(source, 2131427484, "field 'txt_friend'");
+    target.txt_friend = finder.castView(view, 2131427484, "field 'txt_friend'");
+    view = finder.findRequiredView(source, 2131427485, "field 'txt_yourRank'");
+    target.txt_yourRank = finder.castView(view, 2131427485, "field 'txt_yourRank'");
+    view = finder.findRequiredView(source, 2131427486, "field 'img_profile' and method 'changeClick'");
+    target.img_profile = finder.castView(view, 2131427486, "field 'img_profile'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

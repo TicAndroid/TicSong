@@ -32,6 +32,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
+import android.widget.Space;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -139,6 +140,8 @@ public class GameActivity extends Activity {
     ImageView img_life3;
     @Bind(R.id.frame_ans)
     LinearLayout frame_ans;
+    @Bind(R.id.space)
+    Space space;
     @Bind(R.id.btn_pass)
     ImageButton btn_pass;
     @Bind(R.id.btn_send)
@@ -721,6 +724,7 @@ public class GameActivity extends Activity {
         edit_ans.setText(""); // EditText 초기화
         btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
         frame_ans.setVisibility(View.GONE); // 정답창 숨기기
+        space.setVisibility(View.VISIBLE);
         gameMode = 0; // 문제 대기 중 모드로 변경
     }
 
@@ -791,6 +795,7 @@ public class GameActivity extends Activity {
                         public void run() {
                             btn_pass.setVisibility(View.VISIBLE); // 패스 버튼 드러내기
                             frame_ans.setVisibility(View.VISIBLE); // 정답창 드러내기
+                            space.setVisibility(View.GONE);
                             // 문제를 한 번 들어야 정답창이 드러나도록 함
                             txt_msg.setText(quizNum + "번째 문제입니다! 곡명을 한글로 맞춰주세요!");
                         }
@@ -800,6 +805,7 @@ public class GameActivity extends Activity {
         } else {
             btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
             frame_ans.setVisibility(View.GONE); // 정답창 숨기기
+            space.setVisibility(View.VISIBLE);
             item1.setBackgroundResource(R.drawable.item_artist_no);
             item2.setBackgroundResource(R.drawable.item_onemore_no);
             item3.setBackgroundResource(R.drawable.item_onechar_no);

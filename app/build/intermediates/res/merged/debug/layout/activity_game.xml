@@ -123,6 +123,12 @@
                     android:background="@drawable/new_star" />
             </FrameLayout>
 
+            <Space
+                android:id="@+id/space"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:visibility="gone"/>
+
             <LinearLayout
                 android:id="@+id/item_box_panel"
                 android:layout_width="match_parent"

@@ -159,7 +159,7 @@
         jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="efb738f7888e75f696d042fa65830553b2decc9c">
+        sha1="7b4ba8aa27c5aa9f7c9d6d793190af5aac4bc8e6">
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_42b5e81e71ebc24af598f3e0407a4cd6ef634ddd\classes.dex" />
     </item>
     <item
@@ -182,6 +182,13 @@
         revision="23.0.3"
         sha1="9befa937f06683ea4b038fc8667ec41f4480677f">
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\google-api-services-youtube-v3-rev120-1.19.0_9f84ea5568b44cf3ba359539edb31f9d94664010\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\jp.wasabeef\glide-transformations\1.0.6\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2c8af48ae86723e44761977b30d63df71a00ef4e">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\jp.wasabeef-glide-transformations-1.0.6_adc4a362c4f90dbb079f9780b517630cdb3ef9db\classes.dex" />
     </item>
     <item
         jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
@@ -264,7 +271,7 @@
         jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="58a91cab3d7ccc3d51331835f5b7d3d6df07c1bc">
+        sha1="ba8362c58102cabf5fdea7be06de6a1cb80e56f4">
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_60f6f3ae68470e5cad30d128b2d33fa7b1daebf0\classes.dex" />
     </item>
 

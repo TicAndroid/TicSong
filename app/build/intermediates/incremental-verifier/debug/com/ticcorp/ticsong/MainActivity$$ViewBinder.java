@@ -18,8 +18,8 @@ public class MainActivity$$ViewBinder<T extends com.ticcorp.ticsong.MainActivity
           target.mainJokeBoxClicked();
         }
       });
-    view = finder.findRequiredView(source, 2131427479, "field 'btn_ranking' and method 'rankingClicked'");
-    target.btn_ranking = finder.castView(view, 2131427479, "field 'btn_ranking'");
+    view = finder.findRequiredView(source, 2131427480, "field 'btn_ranking' and method 'rankingClicked'");
+    target.btn_ranking = finder.castView(view, 2131427480, "field 'btn_ranking'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -28,35 +28,22 @@ public class MainActivity$$ViewBinder<T extends com.ticcorp.ticsong.MainActivity
           target.rankingClicked();
         }
       });
-<<<<<<< HEAD
-    view = finder.findRequiredView(source, 2131427480, "field 'btn_setting'");
-    target.btn_setting = finder.castView(view, 2131427480, "field 'btn_setting'");
-    view = finder.findRequiredView(source, 2131427482, "field 'img_juke_bold'");
-    target.img_juke_bold = finder.castView(view, 2131427482, "field 'img_juke_bold'");
-    view = finder.findRequiredView(source, 2131427481, "field 'img_juke_sport'");
-    target.img_juke_sport = finder.castView(view, 2131427481, "field 'img_juke_sport'");
-    view = finder.findRequiredView(source, 2131427451, "field 'item1_cnt'");
-    target.item1_cnt = finder.castView(view, 2131427451, "field 'item1_cnt'");
-    view = finder.findRequiredView(source, 2131427453, "field 'item2_cnt'");
-    target.item2_cnt = finder.castView(view, 2131427453, "field 'item2_cnt'");
-    view = finder.findRequiredView(source, 2131427455, "field 'item3_cnt'");
-    target.item3_cnt = finder.castView(view, 2131427455, "field 'item3_cnt'");
-    view = finder.findRequiredView(source, 2131427457, "field 'item4_cnt'");
-    target.item4_cnt = finder.castView(view, 2131427457, "field 'item4_cnt'");
-=======
-    view = finder.findRequiredView(source, 2131427478, "field 'btn_setting'");
-    target.btn_setting = finder.castView(view, 2131427478, "field 'btn_setting'");
-    view = finder.findRequiredView(source, 2131427450, "field 'item1_cnt'");
-    target.item1_cnt = finder.castView(view, 2131427450, "field 'item1_cnt'");
-    view = finder.findRequiredView(source, 2131427452, "field 'item2_cnt'");
-    target.item2_cnt = finder.castView(view, 2131427452, "field 'item2_cnt'");
-    view = finder.findRequiredView(source, 2131427454, "field 'item3_cnt'");
-    target.item3_cnt = finder.castView(view, 2131427454, "field 'item3_cnt'");
-    view = finder.findRequiredView(source, 2131427456, "field 'item4_cnt'");
-    target.item4_cnt = finder.castView(view, 2131427456, "field 'item4_cnt'");
-    view = finder.findRequiredView(source, 2131427472, "field 'profile_img'");
-    target.profile_img = finder.castView(view, 2131427472, "field 'profile_img'");
->>>>>>> 231c93171b2ac15e66b6435a74d17ee493f3b5c4
+    view = finder.findRequiredView(source, 2131427481, "field 'btn_setting'");
+    target.btn_setting = finder.castView(view, 2131427481, "field 'btn_setting'");
+    view = finder.findRequiredView(source, 2131427483, "field 'img_juke_bold'");
+    target.img_juke_bold = finder.castView(view, 2131427483, "field 'img_juke_bold'");
+    view = finder.findRequiredView(source, 2131427482, "field 'img_juke_sport'");
+    target.img_juke_sport = finder.castView(view, 2131427482, "field 'img_juke_sport'");
+    view = finder.findRequiredView(source, 2131427452, "field 'item1_cnt'");
+    target.item1_cnt = finder.castView(view, 2131427452, "field 'item1_cnt'");
+    view = finder.findRequiredView(source, 2131427454, "field 'item2_cnt'");
+    target.item2_cnt = finder.castView(view, 2131427454, "field 'item2_cnt'");
+    view = finder.findRequiredView(source, 2131427456, "field 'item3_cnt'");
+    target.item3_cnt = finder.castView(view, 2131427456, "field 'item3_cnt'");
+    view = finder.findRequiredView(source, 2131427458, "field 'item4_cnt'");
+    target.item4_cnt = finder.castView(view, 2131427458, "field 'item4_cnt'");
+    view = finder.findRequiredView(source, 2131427475, "field 'profile_img'");
+    target.profile_img = finder.castView(view, 2131427475, "field 'profile_img'");
   }
 
   @Override public void unbind(T target) {

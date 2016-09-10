@@ -56,12 +56,9 @@ public class ResultActivity extends Activity {
     // 아티스트 보여주기, 3초 듣기, 정답 1회 증가, 제목 한 글자 보여주기
 
     ImageView score_1, score_2, score_3, score_4, score_5;
-<<<<<<< HEAD
-    ImageView boom, item,lvl_panel;
-=======
-    LinearLayout lvl_panel;
-    ImageView lvl_up_txt, boom, item, profile_img;
->>>>>>> 231c93171b2ac15e66b6435a74d17ee493f3b5c4
+
+    ImageView boom, item,lvl_panel,profile_img;
+
     RelativeLayout item_gift;
     ProgressBar profile_progressbar;
 

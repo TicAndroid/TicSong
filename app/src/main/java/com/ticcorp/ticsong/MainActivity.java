@@ -77,16 +77,11 @@ public class MainActivity extends Activity {
     @Bind(R.id.item4_cnt)
     TextView item4_cnt;
 
-<<<<<<< HEAD
     Animation button_anim, background_anim, juke_bold, juke_sport;
-=======
     @Bind(R.id.profile_img)
     ImageView profile_img;
 
     Bitmap mPicBitmap;
-
-    Animation button_anim, background_anim;
->>>>>>> 231c93171b2ac15e66b6435a74d17ee493f3b5c4
 
     TextView profile_id, profile_level;
     ProgressBar profile_progressbar;
