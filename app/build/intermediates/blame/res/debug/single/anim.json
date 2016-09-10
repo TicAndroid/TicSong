@@ -20,16 +20,16 @@
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/anim/rotate_anim_infinte.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_fade_in.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_popup_exit.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/rotate_tic_anim_infinite.xml",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/anim/rotate_tic_anim_infinite.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_popup_exit.xml"
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_fade_in.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",

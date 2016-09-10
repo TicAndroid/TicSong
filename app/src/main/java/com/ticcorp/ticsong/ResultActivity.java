@@ -20,6 +20,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.ticcorp.ticsong.activitySupport.CustomBitmapPool;
 import com.ticcorp.ticsong.model.CustomPreference;
 import com.ticcorp.ticsong.model.DBManager;
 import com.ticcorp.ticsong.model.StaticSQLite;
@@ -34,6 +36,7 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 /**
  * Created by JPark on 2016-08-15.
@@ -51,7 +54,7 @@ public class ResultActivity extends Activity {
 
     ImageView score_1, score_2, score_3, score_4, score_5;
     LinearLayout lvl_panel;
-    ImageView lvl_up_txt, boom, item;
+    ImageView lvl_up_txt, boom, item, profile_img;
     RelativeLayout item_gift;
     ProgressBar profile_progressbar;
 
@@ -97,10 +100,17 @@ public class ResultActivity extends Activity {
         boom = (ImageView) findViewById(R.id.boom);
         item = (ImageView) findViewById(R.id.item2);
 
+        profile_img = (ImageView) findViewById(R.id.profile_img);
+
         profile_progressbar = (ProgressBar) findViewById(R.id.profile_progressbar);
 
         pref = pref.getInstance(this.getApplicationContext());
+
         setResult(); // 게임 결과 처리하기
+
+        Glide.with(this).load("http://graph.facebook.com/" +
+                userId + "/picture?type=large").bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
+                error(R.drawable.profile_main_image).into(profile_img);
     }
 
     public void setResult() {

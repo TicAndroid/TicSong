@@ -3,6 +3,8 @@ package com.ticcorp.ticsong;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -19,16 +21,24 @@ import android.widget.TextView;
 import android.view.*;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.HttpMethod;
+import com.ticcorp.ticsong.activitySupport.CustomBitmapPool;
 import com.ticcorp.ticsong.model.CustomPreference;
 import com.ticcorp.ticsong.model.DBManager;
 import com.ticcorp.ticsong.model.StaticSQLite;
 import com.ticcorp.ticsong.module.ServerAccessModule;
 import com.ticcorp.ticsong.utils.BackPressCloseHandler;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLConnection;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -36,6 +46,7 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 
 public class MainActivity extends Activity {
@@ -62,6 +73,11 @@ public class MainActivity extends Activity {
     TextView item3_cnt;
     @Bind(R.id.item4_cnt)
     TextView item4_cnt;
+
+    @Bind(R.id.profile_img)
+    ImageView profile_img;
+
+    Bitmap mPicBitmap;
 
     Animation button_anim, background_anim;
 
@@ -254,8 +270,43 @@ public class MainActivity extends Activity {
         item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
         item4_cnt.setText(pref.getValue("item4Cnt", 0) + "");
 
-        Log.e("ticlog Main", user_name + " / " + user_lv + " / " + now_exp + " / " + user_exp + " / " + required_exp + " / " + next_exp);
+        Glide.with(this).load("http://graph.facebook.com/" +
+                pref.getValue("userId", "userId") + "/picture?type=large").bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
+                error(R.drawable.profile_main_image).into(profile_img);
+
+        Log.i("ticlog Main", user_name + " / " + user_lv + " / " + now_exp + " / " + user_exp + " / " + required_exp + " / " + next_exp);
     }
+
+    /*public static Bitmap getBitmapFromURL (String target) {
+        // 이미지 URL에서 불러오는 함수
+        try {
+            URL url = new URL(target);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setDoInput(true);
+            conn.connect();
+            InputStream is = conn.getInputStream();
+            Bitmap picBitmap = BitmapFactory.decodeStream(is);
+            Log.i("ticlog", "Img load success");
+            return picBitmap;
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.i("ticlog", "Img load fail");
+            return null;
+        }
+    }*/
+
+    /*public static Bitmap getBitmapFromURL (String target) {
+        try {
+            URL url = new URL(target);
+            Bitmap picBitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+            Log.i("ticlog", "Img load success");
+            return picBitmap;
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.i("ticlog", "Img load fail");
+            return null;
+        }
+    } */
 
     // JukeBox 이미지 클릭시 GameActivity로 이동
     @OnClick(R.id.main_juke_img)

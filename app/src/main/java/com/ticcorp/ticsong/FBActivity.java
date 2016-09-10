@@ -28,6 +28,7 @@ import com.facebook.login.widget.LoginButton;
 import com.ticcorp.ticsong.model.CustomPreference;
 import com.ticcorp.ticsong.module.ServerAccessModule;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -63,7 +64,7 @@ public class FBActivity extends Activity {
         token = AccessToken.getCurrentAccessToken(); // 토큰을 가져옴
 
         FacebookSdk.sdkInitialize(getApplicationContext());
-        ;
+
         LoginManager.getInstance().logOut();
 
         callbackManager = CallbackManager.Factory.create();
@@ -95,6 +96,35 @@ public class FBActivity extends Activity {
                                             //Log.i("id1",id1);
                                             Log.i("ticlog name", name);
                                             //Log.i("email1",email1);
+                                            pref.put("userId", id);
+
+                                            new GraphRequest(
+                                                    AccessToken.getCurrentAccessToken(),
+                                                    "/me/friends",
+                                                    null,
+                                                    HttpMethod.GET,
+                                                    new GraphRequest.Callback() {
+                                                        public void onCompleted(GraphResponse response) {
+                                                            /* handle the result */
+                                                            Log.i("ticlog", response.toString());
+                                                            JSONObject responseJSON = response.getJSONObject();
+                                                            try {
+                                                                JSONArray dataArray = responseJSON.getJSONArray("data");
+                                                                pref.put("friendCnt", dataArray.length());
+                                                                for (int i = 0; i < dataArray.length(); i++) {
+                                                                    JSONObject friendData = dataArray.getJSONObject(i);
+                                                                    String friendId = (String) friendData.get("id");
+                                                                    pref.put("friendId" + i, friendId);
+                                                                    Log.i("ticlog", "pref friendData" + i + " : " + friendData.toString() + " / " + friendId);
+                                                                    Log.i("ticlog", "pref friendId" + i + " : " + pref.getValue("friendId" + i, "friendId" + i));
+                                                                }
+                                                            } catch (JSONException e) {
+                                                                e.printStackTrace();
+                                                                Log.i("ticlog", "JSONException");
+                                                            }
+                                                        }
+                                                    }
+                                            ).executeAsync();
 
                                             new Thread(new Runnable() {
                                                 @Override
