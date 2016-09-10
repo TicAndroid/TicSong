@@ -11,6 +11,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.ticcorp.ticsong.activitySupport.CustomBitmapPool;
 import com.ticcorp.ticsong.activitySupport.ListData;
 
 import java.io.IOException;
@@ -20,10 +22,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
+
 public class ListViewAdapter extends BaseAdapter {
     private Context mContext = null;
     private ArrayList<ListData> mListData = new ArrayList<ListData>();
-    Bitmap mPicBitmap = null;
 
     public ListViewAdapter(Context mContext) {
         super();
@@ -66,16 +69,17 @@ public class ListViewAdapter extends BaseAdapter {
         }
 
         final ListData mData = mListData.get(position);
-
+        /*
         // 이미지 URL에서 불러오는 부분
         Thread mThread = new Thread() {
             @Override
             public void run() {
+                HttpURLConnection conn = null;
                 try {
 
                     URL url = new URL(mData.mPicURL);
 
-                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                    conn = (HttpURLConnection) url.openConnection();
                     conn.setDoInput(true);
                     conn.connect();
 
@@ -87,6 +91,10 @@ public class ListViewAdapter extends BaseAdapter {
                 } catch (IOException e) {
                     e.printStackTrace();
                     Log.i("ticlog", "Img load fail");
+                } finally {
+                    if (conn != null) {
+                        conn.disconnect();
+                    }
                 }
             }
         };
@@ -97,15 +105,26 @@ public class ListViewAdapter extends BaseAdapter {
             holder.mRank.setText(mData.mRank);
             if (mPicBitmap != null) {
                 holder.mPic.setImageBitmap(mPicBitmap);
+                Log.i("ticlog", "Img set success");
             } else {
                 holder.mPic.setImageResource(R.drawable.profile_main_image);
+                Log.i("ticlog", "Img default");
             }
             holder.mName.setText(mData.mName);
             holder.mScore.setText(mData.mScore);
             holder.mLevel.setText(mData.mLevel);
         } catch (InterruptedException e) {
             e.printStackTrace();
+            Log.i("ticlog", "Img error");
         }
+        */
+
+        holder.mRank.setText(mData.mRank);
+        Glide.with(this.mContext).load(mData.mPicURL).bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
+                error(R.drawable.profile_main_image).into(holder.mPic);
+        holder.mName.setText(mData.mName);
+        holder.mScore.setText(mData.mScore);
+        holder.mLevel.setText(mData.mLevel);
 
         return convertView;
     }

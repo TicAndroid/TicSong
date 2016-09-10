@@ -4,27 +4,47 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
+<<<<<<< HEAD
     timestamp="778338592855948"
     token="-8719231681308812603" >
 
     <task
         name="javac"
         duration="1665" />
+=======
+    timestamp="929623579962464"
+    token="-3161456651158814014" >
+
+    <task
+        name="javac"
+        duration="1103" />
+>>>>>>> 231c93171b2ac15e66b6435a74d17ee493f3b5c4
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
+<<<<<<< HEAD
         duration="1304" />
     <task
         name="verifier"
         duration="934" />
+=======
+        duration="64" />
+    <task
+        name="verifier"
+        duration="25" />
+>>>>>>> 231c93171b2ac15e66b6435a74d17ee493f3b5c4
 
     <artifact
         location="C:\Users\JPark\Documents\TicSong\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
+<<<<<<< HEAD
     <build timestamp="778338592855948" >
+=======
+    <build timestamp="929623579962464" >
+>>>>>>> 231c93171b2ac15e66b6435a74d17ee493f3b5c4
         <artifact
             location="C:\Users\JPark\Documents\TicSong\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />

@@ -56,7 +56,7 @@ public class RankingActivity extends Activity {
         Log.i("Ticlog Rank", ServerAccessModule.TOP_RANKER_LIST + "");
 
         Handler hd = new Handler();
-        hd.postDelayed(new rankinghandler(), 500);
+        hd.postDelayed(new rankinghandler(), 100);
         /*
         for(int i = 0; i < ServerAccessModule.TOP_RANKER_LIST.size(); i++) {
             mAdapter.addItem((i + 1) + "", null,
@@ -78,7 +78,7 @@ public class RankingActivity extends Activity {
                 Log.i("ticlog friendListSize", ServerAccessModule.FRIEND_LIST.size() + "");
                 for(int i = 0; i < ServerAccessModule.FRIEND_LIST.size(); i++) {
                     mAdapter.addItem((i + 1) + "", "http://graph.facebook.com/" +
-                                    ServerAccessModule.FRIEND_LIST.get(i).getUserId() + "/picture",
+                                    ServerAccessModule.FRIEND_LIST.get(i).getUserId() + "/picture?type=large",
                             ServerAccessModule.FRIEND_LIST.get(i).getName(),
                             "EXP : " + ServerAccessModule.FRIEND_LIST.get(i).getExp(),
                             "Lv. " + ServerAccessModule.FRIEND_LIST.get(i).getUserLevel());
@@ -88,7 +88,7 @@ public class RankingActivity extends Activity {
                 Log.i("ticlog TopRankerList", ServerAccessModule.TOP_RANKER_LIST.toString());
                 for(int i = 0; i < ServerAccessModule.TOP_RANKER_LIST.size(); i++) {
                     mAdapter.addItem((i + 1) + "", "http://graph.facebook.com/" +
-                                    ServerAccessModule.TOP_RANKER_LIST.get(i).getUserId() + "/picture",
+                                    ServerAccessModule.TOP_RANKER_LIST.get(i).getUserId() + "/picture?type=large",
                             ServerAccessModule.TOP_RANKER_LIST.get(i).getName(),
                             "SCORE : " + ServerAccessModule.TOP_RANKER_LIST.get(i).getExp(),
                             "Lv. " + ServerAccessModule.TOP_RANKER_LIST.get(i).getUserLevel());
@@ -115,7 +115,7 @@ public class RankingActivity extends Activity {
 
             ServerAccessModule.getInstance().retrieveTopRanker(userId);
             Handler hd = new Handler();
-            hd.postDelayed(new rankinghandler(), 500);
+            hd.postDelayed(new rankinghandler(), 100);
 
         } else {
             // 친구 보기로 전환
@@ -128,15 +128,15 @@ public class RankingActivity extends Activity {
             List<String> fList = new ArrayList<String>();
             if (pref.getValue("friendCnt", 1) > 0) {
                 for (int i = 0; i < pref.getValue("friendCnt", 1); i++) {
-                    Log.i("Ticlog Rank", "friendCnt : " + pref.getValue("friendCnt", 1) + ", friendId" + i + " : " + pref.getValue("friendId" + i, 0));
-                    fList.add(pref.getValue("friendId" + i, 0) + "");
+                    Log.i("Ticlog Rank", "friendCnt : " + pref.getValue("friendCnt", "friendCnt") + ", friendId" + i + " : " + pref.getValue("friendId" + i, "friendId" + i));
+                    fList.add(pref.getValue("friendId" + i, "friendId" + i) + "");
                 }
 
                 Log.i("ticlog fList", fList.toString());
                 ServerAccessModule.getInstance().retrieveFriendList(userId, fList);
 
                 Handler hd = new Handler();
-                hd.postDelayed(new rankinghandler(), 500);
+                hd.postDelayed(new rankinghandler(), 100);
             } else { // 등록된 친구가 없을 때
                 Toast.makeText(RankingActivity.this, "게임에 가입한 친구가 없습니다, 친구를 초대해보세요!", Toast.LENGTH_SHORT).show();
             }

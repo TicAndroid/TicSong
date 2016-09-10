@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+=======
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/RankingActivity$rankinghandler$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/MainActivity$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/RankingActivity$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/ResultActivity$override.class
+>>>>>>> 231c93171b2ac15e66b6435a74d17ee493f3b5c4
