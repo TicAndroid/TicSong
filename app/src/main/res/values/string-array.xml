@@ -2,10 +2,63 @@
 <resources>
 
     <!-- 음악 정보(트랙 ID, 곡명, 아티스트명 순) -->
-    <string-array name="track1"> <item>164984508</item> <item>짧은 치마</item> <item>AOA</item> </string-array>
-    <string-array name="track2"> <item>121047071</item> <item>그리워해요</item> <item>2NE1</item> </string-array>
-    <string-array name="track3"> <item>21601805</item> <item>결혼까지 생각했어(지워짐)</item> <item>휘성</item> </string-array>
-    <string-array name="track4"> <item>125769478</item> <item>너밖에몰라</item> <item>효린</item> </string-array>
-    <string-array name="track5"> <item>119016730</item> <item>허쉬</item> <item>미스에이</item> </string-array>
+    <!-- &amp : & -->
+    <string-array name='track1'>	<item>	214268765	</item>	<item>	안녕	</item>	<item>	효린	</item>	</string-array>
+    <string-array name='track2'>	<item>	156044153	</item>	<item>	가슴시린이야기	</item>	<item>	휘성	</item>	</string-array>
+    <string-array name='track3'>	<item>	242860826	</item>	<item>	너를	</item>	<item>	브라운아이드소울	</item>	</string-array>
+    <string-array name='track4'>	<item>	164984508	</item>	<item>	짧은 치마	</item>	<item>	AOA	</item>	</string-array>
+    <string-array name='track5'>	<item>	121047071	</item>	<item>	그리워해요	</item>	<item>	2NE1	</item>	</string-array>
+    <string-array name='track6'>	<item>	125769478	</item>	<item>	너밖에몰라	</item>	<item>	효린	</item>	</string-array>
+    <string-array name='track7'>	<item>	119016730	</item>	<item>	허쉬	</item>	<item>	미스에이	</item>	</string-array>
+    <string-array name='track8'>	<item>	102944877	</item>	<item>	으르렁	</item>	<item>	엑소	</item>	</string-array>
+    <string-array name='track9'>	<item>	114819921	</item>	<item>	분홍신	</item>	<item>	아이유	</item>	</string-array>
+    <string-array name='track10'>	<item>	147341071	</item>	<item>	내일은없어	</item>	<item>	트러블메이커	</item>	</string-array>
+    <string-array name='track11'>	<item>	272517395	</item>	<item>	착해빠졌어	</item>	<item>	소유&amp;매드클라운	</item>	</string-array>
+    <string-array name='track12'>	<item>	34141014	</item>	<item>	끝사랑	</item>	<item>	김범수	</item>	</string-array>
+    <string-array name='track13'>	<item>	266848335	</item>	<item>	이별식탁	</item>	<item>	산이	</item>	</string-array>
+    <string-array name='track14'>	<item>	172878088	</item>	<item>	삐딱하게	</item>	<item>	지드래곤	</item>	</string-array>
+    <string-array name='track15'>	<item>	63474985	</item>	<item>	자니	</item>	<item>	프라이머리	</item>	</string-array>
+    <string-array name='track16'>	<item>	65855063	</item>	<item>	씨스루	</item>	<item>	프라이머리	</item>	</string-array>
+    <string-array name='track17'>	<item>	131372001	</item>	<item>	처음엔사랑이란게	</item>	<item>	버스커버스커	</item>	</string-array>
+    <string-array name='track18'>	<item>	145585556	</item>	<item>	없어	</item>	<item>	윤하	</item>	</string-array>
+    <string-array name='track19'>	<item>	280600340	</item>	<item>	나란놈이란	</item>	<item>	임창정	</item>	</string-array>
+    <string-array name='track20'>	<item>	119817832	</item>	<item>	링가링가	</item>	<item>	태양	</item>	</string-array>
+    <string-array name='track21'>	<item>	120211157	</item>	<item>	둠다다	</item>	<item>	탑	</item>	</string-array>
+    <string-array name='track22'>	<item>	142652480	</item>	<item>	노래가늘었어	</item>	<item>	에일리	</item>	</string-array>
+    <string-array name='track23'>	<item>	136228547	</item>	<item>	보름달	</item>	<item>	선미	</item>	</string-array>
+    <string-array name='track24'>	<item>	138554865	</item>	<item>	너아님안돼	</item>	<item>	2NE1	</item>	</string-array>
+    <string-array name='track25'>	<item>	136868068	</item>	<item>	컴백홈	</item>	<item>	2NE1	</item>	</string-array>
+    <string-array name='track26'>	<item>	139893181	</item>	<item>	까탈레나	</item>	<item>	오렌지카랴멜	</item>	</string-array>
+    <string-array name='track27'>	<item>	275060162	</item>	<item>	감아	</item>	<item>	로꼬	</item>	</string-array>
+    <string-array name='track28'>	<item>	153486823	</item>	<item>	티가나나봐	</item>	<item>	15&amp;	</item>	</string-array>
+    <string-array name='track29'>	<item>	158630467	</item>	<item>	가끔	</item>	<item>	크러쉬	</item>	</string-array>
+    <string-array name='track30'>	<item>	149937149	</item>	<item>	밀당의고수	</item>	<item>	에디킴	</item>	</string-array>
+    <string-array name='track31'>	<item>	136854624	</item>	<item>	멘붕	</item>	<item>	2NE1	</item>	</string-array>
+    <string-array name='track32'>	<item>	172443128	</item>	<item>	메트로놈	</item>	<item>	박재범	</item>	</string-array>
+    <string-array name='track33'>	<item>	195693227	</item>	<item>	너를원해	</item>	<item>	정기고	</item>	</string-array>
+    <string-array name='track34'>	<item>	195319178	</item>	<item>	단발머리	</item>	<item>	AOA	</item>	</string-array>
+    <string-array name='track35'>	<item>	153087853	</item>	<item>	내가할수없는말	</item>	<item>	정키	</item>	</string-array>
+    <string-array name='track36'>	<item>	162238575	</item>	<item>	우산	</item>	<item>	윤하	</item>	</string-array>
+    <string-array name='track37'>	<item>	158144179	</item>	<item>	달링	</item>	<item>	걸스데이	</item>	</string-array>
+    <string-array name='track38'>	<item>	240508738	</item>	<item>	빨개요	</item>	<item>	현아	</item>	</string-array>
+    <string-array name='track39'>	<item>	101032104	</item>	<item>	잠못드는밤	</item>	<item>	크러쉬	</item>	</string-array>
+    <string-array name='track40'>	<item>	161626703	</item>	<item>	행복	</item>	<item>	레드벨벳	</item>	</string-array>
+    <string-array name='track41'>	<item>	166322835	</item>	<item>	가	</item>	<item>	바비	</item>	</string-array>
+    <string-array name='track42'>	<item>	170570768	</item>	<item>	전화번호	</item>	<item>	스윙스	</item>	</string-array>
+    <string-array name='track43'>	<item>	185453090	</item>	<item>	걔세	</item>	<item>	위너	</item>	</string-array>
+    <string-array name='track44'>	<item>	172654608	</item>	<item>	너를사랑해	</item>	<item>	윤미래	</item>	</string-array>
+    <string-array name='track45'>	<item>	166319292	</item>	<item>	독기	</item>	<item>	아이언	</item>	</string-array>
+    <string-array name='track46'>	<item>	167361138	</item>	<item>	괜찮아사랑이야	</item>	<item>	다비치	</item>	</string-array>
+    <string-array name='track47'>	<item>	233878905	</item>	<item>	당신만이	</item>	<item>	곽진언&amp;김필&amp;임도혁	</item>	</string-array>
+    <string-array name='track48'>	<item>	170204972	</item>	<item>	소격동	</item>	<item>	아이유	</item>	</string-array>
+    <string-array name='track49'>	<item>	260129689	</item>	<item>	걱정말아요그대	</item>	<item>	곽진언&amp;김필	</item>	</string-array>
+    <string-array name='track50'>	<item>	178873636	</item>	<item>	굿보이	</item>	<item>	지디앤태양	</item>	</string-array>
+    <string-array name='track51'>	<item>	182577440	</item>	<item>	터프쿠키	</item>	<item>	지코	</item>	</string-array>
+    <string-array name='track52'>	<item>	270245202	</item>	<item>	소파	</item>	<item>	크러쉬	</item>	</string-array>
+    <string-array name='track53'>	<item>	216334022	</item>	<item>	피아노맨	</item>	<item>	마마무	</item>	</string-array>
+    <string-array name='track54'>	<item>	58579043	</item>	<item>	트러블메이커	</item>	<item>	트러블메이커	</item>	</string-array>
+    <string-array name='track55'>	<item>	200433032	</item>	<item>	손대지마	</item>	<item>	에일리	</item>	</string-array>
+    <string-array name='track56'>	<item>	253790478	</item>	<item>	사실은	</item>	<item>	박재범	</item>	</string-array>
+    <string-array name='track57'>	<item>	225322958	</item>	<item>	솔로	</item>	<item>	박재범	</item>	</string-array>
 
 </resources>

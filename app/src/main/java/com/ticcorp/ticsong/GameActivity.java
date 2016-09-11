@@ -59,6 +59,7 @@ public class GameActivity extends Activity {
 
     public int MAX_QUIZ_NUM = 5; // 한 게임의 문제 개수
     public int MAX_LIFE = 3; // 한 문제의 정답 기회
+    public int MAX_TRACK_COUNT = 57; // 트랙 개수
 
     public String userId;
     public int userLevel;
@@ -506,7 +507,7 @@ public class GameActivity extends Activity {
         for (int i = 0; i < MAX_QUIZ_NUM; i++) { // 문제와 답 5개씩 설정
 
             final String CLIENT_ID = "59eb0488cc28a2c558ecbf47ed19f787";
-            int soundNum = 1 + (int) (Math.random() * 5);
+            int soundNum = 1 + (int) (Math.random() * MAX_TRACK_COUNT);
 
             String[] track_data = getResources().getStringArray(getResources().getIdentifier("track" + soundNum, "array", GameActivity.this.getPackageName()));
 
