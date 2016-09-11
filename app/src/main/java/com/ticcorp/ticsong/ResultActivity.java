@@ -149,7 +149,7 @@ public class ResultActivity extends Activity {
         db.close();
         */
 
-        userExp = pref.getValue("exp", 1);
+        userExp = pref.getValue("exp", 0);
         userLevel = pref.getValue("userLevel", 1);
         //경험치 자동 200씩 추가
         //userExp = userExp + pref.getValue("score", 0) + 200;
@@ -163,7 +163,7 @@ public class ResultActivity extends Activity {
         SQLiteAccessModule.getInstance(ResultActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
                 pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
                 pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
-        pref.put("userExp", userExp);
+        pref.put("exp", userExp);
         pref.put("userLevel", userLevel);
 
         setImage();

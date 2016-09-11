@@ -801,13 +801,26 @@ public class GameActivity extends Activity {
     }
 
     @Override
-    protected void onPause() {
+    protected void onPause() { // 화면이 가려졌을 때
         super.onPause();
         naverRecognizer.getSpeechRecognizer().stopImmediately();
         naverRecognizer.getSpeechRecognizer().release();
         vResult = "";
         frame_voice.setVisibility(View.GONE); //팝업 제거
         voiceRunning = false;
+        //이상 음성인식 부분, 이하 음원 정지 부분
+        if(!playerArray.isEmpty()) {
+            for (int i = 0; i < MAX_QUIZ_NUM; i++) {
+                if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
+                    playerArray.get(i).stop();
+                    try {
+                        playerArray.get(i).prepare();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
     }
 
     static class RecognitionHandler extends Handler {
