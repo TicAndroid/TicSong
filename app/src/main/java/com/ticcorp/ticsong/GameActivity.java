@@ -59,7 +59,7 @@ public class GameActivity extends Activity {
 
     public int MAX_QUIZ_NUM = 5; // 한 게임의 문제 개수
     public int MAX_LIFE = 3; // 한 문제의 정답 기회
-    public int MAX_TRACK_COUNT = 57; // 트랙 개수
+    public int MAX_TRACK_COUNT = 100; // 트랙 개수
 
     public String userId;
     public int userLevel;
@@ -78,6 +78,7 @@ public class GameActivity extends Activity {
     public ArrayList<String> answerArray = new ArrayList<String>(); // 정답 리스트
     public ArrayList<String> artistArray = new ArrayList<String>(); // 아티스트 리스트
     public ArrayList<String> addressArray = new ArrayList<String>(); // 트랙 주소 리스트
+    public ArrayList<Integer> timeArray = new ArrayList<Integer>(); // 트랙 시작 지점(Millisec) 리스트
     public ArrayList<MediaPlayer> playerArray = new ArrayList<MediaPlayer>(); // MediaPlayer 리스트
     //public ArrayList<Integer> correctArray = new ArrayList<Integer>(); // 정답 여부 리스트, 맞출 때의 남은 기회 기록(pref로 전환)
 
@@ -515,15 +516,7 @@ public class GameActivity extends Activity {
             String track_id = track_data[0];
 
             String soundUrl = "https://api.soundcloud.com/tracks/" + track_id + "/stream?client_id=" + CLIENT_ID;
-            /*try {
-                URL url = new URL(soundUrl);
-                URLConnection conn = url.openConnection();
-                HttpURLConnection exitCode = (HttpURLConnection) conn;
-                Log.i("ticlog TrackHTTPCode", exitCode.getResponseCode() + "");
-            } catch (Exception e) {
-                e.printStackTrace();
-                Log.i("ticlog TrackHTTPCode", "Exception");
-            }*/
+
             for (int j = 0; j < i; j++) {
                 if (soundUrl.equals(addressArray.get(j))) {
                     // 문제 중복
@@ -539,12 +532,14 @@ public class GameActivity extends Activity {
 
                 answerArray.add(track_data[1]);
                 artistArray.add(track_data[2]);
+                timeArray.add(Integer.parseInt(track_data[3]));
                 playerArray.add(new MediaPlayer());
                 playerArray.get(i).setAudioStreamType(AudioManager.STREAM_MUSIC);
                 try {
                     playerArray.get(i).setDataSource(addressArray.get(i));
                     try {
                         playerArray.get(i).prepare();
+                        playerArray.get(i).seekTo(timeArray.get(i));
                         //prepare 하는데 시간이 많이 걸림
                         Log.i("ticlog", "prepare success / soundNum : " + soundNum + " / Time : " + playerArray.get(i).getDuration());
                     } catch (Exception e) { // prepare가 안되면 삭제된 파일이므로 이번 Array를 삭제하고 다시 받아오게 함
@@ -553,6 +548,7 @@ public class GameActivity extends Activity {
                         answerArray.remove(i);
                         artistArray.remove(i);
                         addressArray.remove(i);
+                        timeArray.remove(i);
                         playerArray.remove(i);
                         i--;
                     }
@@ -562,6 +558,7 @@ public class GameActivity extends Activity {
                     answerArray.remove(i);
                     artistArray.remove(i);
                     addressArray.remove(i);
+                    timeArray.remove(i);
                     playerArray.remove(i);
                     i--;
                 }
@@ -590,6 +587,7 @@ public class GameActivity extends Activity {
                 playerArray.get(i).stop();
                 try {
                     playerArray.get(i).prepare();
+                    playerArray.get(i).seekTo(timeArray.get(i));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -689,6 +687,7 @@ public class GameActivity extends Activity {
                     playerArray.get(quizNum - 1).stop();
                     try {
                         playerArray.get(quizNum - 1).prepare();
+                        playerArray.get(quizNum - 1).seekTo(timeArray.get(quizNum - 1));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -832,6 +831,7 @@ public class GameActivity extends Activity {
                     playerArray.get(i).stop();
                     try {
                         playerArray.get(i).prepare();
+                        playerArray.get(i).seekTo(timeArray.get(i));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
