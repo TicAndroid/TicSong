@@ -76,8 +76,9 @@ public class GameActivity extends Activity {
     public CustomPreference pref;
     public ArrayList<String> answerArray = new ArrayList<String>(); // 정답 리스트
     public ArrayList<String> artistArray = new ArrayList<String>(); // 아티스트 리스트
-    public ArrayList<String> addressArray = new ArrayList<String>(); // 음원 주소 리스트
-    //public ArrayList<Integer> correctArray = new ArrayList<Integer>(); // 정답 여부 리스트, 맞출 때의 남은 기회 기록
+    public ArrayList<String> addressArray = new ArrayList<String>(); // 트랙 주소 리스트
+    public ArrayList<MediaPlayer> playerArray = new ArrayList<MediaPlayer>(); // MediaPlayer 리스트
+    //public ArrayList<Integer> correctArray = new ArrayList<Integer>(); // 정답 여부 리스트, 맞출 때의 남은 기회 기록(pref로 전환)
 
     public MediaPlayer mPlayer;
     public TextWatcher textWatcher;
@@ -158,6 +159,8 @@ public class GameActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         ButterKnife.bind(this);
+
+        Toast.makeText(this, "문제를 불러오는 중입니다.\n잠시만 기다려주세요...", Toast.LENGTH_LONG).show();
 
         Animation rotate_back = AnimationUtils.loadAnimation(this, R.anim.base_rotate_anim);
         ImageView star_back = (ImageView) findViewById(R.id.background_star);
@@ -335,12 +338,19 @@ public class GameActivity extends Activity {
                     @Override
                     public void onClick(SweetAlertDialog sDialog) {
                         try {
-                            if (mPlayer != null) {// 음악 재생 중일 경우 음악 종료
+                            /*if (mPlayer != null) {// 음악 재생 중일 경우 음악 종료
                                 if (mPlayer.isPlaying()) {
                                     mPlayer.stop();
                                     mPlayer.release();
                                 }
+                            }*/
+                            for(int i = 0; i < MAX_QUIZ_NUM; i++) {
+                                if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
+                                    playerArray.get(i).stop();
+                                    playerArray.get(i).release();
+                                }
                             }
+                            playerArray.clear();
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -494,195 +504,54 @@ public class GameActivity extends Activity {
     public void quizSetting() {
         // 문제 준비 및 유저 정보 받아오기
         for (int i = 0; i < MAX_QUIZ_NUM; i++) { // 문제와 답 5개씩 설정
-            int soundNum = 10 + ((int) (Math.random() * 46));
-            switch (soundNum) {
-                case 10:
-                    answerArray.add("스토커");
-                    artistArray.add("10cm");
-                    break;
-                case 11:
-                    answerArray.add("위아래");
-                    artistArray.add("EXID");
-                    break;
-                case 12:
-                    answerArray.add("니가 알던 내가 아냐");
-                    artistArray.add("AOMG");
-                    break;
-                case 13:
-                    answerArray.add("버스 안에서");
-                    artistArray.add("자자");
-                    break;
-                case 14:
-                    answerArray.add("꺼내먹어요");
-                    artistArray.add("자이언티");
-                    break;
-                case 15:
-                    answerArray.add("양화대교");
-                    artistArray.add("자이언티");
-                    break;
-                case 16:
-                    answerArray.add("쿵");
-                    artistArray.add("자이언티");
-                    break;
-                case 17:
-                    answerArray.add("핑계");
-                    artistArray.add("김건모");
-                    break;
-                case 18:
-                    answerArray.add("잘못된 만남");
-                    artistArray.add("김건모");
-                    break;
-                case 19:
-                    answerArray.add("허니");
-                    artistArray.add("박진영");
-                    break;
-                case 20:
-                    answerArray.add("야생화");
-                    artistArray.add("박효신");
-                    break;
-                case 21:
-                    answerArray.add("바보");
-                    artistArray.add("박효신");
-                    break;
-                case 22:
-                    answerArray.add("쏘쏘");
-                    artistArray.add("백아연");
-                    break;
-                case 23:
-                    answerArray.add("이럴 거면 그러지 말지");
-                    artistArray.add("백아연");
-                    break;
-                case 24:
-                    answerArray.add("우주를 건너");
-                    artistArray.add("백예린");
-                    break;
-                case 25:
-                    answerArray.add("벚꽃엔딩");
-                    artistArray.add("버스커버스커");
-                    break;
-                case 26:
-                    answerArray.add("점점");
-                    artistArray.add("브라운아이드소울");
-                    break;
-                case 27:
-                    answerArray.add("한");
-                    artistArray.add("샤크라");
-                    break;
-                case 28:
-                    answerArray.add("썸");
-                    artistArray.add("소유&정기고");
-                    break;
-                case 29:
-                    answerArray.add("이밤의 끝을 잡고");
-                    artistArray.add("솔리드");
-                    break;
-                case 30:
-                    answerArray.add("겁");
-                    artistArray.add("송민호");
-                    break;
-                case 31:
-                    answerArray.add("챔피언");
-                    artistArray.add("싸이");
-                    break;
-                case 32:
-                    answerArray.add("금요일에 만나요");
-                    artistArray.add("아이유");
-                    break;
-                case 33:
-                    answerArray.add("스물셋");
-                    artistArray.add("아이유");
-                    break;
-                case 34:
-                    answerArray.add("너의 의미");
-                    artistArray.add("아이유");
-                    break;
-                case 35:
-                    answerArray.add("널 사랑하지 않아");
-                    artistArray.add("어반자카파");
-                    break;
-                case 36:
-                    answerArray.add("시간을 달려서");
-                    artistArray.add("여자친구");
-                    break;
-                case 37:
-                    answerArray.add("오늘부터 우리는");
-                    artistArray.add("여자친구");
-                    break;
-                case 38:
-                    answerArray.add("너 그리고 나");
-                    artistArray.add("여자친구");
-                    break;
-                case 39:
-                    answerArray.add("파도");
-                    artistArray.add("UN");
-                    break;
-                case 40:
-                    answerArray.add("와");
-                    artistArray.add("이정현");
-                    break;
-                case 41:
-                    answerArray.add("한숨");
-                    artistArray.add("이하이");
-                    break;
-                case 42:
-                    answerArray.add("여름아 부탁해");
-                    artistArray.add("인디고");
-                    break;
-                case 43:
-                    answerArray.add("또다시사랑");
-                    artistArray.add("임창정");
-                    break;
-                case 44:
-                    answerArray.add("기억의 습작");
-                    artistArray.add("전람회");
-                    break;
-                case 45:
-                    answerArray.add("실연");
-                    artistArray.add("코요태");
-                    break;
-                case 46:
-                    answerArray.add("파란");
-                    artistArray.add("코요태");
-                    break;
-                case 47:
-                    answerArray.add("순정");
-                    artistArray.add("코요태");
-                    break;
-                case 48:
-                    answerArray.add("잊어버리지마");
-                    artistArray.add("크러쉬");
-                    break;
-                case 49:
-                    answerArray.add("오아시스");
-                    artistArray.add("크러쉬");
-                    break;
-                case 50:
-                    answerArray.add("우아해");
-                    artistArray.add("크러쉬");
-                    break;
-                case 51:
-                    answerArray.add("꿍따리샤바라");
-                    artistArray.add("클론");
-                    break;
-                case 52:
-                    answerArray.add("초련");
-                    artistArray.add("클론");
-                    break;
-                case 53:
-                    answerArray.add("영원한 사랑");
-                    artistArray.add("핑클");
-                    break;
-                case 54:
-                    answerArray.add("위잉위잉");
-                    artistArray.add("혁오");
-                    break;
-                case 55:
-                    answerArray.add("흔들린 우정");
-                    artistArray.add("홍경민");
-                    break;
-            }//http://52.78.10.41/unithon/seven/sound/21.mp3
-            String soundUrl = "http://52.78.10.41/unithon/seven/sound/" + soundNum + ".mp3";
+
+            final String CLIENT_ID = "59eb0488cc28a2c558ecbf47ed19f787";
+            int soundNum = 1 + (int) (Math.random() * 5);
+
+            String[] track_data = getResources().getStringArray(getResources().getIdentifier("track" + soundNum, "array", GameActivity.this.getPackageName()));
+
+            String track_id = track_data[0];
+
+            answerArray.add(track_data[1]);
+            artistArray.add(track_data[2]);
+
+            String soundUrl = "https://api.soundcloud.com/tracks/" + track_id + "/stream?client_id=" + CLIENT_ID;
+            /*try {
+                URL url = new URL(soundUrl);
+                URLConnection conn = url.openConnection();
+                HttpURLConnection exitCode = (HttpURLConnection) conn;
+                Log.i("ticlog TrackHTTPCode", exitCode.getResponseCode() + "");
+            } catch (Exception e) {
+                e.printStackTrace();
+                Log.i("ticlog TrackHTTPCode", "Exception");
+            }*/
             addressArray.add(soundUrl);
+            playerArray.add(new MediaPlayer());
+            playerArray.get(i).setAudioStreamType(AudioManager.STREAM_MUSIC);
+            try {
+                playerArray.get(i).setDataSource(addressArray.get(i));
+                try {
+                    playerArray.get(i).prepare();
+                    //prepare 하는데 시간이 많이 걸림
+                    Log.i("ticlog", "prepare success / soundNum : " + soundNum + " / Time : "  + playerArray.get(i).getDuration());
+                } catch (Exception e) { // prepare가 안되면 삭제된 파일이므로 이번 Array를 삭제하고 다시 받아오게 함
+                    e.printStackTrace();
+                    Log.i("ticlog", "prepare catch, removed trackNum : " + soundNum);
+                    answerArray.remove(i);
+                    artistArray.remove(i);
+                    addressArray.remove(i);
+                    playerArray.remove(i);
+                    i--;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                Log.i("ticlog", "setDataSource catch, removed trackNum : " + soundNum);
+                answerArray.remove(i);
+                artistArray.remove(i);
+                addressArray.remove(i);
+                playerArray.remove(i);
+                i--;
+            }
         }
 
         setUserData();
@@ -691,7 +560,7 @@ public class GameActivity extends Activity {
 
     public void nextQuiz() {
         // 다음 문제 초기화
-        try {
+        /*try {
             if (mPlayer != null) {// 음악 재생 중일 경우 음악 종료
                 if (mPlayer.isPlaying()) {
                     mPlayer.stop();
@@ -701,6 +570,16 @@ public class GameActivity extends Activity {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }*/
+        for(int i = 0; i < MAX_QUIZ_NUM; i++) {
+            if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
+                playerArray.get(i).stop();
+                try {
+                    playerArray.get(i).prepare();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         rotate.clearAnimation();
         tictac.clearAnimation();
@@ -711,6 +590,13 @@ public class GameActivity extends Activity {
         if (quizNum > MAX_QUIZ_NUM) {
             // 마지막 문제 완료 시 결과 화면으로 전환
             //Toast.makeText(this, "게임 끝! " + score + "점 획득!", Toast.LENGTH_SHORT).show();
+            for(int i = 0; i < MAX_QUIZ_NUM; i++) {
+                if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
+                    playerArray.get(i).stop();
+                    playerArray.get(i).release();
+                }
+            }
+            playerArray.clear();
             pref.put("score", score);
             Intent intent = new Intent(this, ResultActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -768,7 +654,7 @@ public class GameActivity extends Activity {
         if (time >= 0) {
             gameMode = 1; // 문제 내는 중 모드로 변경
             btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
-            mPlayer = new MediaPlayer();
+            /*mPlayer = new MediaPlayer();
             mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
             try {
                 mPlayer.setDataSource(addressArray.get(quizNum - 1));
@@ -779,15 +665,19 @@ public class GameActivity extends Activity {
                 mPlayer.prepare();
             } catch (IOException e) {
                 e.printStackTrace();
-            }
-            mPlayer.start();
+            }*/
+            playerArray.get(quizNum - 1).start();
 
             Handler mHandler = new Handler();
             mHandler.postDelayed(new Runnable() { // time ms 후 음악 정지
                 @Override
                 public void run() {
-                    mPlayer.stop();
-                    mPlayer.release();
+                    playerArray.get(quizNum - 1).stop();
+                    try {
+                        playerArray.get(quizNum - 1).prepare();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     //프로그레스 바 초기화
                     gameMode = 2;
                     runOnUiThread(new Runnable() {
@@ -814,21 +704,9 @@ public class GameActivity extends Activity {
             item2.setEnabled(false);
             item3.setEnabled(false);
             item4.setEnabled(false);
-            mPlayer = new MediaPlayer();
-            mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
             rotate.startAnimation(start_click_infinite);
             tictac.startAnimation(tic_click_infinite);
-            try {
-                mPlayer.setDataSource(addressArray.get(quizNum - 1));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            try {
-                mPlayer.prepare();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            mPlayer.start();
+            playerArray.get(quizNum - 1).start();
         }
     }
 

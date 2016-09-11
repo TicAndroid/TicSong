@@ -152,7 +152,8 @@ public class ResultActivity extends Activity {
         userExp = pref.getValue("exp", 1);
         userLevel = pref.getValue("userLevel", 1);
         //경험치 자동 200씩 추가
-        userExp = userExp + pref.getValue("score", 0) + 200;
+        //userExp = userExp + pref.getValue("score", 0) + 200;
+        userExp = userExp + pref.getValue("score", 0);
 
         setLevel();
 

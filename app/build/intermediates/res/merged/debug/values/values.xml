@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="track1"> <item>164984508</item> <item>짧은 치마</item> <item>AOA</item> </string-array>
+    <string-array name="track2"> <item>121047071</item> <item>그리워해요</item> <item>2NE1</item> </string-array>
+    <string-array name="track3"> <item>21601805</item> <item>결혼까지 생각했어(지워짐)</item> <item>휘성</item> </string-array>
+    <string-array name="track4"> <item>125769478</item> <item>너밖에몰라</item> <item>효린</item> </string-array>
+    <string-array name="track5"> <item>119016730</item> <item>허쉬</item> <item>미스에이</item> </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>

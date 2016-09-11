@@ -273,7 +273,7 @@ public class MainActivity extends Activity {
                 pref.getValue("userId", "userId") + "/picture?type=large").bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
                 error(R.drawable.profile_main_image).into(profile_img);
 
-        Log.i("ticlog Main", user_name + " / " + user_lv + " / " + now_exp + " / " + user_exp + " / " + required_exp + " / " + next_exp);
+        Log.i("ticlog Main", user_name + " / Lv." + user_lv + " / " + now_exp + "(" + user_exp + ")/ " + required_exp + "(" + next_exp + ")");
     }
 
     /*public static Bitmap getBitmapFromURL (String target) {
