@@ -504,7 +504,8 @@ public class GameActivity extends Activity {
 
     public void quizSetting() {
         // 문제 준비 및 유저 정보 받아오기
-        for (int i = 0; i < MAX_QUIZ_NUM; i++) { // 문제와 답 5개씩 설정
+        for (int i = 0; i < MAX_QUIZ_NUM; i++) { // 문제와 답 정해진 개수만큼 설정
+            boolean isNumUsed = false; // 번호 중복 확인 여부
 
             final String CLIENT_ID = "59eb0488cc28a2c558ecbf47ed19f787";
             int soundNum = 1 + (int) (Math.random() * MAX_TRACK_COUNT);
@@ -512,9 +513,6 @@ public class GameActivity extends Activity {
             String[] track_data = getResources().getStringArray(getResources().getIdentifier("track" + soundNum, "array", GameActivity.this.getPackageName()));
 
             String track_id = track_data[0];
-
-            answerArray.add(track_data[1]);
-            artistArray.add(track_data[2]);
 
             String soundUrl = "https://api.soundcloud.com/tracks/" + track_id + "/stream?client_id=" + CLIENT_ID;
             /*try {
@@ -526,32 +524,47 @@ public class GameActivity extends Activity {
                 e.printStackTrace();
                 Log.i("ticlog TrackHTTPCode", "Exception");
             }*/
-            addressArray.add(soundUrl);
-            playerArray.add(new MediaPlayer());
-            playerArray.get(i).setAudioStreamType(AudioManager.STREAM_MUSIC);
-            try {
-                playerArray.get(i).setDataSource(addressArray.get(i));
+            for (int j = 0; j < i; j++) {
+                if (soundUrl.equals(addressArray.get(j))) {
+                    // 문제 중복
+                    isNumUsed = true;
+                }
+            }
+
+            if(isNumUsed) { // 문제 중복 시 다시 받아오게 함
+                Log.i("ticlog", "quizNum reset");
+                i--;
+            } else {
+                addressArray.add(soundUrl);
+
+                answerArray.add(track_data[1]);
+                artistArray.add(track_data[2]);
+                playerArray.add(new MediaPlayer());
+                playerArray.get(i).setAudioStreamType(AudioManager.STREAM_MUSIC);
                 try {
-                    playerArray.get(i).prepare();
-                    //prepare 하는데 시간이 많이 걸림
-                    Log.i("ticlog", "prepare success / soundNum : " + soundNum + " / Time : "  + playerArray.get(i).getDuration());
-                } catch (Exception e) { // prepare가 안되면 삭제된 파일이므로 이번 Array를 삭제하고 다시 받아오게 함
+                    playerArray.get(i).setDataSource(addressArray.get(i));
+                    try {
+                        playerArray.get(i).prepare();
+                        //prepare 하는데 시간이 많이 걸림
+                        Log.i("ticlog", "prepare success / soundNum : " + soundNum + " / Time : " + playerArray.get(i).getDuration());
+                    } catch (Exception e) { // prepare가 안되면 삭제된 파일이므로 이번 Array를 삭제하고 다시 받아오게 함
+                        e.printStackTrace();
+                        Log.i("ticlog", "prepare catch, removed trackNum : " + soundNum);
+                        answerArray.remove(i);
+                        artistArray.remove(i);
+                        addressArray.remove(i);
+                        playerArray.remove(i);
+                        i--;
+                    }
+                } catch (Exception e) {
                     e.printStackTrace();
-                    Log.i("ticlog", "prepare catch, removed trackNum : " + soundNum);
+                    Log.i("ticlog", "setDataSource catch, removed trackNum : " + soundNum);
                     answerArray.remove(i);
                     artistArray.remove(i);
                     addressArray.remove(i);
                     playerArray.remove(i);
                     i--;
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
-                Log.i("ticlog", "setDataSource catch, removed trackNum : " + soundNum);
-                answerArray.remove(i);
-                artistArray.remove(i);
-                addressArray.remove(i);
-                playerArray.remove(i);
-                i--;
             }
         }
 
@@ -777,6 +790,9 @@ public class GameActivity extends Activity {
     public String textChanger(String text) {
         // 텍스트 공백 및 특수문자 제거, 숫자 한글 변환
         String resultTxt = text;
+        // 추가 답 처리 부분
+        resultTxt = resultTxt.replaceAll("forever", "포에버");
+        // 추가 답 처리 부분 종료
         resultTxt = resultTxt.replaceAll("[^ㄱ-ㅎ가-힣0-9]", ""); // 한글이나 숫자가 아니면 전부 제거
         resultTxt = resultTxt.replaceAll("1", "일");
         resultTxt = resultTxt.replaceAll("2", "이");
