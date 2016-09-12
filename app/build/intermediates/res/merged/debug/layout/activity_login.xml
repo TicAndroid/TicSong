@@ -35,16 +35,17 @@
             <com.facebook.login.widget.LoginButton xmlns:fb="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/login_button"
                 style="@style/FacebookLoginButton"
-                android:layout_width="300dp"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_facebook_sign_in_button"
-                android:paddingBottom="18dp"
+                android:paddingBottom="13dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:paddingTop="18dp"
+                android:paddingTop="13dp"
                 android:textStyle="normal"
-                fb:com_facebook_login_text="페이스북으로 로그인하기"
-                fb:com_facebook_logout_text="페이스북 로그아웃하기" />
+                android:gravity="center"
+                fb:com_facebook_login_text="Log in with Facebook"
+                fb:com_facebook_logout_text="Log out with Facebook" />
 
 
         </LinearLayout>
