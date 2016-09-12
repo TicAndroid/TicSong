@@ -6,6 +6,7 @@ import android.content.ClipDescription;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.media.Image;
@@ -45,6 +46,7 @@ import com.ticcorp.ticsong.model.StaticSQLite;
 import com.ticcorp.ticsong.module.SQLiteAccessModule;
 import com.ticcorp.ticsong.module.ServerAccessModule;
 import com.ticcorp.ticsong.utils.AudioWriterPCM;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
@@ -59,7 +61,7 @@ public class GameActivity extends Activity {
 
     public int MAX_QUIZ_NUM = 5; // 한 게임의 문제 개수
     public int MAX_LIFE = 3; // 한 문제의 정답 기회
-    public int MAX_TRACK_COUNT = 100; // 트랙 개수
+    public int MAX_TRACK_COUNT = 250; // 트랙 개수
 
     public String userId;
     public int userLevel;
@@ -161,8 +163,6 @@ public class GameActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         ButterKnife.bind(this);
-
-        Toast.makeText(this, "문제를 불러오는 중입니다.\n잠시만 기다려주세요...", Toast.LENGTH_LONG).show();
 
         Animation rotate_back = AnimationUtils.loadAnimation(this, R.anim.base_rotate_anim);
         ImageView star_back = (ImageView) findViewById(R.id.background_star);
@@ -308,8 +308,16 @@ public class GameActivity extends Activity {
         naverRecognizer = new NaverRecognizer(this, handler, CLIENT_ID, SPEECH_CONFIG);
 
         pref = pref.getInstance(this.getApplicationContext());
-        quizSetting();
+
+        Handler hd = new Handler();
+        hd.postDelayed(new quizSettingHandler(), 100);
         textWatching();
+    }
+
+    // 폰트 적용
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 
     @Override
@@ -503,48 +511,59 @@ public class GameActivity extends Activity {
         }
     }
 
-    public void quizSetting() {
-        // 문제 준비 및 유저 정보 받아오기
-        for (int i = 0; i < MAX_QUIZ_NUM; i++) { // 문제와 답 정해진 개수만큼 설정
-            boolean isNumUsed = false; // 번호 중복 확인 여부
+    public class quizSettingHandler implements Runnable {
+        public void run () {
+            // 문제 준비 및 유저 정보 받아오기
+            for (int i = 0; i < MAX_QUIZ_NUM; i++) { // 문제와 답 정해진 개수만큼 설정
+                boolean isNumUsed = false; // 번호 중복 확인 여부
 
-            final String CLIENT_ID = "59eb0488cc28a2c558ecbf47ed19f787";
-            int soundNum = 1 + (int) (Math.random() * MAX_TRACK_COUNT);
+                final String CLIENT_ID = "59eb0488cc28a2c558ecbf47ed19f787";
+                int soundNum = 1 + (int) (Math.random() * MAX_TRACK_COUNT);
 
-            String[] track_data = getResources().getStringArray(getResources().getIdentifier("track" + soundNum, "array", GameActivity.this.getPackageName()));
+                String[] track_data = getResources().getStringArray(getResources().getIdentifier("track" + soundNum, "array", GameActivity.this.getPackageName()));
 
-            String track_id = track_data[0];
+                String track_id = track_data[0];
 
-            String soundUrl = "https://api.soundcloud.com/tracks/" + track_id + "/stream?client_id=" + CLIENT_ID;
+                String soundUrl = "https://api.soundcloud.com/tracks/" + track_id + "/stream?client_id=" + CLIENT_ID;
 
-            for (int j = 0; j < i; j++) {
-                if (soundUrl.equals(addressArray.get(j))) {
-                    // 문제 중복
-                    isNumUsed = true;
+                for (int j = 0; j < i; j++) {
+                    if (soundUrl.equals(addressArray.get(j))) {
+                        // 문제 중복
+                        isNumUsed = true;
+                    }
                 }
-            }
 
-            if(isNumUsed) { // 문제 중복 시 다시 받아오게 함
-                Log.i("ticlog", "quizNum reset");
-                i--;
-            } else {
-                addressArray.add(soundUrl);
+                if (isNumUsed) { // 문제 중복 시 다시 받아오게 함
+                    Log.i("ticlog", "quizNum reset");
+                    i--;
+                } else {
+                    addressArray.add(soundUrl);
 
-                answerArray.add(track_data[1]);
-                artistArray.add(track_data[2]);
-                timeArray.add(Integer.parseInt(track_data[3]));
-                playerArray.add(new MediaPlayer());
-                playerArray.get(i).setAudioStreamType(AudioManager.STREAM_MUSIC);
-                try {
-                    playerArray.get(i).setDataSource(addressArray.get(i));
+                    answerArray.add(track_data[1]);
+                    artistArray.add(track_data[2]);
+                    timeArray.add(Integer.parseInt(track_data[3]));
+                    playerArray.add(new MediaPlayer());
+                    playerArray.get(i).setAudioStreamType(AudioManager.STREAM_MUSIC);
                     try {
-                        playerArray.get(i).prepare();
-                        playerArray.get(i).seekTo(timeArray.get(i));
-                        //prepare 하는데 시간이 많이 걸림
-                        Log.i("ticlog", "prepare success / soundNum : " + soundNum + " / Time : " + playerArray.get(i).getDuration());
-                    } catch (Exception e) { // prepare가 안되면 삭제된 파일이므로 이번 Array를 삭제하고 다시 받아오게 함
+                        playerArray.get(i).setDataSource(addressArray.get(i));
+                        try {
+                            playerArray.get(i).prepare();
+                            playerArray.get(i).seekTo(timeArray.get(i));
+                            //prepare 하는데 시간이 많이 걸림
+                            Log.i("ticlog", "prepare success / soundNum : " + soundNum + " / Time : " + playerArray.get(i).getDuration());
+                        } catch (Exception e) { // prepare가 안되면 삭제된 파일이므로 이번 Array를 삭제하고 다시 받아오게 함
+                            e.printStackTrace();
+                            Log.i("ticlog", "prepare catch, removed trackNum : " + soundNum);
+                            answerArray.remove(i);
+                            artistArray.remove(i);
+                            addressArray.remove(i);
+                            timeArray.remove(i);
+                            playerArray.remove(i);
+                            i--;
+                        }
+                    } catch (Exception e) {
                         e.printStackTrace();
-                        Log.i("ticlog", "prepare catch, removed trackNum : " + soundNum);
+                        Log.i("ticlog", "setDataSource catch, removed trackNum : " + soundNum);
                         answerArray.remove(i);
                         artistArray.remove(i);
                         addressArray.remove(i);
@@ -552,22 +571,14 @@ public class GameActivity extends Activity {
                         playerArray.remove(i);
                         i--;
                     }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    Log.i("ticlog", "setDataSource catch, removed trackNum : " + soundNum);
-                    answerArray.remove(i);
-                    artistArray.remove(i);
-                    addressArray.remove(i);
-                    timeArray.remove(i);
-                    playerArray.remove(i);
-                    i--;
                 }
             }
-        }
 
-        setUserData();
-        nextQuiz();
+            setUserData();
+            nextQuiz();
+        }
     }
+
 
     public void nextQuiz() {
         // 다음 문제 초기화
@@ -617,7 +628,7 @@ public class GameActivity extends Activity {
         } else {
             life = MAX_LIFE; // 라이프 초기화
             lifeRefresh();
-            txt_msg.setText(quizNum + "번째 문제입니다! 문제를 들어주세요!");
+            txt_msg.setText(quizNum + "번째 문제입니다!\n문제를 먼저 들어주세요!");
         }
         edit_ans.setText(""); // EditText 초기화
         btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
@@ -655,10 +666,10 @@ public class GameActivity extends Activity {
 
         pref.put("score", 0);
 
-        item1_cnt.setText(pref.getValue("item1Cnt", 0) + "");
-        item2_cnt.setText(pref.getValue("item2Cnt", 0) + "");
-        item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
-        item4_cnt.setText(pref.getValue("item4Cnt", 0) + "");
+        item1_cnt.setText(pref.getValue("item1Cnt", 0) + " ");
+        item2_cnt.setText(pref.getValue("item2Cnt", 0) + " ");
+        item3_cnt.setText(pref.getValue("item3Cnt", 0) + " ");
+        item4_cnt.setText(pref.getValue("item4Cnt", 0) + " ");
     }
 
     public void musicPlay(int time) {
@@ -700,7 +711,7 @@ public class GameActivity extends Activity {
                             frame_ans.setVisibility(View.VISIBLE); // 정답창 드러내기
                             space.setVisibility(View.GONE);
                             // 문제를 한 번 들어야 정답창이 드러나도록 함
-                            txt_msg.setText(quizNum + "번째 문제입니다! 곡명을 한글로 맞춰주세요!");
+                            txt_msg.setText(quizNum + "번째 문제입니다!\n곡명을 한글로 맞춰주세요!");
                         }
                     });
                 }

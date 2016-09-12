@@ -1,6 +1,7 @@
 package com.ticcorp.ticsong;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -32,6 +33,8 @@ import com.ticcorp.ticsong.model.DBManager;
 import com.ticcorp.ticsong.model.StaticSQLite;
 import com.ticcorp.ticsong.module.ServerAccessModule;
 import com.ticcorp.ticsong.utils.BackPressCloseHandler;
+import com.tsengvn.typekit.Typekit;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -207,6 +210,12 @@ public class MainActivity extends Activity {
 
     }
 
+    // 폰트 적용
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
+
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
@@ -246,8 +255,8 @@ public class MainActivity extends Activity {
         user_lv = pref.getValue("userLevel", 1);
         user_exp = pref.getValue("exp", 0);
 
-        profile_id.setText(user_name);
-        profile_level.setText(user_lv + "");
+        profile_id.setText(user_name + " ");
+        profile_level.setText(user_lv + " ");
 
         next_exp = 0;
         for(int i = 1; i <= user_lv; i++) { // 누적 경험치를 구하는 함수
@@ -264,10 +273,10 @@ public class MainActivity extends Activity {
         profile_progressbar.setMax(required_exp);
         profile_progressbar.setProgress(now_exp);
 
-        item1_cnt.setText(pref.getValue("item1Cnt", 0) + "");
-        item2_cnt.setText(pref.getValue("item2Cnt", 0) + "");
-        item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
-        item4_cnt.setText(pref.getValue("item4Cnt", 0) + "");
+        item1_cnt.setText(pref.getValue("item1Cnt", 0) + " ");
+        item2_cnt.setText(pref.getValue("item2Cnt", 0) + " ");
+        item3_cnt.setText(pref.getValue("item3Cnt", 0) + " ");
+        item4_cnt.setText(pref.getValue("item4Cnt", 0) + " ");
 
         Glide.with(this).load("http://graph.facebook.com/" +
                 pref.getValue("userId", "userId") + "/picture?type=large").bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).

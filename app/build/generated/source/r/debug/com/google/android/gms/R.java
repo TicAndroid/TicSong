@@ -59,11 +59,11 @@ public final class R {
 		public static final int ic_plusone_tall_off_client = 0x7f0200a9;
 	}
 	public static final class id {
-		public static final int adjust_height = 0x7f0c0023;
-		public static final int adjust_width = 0x7f0c0024;
-		public static final int none = 0x7f0c0016;
-		public static final int normal = 0x7f0c0012;
-		public static final int wrap_content = 0x7f0c002d;
+		public static final int adjust_height = 0x7f0c0024;
+		public static final int adjust_width = 0x7f0c0025;
+		public static final int none = 0x7f0c0017;
+		public static final int normal = 0x7f0c0013;
+		public static final int wrap_content = 0x7f0c002e;
 	}
 	public static final class integer {
 		public static final int google_play_services_version = 0x7f090004;

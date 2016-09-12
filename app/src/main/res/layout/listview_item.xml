@@ -60,7 +60,8 @@
             android:text="SCORE : -"
             android:textColor="#000066"
             android:background="#eeFFFFFF"
-            android:textSize="10sp" />
+            android:textSize="10sp"
+            android:textStyle="bold|italic"/>
 
     </LinearLayout>
 
@@ -70,8 +71,9 @@
         android:layout_height="match_parent"
         android:layout_weight="14"
         android:gravity="bottom"
-        android:text="Lv. 99"
+        android:text="Lv. 00"
         android:textColor="#eeFFFFFF"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textStyle="italic"/>
 
 </LinearLayout>

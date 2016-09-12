@@ -21,7 +21,8 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
         tools:replace="android:icon,android:theme"
-        android:largeHeap="true">
+        android:largeHeap="true"
+        android:name=".ApplicationClass">
 
         <activity
             android:name=".SplashActivity"

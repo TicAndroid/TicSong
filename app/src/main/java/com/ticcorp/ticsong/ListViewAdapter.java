@@ -3,6 +3,7 @@ package com.ticcorp.ticsong;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.ticcorp.ticsong.activitySupport.CustomBitmapPool;
 import com.ticcorp.ticsong.activitySupport.ListData;
+import com.tsengvn.typekit.Typekit;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -119,12 +121,12 @@ public class ListViewAdapter extends BaseAdapter {
         }
         */
 
-        holder.mRank.setText(mData.mRank);
+        holder.mRank.setText(mData.mRank + " ");
         Glide.with(this.mContext).load(mData.mPicURL).bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
                 error(R.drawable.profile_main_image).into(holder.mPic);
-        holder.mName.setText(mData.mName);
-        holder.mScore.setText(mData.mScore);
-        holder.mLevel.setText(mData.mLevel);
+        holder.mName.setText(mData.mName + " ");
+        holder.mScore.setText(mData.mScore + " ");
+        holder.mLevel.setText(mData.mLevel + " ");
 
         return convertView;
     }

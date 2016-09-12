@@ -27,6 +27,7 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.ticcorp.ticsong.model.CustomPreference;
 import com.ticcorp.ticsong.module.ServerAccessModule;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -224,5 +225,11 @@ public class FBActivity extends Activity {
             }
         });
 
+    }
+
+    // 폰트 적용
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 }

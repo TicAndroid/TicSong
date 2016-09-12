@@ -209,7 +209,8 @@
                         android:layout_height="match_parent"
                         android:text="Lv. "
                         android:textColor="#FFFFFF"
-                        android:textSize="28sp" />
+                        android:textSize="28sp"
+                        android:textStyle="italic"/>
 
                     <TextView
                         android:id="@+id/level"
@@ -217,7 +218,8 @@
                         android:layout_height="match_parent"
                         android:text="100"
                         android:textColor="#FFFFFF"
-                        android:textSize="28sp" />
+                        android:textSize="28sp"
+                        android:textStyle="italic"/>
 
                 </LinearLayout>
 

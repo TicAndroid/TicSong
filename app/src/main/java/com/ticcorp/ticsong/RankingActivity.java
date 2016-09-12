@@ -2,6 +2,7 @@ package com.ticcorp.ticsong;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.ticcorp.ticsong.model.CustomPreference;
 import com.ticcorp.ticsong.module.ServerAccessModule;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,6 +68,12 @@ public class RankingActivity extends Activity {
         }
         */
 
+    }
+
+    // 폰트 적용
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 
     private class rankinghandler implements Runnable {

@@ -1,6 +1,7 @@
 package com.ticcorp.ticsong;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -30,6 +31,7 @@ import com.ticcorp.ticsong.model.DBManager;
 import com.ticcorp.ticsong.model.StaticSQLite;
 import com.ticcorp.ticsong.module.SQLiteAccessModule;
 import com.ticcorp.ticsong.module.ServerAccessModule;
+import com.tsengvn.typekit.TypekitContextWrapper;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -118,6 +120,12 @@ public class ResultActivity extends Activity {
                 error(R.drawable.profile_main_image).into(profile_img);
     }
 
+    // 폰트 적용
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
+
     public void setResult() {
         userId = pref.getValue("userId", "userId");
 
@@ -168,9 +176,9 @@ public class ResultActivity extends Activity {
 
         setImage();
 
-        score.setText(pref.getValue("score", 0) + "");
+        score.setText(pref.getValue("score", 0) + " ");
         //exp.setText("exp " + userExp);
-        level.setText(userLevel + "");
+        level.setText(userLevel + " ");
 
 
         nextExp = 0;
