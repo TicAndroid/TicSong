@@ -126,15 +126,15 @@ public class RankingActivity extends Activity {
             hd.postDelayed(new rankinghandler(), 100);
 
         } else {
-            // 친구 보기로 전환
-            modeFriend = true;
-            Log.i("Ticlog Rank", "userId : " + userId);
-            for(int j = 0; j < mAdapter.getCount(); j++){
-                mAdapter.remove(j);
-            }
-
-            List<String> fList = new ArrayList<String>();
             if (pref.getValue("friendCnt", 1) > 0) {
+                // 친구 보기로 전환
+                modeFriend = true;
+                Log.i("Ticlog Rank", "userId : " + userId);
+                for(int j = 0; j < mAdapter.getCount(); j++){
+                    mAdapter.remove(j);
+                }
+
+                List<String> fList = new ArrayList<String>();
                 for (int i = 0; i < pref.getValue("friendCnt", 1); i++) {
                     Log.i("Ticlog Rank", "friendCnt : " + pref.getValue("friendCnt", "friendCnt") + ", friendId" + i + " : " + pref.getValue("friendId" + i, "friendId" + i));
                     fList.add(pref.getValue("friendId" + i, "friendId" + i) + "");

@@ -76,8 +76,6 @@ public class SplashActivity extends Activity {
         }
 */
 
-        Handler hd = new Handler();
-        hd.postDelayed(new splashhandler(), 3500);
     }
     private class splashhandler implements Runnable {
         public void run() {
@@ -91,11 +89,23 @@ public class SplashActivity extends Activity {
         @Override
         public void onPermissionGranted() {
             //Toast.makeText(SplashActivity.this, "Permission Granted", Toast.LENGTH_SHORT).show();
+            Handler hd = new Handler();
+            hd.postDelayed(new splashhandler(), 3500);
         }
 
         @Override
         public void onPermissionDenied(ArrayList<String> deniedPermissions) {
             //Toast.makeText(SplashActivity.this, "Permission Denied\n" + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(SplashActivity.this, "게임 진행을 위해서는 권한 설정이 필요합니다.", Toast.LENGTH_SHORT).show();
+
+            new TedPermission(SplashActivity.this)
+                    .setPermissionListener(permissionlistener)
+                    .setDeniedMessage("게임 진행을 위한 권한입니다.")
+                    .setPermissions(Manifest.permission.INTERNET, Manifest.permission.ACCESS_NETWORK_STATE,
+                            Manifest.permission.GET_ACCOUNTS, Manifest.permission.WAKE_LOCK,
+                            Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                            Manifest.permission.RECORD_AUDIO)
+                    .check();
         }
 
 
