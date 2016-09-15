@@ -8,12 +8,20 @@
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/icon_launcher.png"
     },
     {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_fx.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_fx.png"
+    },
+    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_edit_text_material.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/item_onemore.png",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/item_onemore.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_music.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_music.png"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_on.png",
@@ -34,6 +42,10 @@
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_record.png",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_record.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_aboutus.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_aboutus.png"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/error_circle.xml",
@@ -102,6 +114,10 @@
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/profile_ranking.png",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/profile_ranking.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/tutorial_4.jpg",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/tutorial_4.jpg"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/game_upstair_panel.png",
@@ -228,6 +244,10 @@
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/icon_tro.png"
     },
     {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/tutorial_1.jpg",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/tutorial_1.jpg"
+    },
+    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_holo_light.xml"
     },
@@ -262,6 +282,10 @@
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/icon_character.png",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/icon_character.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/tutorial_2.jpg",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/tutorial_2.jpg"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/messenger_button_blue_bg_selector.xml",
@@ -332,6 +356,10 @@
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/background_listen.png"
     },
     {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/tutorial_3.jpg",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/tutorial_3.jpg"
+    },
+    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/edix_style.xml",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/edix_style.xml"
     },
@@ -346,6 +374,10 @@
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/target_shape.xml",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/target_shape.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_opensource.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_opensource.png"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/dialog_background.xml",
@@ -422,6 +454,10 @@
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_background.xml",
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.15.0/res/drawable/com_facebook_auth_dialog_background.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/tutorial_5.jpg",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/tutorial_5.jpg"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/common_signin_btn_text_light.xml",

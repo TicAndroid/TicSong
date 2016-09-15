@@ -76,6 +76,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.ticcorp.ticsong.TutorialActivity"
+            android:label="튜토리얼화면" >
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.OpenSourceActivity"
+            android:label="오픈소스공시화면" >
+        </activity>
+        <activity
             android:name="com.ticcorp.ticsong.RankingActivity"
             android:label="랭킹화면"
             android:screenOrientation="portrait" >

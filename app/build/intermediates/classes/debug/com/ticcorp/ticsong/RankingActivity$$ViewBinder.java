@@ -8,6 +8,16 @@ import butterknife.ButterKnife.ViewBinder;
 public class RankingActivity$$ViewBinder<T extends com.ticcorp.ticsong.RankingActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
+    view = finder.findRequiredView(source, 2131492979, "field 'btn_exit' and method 'exitClick'");
+    target.btn_exit = finder.castView(view, 2131492979, "field 'btn_exit'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.exitClick();
+        }
+      });
     view = finder.findRequiredView(source, 2131493021, "field 'txt_friend'");
     target.txt_friend = finder.castView(view, 2131493021, "field 'txt_friend'");
     view = finder.findRequiredView(source, 2131493022, "field 'txt_yourRank'");
@@ -22,18 +32,10 @@ public class RankingActivity$$ViewBinder<T extends com.ticcorp.ticsong.RankingAc
           target.changeClick();
         }
       });
-    view = finder.findRequiredView(source, 2131492979, "method 'exitClick'");
-    view.setOnClickListener(
-      new butterknife.internal.DebouncingOnClickListener() {
-        @Override public void doClick(
-          android.view.View p0
-        ) {
-          target.exitClick();
-        }
-      });
   }
 
   @Override public void unbind(T target) {
+    target.btn_exit = null;
     target.txt_friend = null;
     target.txt_yourRank = null;
     target.img_profile = null;

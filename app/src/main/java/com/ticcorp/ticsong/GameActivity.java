@@ -730,7 +730,9 @@ public class GameActivity extends Activity {
             item4.setEnabled(false);
             rotate.startAnimation(start_click_infinite);
             tictac.startAnimation(tic_click_infinite);
-            playerArray.get(quizNum - 1).start();
+            if (pref.getValue("setting_music", true)) {
+                playerArray.get(quizNum - 1).start();
+            }
         }
     }
 

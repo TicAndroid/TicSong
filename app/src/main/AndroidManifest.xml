@@ -74,6 +74,16 @@
         </activity>
 
         <activity
+            android:name=".TutorialActivity"
+            android:label="튜토리얼화면">
+        </activity>
+
+        <activity
+            android:name=".OpenSourceActivity"
+            android:label="오픈소스공시화면">
+        </activity>
+
+        <activity
             android:name=".RankingActivity"
             android:label="랭킹화면"
             android:screenOrientation="portrait">

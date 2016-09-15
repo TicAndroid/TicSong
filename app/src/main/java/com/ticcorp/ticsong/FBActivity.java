@@ -67,7 +67,7 @@ public class FBActivity extends Activity {
         FacebookSdk.sdkInitialize(getApplicationContext());
 
         LoginManager.getInstance().logOut();
-        if(pref.getValue("userId", "userId") != "userId") {
+        if(!pref.getValue("userId", "userId").equals("userId")) {
             pref.remove("userId");
         }
 
