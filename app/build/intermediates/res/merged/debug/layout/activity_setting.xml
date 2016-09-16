@@ -22,7 +22,7 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <ImageButton
+            <ImageButton android:id="@+id/btn_exit"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="10dp"
@@ -63,8 +63,105 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+<<<<<<< HEAD
                         android:layout_weight="13"
                         android:gravity="center_vertical"
+=======
+                        android:layout_weight="5"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <ImageButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="22"
+                            android:background="@drawable/btn_alarm"
+                            android:gravity="center_vertical" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="63" />
+
+                        <ImageButton android:id="@+id/setting_music"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:background="@drawable/btn_on" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#aaFFFFFF" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="13"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <ImageButton
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="22"
+                            android:background="@drawable/btn_sound"
+                            android:gravity="center_vertical" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="63" />
+
+                        <ImageButton android:id="@+id/setting_fx"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:background="@drawable/btn_on" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#55000033" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="65"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="8"
+                        android:gravity="center"
+>>>>>>> 20093bfc8eed7b2202a0942c5835a167dca9b048
                         android:orientation="vertical"
                         android:padding="10dp"
                         android:weightSum="10">
@@ -76,7 +173,7 @@
                             android:orientation="horizontal"
                             android:weightSum="100">
 
-                            <ImageButton
+                            <ImageButton android:id="@+id/btn_tutorial"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="10dp"
@@ -114,7 +211,7 @@
                             android:orientation="horizontal"
                             android:weightSum="100">
 
-                            <ImageButton
+                            <ImageButton android:id="@+id/btn_info"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="10dp"
@@ -127,11 +224,16 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="61" />
 
-                            <ImageButton
+                            <ImageButton android:id="@+id/btn_ask"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
+<<<<<<< HEAD
                                 android:layout_weight="15"
                                 android:background="@drawable/btn_off" />
+=======
+                                android:layout_weight="17"
+                                android:background="@drawable/btn_ask" />
+>>>>>>> 20093bfc8eed7b2202a0942c5835a167dca9b048
                         </LinearLayout>
 
                     </LinearLayout>
@@ -263,6 +365,38 @@
                                     android:background="@drawable/btn_open_source" />
                             </LinearLayout>
 
+<<<<<<< HEAD
+=======
+                            <ImageButton android:id="@+id/btn_aboutus"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="15"
+                                android:background="@drawable/btn_aboutus" />
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:layout_width="3dp"
+                            android:layout_height="3dp"
+                            android:layout_marginBottom="17dp"
+                            android:layout_marginTop="17dp"
+                            android:background="#ffffff" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="25"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <ImageButton android:id="@+id/btn_opensource"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="30"
+                                android:background="@drawable/btn_opensource" />
+                        </LinearLayout>
+>>>>>>> 20093bfc8eed7b2202a0942c5835a167dca9b048
 
                         </LinearLayout>
                     </LinearLayout>
@@ -293,7 +427,7 @@
                     android:layout_weight="10"
                     android:orientation="horizontal">
 
-                    <ImageButton
+                    <ImageButton android:id="@+id/btn_logout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/btn_logout" />
@@ -310,7 +444,7 @@
                     android:layout_weight="12"
                     android:orientation="horizontal">
 
-                    <ImageButton
+                    <ImageButton android:id="@+id/btn_out"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/btn_out" />

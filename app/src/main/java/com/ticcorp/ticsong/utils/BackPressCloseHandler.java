@@ -1,6 +1,7 @@
 package com.ticcorp.ticsong.utils;
 
 import android.app.Activity;
+import android.os.Process;
 import android.widget.Toast;
 
 /**
@@ -26,6 +27,8 @@ public class BackPressCloseHandler {
         if (System.currentTimeMillis() <= backKeyPressedTime + 2000) {
             activity.finish();
             toast.cancel();
+            // 프로세스 종료
+            //Process.killProcess(Process.myPid());
         }
     }
 

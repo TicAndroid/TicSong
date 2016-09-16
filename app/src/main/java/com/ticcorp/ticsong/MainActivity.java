@@ -279,9 +279,9 @@ public class MainActivity extends Activity {
         profile_progressbar.setProgress(now_exp);
 
         item1_cnt.setText(pref.getValue("item1Cnt", 0) + " ");
-        item2_cnt.setText(pref.getValue("item2Cnt", 0) + " ");
-        item3_cnt.setText(pref.getValue("item3Cnt", 0) + " ");
-        item4_cnt.setText(pref.getValue("item4Cnt", 0) + " ");
+        item2_cnt.setText(pref.getValue("item2Cnt", 0) + "");
+        item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
+        item4_cnt.setText(pref.getValue("item4Cnt", 0) + "");
 
         Glide.with(this).load("http://graph.facebook.com/" +
                 pref.getValue("userId", "userId") + "/picture?type=large").bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).

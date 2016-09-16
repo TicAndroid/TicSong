@@ -176,8 +176,17 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\layout\\activity_game.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_menu_layout.xml"
+=======
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_opensource.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_opensource.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+>>>>>>> 20093bfc8eed7b2202a0942c5835a167dca9b048
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
@@ -200,8 +209,17 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\layout\\activity_setting.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\layout\\activity_login.xml"
+=======
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_tutorial.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_tutorial.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/com_facebook_login_fragment.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.15.0/res/layout/com_facebook_login_fragment.xml"
+>>>>>>> 20093bfc8eed7b2202a0942c5835a167dca9b048
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",

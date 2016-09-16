@@ -7,7 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+<<<<<<< HEAD
 import android.view.View;
+=======
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+>>>>>>> 20093bfc8eed7b2202a0942c5835a167dca9b048
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -31,8 +36,14 @@ public class RankingActivity extends Activity {
     private ListViewAdapter mAdapter, aAdapter; //가상
     private CustomPreference pref;
     private String userId;
+    private boolean isLoaded = false; // 랭킹 로딩 확인
+
+    public Animation btn_click;
 
     private boolean modeFriend = false; // 친구 보기일 때 true, 전체 보기일 때 false
+
+    @Bind(R.id.btn_exit)
+    ImageButton btn_exit;
 
     @Bind(R.id.txt_friend)
     TextView txt_friend;
@@ -55,14 +66,15 @@ public class RankingActivity extends Activity {
         pref = pref.getInstance(this.getApplicationContext());
         userId = pref.getValue("userId", "userId");
 
+        btn_click = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
+
         mListView = (ListView) findViewById(R.id.list_rank);
         ServerAccessModule.getInstance().retrieveTopRanker(userId);
 
         Log.i("Ticlog Rank", "userId : " + userId);
-        Log.i("Ticlog Rank", ServerAccessModule.TOP_RANKER_LIST + "");
 
         Handler hd = new Handler();
-        hd.postDelayed(new rankinghandler(), 100);
+        hd.postDelayed(new rankinghandler(), 500);
         /*
         for(int i = 0; i < ServerAccessModule.TOP_RANKER_LIST.size(); i++) {
             mAdapter.addItem((i + 1) + "", null,
@@ -115,6 +127,7 @@ public class RankingActivity extends Activity {
 
     @OnClick(R.id.btn_exit)
     void exitClick() {
+        btn_exit.startAnimation(btn_click);
         startActivity(new Intent(RankingActivity.this, MainActivity.class));
         RankingActivity.this.finish();
     }
@@ -134,15 +147,15 @@ public class RankingActivity extends Activity {
             hd.postDelayed(new rankinghandler(), 100);
 
         } else {
-            // 친구 보기로 전환
-            modeFriend = true;
-            Log.i("Ticlog Rank", "userId : " + userId);
-            for(int j = 0; j < mAdapter.getCount(); j++){
-                mAdapter.remove(j);
-            }
-
-            List<String> fList = new ArrayList<String>();
             if (pref.getValue("friendCnt", 1) > 0) {
+                // 친구 보기로 전환
+                modeFriend = true;
+                Log.i("Ticlog Rank", "userId : " + userId);
+                for(int j = 0; j < mAdapter.getCount(); j++){
+                    mAdapter.remove(j);
+                }
+
+                List<String> fList = new ArrayList<String>();
                 for (int i = 0; i < pref.getValue("friendCnt", 1); i++) {
                     Log.i("Ticlog Rank", "friendCnt : " + pref.getValue("friendCnt", "friendCnt") + ", friendId" + i + " : " + pref.getValue("friendId" + i, "friendId" + i));
                     fList.add(pref.getValue("friendId" + i, "friendId" + i) + "");

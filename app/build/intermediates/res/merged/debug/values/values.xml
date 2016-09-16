@@ -642,6 +642,7 @@
     <string name="dialog_ok">OK</string>
     <string name="facebook_app_id">1573118516326328</string>
     <string name="messenger_send_button_text">Send</string>
+    <string name="opensource">오픈소스 공시</string>
     <string name="result">"대단한 실력이시네요~! 혹시 절대음감...?"</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="str_listening">listening</string>
