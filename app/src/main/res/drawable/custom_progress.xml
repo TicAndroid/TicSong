@@ -5,28 +5,15 @@
         <shape>
             <corners android:radius="0dip" />
             <gradient
-                android:startColor="#ff9d9e9d"
-                android:centerColor="#ff5a5d5a"
-                android:centerY="0.75"
-                android:endColor="#ff747674"
-                android:angle="270"
-                />
-        </shape>
-    </item>
+                android:centerColor="#25223d"
+                android:endColor="#25223d"
+                android:startColor="#25223d"
 
-    <item android:id="@android:id/secondaryProgress">
-        <clip>
-            <shape>
-                <corners android:radius="0dip" />
-                <gradient
-                    android:startColor="#80ffd300"
-                    android:centerColor="#80ffb600"
-                    android:centerY="0.75"
-                    android:endColor="#a0ffcb00"
-                    android:angle="270"
-                    />
-            </shape>
-        </clip>
+                />
+            <stroke android:width="1dp" android:color="#ffffff"/>
+            <padding android:left="2dp" android:top="2dp"
+                android:right="2dp" android:bottom="2dp" />
+        </shape>
     </item>
 
     <item android:id="@android:id/progress">
@@ -34,15 +21,13 @@
             <shape>
                 <corners android:radius="0dip" />
                 <gradient
-                    android:startColor="#ff0000"
-                    android:centerColor="#00ff00"
-                    android:centerY="0.75"
-                    android:endColor="#0000ff"
-                    android:angle="0"
+                    android:startColor="#ffd655"
+                    android:centerColor="#ffd655"
+                    android:endColor="#ffd655"
+
                     />
-                <stroke android:width="3dp" color="#000000"/>
-                <padding android:left="10dp" android:top="10dp"
-                    android:right="10dp" android:bottom="10dp" />
+                <stroke android:width="1dp" android:color="#25223d"/>
+
             </shape>
         </clip>
     </item>

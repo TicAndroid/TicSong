@@ -22,6 +22,8 @@ public class RankingActivity$$ViewBinder<T extends com.ticcorp.ticsong.RankingAc
           target.changeClick();
         }
       });
+    view = finder.findRequiredView(source, 2131493024, "field 'ranking_standby'");
+    target.ranking_standby = finder.castView(view, 2131493024, "field 'ranking_standby'");
     view = finder.findRequiredView(source, 2131492979, "method 'exitClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
@@ -37,5 +39,6 @@ public class RankingActivity$$ViewBinder<T extends com.ticcorp.ticsong.RankingAc
     target.txt_friend = null;
     target.txt_yourRank = null;
     target.img_profile = null;
+    target.ranking_standby = null;
   }
 }

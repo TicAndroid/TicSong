@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -26,8 +27,8 @@ import butterknife.OnClick;
 
 public class RankingActivity extends Activity {
 
-    private ListView mListView;
-    private ListViewAdapter mAdapter;
+    private ListView mListView, aListView;
+    private ListViewAdapter mAdapter, aAdapter; //가상
     private CustomPreference pref;
     private String userId;
 
@@ -41,6 +42,9 @@ public class RankingActivity extends Activity {
 
     @Bind(R.id.img_profile)
     ImageButton img_profile;
+
+    @Bind(R.id.raking_standby)
+    ImageView ranking_standby;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +86,7 @@ public class RankingActivity extends Activity {
             mListView.setAdapter(mAdapter);
 
             if(modeFriend) {
+                ranking_standby.setVisibility(View.VISIBLE);
                 Log.i("ticlog friendList", ServerAccessModule.FRIEND_LIST.toString());
                 Log.i("ticlog friendListSize", ServerAccessModule.FRIEND_LIST.size() + "");
                 for(int i = 0; i < ServerAccessModule.FRIEND_LIST.size(); i++) {
@@ -91,8 +96,10 @@ public class RankingActivity extends Activity {
                             "EXP : " + ServerAccessModule.FRIEND_LIST.get(i).getExp(),
                             "Lv. " + ServerAccessModule.FRIEND_LIST.get(i).getUserLevel());
                 }
+                ranking_standby.setVisibility(View.INVISIBLE);
 
             } else {
+                ranking_standby.setVisibility(View.VISIBLE);
                 Log.i("ticlog TopRankerList", ServerAccessModule.TOP_RANKER_LIST.toString());
                 for(int i = 0; i < ServerAccessModule.TOP_RANKER_LIST.size(); i++) {
                     mAdapter.addItem((i + 1) + "", "http://graph.facebook.com/" +
@@ -101,6 +108,7 @@ public class RankingActivity extends Activity {
                             "SCORE : " + ServerAccessModule.TOP_RANKER_LIST.get(i).getExp(),
                             "Lv. " + ServerAccessModule.TOP_RANKER_LIST.get(i).getUserLevel());
                 }
+                ranking_standby.setVisibility(View.INVISIBLE);
             }
         }
     }

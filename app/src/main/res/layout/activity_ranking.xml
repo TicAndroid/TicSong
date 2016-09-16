@@ -104,15 +104,27 @@
 
                 </LinearLayout>
 
-                <ListView
-                    android:id="@+id/list_rank"
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginTop="10dp"
-                    android:layout_weight="88"
-                    android:divider="#00000000"
-                    android:dividerHeight="4dp"
-                    android:listSelector="@android:color/transparent"></ListView>
+                    android:layout_weight="88">
+
+                    <ImageView
+                        android:id="@+id/raking_standby"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ranking_standby"/>
+
+                    <ListView
+                        android:id="@+id/list_rank"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="#00000000"
+                        android:dividerHeight="4dp"
+                        android:listSelector="@android:color/transparent"></ListView>
+
+                </FrameLayout>
 
             </LinearLayout>
         </LinearLayout>

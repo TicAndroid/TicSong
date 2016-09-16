@@ -101,7 +101,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
-                        android:background="#44000000"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
@@ -122,7 +121,7 @@
                             android:layout_height="match_parent"
                             android:max="100"
                             android:progress="30"
-                            android:padding="10dp" />
+                            android:padding="6dp" />
 
                     </LinearLayout>
 

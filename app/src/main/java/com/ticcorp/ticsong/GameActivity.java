@@ -19,6 +19,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.DragEvent;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -97,10 +98,8 @@ public class GameActivity extends Activity {
     public Animation start_click_infinite;
     public Animation tic_click_infinite;
 
-    public ImageView item1;
-    public ImageView item2;
-    public ImageView item3;
-    public ImageView item4;
+    public ImageButton item1, item2, item3, item4;
+
     public ImageView tictac;
     public ImageView rotate;
 
@@ -167,23 +166,16 @@ public class GameActivity extends Activity {
         Animation rotate_back = AnimationUtils.loadAnimation(this, R.anim.base_rotate_anim);
         ImageView star_back = (ImageView) findViewById(R.id.background_star);
 
-        star_back.startAnimation(rotate_back);
+        star_back.startAnimation(rotate_back); //별 윙윙 도는거
+        //버튼클릭 애니메이션
         btn_click = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
 
-        /*
-        scrollView = (ScrollView) findViewById(R.id.scroll_part);
-        scrollView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                return true;
-            }
-        });*/
-        btn_exit = (ImageButton) findViewById(R.id.btn_exit);
+        btn_exit = (ImageButton) findViewById(R.id.btn_exit); //나가기 버튼
 
-        item1 = (ImageView) findViewById(R.id.item1); //아티스트 공개
-        item2 = (ImageView) findViewById(R.id.item2); //생명증가
-        item3 = (ImageView) findViewById(R.id.item3); //한글자
-        item4 = (ImageView) findViewById(R.id.item4); //3초듣기
+        item1 = (ImageButton) findViewById(R.id.item1); //아티스트 공개
+        item2 = (ImageButton) findViewById(R.id.item2); //생명증가
+        item3 = (ImageButton) findViewById(R.id.item3); //한글자
+        item4 = (ImageButton) findViewById(R.id.item4); //3초듣기
 
         item1.setTag(item1_tag);
         item2.setTag(item2_tag);
@@ -196,24 +188,9 @@ public class GameActivity extends Activity {
         item4_cnt = (TextView) findViewById(R.id.item4_cnt);
 
         item1.setOnLongClickListener(new View.OnLongClickListener() {
-
             @Override
             public boolean onLongClick(View v) {
-                // 태그 생성
-                ClipData.Item item = new ClipData.Item(
-                        (CharSequence) v.getTag());
-                item_selected = 1;
-                String[] mimeTypes = {ClipDescription.MIMETYPE_TEXT_PLAIN};
-                ClipData data = new ClipData(v.getTag().toString(),
-                        mimeTypes, item);
-                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(
-                        v);
-
-                v.startDrag(data, // data to be dragged
-                        shadowBuilder, // drag shadow
-                        v, // 드래그 드랍할  Vew
-                        0 // 필요없은 플래그
-                );
+                Toast.makeText(GameActivity.this, "가수 이름 보여주기 아이템", Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
@@ -223,21 +200,7 @@ public class GameActivity extends Activity {
 
             @Override
             public boolean onLongClick(View v) {
-                // 태그 생성
-                ClipData.Item item = new ClipData.Item(
-                        (CharSequence) v.getTag());
-                item_selected = 2;
-                String[] mimeTypes = {ClipDescription.MIMETYPE_TEXT_PLAIN};
-                ClipData data = new ClipData(v.getTag().toString(),
-                        mimeTypes, item);
-                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(
-                        v);
-
-                v.startDrag(data, // data to be dragged
-                        shadowBuilder, // drag shadow
-                        v, // 드래그 드랍할  Vew
-                        0 // 필요없은 플래그
-                );
+                Toast.makeText(GameActivity.this, "생명력 증가 아이템", Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
@@ -246,21 +209,7 @@ public class GameActivity extends Activity {
 
             @Override
             public boolean onLongClick(View v) {
-                // 태그 생성
-                ClipData.Item item = new ClipData.Item(
-                        (CharSequence) v.getTag());
-                item_selected = 3;
-                String[] mimeTypes = {ClipDescription.MIMETYPE_TEXT_PLAIN};
-                ClipData data = new ClipData(v.getTag().toString(),
-                        mimeTypes, item);
-                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(
-                        v);
-
-                v.startDrag(data, // data to be dragged
-                        shadowBuilder, // drag shadow
-                        v, // 드래그 드랍할  Vew
-                        0 // 필요없은 플래그
-                );
+                Toast.makeText(GameActivity.this, "한 글자 보여주기 아이템", Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
@@ -269,27 +218,11 @@ public class GameActivity extends Activity {
 
             @Override
             public boolean onLongClick(View v) {
-                // 태그 생성
-                ClipData.Item item = new ClipData.Item(
-                        (CharSequence) v.getTag());
-                item_selected = 4;
-                String[] mimeTypes = {ClipDescription.MIMETYPE_TEXT_PLAIN};
-                ClipData data = new ClipData(v.getTag().toString(),
-                        mimeTypes, item);
-                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(
-                        v);
-
-                v.startDrag(data, // data to be dragged
-                        shadowBuilder, // drag shadow
-                        v, // 드래그 드랍할  Vew
-                        0 // 필요없은 플래그
-                );
+                Toast.makeText(GameActivity.this, "3초 듣기", Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
 
-        findViewById(R.id.btn_play).setOnDragListener(
-                new DragListener());
 
         tictac = (ImageView) findViewById(R.id.tictac);
         rotate = (ImageView) findViewById(R.id.rotate);
@@ -312,6 +245,124 @@ public class GameActivity extends Activity {
         Handler hd = new Handler();
         hd.postDelayed(new quizSettingHandler(), 100);
         textWatching();
+    }
+
+    //아이템 사용
+    @OnClick({R.id.item1, R.id.item2, R.id.item3, R.id.item4})
+    public void onButtonClick(View view){
+        switch (view.getId()) {
+            case R.id.item1:
+                if (pref.getValue("item1Cnt", 0) > 0) {
+                    pref.put("item1Cnt", pref.getValue("item1Cnt", 0) - 1);
+                    ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
+                            pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                            pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                    SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
+                            pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                            pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                    item1_cnt.setText(pref.getValue("item1Cnt", 0) + "");
+
+                    Toast.makeText(view.getContext(), "이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
+                            + "'입니다.", Toast.LENGTH_SHORT).show();
+                    itemUsed = 1;
+                    edit_ans.setHint("이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
+                            + "'입니다.");
+                    item1.setEnabled(false);
+                    item2.setEnabled(false);
+                    item3.setEnabled(false);
+                    item4.setEnabled(false);
+                    item1.setBackgroundResource(R.drawable.item_artist);
+                    item2.setBackgroundResource(R.drawable.item_onemore_no);
+                    item3.setBackgroundResource(R.drawable.item_onechar_no);
+                    item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
+                }break;
+            case R.id.item2:
+                if (pref.getValue("item2Cnt", 0) > 0) {
+                    if (life >= 3)
+                        Toast.makeText(view.getContext(), "현재 생명력 만땅입니다!", Toast.LENGTH_SHORT).show();
+                    else {
+                        pref.put("item2Cnt", pref.getValue("item2Cnt", 0) - 1);
+                        ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
+                                pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                                pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                        SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
+                                pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                                pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                        item2_cnt.setText(pref.getValue("item2Cnt", 0) + "");
+
+                        itemUsed = 2;
+                        life++;
+                        lifeRefresh();
+                        item1.setEnabled(false);
+                        item2.setEnabled(false);
+                        item3.setEnabled(false);
+                        item4.setEnabled(false);
+                        item1.setBackgroundResource(R.drawable.item_artist_no);
+                        item2.setBackgroundResource(R.drawable.item_onemore);
+                        item3.setBackgroundResource(R.drawable.item_onechar_no);
+                        item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
+                    }
+                } else {
+                    Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
+                } break;
+            case R.id.item3:
+                if (pref.getValue("item3Cnt", 0) > 0) {
+                    pref.put("item3Cnt", pref.getValue("item3Cnt", 0) - 1);
+                    ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
+                            pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                            pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                    SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
+                            pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                            pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                    item1_cnt.setText(pref.getValue("item3Cnt", 0) + "");
+
+                    itemUsed = 3;
+                    Toast.makeText(view.getContext(), "곡 제목의 첫 글자는 '" +
+                            textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
+                    edit_ans.setHint("곡 제목의 첫 글자는 '" +
+                            textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.");
+
+                    item1.setEnabled(false);
+                    item2.setEnabled(false);
+                    item3.setEnabled(false);
+                    item4.setEnabled(false);
+                    item1.setBackgroundResource(R.drawable.item_artist_no);
+                    item2.setBackgroundResource(R.drawable.item_onemore_no);
+                    item3.setBackgroundResource(R.drawable.item_onechar);
+                    item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
+
+                } else {
+                    Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
+                } break;
+            case R.id.item4:
+                if (pref.getValue("item4Cnt", 0) > 0) {
+                    pref.put("item4Cnt", pref.getValue("item4Cnt", 0) - 1);
+                    ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
+                            pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                            pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                    SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
+                            pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
+                            pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
+                    item1_cnt.setText(pref.getValue("item4Cnt", 0) + "");
+                    Toast.makeText(view.getContext(), "3초 재생 적용!", Toast.LENGTH_SHORT).show();
+                    rotate.startAnimation(start_click_third);
+                    tictac.startAnimation(tic_click_third);
+                    musicPlay(3000);
+                    itemUsed = 4;
+                    item1.setEnabled(false);
+                    item2.setEnabled(false);
+                    item3.setEnabled(false);
+                    item4.setEnabled(false);
+                    item1.setBackgroundResource(R.drawable.item_artist_no);
+                    item2.setBackgroundResource(R.drawable.item_onemore_no);
+                    item3.setBackgroundResource(R.drawable.item_onechar_no);
+                    item4.setBackgroundResource(R.drawable.item_thirdsecond);
+
+                } else {
+                    Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
+                } break;
+            default:
+        }
     }
 
     // 폰트 적용
@@ -922,170 +973,5 @@ public class GameActivity extends Activity {
         }
     }
 
-    class DragListener implements View.OnDragListener {
-        public boolean onDrag(View v, DragEvent event) {
-
-            // 이벤트 시작
-            switch (event.getAction()) {
-
-                // 이미지를 드래그 시작될때
-                case DragEvent.ACTION_DRAG_STARTED:
-                    Log.d("DragClickListener", "ACTION_DRAG_STARTED");
-                    break;
-
-                // 드래그한 이미지를 옮길려는 지역으로 들어왔을때
-                case DragEvent.ACTION_DRAG_ENTERED:
-                    Log.d("DragClickListener", "ACTION_DRAG_ENTERED");
-                    // 이미지가 들어왔다는 것을 알려주기 위해 배경이미지 변경
-                    break;
-
-                // 드래그한 이미지가 영역을 빠져 나갈때
-                case DragEvent.ACTION_DRAG_EXITED:
-                    Log.d("DragClickListener", "ACTION_DRAG_EXITED");
-                    break;
-
-                // 이미지를 드래그해서 드랍시켰을때
-                case DragEvent.ACTION_DROP:
-                    Log.d("DragClickListener", "ACTION_DROP");
-
-                    if (v == findViewById(R.id.btn_play)) {
-                        View view = (View) event.getLocalState();
-
-                        view.setVisibility(View.VISIBLE);
-
-                    }
-                    break;
-
-                case DragEvent.ACTION_DRAG_ENDED:
-                    Log.d("DragClickListener", "ACTION_DRAG_ENDED");
-                    View view = (View) event.getLocalState();
-                    switch (item_selected) {
-                        case 1:
-                            if (pref.getValue("item1Cnt", 0) > 0) {
-                                pref.put("item1Cnt", pref.getValue("item1Cnt", 0) - 1);
-                                ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
-                                        pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
-                                        pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
-                                SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
-                                        pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
-                                        pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
-                                item1_cnt.setText(pref.getValue("item1Cnt", 0) + "");
-
-                            Toast.makeText(view.getContext(), "이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
-                                    + "'입니다.", Toast.LENGTH_SHORT).show();
-                            itemUsed = 1;
-                            edit_ans.setHint("이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
-                                    + "'입니다.");
-                            item1.setEnabled(false);
-                            item2.setEnabled(false);
-                            item3.setEnabled(false);
-                            item4.setEnabled(false);
-                            item1.setBackgroundResource(R.drawable.item_artist);
-                            item2.setBackgroundResource(R.drawable.item_onemore_no);
-                            item3.setBackgroundResource(R.drawable.item_onechar_no);
-                            item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
-
-                            } else {
-                                Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }
-                            break;
-                        case 2:
-                            if (pref.getValue("item2Cnt", 0) > 0) {
-                                if (life >= 3)
-                                    Toast.makeText(view.getContext(), "현재 생명력 만땅입니다!", Toast.LENGTH_SHORT).show();
-                                else {
-                                    pref.put("item2Cnt", pref.getValue("item2Cnt", 0) - 1);
-                                    ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
-                                            pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
-                                            pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
-                                    SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
-                                            pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
-                                            pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
-                                    item2_cnt.setText(pref.getValue("item2Cnt", 0) + "");
-
-                            itemUsed = 2;
-                            life++;
-                            lifeRefresh();
-                            item1.setEnabled(false);
-                            item2.setEnabled(false);
-                            item3.setEnabled(false);
-                            item4.setEnabled(false);
-                            item1.setBackgroundResource(R.drawable.item_artist_no);
-                            item2.setBackgroundResource(R.drawable.item_onemore);
-                            item3.setBackgroundResource(R.drawable.item_onechar_no);
-                            item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
-                                }
-                            } else {
-                                Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }
-                            break;
-                        case 3:
-                            if (pref.getValue("item3Cnt", 0) > 0) {
-                            pref.put("item3Cnt", pref.getValue("item3Cnt", 0) - 1);
-                            ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
-                                    pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
-                                    pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
-                            SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
-                                    pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
-                                    pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
-                            item1_cnt.setText(pref.getValue("item3Cnt", 0) + "");
-
-                            itemUsed = 3;
-                            Toast.makeText(view.getContext(), "곡 제목의 첫 글자는 '" +
-                                    textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
-                            edit_ans.setHint("곡 제목의 첫 글자는 '" +
-                                    textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.");
-
-                                item1.setEnabled(false);
-                                item2.setEnabled(false);
-                                item3.setEnabled(false);
-                                item4.setEnabled(false);
-                                item1.setBackgroundResource(R.drawable.item_artist_no);
-                                item2.setBackgroundResource(R.drawable.item_onemore_no);
-                                item3.setBackgroundResource(R.drawable.item_onechar);
-                                item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
-
-                            } else {
-                                Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }
-                            break;
-                        case 4:
-                            if (pref.getValue("item4Cnt", 0) > 0) {
-                                pref.put("item4Cnt", pref.getValue("item4Cnt", 0) - 1);
-                                ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
-                                        pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
-                                        pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
-                                SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
-                                        pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
-                                        pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
-                                item1_cnt.setText(pref.getValue("item4Cnt", 0) + "");
-                            Toast.makeText(view.getContext(), "3초 재생 적용!", Toast.LENGTH_SHORT).show();
-                            rotate.startAnimation(start_click_third);
-                            tictac.startAnimation(tic_click_third);
-                            musicPlay(3000);
-                            itemUsed = 4;
-                                item1.setEnabled(false);
-                                item2.setEnabled(false);
-                                item3.setEnabled(false);
-                                item4.setEnabled(false);
-                                item1.setBackgroundResource(R.drawable.item_artist_no);
-                                item2.setBackgroundResource(R.drawable.item_onemore_no);
-                                item3.setBackgroundResource(R.drawable.item_onechar_no);
-                                item4.setBackgroundResource(R.drawable.item_thirdsecond);
-
-                            } else {
-                                Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                            }
-                            break;
-                        case 0:
-                        default:
-                            Log.e("drag", "코드 이상이상");
-                    }
-                default:
-                    break;
-            }
-            return true;
-        }
-    }
 
 }

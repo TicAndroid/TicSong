@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -79,6 +80,8 @@ public class MainActivity extends Activity {
     TextView item3_cnt;
     @Bind(R.id.item4_cnt)
     TextView item4_cnt;
+    @Bind(R.id.profile_progressbar)
+    ProgressBar exp_bar;
 
     Animation button_anim, background_anim, juke_bold, juke_sport;
     @Bind(R.id.profile_img)
@@ -111,6 +114,8 @@ public class MainActivity extends Activity {
 
         img_juke_bold.startAnimation(juke_bold);
         img_juke_sport.startAnimation(juke_sport);
+
+
 
         ImageView star_background = (ImageView) findViewById(R.id.background_star);
         star_background.startAnimation(background_anim);

@@ -165,12 +165,13 @@
                         android:layout_weight="21"
                         android:gravity="center">
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/item1"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:background="@drawable/item_artist_no"
-                            android:enabled="false" />
+                            android:enabled="false"
+                            android:onClick="onButtonClick"/>
 
                         <TextView
                             android:id="@+id/item1_cnt"
@@ -197,12 +198,13 @@
                         android:layout_weight="21"
                         android:gravity="center">
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/item2"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:background="@drawable/item_onemore_no"
-                            android:enabled="false" />
+                            android:enabled="false"
+                            android:onClick="onButtonClick"/>
 
                         <TextView
                             android:id="@+id/item2_cnt"
@@ -229,12 +231,13 @@
                         android:layout_weight="21"
                         android:gravity="center">
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/item3"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:background="@drawable/item_onechar_no"
-                            android:enabled="false" />
+                            android:enabled="false"
+                            android:onClick="onButtonClick"/>
 
                         <TextView
                             android:id="@+id/item3_cnt"
@@ -262,12 +265,13 @@
                         android:layout_weight="21"
                         android:gravity="center">
 
-                        <ImageView
+                        <ImageButton
                             android:id="@+id/item4"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:background="@drawable/item_thirdsecond_no"
-                            android:enabled="false" />
+                            android:enabled="false"
+                            android:onClick="onButtonClick"/>
 
                         <TextView
                             android:id="@+id/item4_cnt"
