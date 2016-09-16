@@ -89,7 +89,7 @@ public class SettingActivity  extends Activity {
 
     @OnClick (R.id.btn_info)
     void infoClick() {
-
+        startActivity(new Intent(SettingActivity.this, InfoActivity.class));
     }
 
     @OnClick (R.id.btn_ask)
@@ -132,13 +132,17 @@ public class SettingActivity  extends Activity {
                 .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override
                     public void onClick(SweetAlertDialog sDialog) {
-                        ServerAccessModule.getInstance().deleteUser(pref.getValue("userId", "userId"));
-                        //이 부분에 탈퇴 확인 메소드 필요할듯(콜백을 받거나 서버 DB에 값이 남아있는지 확인해보거나)
-                        pref.remove("userId");
-                        Toast.makeText(SettingActivity.this, "탈퇴가 완료되었습니다.", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplication(), FBActivity.class);
-                        startActivity(intent);
-                        SettingActivity.this.finish();
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ServerAccessModule.getInstance().deleteUser(pref.getValue("userId", "userId"));
+                                pref.remove("userId");
+                                Toast.makeText(SettingActivity.this, "탈퇴가 완료되었습니다.", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(getApplication(), FBActivity.class);
+                                startActivity(intent);
+                                SettingActivity.this.finish();
+                            }
+                        }).start();
                     }
                 })
                 .show();

@@ -1,19 +1,49 @@
 package com.ticcorp.ticsong;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageButton;
 
+import com.tsengvn.typekit.TypekitContextWrapper;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * Created by JPark on 2016-09-05.
+ */
 public class OpenSourceActivity extends Activity {
 
+    @Bind(R.id.btn_exit)
+    ImageButton btn_exit;
+
+    public Animation btn_click;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(getWindow().FEATURE_NO_TITLE);
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opensource);
-        getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        ButterKnife.bind(this);
 
+        btn_click = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
+
+    }
+
+    @OnClick (R.id.btn_exit)
+    void exitClick() {
+        btn_exit.startAnimation(btn_click);
+        startActivity(new Intent(OpenSourceActivity.this, MainActivity.class));
+        OpenSourceActivity.this.finish();
+    }
+
+    // 폰트 적용
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 }

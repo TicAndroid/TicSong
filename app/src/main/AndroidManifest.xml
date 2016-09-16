@@ -79,9 +79,14 @@
         </activity>
 
         <activity
-            android:name=".OpenSourceActivity"
-            android:label="오픈소스공시화면">
+            android:name=".InfoActivity"
+            android:label="개인정보화면">
         </activity>
+
+        <activity
+            android:name=".OpenSourceActivity"
+            android:label="오픈소스화면">
+       </activity>
 
         <activity
             android:name=".RankingActivity"
@@ -94,13 +99,23 @@
         </activity>
 
         <activity
+            android:name=".AgreementActivity"
+            android:label="약관동의화면"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".ServerTestActivity"
             android:label="서버 테스트"
             android:screenOrientation="portrait">
-            <!--<intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
 
         <activity

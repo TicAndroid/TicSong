@@ -343,7 +343,7 @@ public final class R {
 		public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f020042;
 		public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020043;
 		public static final int abc_textfield_search_material = 0x7f020044;
-		public static final int ic_launcher = 0x7f0200a9;
+		public static final int ic_launcher = 0x7f0200aa;
 	}
 	public static final class id {
 		public static final int action_bar = 0x7f0c0060;
@@ -435,7 +435,7 @@ public final class R {
 		public static final int abc_screen_toolbar = 0x7f030015;
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f030016;
 		public static final int abc_search_view = 0x7f030017;
-		public static final int support_simple_spinner_dropdown_item = 0x7f03003b;
+		public static final int support_simple_spinner_dropdown_item = 0x7f03003d;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f050000;
@@ -453,7 +453,7 @@ public final class R {
 		public static final int abc_searchview_description_voice = 0x7f05000f;
 		public static final int abc_shareactionprovider_share_with = 0x7f050010;
 		public static final int abc_shareactionprovider_share_with_application = 0x7f050011;
-		public static final int app_name = 0x7f05004a;
+		public static final int app_name = 0x7f05004b;
 	}
 	public static final class style {
 		public static final int Base_TextAppearance_AppCompat = 0x7f08002f;

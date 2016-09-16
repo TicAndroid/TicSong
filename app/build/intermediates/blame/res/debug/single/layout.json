@@ -12,12 +12,12 @@
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_dialog_title_material.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
@@ -38,6 +38,10 @@
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_info.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_info.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/notification_media_cancel_action.xml",
@@ -78,6 +82,10 @@
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_large.xml",
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.15.0/res/layout/messenger_button_send_blue_large.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_agreement.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_agreement.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
@@ -172,12 +180,12 @@
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_search_view.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_splash.xml"
-    },
-    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_opensource.xml",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_opensource.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_splash.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
@@ -200,12 +208,12 @@
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_setting.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_setting.xml"
-    },
-    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_tutorial.xml",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_tutorial.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/activity_setting.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/layout/activity_setting.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/layout/com_facebook_login_fragment.xml",

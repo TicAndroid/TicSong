@@ -135,10 +135,26 @@ public class FBActivity extends Activity {
                                                 public void run() {
                                                     ServerAccessModule.getInstance().login(getApplicationContext(), id, name, 0);
 
-                                                    startActivity(new Intent(getApplication(), MainActivity.class));
-                                                    //startActivity(new Intent(getApplication(), ServerTestActivity.class));
-                                                    // 로그인 되면 현재 페이지 제거
-                                                    FBActivity.this.finish();
+                                                    switch (pref.getValue("platform", 0)) {
+                                                        case 0 : // 약관 동의를 하지 않은 경우
+                                                            startActivity(new Intent(getApplication(), AgreementActivity.class));
+                                                            FBActivity.this.finish();
+                                                            break;
+                                                        case 1 : // 약관 동의는 했으나 튜토리얼 보는 중에 앱을 종료한 경우
+                                                            startActivity(new Intent(getApplication(), TutorialActivity.class));
+                                                            FBActivity.this.finish();
+                                                            break;
+                                                        case 2 : // 약관 동의와 튜토리얼을 모두 완료한 경우
+                                                            startActivity(new Intent(getApplication(), MainActivity.class));
+                                                            //startActivity(new Intent(getApplication(), ServerTestActivity.class));
+                                                            // 로그인 되면 현재 페이지 제거
+                                                            FBActivity.this.finish();
+                                                            break;
+                                                        default:
+                                                            startActivity(new Intent(getApplication(), AgreementActivity.class));
+                                                            FBActivity.this.finish();
+                                                            break;
+                                                    }
                                                 }
                                             }).start();
 

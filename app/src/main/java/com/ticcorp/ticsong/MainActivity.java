@@ -229,6 +229,8 @@ public class MainActivity extends Activity {
 
         pref = pref.getInstance(this.getApplicationContext());
 
+        pref.put("platform", 2); // 약관 동의 후 튜토리얼까지 봄 확인(임시로 platform에 대입)
+
 
         //강제 레벨/경험치 주입
         /*
