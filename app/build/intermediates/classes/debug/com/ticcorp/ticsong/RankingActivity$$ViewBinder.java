@@ -32,6 +32,8 @@ public class RankingActivity$$ViewBinder<T extends com.ticcorp.ticsong.RankingAc
           target.changeClick();
         }
       });
+    view = finder.findRequiredView(source, 2131493025, "field 'ranking_standby'");
+    target.ranking_standby = finder.castView(view, 2131493025, "field 'ranking_standby'");
   }
 
   @Override public void unbind(T target) {
@@ -39,5 +41,6 @@ public class RankingActivity$$ViewBinder<T extends com.ticcorp.ticsong.RankingAc
     target.txt_friend = null;
     target.txt_yourRank = null;
     target.img_profile = null;
+    target.ranking_standby = null;
   }
 }

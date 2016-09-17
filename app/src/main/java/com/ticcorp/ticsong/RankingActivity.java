@@ -7,12 +7,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-<<<<<<< HEAD
+
 import android.view.View;
-=======
+
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
->>>>>>> 20093bfc8eed7b2202a0942c5835a167dca9b048
+
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;

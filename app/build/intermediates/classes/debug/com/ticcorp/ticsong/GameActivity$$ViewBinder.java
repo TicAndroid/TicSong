@@ -78,6 +78,42 @@ public class GameActivity$$ViewBinder<T extends com.ticcorp.ticsong.GameActivity
       });
     view = finder.findRequiredView(source, 2131493006, "field 'txt_voice_system'");
     target.txt_voice_system = finder.castView(view, 2131493006, "field 'txt_voice_system'");
+    view = finder.findRequiredView(source, 2131492989, "method 'onButtonClick'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onButtonClick(p0);
+        }
+      });
+    view = finder.findRequiredView(source, 2131492991, "method 'onButtonClick'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onButtonClick(p0);
+        }
+      });
+    view = finder.findRequiredView(source, 2131492993, "method 'onButtonClick'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onButtonClick(p0);
+        }
+      });
+    view = finder.findRequiredView(source, 2131492995, "method 'onButtonClick'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onButtonClick(p0);
+        }
+      });
     view = finder.findRequiredView(source, 2131492975, "method 'exitOkClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {

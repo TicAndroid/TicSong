@@ -42,6 +42,8 @@ public class MainActivity$$ViewBinder<T extends com.ticcorp.ticsong.MainActivity
     target.item3_cnt = finder.castView(view, 2131492994, "field 'item3_cnt'");
     view = finder.findRequiredView(source, 2131492996, "field 'item4_cnt'");
     target.item4_cnt = finder.castView(view, 2131492996, "field 'item4_cnt'");
+    view = finder.findRequiredView(source, 2131493017, "field 'exp_bar'");
+    target.exp_bar = finder.castView(view, 2131493017, "field 'exp_bar'");
     view = finder.findRequiredView(source, 2131493013, "field 'profile_img'");
     target.profile_img = finder.castView(view, 2131493013, "field 'profile_img'");
   }
@@ -56,6 +58,7 @@ public class MainActivity$$ViewBinder<T extends com.ticcorp.ticsong.MainActivity
     target.item2_cnt = null;
     target.item3_cnt = null;
     target.item4_cnt = null;
+    target.exp_bar = null;
     target.profile_img = null;
   }
 }
