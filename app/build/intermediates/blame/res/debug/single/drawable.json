@@ -4,6 +4,7 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\background_listen.png"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\profile_main_image.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\profile_main_image.png"
     },
@@ -18,14 +19,35 @@
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_send_background.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\com_facebook_button_send_background.xml"
+=======
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_fx.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_fx.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/icon_launcher.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/icon_launcher.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_edit_text_material.xml"
+>>>>>>> 89557582faf814c2ef1e8a2c41b15c8e6541b746
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_music.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\btn_music.png"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\warning_sigh.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\cn.pedant.sweetalert\\library\\1.3\\res\\drawable\\warning_sigh.xml"
+=======
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/item_onemore.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/item_onemore.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_on.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_on.png"
+>>>>>>> 89557582faf814c2ef1e8a2c41b15c8e6541b746
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_mic.png",
@@ -52,8 +74,17 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\tutorial_2.jpg"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\jukebox_bold.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\jukebox_bold.png"
+=======
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/about_us.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/about_us.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/jukebox_sport.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/jukebox_sport.png"
+>>>>>>> 89557582faf814c2ef1e8a2c41b15c8e6541b746
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
@@ -112,6 +143,7 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\cn.pedant.sweetalert\\library\\1.3\\res\\drawable\\red_button_background.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_check_material.xml"
     },
@@ -122,6 +154,18 @@
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background_main_juke.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\background_main_juke.png"
+=======
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/tutorial_4.jpg",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/tutorial_4.jpg"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/profile_ranking.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/profile_ranking.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/game_upstair_panel.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/game_upstair_panel.png"
+>>>>>>> 89557582faf814c2ef1e8a2c41b15c8e6541b746
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\txt_song.png",
@@ -452,6 +496,7 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\score_60.png"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\error_circle.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\cn.pedant.sweetalert\\library\\1.3\\res\\drawable\\error_circle.xml"
     },
@@ -462,6 +507,18 @@
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_tutorial.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\btn_tutorial.png"
+=======
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/tutorial_5.jpg",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/tutorial_5.jpg"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_background.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.15.0/res/drawable/com_facebook_auth_dialog_background.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/common_signin_btn_text_light.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/drawable/common_signin_btn_text_light.xml"
+>>>>>>> 89557582faf814c2ef1e8a2c41b15c8e6541b746
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_play.png",
@@ -516,6 +573,7 @@
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_info.png",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\drawable\\btn_info.png"
     },
@@ -526,6 +584,18 @@
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
         "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_borderless_material.xml"
+=======
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/warning_sigh.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/cn.pedant.sweetalert/library/1.3/res/drawable/warning_sigh.xml"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/item_artist_no.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/item_artist_no.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/txt_ranking.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/txt_ranking.png"
+>>>>>>> 89557582faf814c2ef1e8a2c41b15c8e6541b746
     },
     {
         "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_signin_btn_text_light.xml",
