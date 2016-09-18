@@ -96,9 +96,18 @@ public class SettingActivity  extends Activity {
 
     @OnClick (R.id.btn_ask)
     void askClick() {
-        Uri uri = Uri.parse("mailto:wemetinsummer@gmail.com");
-        startActivity(new Intent(Intent.ACTION_SEND, uri));
-
+        //Uri uri = Uri.parse("mailto:wemetinsummer@gmail.com");
+        //startActivity(new Intent(Intent.ACTION_SEND, uri));
+        Intent mailIntent = new Intent(Intent.ACTION_SEND);
+        mailIntent.setType("plain/text");
+        // 수신인 주소, 배열에 여러 주소를 넣을 경우 다수의 수신자에게 발송됨
+        String[] toString = { "wemetinsummer@gmail.com" };
+        mailIntent.putExtra(Intent.EXTRA_EMAIL, toString);
+        // 메일 제목 미리 지정하기
+        mailIntent.putExtra(Intent.EXTRA_SUBJECT, "[TicSong] 문의사항");
+        // 메일 내용 미리 지정하기
+        // mailIntent.putExtra(Intent.EXTRA_TEXT, "");
+        startActivity(mailIntent);
     }
 
     @OnClick (R.id.btn_aboutus)
