@@ -179,6 +179,7 @@
                                 android:weightSum="100">
 
                                 <ImageButton
+                                    android:id="@+id/btn_tutorial"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="20"
@@ -246,6 +247,7 @@
                                 android:weightSum="100">
 
                                 <ImageButton
+                                    android:id="@+id/btn_aboutus"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="20"
@@ -269,6 +271,7 @@
                                 android:weightSum="100">
 
                                 <ImageButton
+                                    android:id="@+id/btn_opensource"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="24"

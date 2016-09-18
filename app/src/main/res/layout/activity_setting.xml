@@ -97,8 +97,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="63" />
 
-                            <ImageButton
-                                android:id="@+id/setting_fx"
+                            <ImageButton android:id="@+id/setting_music"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="15"
@@ -124,7 +123,6 @@
                             android:weightSum="100">
 
                             <ImageButton
-                                android:id="@+id/btn_info"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="10dp"
@@ -137,12 +135,11 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="61" />
 
-                            <ImageButton
-                                android:id="@+id/btn_ask"
+                            <ImageButton android:id="@+id/setting_fx"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="15"
-                                android:background="@drawable/btn_off" />
+                                android:background="@drawable/btn_on" />
 
                         </LinearLayout>
 
@@ -201,7 +198,7 @@
                                 android:orientation="horizontal"
                                 android:weightSum="100">
 
-                                <ImageButton
+                                <ImageButton android:id="@+id/btn_info"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="60"
@@ -223,7 +220,7 @@
                                 android:orientation="horizontal"
                                 android:weightSum="100">
 
-                                <ImageButton
+                                <ImageButton android:id="@+id/btn_ask"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="18"
