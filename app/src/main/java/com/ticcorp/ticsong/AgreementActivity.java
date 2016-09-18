@@ -48,7 +48,7 @@ public class AgreementActivity extends Activity {
     @OnClick (R.id.btn_agreement)
     void agreementClick() {
         //btn_agreement.startAnimation(btn_click);
-        pref.put("platform", 1); // 약관 동의 함 확인(튜토리얼은 보지 않음, 임시로 platform에 대입)
+        pref.put("tutorial", 1); // 약관 동의 함 확인(튜토리얼은 보지 않음, 임시로 프리퍼런스에 대입)
         startActivity(new Intent(AgreementActivity.this, TutorialActivity.class));
         AgreementActivity.this.finish();
     }

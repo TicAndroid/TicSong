@@ -3,6 +3,7 @@ package com.ticcorp.ticsong;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.animation.Animation;
@@ -25,6 +26,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 public class SettingActivity  extends Activity {
 
     CustomPreference pref;
+    AboutUsDialog aboutUsDialog;
 
     @Bind(R.id.btn_exit)
     ImageButton btn_exit;
@@ -94,11 +96,15 @@ public class SettingActivity  extends Activity {
 
     @OnClick (R.id.btn_ask)
     void askClick() {
+        Uri uri = Uri.parse("mailto:wemetinsummer@gmail.com");
+        startActivity(new Intent(Intent.ACTION_SEND, uri));
 
     }
 
     @OnClick (R.id.btn_aboutus)
     void aboutUsClick() {
+        aboutUsDialog = new AboutUsDialog(this);
+        aboutUsDialog.show();
 
     }
 

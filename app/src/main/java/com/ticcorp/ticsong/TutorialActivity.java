@@ -44,7 +44,7 @@ public class TutorialActivity extends Activity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        if (pref.getValue("platform", 2) < 2 ) { // 튜토리얼을 처음 보는 경우
+        if (pref.getValue("tutorial", 2) < 2 ) { // 튜토리얼을 처음 보는 경우
             startActivity(new Intent(TutorialActivity.this, MainActivity.class));
             this.finish();
         } else { // 설정에서 튜토리얼로 들어온 경우
