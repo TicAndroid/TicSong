@@ -120,6 +120,8 @@ public class MainActivity extends Activity {
         ImageView star_background = (ImageView) findViewById(R.id.background_star);
         star_background.startAnimation(background_anim);
 
+
+        //세팅 버튼
         btn_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -327,9 +329,10 @@ public class MainActivity extends Activity {
     @OnClick(R.id.btn_play)
     void mainJokeBoxClicked() {
         Intent intent = new Intent(this, GameActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+        this.finish();
     }
 
     @OnClick(R.id.btn_ranking)

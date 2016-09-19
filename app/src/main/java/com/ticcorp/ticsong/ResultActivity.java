@@ -126,6 +126,15 @@ public class ResultActivity extends Activity {
         super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
     }
 
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
     public void setResult() {
         userId = pref.getValue("userId", "userId");
 
@@ -211,7 +220,7 @@ public class ResultActivity extends Activity {
             item_gift.setVisibility(View.VISIBLE);
             boom.setVisibility(View.INVISIBLE);
 
-            switch ((int) Math.random() * 4) {
+            switch ((int) (Math.random() * 4)) {
                 case 0 :
                     pref.put("item1Cnt", pref.getValue("item1Cnt", 0) + 1);
                     item.setBackgroundResource(R.drawable.item_artist);

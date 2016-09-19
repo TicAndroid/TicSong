@@ -184,7 +184,7 @@
                 android:layout_width="250dp"
                 android:layout_height="250dp"
                 android:layout_gravity="center"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="21dp"
                 android:background="@drawable/juke_tic" />
 
             <ImageView
@@ -195,6 +195,13 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginRight="5dp"
                 android:background="@drawable/new_star" />
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/juke_circle" />
 
         </FrameLayout>
 

@@ -48,7 +48,6 @@ public class TutorialActivity extends Activity {
             startActivity(new Intent(TutorialActivity.this, MainActivity.class));
             this.finish();
         } else { // 설정에서 튜토리얼로 들어온 경우
-            startActivity(new Intent(TutorialActivity.this, SettingActivity.class));
             this.finish();
         }
     }

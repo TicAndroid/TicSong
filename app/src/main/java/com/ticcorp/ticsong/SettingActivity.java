@@ -53,7 +53,7 @@ public class SettingActivity  extends Activity {
     @OnClick (R.id.btn_exit)
     void exitClick() {
         btn_exit.startAnimation(btn_click);
-        startActivity(new Intent(SettingActivity.this, MainActivity.class));
+        //startActivity(new Intent(SettingActivity.this, MainActivity.class));
         SettingActivity.this.finish();
     }
 
@@ -86,7 +86,6 @@ public class SettingActivity  extends Activity {
     @OnClick (R.id.btn_tutorial)
     void tutorialClick() {
         startActivity(new Intent(SettingActivity.this, TutorialActivity.class));
-        SettingActivity.this.finish();
     }
 
     @OnClick (R.id.btn_info)

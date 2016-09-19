@@ -37,7 +37,7 @@ public class OpenSourceActivity extends Activity {
     @OnClick (R.id.btn_exit)
     void exitClick() {
         btn_exit.startAnimation(btn_click);
-        startActivity(new Intent(OpenSourceActivity.this, MainActivity.class));
+        //startActivity(new Intent(OpenSourceActivity.this, MainActivity.class));
         OpenSourceActivity.this.finish();
     }
 

@@ -42,7 +42,7 @@ public class InfoActivity extends Activity {
     @OnClick (R.id.btn_exit)
     void exitClick() {
         btn_exit.startAnimation(btn_click);
-        startActivity(new Intent(InfoActivity.this, MainActivity.class));
+        //startActivity(new Intent(InfoActivity.this, MainActivity.class));
         InfoActivity.this.finish();
     }
 
