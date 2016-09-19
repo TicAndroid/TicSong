@@ -89,6 +89,9 @@ public class RankingActivity extends Activity {
         }
         */
 
+        txt_friend.setText(pref.getValue("friendCnt", 1) + " 친구 ");
+        txt_yourRank.setText("TOP 20 "); //자기가 몇 등인지 확인하는 방법이 없어 임시로 현재 랭킹 모드 표시
+
     }
 
     // 폰트 적용
@@ -103,6 +106,7 @@ public class RankingActivity extends Activity {
             mListView.setAdapter(mAdapter);
 
             if(modeFriend) {
+                txt_yourRank.setText("FRIENDS ");
                 ranking_standby.setVisibility(View.VISIBLE);
                 //Log.i("ticlog friendList", ServerAccessModule.FRIEND_LIST.toString());
                 //Log.i("ticlog friendListSize", ServerAccessModule.FRIEND_LIST.size() + "");
@@ -116,6 +120,7 @@ public class RankingActivity extends Activity {
                 ranking_standby.setVisibility(View.INVISIBLE);
 
             } else {
+                txt_yourRank.setText("TOP 20 ");
                 ranking_standby.setVisibility(View.VISIBLE);
                 //Log.i("ticlog TopRankerList", ServerAccessModule.TOP_RANKER_LIST.toString());
                 for(int i = 0; i < ServerAccessModule.TOP_RANKER_LIST.size(); i++) {
@@ -151,7 +156,7 @@ public class RankingActivity extends Activity {
 
             ServerAccessModule.getInstance().retrieveTopRanker(userId);
             Handler hd = new Handler();
-            hd.postDelayed(new rankinghandler(), 100);
+            hd.postDelayed(new rankinghandler(), 500);
 
         } else {
             if (pref.getValue("friendCnt", 1) > 0) {
@@ -172,7 +177,7 @@ public class RankingActivity extends Activity {
                 ServerAccessModule.getInstance().retrieveFriendList(userId, fList);
 
                 Handler hd = new Handler();
-                hd.postDelayed(new rankinghandler(), 100);
+                hd.postDelayed(new rankinghandler(), 500);
             } else { // 등록된 친구가 없을 때
                 Toast.makeText(RankingActivity.this, "게임에 가입한 친구가 없습니다, 친구를 초대해보세요!", Toast.LENGTH_SHORT).show();
             }

@@ -131,6 +131,7 @@ public class MainActivity extends Activity {
         btn_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                fxPlay(R.raw.btn_touch);
                 startActivity(new Intent(getApplication(), SettingActivity.class));
             }
         });

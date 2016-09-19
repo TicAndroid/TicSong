@@ -337,8 +337,7 @@
                     android:singleLine="true"
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF"
-                    android:textSize="15sp"
-                    android:visibility="gone"/>
+                    android:textSize="15sp" />
 
                 <Space
                     android:layout_width="0dp"

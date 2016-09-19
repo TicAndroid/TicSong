@@ -1,13 +1,16 @@
 package com.ticcorp.ticsong;
 
+import android.app.Application;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class ImageAdapter extends PagerAdapter {
 
@@ -20,7 +23,8 @@ public class ImageAdapter extends PagerAdapter {
             R.drawable.tutorial_2,
             R.drawable.tutorial_3,
             R.drawable.tutorial_4,
-            R.drawable.tutorial_5
+            R.drawable.tutorial_5,
+            0
     };
 
     ImageAdapter (Context context) {

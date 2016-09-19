@@ -55,7 +55,6 @@ public class OpenSourceActivity extends Activity {
     public void fxPlay(int target) {
         // 효과음 설정이 되어있을 경우 효과음 재생
         if (pref.getValue("setting_fx", true)) {
-            fxPlay(R.raw.btn_touch);
             MediaPlayer fxPlayer = new MediaPlayer();
             fxPlayer = MediaPlayer.create(OpenSourceActivity.this, target);
             fxPlayer.start();

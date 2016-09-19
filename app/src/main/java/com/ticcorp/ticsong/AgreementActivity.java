@@ -47,7 +47,7 @@ public class AgreementActivity extends Activity {
         pref = pref.getInstance(this.getApplicationContext());
         //btn_click = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
 
-        btn_exit.setVisibility(View.GONE); // 뒤로 버튼 감춤
+        btn_exit.setVisibility(View.INVISIBLE); // 뒤로 버튼 감춤
     }
 
     @OnClick (R.id.btn_agreement)

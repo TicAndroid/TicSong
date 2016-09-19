@@ -34,6 +34,35 @@ public class TutorialActivity extends Activity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
         ImageAdapter imageAdapter = new ImageAdapter(this);
         viewPager.setAdapter(imageAdapter);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                // 페이지가 스크롤 되는 동안 계속 실행, position은 현재 페이지
+                //Log.i("ticlog", "viewPager onPageScrolled " + position);
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                // 스크롤 시작할 때 한 번 실행, position은 목적지 페이지
+                //Log.i("ticlog", "viewPager onPageSelected " + position);
+                if (position == 5) {
+                    if (pref.getValue("tutorial", 2) < 2 ) { // 튜토리얼을 처음 보는 경우
+                        startActivity(new Intent(TutorialActivity.this, MainActivity.class));
+                        TutorialActivity.this.finish();
+                    } else { // 설정에서 튜토리얼로 들어온 경우
+                        TutorialActivity.this.finish();
+                    }
+                }
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                // 사라지고 생성되는 페이지 관련
+                //Log.i("ticlog", "viewPager onPageScrollStateChanged " + state);
+
+            }
+        });
 
         pref = pref.getInstance(this.getApplicationContext());
     }
