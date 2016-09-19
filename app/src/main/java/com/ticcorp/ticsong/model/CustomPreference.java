@@ -28,7 +28,15 @@ public class CustomPreference {
         SharedPreferences.Editor editor = pref.edit();
         editor.remove(key);
         editor.clear();
-        editor.commit();
+        editor.apply();
+    }
+
+    public void removeKey(String key) {
+        SharedPreferences pref = mContext.getSharedPreferences(PREF_NAME,
+                mContext.MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.remove(key);
+        editor.apply();
     }
 
     //여기서 put메서드 하나만 설명하면 어떤 키값을 가진 벨류를 사용할거다 이거야. 그러니깐
@@ -44,7 +52,7 @@ public class CustomPreference {
         SharedPreferences.Editor editor = pref.edit();
 
         editor.putString(key, value);
-        editor.commit();
+        editor.apply();
     }
 
     public void put(String key, int value) {
@@ -56,7 +64,7 @@ public class CustomPreference {
         SharedPreferences.Editor editor = pref.edit();
 
         editor.putInt(key, value);
-        editor.commit();
+        editor.apply();
     }
 
     public void put(String key, Boolean value) {
@@ -66,7 +74,7 @@ public class CustomPreference {
         SharedPreferences.Editor editor = pref.edit();
 
         editor.putBoolean(key, value);
-        editor.commit();
+        editor.apply();
     }
 
     public void put(String key, long value) {
@@ -76,7 +84,7 @@ public class CustomPreference {
         SharedPreferences.Editor editor = pref.edit();
 
         editor.putLong(key, value);
-        editor.commit();
+        editor.apply();
     }
     //그리고 put 메서드를 이용해서 데이터가 저장되면 getValue 메서드를 호출해서 그 값을 엑티비티 내에서 쓸수 가 있어.
 

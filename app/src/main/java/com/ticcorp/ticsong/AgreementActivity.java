@@ -3,8 +3,10 @@ package com.ticcorp.ticsong;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -54,6 +56,7 @@ public class AgreementActivity extends Activity {
     void agreementClick() {
         //btn_agreement.startAnimation(btn_click);
         pref.put("tutorial", 1); // 약관 동의 함 확인(튜토리얼은 보지 않음, 임시로 프리퍼런스에 대입)
+        Log.v("test"," "+pref.getValue("tutorial",-1));
         fxPlay(R.raw.btn_touch);
         startActivity(new Intent(AgreementActivity.this, TutorialActivity.class));
         AgreementActivity.this.finish();

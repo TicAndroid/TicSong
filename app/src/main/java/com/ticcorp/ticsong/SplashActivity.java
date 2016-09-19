@@ -51,7 +51,7 @@ public class SplashActivity extends Activity {
             // setting_fx 값이 true이거나 null이면(false가 아니면)
             pref.put("setting_fx", true);
         }
-
+        Log.v("test"," "+pref.getValue("tutorial",-1));
         new TedPermission(this)
                 .setPermissionListener(permissionlistener)
                 .setDeniedMessage("게임 진행을 위한 권한입니다.")

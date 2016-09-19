@@ -121,7 +121,7 @@ public class MainActivity extends Activity {
         img_juke_bold.startAnimation(juke_bold);
         img_juke_sport.startAnimation(juke_sport);
 
-
+        Log.v("test"," "+pref.getValue("tutorial",-1));
 
         ImageView star_background = (ImageView) findViewById(R.id.background_star);
         star_background.startAnimation(background_anim);

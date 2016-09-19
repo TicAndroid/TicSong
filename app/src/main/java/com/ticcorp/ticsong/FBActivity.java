@@ -5,14 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -72,7 +67,7 @@ public class FBActivity extends Activity {
 
         LoginManager.getInstance().logOut();
         if(!pref.getValue("userId", "userId").equals("userId")) {
-            pref.remove("userId");
+            pref.removeKey("userId");
         }
 
         callbackManager = CallbackManager.Factory.create();
@@ -139,23 +134,27 @@ public class FBActivity extends Activity {
                                                 public void run() {
                                                     ServerAccessModule.getInstance().login(getApplicationContext(), id, name, 0);
                                                     appClass.bgmPlay(R.raw.jellyfish_in_space);
-
+                                                    Log.v("test"," "+pref.getValue("tutorial",-1));
                                                     switch (pref.getValue("tutorial", -1)) {
                                                         case 0: // 약관 동의를 하지 않은 경우
+                                                            Log.v("test","test2");
                                                             startActivity(new Intent(getApplication(), AgreementActivity.class));
                                                             FBActivity.this.finish();
                                                             break;
                                                         case 1: // 약관 동의는 했으나 튜토리얼 보는 중에 앱을 종료한 경우
+                                                            Log.v("test","test3");
                                                             startActivity(new Intent(getApplication(), TutorialActivity.class));
                                                             FBActivity.this.finish();
                                                             break;
                                                         case 2: // 약관 동의와 튜토리얼을 모두 완료한 경우
+                                                            Log.v("test","test4");
                                                             startActivity(new Intent(getApplication(), MainActivity.class));
                                                             //startActivity(new Intent(getApplication(), ServerTestActivity.class));
                                                             // 로그인 되면 현재 페이지 제거
                                                             FBActivity.this.finish();
                                                             break;
                                                         default:
+                                                            Log.v("test","test5");
                                                             pref.put("tutorial", 0);
                                                             startActivity(new Intent(getApplication(), AgreementActivity.class));
                                                             FBActivity.this.finish();
