@@ -20,12 +20,16 @@ import java.util.ArrayList;
 
 public class TutorialActivity extends Activity {
 
+    ApplicationClass appClass;
+
     CustomPreference pref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
+
+        appClass = (ApplicationClass) getApplication();
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
         ImageAdapter imageAdapter = new ImageAdapter(this);
@@ -50,5 +54,17 @@ public class TutorialActivity extends Activity {
         } else { // 설정에서 튜토리얼로 들어온 경우
             this.finish();
         }
+    }
+
+    @Override
+    protected void onPause() { // 화면이 가려졌을 때
+        super.onPause();
+        appClass.bgmPause();
+    }
+
+    @Override
+    protected void onResume() { // 화면으로 돌아왔을 때
+        super.onResume();
+        appClass.bgmResume();
     }
 }

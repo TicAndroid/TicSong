@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class AgreementActivity$$ViewBinder<T extends com.ticcorp.ticsong.AgreementActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131492976, "field 'btn_agreement' and method 'agreementClick'");
-    target.btn_agreement = finder.castView(view, 2131492976, "field 'btn_agreement'");
+    view = finder.findRequiredView(source, 2131558512, "field 'btn_agreement' and method 'agreementClick'");
+    target.btn_agreement = finder.castView(view, 2131558512, "field 'btn_agreement'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -18,8 +18,8 @@ public class AgreementActivity$$ViewBinder<T extends com.ticcorp.ticsong.Agreeme
           target.agreementClick();
         }
       });
-    view = finder.findRequiredView(source, 2131492975, "field 'btn_exit'");
-    target.btn_exit = finder.castView(view, 2131492975, "field 'btn_exit'");
+    view = finder.findRequiredView(source, 2131558511, "field 'btn_exit'");
+    target.btn_exit = finder.castView(view, 2131558511, "field 'btn_exit'");
   }
 
   @Override public void unbind(T target) {

@@ -4,6 +4,7 @@ package com.ticcorp.ticsong;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -31,6 +32,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class RankingActivity extends Activity {
+
+    ApplicationClass appClass;
 
     private ListView mListView, aListView;
     private ListViewAdapter mAdapter, aAdapter; //가상
@@ -63,6 +66,8 @@ public class RankingActivity extends Activity {
         setContentView(R.layout.activity_ranking);
         ButterKnife.bind(this);
 
+        appClass = (ApplicationClass) getApplication();
+
         pref = pref.getInstance(this.getApplicationContext());
         userId = pref.getValue("userId", "userId");
 
@@ -71,7 +76,7 @@ public class RankingActivity extends Activity {
         mListView = (ListView) findViewById(R.id.list_rank);
         ServerAccessModule.getInstance().retrieveTopRanker(userId);
 
-        Log.i("Ticlog Rank", "userId : " + userId);
+        //Log.i("Ticlog Rank", "userId : " + userId);
 
         Handler hd = new Handler();
         hd.postDelayed(new rankinghandler(), 500);
@@ -99,8 +104,8 @@ public class RankingActivity extends Activity {
 
             if(modeFriend) {
                 ranking_standby.setVisibility(View.VISIBLE);
-                Log.i("ticlog friendList", ServerAccessModule.FRIEND_LIST.toString());
-                Log.i("ticlog friendListSize", ServerAccessModule.FRIEND_LIST.size() + "");
+                //Log.i("ticlog friendList", ServerAccessModule.FRIEND_LIST.toString());
+                //Log.i("ticlog friendListSize", ServerAccessModule.FRIEND_LIST.size() + "");
                 for(int i = 0; i < ServerAccessModule.FRIEND_LIST.size(); i++) {
                     mAdapter.addItem((i + 1) + "", "http://graph.facebook.com/" +
                                     ServerAccessModule.FRIEND_LIST.get(i).getUserId() + "/picture?type=large",
@@ -112,7 +117,7 @@ public class RankingActivity extends Activity {
 
             } else {
                 ranking_standby.setVisibility(View.VISIBLE);
-                Log.i("ticlog TopRankerList", ServerAccessModule.TOP_RANKER_LIST.toString());
+                //Log.i("ticlog TopRankerList", ServerAccessModule.TOP_RANKER_LIST.toString());
                 for(int i = 0; i < ServerAccessModule.TOP_RANKER_LIST.size(); i++) {
                     mAdapter.addItem((i + 1) + "", "http://graph.facebook.com/" +
                                     ServerAccessModule.TOP_RANKER_LIST.get(i).getUserId() + "/picture?type=large",
@@ -127,6 +132,7 @@ public class RankingActivity extends Activity {
 
     @OnClick(R.id.btn_exit)
     void exitClick() {
+        fxPlay(R.raw.btn_touch);
         btn_exit.startAnimation(btn_click);
         startActivity(new Intent(RankingActivity.this, MainActivity.class));
         RankingActivity.this.finish();
@@ -134,10 +140,11 @@ public class RankingActivity extends Activity {
 
     @OnClick(R.id.img_profile)
     void changeClick() {
+        fxPlay(R.raw.btn_touch);
         if(modeFriend) {
             // 전체 보기로 전환
             modeFriend = false;
-            Log.i("Ticlog Rank", "userId : " + userId);
+            //Log.i("Ticlog Rank", "userId : " + userId);
             for(int j = 0; j < mAdapter.getCount(); j++){
                 mAdapter.remove(j);
             }
@@ -150,18 +157,18 @@ public class RankingActivity extends Activity {
             if (pref.getValue("friendCnt", 1) > 0) {
                 // 친구 보기로 전환
                 modeFriend = true;
-                Log.i("Ticlog Rank", "userId : " + userId);
+                //Log.i("Ticlog Rank", "userId : " + userId);
                 for(int j = 0; j < mAdapter.getCount(); j++){
                     mAdapter.remove(j);
                 }
 
                 List<String> fList = new ArrayList<String>();
                 for (int i = 0; i < pref.getValue("friendCnt", 1); i++) {
-                    Log.i("Ticlog Rank", "friendCnt : " + pref.getValue("friendCnt", "friendCnt") + ", friendId" + i + " : " + pref.getValue("friendId" + i, "friendId" + i));
+                    //Log.i("Ticlog Rank", "friendCnt : " + pref.getValue("friendCnt", "friendCnt") + ", friendId" + i + " : " + pref.getValue("friendId" + i, "friendId" + i));
                     fList.add(pref.getValue("friendId" + i, "friendId" + i) + "");
                 }
 
-                Log.i("ticlog fList", fList.toString());
+                //Log.i("ticlog fList", fList.toString());
                 ServerAccessModule.getInstance().retrieveFriendList(userId, fList);
 
                 Handler hd = new Handler();
@@ -171,5 +178,34 @@ public class RankingActivity extends Activity {
             }
 
         }
+    }
+
+
+    public void fxPlay(int target) {
+        // 효과음 설정이 되어있을 경우 효과음 재생
+        if (pref.getValue("setting_fx", true)) {
+            MediaPlayer fxPlayer = new MediaPlayer();
+            fxPlayer = MediaPlayer.create(RankingActivity.this, target);
+            fxPlayer.start();
+            fxPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    mediaPlayer.release();
+                }
+            });
+        }
+    }
+
+
+    @Override
+    protected void onPause() { // 화면이 가려졌을 때
+        super.onPause();
+        appClass.bgmPause();
+    }
+
+    @Override
+    protected void onResume() { // 화면으로 돌아왔을 때
+        super.onResume();
+        appClass.bgmResume();
     }
 }

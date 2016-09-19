@@ -1,2 +1,0 @@
-CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\ticcorp\ticsong\InfoActivity.class
-CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\ticcorp\ticsong\ResultActivity.class

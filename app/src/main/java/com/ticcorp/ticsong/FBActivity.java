@@ -41,6 +41,8 @@ import java.util.Arrays;
 //Login Activity
 public class FBActivity extends Activity {
 
+    ApplicationClass appClass;
+
     private CallbackManager callbackManager;
     private Profile profile;
     String id = "";
@@ -59,6 +61,8 @@ public class FBActivity extends Activity {
         mContext = getApplicationContext();
         FacebookSdk.sdkInitialize(this.getApplicationContext());
         setContentView(R.layout.activity_login);
+
+        appClass = (ApplicationClass) getApplication();
 
         pref = pref.getInstance(this.getApplicationContext());
 
@@ -134,17 +138,18 @@ public class FBActivity extends Activity {
                                                 @Override
                                                 public void run() {
                                                     ServerAccessModule.getInstance().login(getApplicationContext(), id, name, 0);
+                                                    appClass.bgmPlay(R.raw.jellyfish_in_space);
 
-                                                    switch (pref.getValue("tutorial", "tutorial")) {
-                                                        case "0" : // 약관 동의를 하지 않은 경우
+                                                    switch (pref.getValue("tutorial", -1)) {
+                                                        case 0: // 약관 동의를 하지 않은 경우
                                                             startActivity(new Intent(getApplication(), AgreementActivity.class));
                                                             FBActivity.this.finish();
                                                             break;
-                                                        case "1" : // 약관 동의는 했으나 튜토리얼 보는 중에 앱을 종료한 경우
+                                                        case 1: // 약관 동의는 했으나 튜토리얼 보는 중에 앱을 종료한 경우
                                                             startActivity(new Intent(getApplication(), TutorialActivity.class));
                                                             FBActivity.this.finish();
                                                             break;
-                                                        case "2" : // 약관 동의와 튜토리얼을 모두 완료한 경우
+                                                        case 2: // 약관 동의와 튜토리얼을 모두 완료한 경우
                                                             startActivity(new Intent(getApplication(), MainActivity.class));
                                                             //startActivity(new Intent(getApplication(), ServerTestActivity.class));
                                                             // 로그인 되면 현재 페이지 제거
@@ -246,6 +251,19 @@ public class FBActivity extends Activity {
         });
 
     }
+
+    @Override
+    protected void onPause() { // 화면이 가려졌을 때
+        super.onPause();
+        appClass.bgmPause();
+    }
+
+    @Override
+    protected void onResume() { // 화면으로 돌아왔을 때
+        super.onResume();
+        appClass.bgmResume();
+    }
+
 
     // 폰트 적용
     @Override

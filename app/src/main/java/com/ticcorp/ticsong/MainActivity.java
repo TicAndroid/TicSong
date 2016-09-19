@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -55,9 +56,12 @@ import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 public class MainActivity extends Activity {
 
+    ApplicationClass appClass;
+
     // 테스트를 위한 계정 데이터 변수 부분
     public String user_name;
     public int user_id, user_lv, user_exp, next_exp, now_exp, required_exp;
+    public final int MAX_LEVEL = 99;
     public ArrayList<Integer> user_itemArray = new ArrayList<Integer>();
 
     private BackPressCloseHandler backPressCloseHandler;
@@ -103,6 +107,8 @@ public class MainActivity extends Activity {
 
         ButterKnife.bind(this);
 
+        appClass = (ApplicationClass) getApplication();
+
         setUserData();
 
         backPressCloseHandler = new BackPressCloseHandler(this);
@@ -128,6 +134,8 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(getApplication(), SettingActivity.class));
             }
         });
+
+        appClass.bgmPlay(R.raw.jellyfish_in_space);
 
 /*
         Button btn_friend = (Button) findViewById(R.id.btn_friend);
@@ -267,21 +275,27 @@ public class MainActivity extends Activity {
         profile_id.setText(user_name + " ");
         profile_level.setText(user_lv + " ");
 
-        next_exp = 0;
-        for(int i = 1; i <= user_lv; i++) { // 누적 경험치를 구하는 함수
-            if (i == user_lv) {
-                // 경험치바에 표시할 현재 경험치는 현재 누적 경험치에서 이전 레벨까지의 누적 경험치를 뺀 수치
-                now_exp = user_exp - next_exp;
+        if (user_lv < MAX_LEVEL) { // 최대 레벨 이하일 때
+            next_exp = 0;
+            for (int i = 1; i <= user_lv; i++) { // 누적 경험치를 구하는 함수
+                if (i == user_lv) {
+                    // 경험치바에 표시할 현재 경험치는 현재 누적 경험치에서 이전 레벨까지의 누적 경험치를 뺀 수치
+                    now_exp = user_exp - next_exp;
+                }
+                next_exp += getResources().getInteger(getResources().getIdentifier("lv" + i, "integer", MainActivity.this.getPackageName()));
+                Log.i("ticlog Main", "next_exp 계산중 : " + next_exp + "/" + i);
             }
-            next_exp += getResources().getInteger(getResources().getIdentifier("lv" + i, "integer", MainActivity.this.getPackageName()));
-            Log.i("ticlog Main", "next_exp 계산중 : " + next_exp + "/" + i);
+            required_exp = getResources().getInteger(getResources().getIdentifier("lv" + user_lv, "integer", MainActivity.this.getPackageName()));
+            // required_exp는 현재 레벨에서 다음 레벨로 가기 위한 요구 경험치, next_exp는 다음 레벨로 가기 위한 총 누적 경험치
+
+            profile_progressbar.setMax(required_exp);
+            profile_progressbar.setProgress(now_exp);
+
+            //Log.i("ticlog Main", user_name + " / Lv." + user_lv + " / " + now_exp + "(" + user_exp + ")/ " + required_exp + "(" + next_exp + ")");
+        } else { // 최대 레벨일 때
+            profile_progressbar.setMax(100);
+            profile_progressbar.setProgress(100);
         }
-        required_exp = getResources().getInteger(getResources().getIdentifier("lv" + user_lv, "integer", MainActivity.this.getPackageName()));
-        // required_exp는 현재 레벨에서 다음 레벨로 가기 위한 요구 경험치, next_exp는 다음 레벨로 가기 위한 총 누적 경험치
-
-        profile_progressbar.setMax(required_exp);
-        profile_progressbar.setProgress(now_exp);
-
         item1_cnt.setText(pref.getValue("item1Cnt", 0) + " ");
         item2_cnt.setText(pref.getValue("item2Cnt", 0) + "");
         item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
@@ -291,7 +305,6 @@ public class MainActivity extends Activity {
                 pref.getValue("userId", "userId") + "/picture?type=large").bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
                 error(R.drawable.profile_main_image).into(profile_img);
 
-        Log.i("ticlog Main", user_name + " / Lv." + user_lv + " / " + now_exp + "(" + user_exp + ")/ " + required_exp + "(" + next_exp + ")");
     }
 
     /*public static Bitmap getBitmapFromURL (String target) {
@@ -325,20 +338,49 @@ public class MainActivity extends Activity {
         }
     } */
 
+    public void fxPlay(int target) {
+        // 효과음 설정이 되어있을 경우 효과음 재생
+        if (pref.getValue("setting_fx", true)) {
+            MediaPlayer fxPlayer = new MediaPlayer();
+            fxPlayer = MediaPlayer.create(MainActivity.this, target);
+            fxPlayer.start();
+            fxPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    mediaPlayer.release();
+                }
+            });
+        }
+    }
+
     // JukeBox 이미지 클릭시 GameActivity로 이동
     @OnClick(R.id.btn_play)
     void mainJokeBoxClicked() {
+        fxPlay(R.raw.btn_touch);
         Intent intent = new Intent(this, GameActivity.class);
         //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        appClass.bgmStop();
         startActivity(intent);
         this.finish();
     }
 
     @OnClick(R.id.btn_ranking)
     void rankingClicked() {
+        fxPlay(R.raw.btn_touch);
         startActivity(new Intent(getApplication(), RankingActivity.class));
     }
 
+    @Override
+    protected void onPause() { // 화면이 가려졌을 때
+        super.onPause();
+        appClass.bgmPause();
+    }
+
+    @Override
+    protected void onResume() { // 화면으로 돌아왔을 때
+        super.onResume();
+        appClass.bgmResume();
+    }
 
 }

@@ -15,7 +15,7 @@
     \n
     \n\t제 1 조 #개인정보 수집에 대한 동의
     \n
-    \n\t우여만은 이용자들이 우여만의 개인정보 취급방침 또는 이용약관의 내용에 대하여 「동의」버튼 또는 「취소」버튼을 클릭할 수 있는 절차를 마련하여, 「동의」버튼을 클릭하면 개인정보 수집에 대해 동의한 것으로 봅니다.
+    \n\t우여만은 이용자들이 우여만의 개인정보 취급방침 또는 이용약관의 내용에 대하여 「동의」 버튼을 클릭하는 절차를 마련하며, 클릭 시 개인정보 수집에 대해 동의한 것으로 봅니다.
     \n
     \n\t제 2조 #개인정보의 수집 및 이용 목적
     \n
@@ -101,45 +101,182 @@
     </string>
     <string name="opensource_title">오픈소스 공시</string>
     <string name="opensource_txt">
-        \n\tCopyright © 2016 우리는여름에만났다 All Rights Reserved
+        \n\t<b>Copyright © 2016 우리는여름에만났다 All Rights Reserved</b>
         \n
         \n
-        \n\t- Library
+        \n\t<b><u>- Library</u></b>
         \n
-        \n\tNAVER OpenAPI 음성인식
+        \n\t<b><u>페이스북 로그인 API</u></b>
+        \n\thttps://developers.facebook.com
+        \n
+        \n\t<b><u>NAVER OpenAPI 음성인식</u></b>
         \n\thttps://developers.naver.com
         \n
-        \n\tSoundCloud API
-        \n\thttps://developers.soundcloud.com/
+        \n\t<b><u>SoundCloud API</u></b>
+        \n\thttps://developers.soundcloud.com
         \n
-        \n\tJSON
+        \n\t<b><u>Gson</u></b>
+        \n\thttps://github.com/google/gson
+        \n\tCopyright 2008 Google Inc.
         \n
-        \n\tVolley
+        \n\tLicensed under the Apache License, Version 2.0 (the "License");
+        \n\tyou may not use this file except in compliance with the License.
+        \n\tYou may obtain a copy of the License at
         \n
-        \n\tGlide
+        \n\thttp://www.apache.org/licenses/LICENSE-2.0
+        \n
+        \n\tUnless required by applicable law or agreed to in writing, software
+        \n\tdistributed under the License is distributed on an "AS IS" BASIS,
+        \n\tWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        \n\tSee the License for the specific language governing permissions and
+        \n\tlimitations under the License.
+        \n
+        \n\t<b><u>Volley</u></b>
+        \n\thttps://github.com/mcxiaoke/android-volley
+        \n\tCopyright (C) 2014,2015,2016 Xiaoke Zhang
+        \n\tCopyright (C) 2011 The Android Open Source Project
+        \n
+        \n\tLicensed under the Apache License, Version 2.0 (the "License");
+        \n\tyou may not use this file except in compliance with the License.
+        \n\tYou may obtain a copy of the License at
+        \n
+        \n\thttp://www.apache.org/licenses/LICENSE-2.0
+        \n
+        \n\tUnless required by applicable law or agreed to in writing, software
+        \n\tdistributed under the License is distributed on an "AS IS" BASIS,
+        \n\tWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        \n\tSee the License for the specific language governing permissions and
+        \n\tlimitations under the License.
+        \n
+        \n\t<b><u>Glide</u></b>
         \n\thttps://github.com/bumptech/glide
         \n\tBSD, part MIT and Apache 2.0. See the LICENSE file for details. https://github.com/bumptech/glide/blob/master/LICENSE
         \n
-        \n\tGlide-Transformations
+        \n\t<b><u>Glide-Transformations</u></b>
+        \n\thttps://github.com/wasabeef/glide-transformations
+        \n\tCopyright 2015 Wasabeef
         \n
-        \n\tButterKnife
+        \n\tLicensed under the Apache License, Version 2.0 (the "License");
+        \n\tyou may not use this file except in compliance with the License.
+        \n\tYou may obtain a copy of the License at
         \n
-        \n\tRetrofit
+        \n\thttp://www.apache.org/licenses/LICENSE-2.0
         \n
-        \n\tSweetAlert
+        \n\tUnless required by applicable law or agreed to in writing, software
+        \n\tdistributed under the License is distributed on an "AS IS" BASIS,
+        \n\tWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        \n\tSee the License for the specific language governing permissions and
+        \n\tlimitations under the License.
         \n
-        \n\tTedPermission
+        \n\t<b><u>ButterKnife</u></b>
+        \n\thttp://jakewharton.github.io/butterknife/
+        \n\tCopyright 2013 Jake Wharton
         \n
-        \n\tTypeKit
+        \n\tLicensed under the Apache License, Version 2.0 (the "License");
+        \n\tyou may not use this file except in compliance with the License.
+        \n\tYou may obtain a copy of the License at
         \n
-        \n\t- Font
+        \n\thttp://www.apache.org/licenses/LICENSE-2.0
         \n
-        \n\t나눔바른고딕 Bold
+        \n\tUnless required by applicable law or agreed to in writing, software
+        \n\tdistributed under the License is distributed on an "AS IS" BASIS,
+        \n\tWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        \n\tSee the License for the specific language governing permissions and
+        \n\tlimitations under the License.
         \n
-        \n\tExo
+        \n\t<b><u>Retrofit</u></b>
+        \n\thttp://square.github.io/retrofit/
+        \n
+        \n\tCopyright 2013 Square, Inc.
+        \n
+        \n\tLicensed under the Apache License, Version 2.0 (the "License");
+        \n\tyou may not use this file except in compliance with the License.
+        \n\tYou may obtain a copy of the License at
+        \n
+        \n\thttp://www.apache.org/licenses/LICENSE-2.0
+        \n
+        \n\tUnless required by applicable law or agreed to in writing, software
+        \n\tdistributed under the License is distributed on an "AS IS" BASIS,
+        \n\tWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        \n\tSee the License for the specific language governing permissions and
+        \n\tlimitations under the License.
+        \n
+        \n\t<b><u>SweetAlert</u></b>
+        \n\thttps://github.com/pedant/sweet-alert-dialog
+        \n\tThe MIT License (MIT)
+        \n
+        \n\tCopyright (c) 2014 Pedant(http://pedant.cn)
+        \n
+        \n\tPermission is hereby granted, free of charge, to any person obtaining a copy
+        \n\tof this software and associated documentation files (the "Software"), to deal
+        \n\tin the Software without restriction, including without limitation the rights
+        \n\tto use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        \n\tcopies of the Software, and to permit persons to whom the Software is
+        \n\tfurnished to do so, subject to the following conditions:
+        \n
+        \n\tThe above copyright notice and this permission notice shall be included in all
+        \n\tcopies or substantial portions of the Software.
+        \n
+        \n\tTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        \n\tIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        \n\tFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        \n\tAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        \n\tLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        \n\tOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        \n\tSOFTWARE.
+        \n
+        \n\t<b><u>TedPermission</u></b>
+        \n\thttps://github.com/ParkSangGwon/TedPermission
+        \n\tCopyright 2016 Ted Park
+        \n
+        \n\tLicensed under the Apache License, Version 2.0 (the "License");
+        \n\tyou may not use this file except in compliance with the License.
+        \n\tYou may obtain a copy of the License at
+        \n
+        \n\thttp://www.apache.org/licenses/LICENSE-2.0
+        \n
+        \n\tUnless required by applicable law or agreed to in writing, software
+        \n\tdistributed under the License is distributed on an "AS IS" BASIS,
+        \n\tWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        \n\tSee the License for the specific language governing permissions and
+        \n\tlimitations under the License.
+        \n
+        \n\t<b><u>TypeKit</u></b>
+        \n\thttps://github.com/tsengvn/typekit
+        \n\tCopyright (c) 2015 Hien Ngo
+        \n
+        \n\tLicensed under the Apache License, Version 2.0 (the "License");
+        \n\tyou may not use this file except in compliance with the License.
+        \n\tYou may obtain a copy of the License at
+        \n
+        \n\thttp://www.apache.org/licenses/LICENSE-2.0
+        \n
+        \n\tUnless required by applicable law or agreed to in writing, software
+        \n\tdistributed under the License is distributed on an "AS IS" BASIS,
+        \n\tWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        \n\tSee the License for the specific language governing permissions and
+        \n\tlimitations under the License.
+        \n
+        \n
+        \n\t<b><u>- Font</u></b>
+        \n
+        \n\t<b><u>나눔바른고딕 Bold</u></b>
+        \n\thttp://hangeul.naver.com/
+        \n
+        \n\t<b><u>Exo</u></b>
+        \n\thttp://ndiscovered.com
+        \n\tCopyright (c) 2011 Natanael Gama (exo@ndiscovered.com), with Reserved Font Name "Exo"
+        \n
+        \n\tThis Font Software is licensed under the SIL Open Font License, Version 1.1.
+        \n\tThis license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
         \n
     </string>
     <string name="agreement_title">이용약관 확인</string>
 
-    <string name="result">"대단한 실력이시네요~! 혹시 절대음감...?"</string>
+    <string name="result">"대단한 실력이시네요~!\n혹시 절대음감...?"</string>
+    <string name="result_1">아직 많이 부족해요...\n조금 더 노력해봐요~</string>
+    <string name="result_2">아쉽다...\n다음엔 더 잘할 수 있을 거에요!</string>
+    <string name="result_3">잘하시네요~ 굿굿!</string>
+    <string name="result_4">대단해요!\n당신의 귀는 절대음감을 넘은 황금귀...?</string>
+    <string name="result_5">대박! 완벽해요!\n더 어려운 곡으로 업데이트 해야겠는데요?</string>
 </resources>

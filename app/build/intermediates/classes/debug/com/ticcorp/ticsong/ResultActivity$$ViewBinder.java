@@ -8,11 +8,13 @@ import butterknife.ButterKnife.ViewBinder;
 public class ResultActivity$$ViewBinder<T extends com.ticcorp.ticsong.ResultActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131493036, "field 'score'");
-    target.score = finder.castView(view, 2131493036, "field 'score'");
-    view = finder.findRequiredView(source, 2131493037, "field 'level'");
-    target.level = finder.castView(view, 2131493037, "field 'level'");
-    view = finder.findRequiredView(source, 2131493041, "method 'shareClick'");
+    view = finder.findRequiredView(source, 2131558572, "field 'score'");
+    target.score = finder.castView(view, 2131558572, "field 'score'");
+    view = finder.findRequiredView(source, 2131558564, "field 'txt_result'");
+    target.txt_result = finder.castView(view, 2131558564, "field 'txt_result'");
+    view = finder.findRequiredView(source, 2131558573, "field 'level'");
+    target.level = finder.castView(view, 2131558573, "field 'level'");
+    view = finder.findRequiredView(source, 2131558577, "method 'shareClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -21,7 +23,7 @@ public class ResultActivity$$ViewBinder<T extends com.ticcorp.ticsong.ResultActi
           target.shareClick();
         }
       });
-    view = finder.findRequiredView(source, 2131493040, "method 'mainClick'");
+    view = finder.findRequiredView(source, 2131558576, "method 'mainClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -34,6 +36,7 @@ public class ResultActivity$$ViewBinder<T extends com.ticcorp.ticsong.ResultActi
 
   @Override public void unbind(T target) {
     target.score = null;
+    target.txt_result = null;
     target.level = null;
   }
 }

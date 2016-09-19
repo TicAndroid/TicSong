@@ -3,6 +3,7 @@ package com.ticcorp.ticsong;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.animation.Animation;
@@ -24,6 +25,10 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
  */
 public class InfoActivity extends Activity {
 
+    ApplicationClass appClass;
+
+    CustomPreference pref;
+
     @Bind(R.id.btn_exit)
     ImageButton btn_exit;
 
@@ -35,15 +40,47 @@ public class InfoActivity extends Activity {
         setContentView(R.layout.activity_info);
         ButterKnife.bind(this);
 
+        appClass = (ApplicationClass) getApplication();
+        pref = pref.getInstance(this.getApplicationContext());
+
         btn_click = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
 
     }
 
     @OnClick (R.id.btn_exit)
     void exitClick() {
+        fxPlay(R.raw.btn_touch);
         btn_exit.startAnimation(btn_click);
         //startActivity(new Intent(InfoActivity.this, MainActivity.class));
         InfoActivity.this.finish();
+    }
+
+
+    public void fxPlay(int target) {
+        // 효과음 설정이 되어있을 경우 효과음 재생
+        if (pref.getValue("setting_fx", true)) {
+            MediaPlayer fxPlayer = new MediaPlayer();
+            fxPlayer = MediaPlayer.create(InfoActivity.this, target);
+            fxPlayer.start();
+            fxPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    mediaPlayer.release();
+                }
+            });
+        }
+    }
+
+    @Override
+    protected void onPause() { // 화면이 가려졌을 때
+        super.onPause();
+        appClass.bgmPause();
+    }
+
+    @Override
+    protected void onResume() { // 화면으로 돌아왔을 때
+        super.onResume();
+        appClass.bgmResume();
     }
 
     // 폰트 적용

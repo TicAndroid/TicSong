@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class SettingActivity$$ViewBinder<T extends com.ticcorp.ticsong.SettingActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131492975, "field 'btn_exit' and method 'exitClick'");
-    target.btn_exit = finder.castView(view, 2131492975, "field 'btn_exit'");
+    view = finder.findRequiredView(source, 2131558511, "field 'btn_exit' and method 'exitClick'");
+    target.btn_exit = finder.castView(view, 2131558511, "field 'btn_exit'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -18,8 +18,8 @@ public class SettingActivity$$ViewBinder<T extends com.ticcorp.ticsong.SettingAc
           target.exitClick();
         }
       });
-    view = finder.findRequiredView(source, 2131493049, "field 'setting_music' and method 'settingMusicClick'");
-    target.setting_music = finder.castView(view, 2131493049, "field 'setting_music'");
+    view = finder.findRequiredView(source, 2131558585, "field 'setting_music' and method 'settingMusicClick'");
+    target.setting_music = finder.castView(view, 2131558585, "field 'setting_music'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -28,8 +28,8 @@ public class SettingActivity$$ViewBinder<T extends com.ticcorp.ticsong.SettingAc
           target.settingMusicClick();
         }
       });
-    view = finder.findRequiredView(source, 2131493050, "field 'setting_fx' and method 'settingFxClick'");
-    target.setting_fx = finder.castView(view, 2131493050, "field 'setting_fx'");
+    view = finder.findRequiredView(source, 2131558586, "field 'setting_fx' and method 'settingFxClick'");
+    target.setting_fx = finder.castView(view, 2131558586, "field 'setting_fx'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -38,7 +38,7 @@ public class SettingActivity$$ViewBinder<T extends com.ticcorp.ticsong.SettingAc
           target.settingFxClick();
         }
       });
-    view = finder.findRequiredView(source, 2131493051, "method 'tutorialClick'");
+    view = finder.findRequiredView(source, 2131558587, "method 'tutorialClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -47,7 +47,7 @@ public class SettingActivity$$ViewBinder<T extends com.ticcorp.ticsong.SettingAc
           target.tutorialClick();
         }
       });
-    view = finder.findRequiredView(source, 2131493052, "method 'infoClick'");
+    view = finder.findRequiredView(source, 2131558588, "method 'infoClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -56,7 +56,7 @@ public class SettingActivity$$ViewBinder<T extends com.ticcorp.ticsong.SettingAc
           target.infoClick();
         }
       });
-    view = finder.findRequiredView(source, 2131493053, "method 'askClick'");
+    view = finder.findRequiredView(source, 2131558589, "method 'askClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -65,7 +65,7 @@ public class SettingActivity$$ViewBinder<T extends com.ticcorp.ticsong.SettingAc
           target.askClick();
         }
       });
-    view = finder.findRequiredView(source, 2131493054, "method 'aboutUsClick'");
+    view = finder.findRequiredView(source, 2131558590, "method 'aboutUsClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -74,7 +74,7 @@ public class SettingActivity$$ViewBinder<T extends com.ticcorp.ticsong.SettingAc
           target.aboutUsClick();
         }
       });
-    view = finder.findRequiredView(source, 2131493055, "method 'openSourceClick'");
+    view = finder.findRequiredView(source, 2131558591, "method 'openSourceClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -83,7 +83,7 @@ public class SettingActivity$$ViewBinder<T extends com.ticcorp.ticsong.SettingAc
           target.openSourceClick();
         }
       });
-    view = finder.findRequiredView(source, 2131493044, "method 'logoutClick'");
+    view = finder.findRequiredView(source, 2131558580, "method 'logoutClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -92,7 +92,7 @@ public class SettingActivity$$ViewBinder<T extends com.ticcorp.ticsong.SettingAc
           target.logoutClick();
         }
       });
-    view = finder.findRequiredView(source, 2131493056, "method 'withdrawClick'");
+    view = finder.findRequiredView(source, 2131558592, "method 'withdrawClick'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

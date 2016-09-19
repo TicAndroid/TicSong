@@ -3,6 +3,7 @@ package com.ticcorp.ticsong;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +26,8 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
  */
 public class SettingActivity  extends Activity {
 
+    ApplicationClass appClass;
+
     CustomPreference pref;
     AboutUsDialog aboutUsDialog;
 
@@ -43,6 +46,8 @@ public class SettingActivity  extends Activity {
         setContentView(R.layout.activity_setting);
         ButterKnife.bind(this);
 
+        appClass = (ApplicationClass) getApplication();
+
         pref = pref.getInstance(this.getApplicationContext());
 
         btn_click = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
@@ -52,6 +57,7 @@ public class SettingActivity  extends Activity {
 
     @OnClick (R.id.btn_exit)
     void exitClick() {
+        fxPlay(R.raw.btn_touch);
         btn_exit.startAnimation(btn_click);
         //startActivity(new Intent(SettingActivity.this, MainActivity.class));
         SettingActivity.this.finish();
@@ -59,14 +65,17 @@ public class SettingActivity  extends Activity {
 
     @OnClick (R.id.setting_music)
     void settingMusicClick() {
+        fxPlay(R.raw.btn_touch);
         if (pref.getValue("setting_music", true)) {
             pref.put("setting_music", false);
             Log.i("ticlog", "setting_music Changed : " + pref.getValue("setting_music", true));
             setting_music.setBackgroundResource(R.drawable.btn_off);
+            appClass.bgmStop();
         } else {
             pref.put("setting_music", true);
             Log.i("ticlog", "setting_music Changed : " + pref.getValue("setting_music", true));
             setting_music.setBackgroundResource(R.drawable.btn_on);
+            appClass.bgmPlay(R.raw.jellyfish_in_space);
         }
     }
 
@@ -77,6 +86,7 @@ public class SettingActivity  extends Activity {
             Log.i("ticlog", "setting_fx Changed : " + pref.getValue("setting_fx", true));
             setting_fx.setBackgroundResource(R.drawable.btn_off);
         } else {
+            fxPlay(R.raw.btn_touch);
             pref.put("setting_fx", true);
             Log.i("ticlog", "setting_fx Changed : " + pref.getValue("setting_fx", true));
             setting_fx.setBackgroundResource(R.drawable.btn_on);
@@ -85,18 +95,19 @@ public class SettingActivity  extends Activity {
 
     @OnClick (R.id.btn_tutorial)
     void tutorialClick() {
+        fxPlay(R.raw.btn_touch);
         startActivity(new Intent(SettingActivity.this, TutorialActivity.class));
     }
 
     @OnClick (R.id.btn_info)
     void infoClick() {
+        fxPlay(R.raw.btn_touch);
         startActivity(new Intent(SettingActivity.this, InfoActivity.class));
     }
 
     @OnClick (R.id.btn_ask)
     void askClick() {
-        //Uri uri = Uri.parse("mailto:wemetinsummer@gmail.com");
-        //startActivity(new Intent(Intent.ACTION_SEND, uri));
+        fxPlay(R.raw.btn_touch);
         Intent mailIntent = new Intent(Intent.ACTION_SEND);
         mailIntent.setType("plain/text");
         // 수신인 주소, 배열에 여러 주소를 넣을 경우 다수의 수신자에게 발송됨
@@ -111,6 +122,7 @@ public class SettingActivity  extends Activity {
 
     @OnClick (R.id.btn_aboutus)
     void aboutUsClick() {
+        fxPlay(R.raw.btn_touch);
         aboutUsDialog = new AboutUsDialog(this);
         aboutUsDialog.show();
 
@@ -118,13 +130,14 @@ public class SettingActivity  extends Activity {
 
     @OnClick (R.id.btn_opensource)
     void openSourceClick() {
+        fxPlay(R.raw.btn_touch);
         startActivity(new Intent(SettingActivity.this, OpenSourceActivity.class));
     }
 
     @OnClick (R.id.btn_logout)
     void logoutClick() {
         // 로그아웃 임시 토스트 (후에 페이스북 버튼 로그아웃 기능 붙일 것)
-
+        fxPlay(R.raw.btn_touch);
         Toast.makeText(SettingActivity.this, "Facebook 앱에서 로그아웃 해주세요.", Toast.LENGTH_LONG).show();
     }
 
@@ -140,12 +153,14 @@ public class SettingActivity  extends Activity {
                 .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override
                     public void onClick(SweetAlertDialog sDialog) {
+                        fxPlay(R.raw.btn_touch);
                         sDialog.cancel();
                     }
                 })
                 .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override
                     public void onClick(SweetAlertDialog sDialog) {
+                        fxPlay(R.raw.btn_touch);
                         new Thread(new Runnable() {
                             @Override
                             public void run() {
@@ -173,6 +188,33 @@ public class SettingActivity  extends Activity {
         } else {
             setting_fx.setBackgroundResource(R.drawable.btn_off);
         }
+    }
+
+    public void fxPlay(int target) {
+        // 효과음 설정이 되어있을 경우 효과음 재생
+        if (pref.getValue("setting_fx", true)) {
+            MediaPlayer fxPlayer = new MediaPlayer();
+            fxPlayer = MediaPlayer.create(SettingActivity.this, target);
+            fxPlayer.start();
+            fxPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    mediaPlayer.release();
+                }
+            });
+        }
+    }
+
+    @Override
+    protected void onPause() { // 화면이 가려졌을 때
+        super.onPause();
+        appClass.bgmPause();
+    }
+
+    @Override
+    protected void onResume() { // 화면으로 돌아왔을 때
+        super.onResume();
+        appClass.bgmResume();
     }
 
     // 폰트 적용

@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -48,7 +49,9 @@ import jp.wasabeef.glide.transformations.CropCircleTransformation;
  */
 public class ResultActivity extends Activity {
 
-    public final int MAX_LEVEL = 10; // 최대 레벨 설정
+    ApplicationClass appClass;
+
+    public final int MAX_LEVEL = 99; // 최대 레벨 설정
 
     public CustomPreference pref;
     public int userExp, userLevel, nextExp, nowExp, requiredExp;
@@ -66,24 +69,23 @@ public class ResultActivity extends Activity {
 
     @Bind(R.id.score)
     TextView score;
-    /*
-    @Bind(R.id.exp)
-    TextView exp;
-    */
+
+    @Bind(R.id.txt_result)
+    TextView txt_result;
+
     @Bind(R.id.level)
     TextView level;
 
     @OnClick(R.id.btn_share)
     void shareClick() {
+
+        fxPlay(R.raw.btn_touch);
         shareScreenshot();
     }
 
     @OnClick(R.id.btn_main)
     void mainClick() {
-        /*pref.remove("score");
-        for(int i = 1; i <= 5; i++) {
-            pref.remove("correct" + i);
-        }*/
+        fxPlay(R.raw.btn_touch);
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -168,8 +170,6 @@ public class ResultActivity extends Activity {
 
         userExp = pref.getValue("exp", 0);
         userLevel = pref.getValue("userLevel", 1);
-        //경험치 자동 200씩 추가
-        //userExp = userExp + pref.getValue("score", 0) + 200;
         userExp = userExp + pref.getValue("score", 0);
 
         setLevel();
@@ -190,66 +190,93 @@ public class ResultActivity extends Activity {
         level.setText(userLevel + " ");
 
 
-        nextExp = 0;
-        for(int i = 1; i <= userLevel; i++) { // 누적 경험치를 구하는 함수
-            if (i == userLevel) {
-                // 경험치바에 표시할 현재 경험치는 현재 누적 경험치에서 이전 레벨까지의 누적 경험치를 뺀 수치
-                nowExp = userExp - nextExp;
-            }
-            nextExp += getResources().getInteger(getResources().getIdentifier("lv" + i, "integer", ResultActivity.this.getPackageName()));
-            Log.i("ticlog Main", "next_exp 계산중 : " + nextExp + "/" + i);
+        if (pref.getValue("score", 0) >= 500) {
+            fxPlay(R.raw.result_great);
+            fxPlay(R.raw.applause);
+            txt_result.setText(R.string.result_5);
+        } else if ((pref.getValue("score", 0) >= 400)) {
+            fxPlay(R.raw.result_great);
+            fxPlay(R.raw.applause);
+            txt_result.setText(R.string.result_4);
+        } else if ((pref.getValue("score", 0) >= 200)) {
+            fxPlay(R.raw.result_great);
+            fxPlay(R.raw.applause);
+            txt_result.setText(R.string.result_3);
+        } else if ((pref.getValue("score", 0) >= 100)) {
+            fxPlay(R.raw.result_good);
+            fxPlay(R.raw.applause);
+            txt_result.setText(R.string.result_2);
+        } else {
+            fxPlay(R.raw.result_bad);
+            txt_result.setText(R.string.result_1);
         }
-        requiredExp = getResources().getInteger(getResources().getIdentifier("lv" + userLevel, "integer", ResultActivity.this.getPackageName()));
-        // requiredExp는 현재 레벨에서 다음 레벨로 가기 위한 요구 경험치, nextExp는 다음 레벨로 가기 위한 총 누적 경험치(setLevel에서 사용된 변수 초기화 후 사용)
 
-        profile_progressbar.setMax(requiredExp);
-        profile_progressbar.setProgress(nowExp);
+        if (userLevel < MAX_LEVEL) { // 최대 레벨 이하일 때
+            nextExp = 0;
+            for (int i = 1; i <= userLevel; i++) { // 누적 경험치를 구하는 함수
+                if (i == userLevel) {
+                    // 경험치바에 표시할 현재 경험치는 현재 누적 경험치에서 이전 레벨까지의 누적 경험치를 뺀 수치
+                    nowExp = userExp - nextExp;
+                }
+                nextExp += getResources().getInteger(getResources().getIdentifier("lv" + i, "integer", ResultActivity.this.getPackageName()));
+                //Log.i("ticlog Main", "next_exp 계산중 : " + nextExp + "/" + i);
+            }
+            requiredExp = getResources().getInteger(getResources().getIdentifier("lv" + userLevel, "integer", ResultActivity.this.getPackageName()));
+            // requiredExp는 현재 레벨에서 다음 레벨로 가기 위한 요구 경험치, nextExp는 다음 레벨로 가기 위한 총 누적 경험치(setLevel에서 사용된 변수 초기화 후 사용)
+
+            profile_progressbar.setMax(requiredExp);
+            profile_progressbar.setProgress(nowExp);
+        } else { // 최대 레벨일 때
+            profile_progressbar.setMax(100);
+            profile_progressbar.setProgress(100);
+        }
     }
 
     public void setLevel() { // 경험치 보고 레벨 업 처리
-        //nextExp = getResources().getInteger(getResources().getIdentifier("lv" + userLevel, "integer", ResultActivity.this.getPackageName()));
-        nextExp = 0;
-        for(int i = 1; i <= userLevel; i++) {
-            nextExp += getResources().getInteger(getResources().getIdentifier("lv" + i, "integer", ResultActivity.this.getPackageName()));
-        }
-        while(userExp >= nextExp) {
-            //userExp는 누적 경험치이므로 경험치를 초기화하지 않음
-            //userExp -= nextExp;
-            userLevel++;
-            lvl_panel.setVisibility(View.VISIBLE);
-            item_gift.setVisibility(View.VISIBLE);
-            boom.setVisibility(View.INVISIBLE);
-
-            switch ((int) (Math.random() * 4)) {
-                case 0 :
-                    pref.put("item1Cnt", pref.getValue("item1Cnt", 0) + 1);
-                    item.setBackgroundResource(R.drawable.item_artist);
-                    Toast.makeText(ResultActivity.this, "레벨 업!\n아티스트 보여주기 아이템 1개 획득!", Toast.LENGTH_SHORT).show();
-                    break;
-                case 1 :
-                    pref.put("item2Cnt", pref.getValue("item2Cnt", 0) + 1);
-                    item.setBackgroundResource(R.drawable.item_thirdsecond);
-                    Toast.makeText(ResultActivity.this, "레벨 업!\n3초 듣기 아이템 1개 획득!", Toast.LENGTH_SHORT).show();
-                    break;
-                case 2 :
-                    pref.put("item3Cnt", pref.getValue("item3Cnt", 0) + 1);
-                    item.setBackgroundResource(R.drawable.item_onemore);
-                    Toast.makeText(ResultActivity.this, "레벨 업!\n정답 1회 증가 아이템 1개 획득!", Toast.LENGTH_SHORT).show();
-                    break;
-                case 3 :
-                    pref.put("item4Cnt", pref.getValue("item4Cnt", 0) + 1);
-                    item.setBackgroundResource(R.drawable.item_onechar);
-                    Toast.makeText(ResultActivity.this, "레벨 업!\n제목 한 글자 보여주기 아이템 1개 획득!", Toast.LENGTH_SHORT).show();
-                    break;
-                default:
-                    break;
-            }
+        if (userLevel < MAX_LEVEL) { // 최대 레벨 이하일 때만
+            //nextExp = getResources().getInteger(getResources().getIdentifier("lv" + userLevel, "integer", ResultActivity.this.getPackageName()));
             nextExp = 0;
-            for(int i = 1; i <= userLevel; i++) {
+            for (int i = 1; i <= userLevel; i++) {
                 nextExp += getResources().getInteger(getResources().getIdentifier("lv" + i, "integer", ResultActivity.this.getPackageName()));
             }
-        }
+            while (userExp >= nextExp) {
+                //userExp는 누적 경험치이므로 경험치를 초기화하지 않음
+                //userExp -= nextExp;
+                userLevel++;
+                lvl_panel.setVisibility(View.VISIBLE);
+                item_gift.setVisibility(View.VISIBLE);
+                boom.setVisibility(View.INVISIBLE);
 
+                switch ((int) (Math.random() * 4)) {
+                    case 0:
+                        pref.put("item1Cnt", pref.getValue("item1Cnt", 0) + 1);
+                        item.setBackgroundResource(R.drawable.item_artist);
+                        Toast.makeText(ResultActivity.this, "레벨 업!\n아티스트 보여주기 아이템 1개 획득!", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 1:
+                        pref.put("item2Cnt", pref.getValue("item2Cnt", 0) + 1);
+                        item.setBackgroundResource(R.drawable.item_thirdsecond);
+                        Toast.makeText(ResultActivity.this, "레벨 업!\n3초 듣기 아이템 1개 획득!", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2:
+                        pref.put("item3Cnt", pref.getValue("item3Cnt", 0) + 1);
+                        item.setBackgroundResource(R.drawable.item_onemore);
+                        Toast.makeText(ResultActivity.this, "레벨 업!\n정답 1회 증가 아이템 1개 획득!", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 3:
+                        pref.put("item4Cnt", pref.getValue("item4Cnt", 0) + 1);
+                        item.setBackgroundResource(R.drawable.item_onechar);
+                        Toast.makeText(ResultActivity.this, "레벨 업!\n제목 한 글자 보여주기 아이템 1개 획득!", Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        break;
+                }
+                nextExp = 0;
+                for (int i = 1; i <= userLevel; i++) {
+                    nextExp += getResources().getInteger(getResources().getIdentifier("lv" + i, "integer", ResultActivity.this.getPackageName()));
+                }
+            }
+        }
     }
 
     public void setImage() { // 결과 이미지 변경
@@ -333,6 +360,22 @@ public class ResultActivity extends Activity {
                 break;
             default:
                 break;
+        }
+    }
+
+
+    public void fxPlay(int target) {
+        // 효과음 설정이 되어있을 경우 효과음 재생
+        if (pref.getValue("setting_fx", true)) {
+            MediaPlayer fxPlayer = new MediaPlayer();
+            fxPlayer = MediaPlayer.create(ResultActivity.this, target);
+            fxPlayer.start();
+            fxPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    mediaPlayer.release();
+                }
+            });
         }
     }
 

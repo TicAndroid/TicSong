@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class InfoActivity$$ViewBinder<T extends com.ticcorp.ticsong.InfoActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131492975, "field 'btn_exit' and method 'exitClick'");
-    target.btn_exit = finder.castView(view, 2131492975, "field 'btn_exit'");
+    view = finder.findRequiredView(source, 2131558511, "field 'btn_exit' and method 'exitClick'");
+    target.btn_exit = finder.castView(view, 2131558511, "field 'btn_exit'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

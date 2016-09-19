@@ -60,6 +60,8 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class GameActivity extends Activity {
 
+    ApplicationClass appClass;
+
     public int MAX_QUIZ_NUM = 5; // 한 게임의 문제 개수
     public int MAX_LIFE = 3; // 한 문제의 정답 기회
     public int MAX_TRACK_COUNT = 250; // 트랙 개수
@@ -163,6 +165,8 @@ public class GameActivity extends Activity {
         setContentView(R.layout.activity_game);
         ButterKnife.bind(this);
 
+        appClass = (ApplicationClass) getApplication();
+
         Animation rotate_back = AnimationUtils.loadAnimation(this, R.anim.base_rotate_anim);
         ImageView star_back = (ImageView) findViewById(R.id.background_star);
 
@@ -264,6 +268,7 @@ public class GameActivity extends Activity {
 
                     Toast.makeText(view.getContext(), "이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
                             + "'입니다.", Toast.LENGTH_SHORT).show();
+                    fxPlay(R.raw.wind_chimes);
                     itemUsed = 1;
                     edit_ans.setHint("이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
                             + "'입니다.");
@@ -278,9 +283,10 @@ public class GameActivity extends Activity {
                 }break;
             case R.id.item2:
                 if (pref.getValue("item2Cnt", 0) > 0) {
-                    if (life >= 3)
+                    if (life >= 3) {
+                        fxPlay(R.raw.btn_touch);
                         Toast.makeText(view.getContext(), "현재 생명력 만땅입니다!", Toast.LENGTH_SHORT).show();
-                    else {
+                    } else {
                         pref.put("item2Cnt", pref.getValue("item2Cnt", 0) - 1);
                         ServerAccessModule.getInstance().gameFinished(userId, userExp, userLevel,
                                 pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
@@ -289,7 +295,7 @@ public class GameActivity extends Activity {
                                 pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
                                 pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
                         item2_cnt.setText(pref.getValue("item2Cnt", 0) + "");
-
+                        fxPlay(R.raw.wind_chimes);
                         itemUsed = 2;
                         life++;
                         lifeRefresh();
@@ -303,6 +309,7 @@ public class GameActivity extends Activity {
                         item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
                     }
                 } else {
+                    fxPlay(R.raw.btn_touch);
                     Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
                 } break;
             case R.id.item3:
@@ -315,7 +322,7 @@ public class GameActivity extends Activity {
                             pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
                             pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
                     item1_cnt.setText(pref.getValue("item3Cnt", 0) + "");
-
+                    fxPlay(R.raw.wind_chimes);
                     itemUsed = 3;
                     Toast.makeText(view.getContext(), "곡 제목의 첫 글자는 '" +
                             textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
@@ -332,6 +339,7 @@ public class GameActivity extends Activity {
                     item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
 
                 } else {
+                    fxPlay(R.raw.btn_touch);
                     Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
                 } break;
             case R.id.item4:
@@ -348,6 +356,7 @@ public class GameActivity extends Activity {
                     rotate.startAnimation(start_click_third);
                     tictac.startAnimation(tic_click_third);
                     musicPlay(3000);
+                    fxPlay(R.raw.wind_chimes);
                     itemUsed = 4;
                     item1.setEnabled(false);
                     item2.setEnabled(false);
@@ -359,6 +368,7 @@ public class GameActivity extends Activity {
                     item4.setBackgroundResource(R.drawable.item_thirdsecond);
 
                 } else {
+                    fxPlay(R.raw.btn_touch);
                     Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
                 } break;
             default:
@@ -375,6 +385,7 @@ public class GameActivity extends Activity {
     public void onBackPressed() {
         //super.onBackPressed();
         // 뒤로 가기 버튼 터치 시 지금 메인화면으로 돌아가면 경험치를 얻을 수 없다는 알림을 띄우고 다시 확인
+        fxPlay(R.raw.btn_touch);
         downKeyboard(this, edit_ans);
         exitOkClick();
     }
@@ -392,6 +403,7 @@ public class GameActivity extends Activity {
                 .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override
                     public void onClick(SweetAlertDialog sDialog) {
+                        fxPlay(R.raw.btn_touch);
                         sDialog.cancel();
                     }
                 })
@@ -415,6 +427,7 @@ public class GameActivity extends Activity {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+                        fxPlay(R.raw.btn_touch);
                         Intent intent = new Intent(getApplication(), MainActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -430,6 +443,7 @@ public class GameActivity extends Activity {
     void passOkClick() {
         // 패스 버튼 확인 시 오답 처리하고 정답 공개
         btn_pass.startAnimation(btn_click);
+        fxPlay(R.raw.btn_touch);
         gameMode = 3;
         txt_msg.setText("정답은 " + artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + "입니다!");
         //correctArray.add((quizNum - 1), 0); // 오답 문제 기록
@@ -472,6 +486,7 @@ public class GameActivity extends Activity {
                 break;
             case 3:
                 // 다음 문제로
+                fxPlay(R.raw.btn_touch);
                 nextQuiz();
                 break;
         }
@@ -517,6 +532,7 @@ public class GameActivity extends Activity {
         if (gameMode == 0 | gameMode == 2) { // 맞추는 중에만 사용 가능
             if (textChanger(edit_ans.getText().toString()).equals(textChanger(answerArray.get(quizNum - 1)))) {
                 // 정답 시
+                fxPlay(R.raw.right_answer);
                 gameMode = 3;
                 int nowScore = 0;
                 switch (life) { // 남은 기회에 따른 점수 계산
@@ -543,11 +559,13 @@ public class GameActivity extends Activity {
                 musicPlay(-1);
             } else if (textChanger(edit_ans.getText().toString()).equals("")) {
                 // 정답이 비어있을 때
+                fxPlay(R.raw.btn_touch);
                 Toast.makeText(this, "정답을 입력해주세요.", Toast.LENGTH_SHORT).show();
             } else {
                 // 오답 시
                 life--;
                 lifeRefresh();
+                fxPlay(R.raw.wrong_answer);
                 if (life > 0) { // 아직 기회가 남았을 경우
                     txt_msg.setText("틀렸습니다! " + life + "번 남았습니다!");
                     edit_ans.setText(""); // EditText 초기화
@@ -787,6 +805,21 @@ public class GameActivity extends Activity {
         }
     }
 
+    public void fxPlay(int target) {
+        // 효과음 설정이 되어있을 경우 효과음 재생
+        if (pref.getValue("setting_fx", true)) {
+            MediaPlayer fxPlayer = new MediaPlayer();
+            fxPlayer = MediaPlayer.create(GameActivity.this, target);
+            fxPlayer.start();
+            fxPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    mediaPlayer.release();
+                }
+            });
+        }
+    }
+
     public void textWatching() {
         // EditText의 값이 변하는 것을 감지하는 함수
         textWatcher = new TextWatcher() {
@@ -924,6 +957,7 @@ public class GameActivity extends Activity {
         switch (msg.what) {
             case R.id.clientReady:
                 // 지금부터 음성을 받음
+                fxPlay(R.raw.btn_touch);
                 txt_voice_system.setText("이야기 해주세요");
                 listen.setBackgroundResource(R.drawable.listen_back);
                 mic.setBackgroundResource(R.drawable.mic_listen_yes);
