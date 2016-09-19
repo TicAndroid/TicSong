@@ -47,33 +47,14 @@
             android:name="com.ticcorp.ticsong.MainActivity"
             android:label="메인화면"
             android:screenOrientation="portrait" >
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.GameActivity"
             android:label="게임화면" >
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.SettingActivity"
             android:label="셋팅화면" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.TutorialActivity"
@@ -91,33 +72,16 @@
             android:name="com.ticcorp.ticsong.RankingActivity"
             android:label="랭킹화면"
             android:screenOrientation="portrait" >
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.AgreementActivity"
             android:label="약관동의화면"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.ServerTestActivity"
             android:label="서버 테스트"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.facebook.FacebookActivity"

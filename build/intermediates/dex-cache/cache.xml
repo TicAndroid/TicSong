@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="649b01dc31cf2b4060d037afe8276bb2d33586d6">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_42b5e81e71ebc24af598f3e0407a4cd6ef634ddd\classes.dex" />
+    </item>
+
+</items>
