@@ -42,6 +42,14 @@ public class MainActivity$$ViewBinder<T extends com.ticcorp.ticsong.MainActivity
     target.item3_cnt = finder.castView(view, 2131558530, "field 'item3_cnt'");
     view = finder.findRequiredView(source, 2131558532, "field 'item4_cnt'");
     target.item4_cnt = finder.castView(view, 2131558532, "field 'item4_cnt'");
+    view = finder.findRequiredView(source, 2131558525, "field 'item1'");
+    target.item1 = finder.castView(view, 2131558525, "field 'item1'");
+    view = finder.findRequiredView(source, 2131558527, "field 'item2'");
+    target.item2 = finder.castView(view, 2131558527, "field 'item2'");
+    view = finder.findRequiredView(source, 2131558529, "field 'item3'");
+    target.item3 = finder.castView(view, 2131558529, "field 'item3'");
+    view = finder.findRequiredView(source, 2131558531, "field 'item4'");
+    target.item4 = finder.castView(view, 2131558531, "field 'item4'");
     view = finder.findRequiredView(source, 2131558553, "field 'exp_bar'");
     target.exp_bar = finder.castView(view, 2131558553, "field 'exp_bar'");
     view = finder.findRequiredView(source, 2131558549, "field 'profile_img'");
@@ -58,6 +66,10 @@ public class MainActivity$$ViewBinder<T extends com.ticcorp.ticsong.MainActivity
     target.item2_cnt = null;
     target.item3_cnt = null;
     target.item4_cnt = null;
+    target.item1 = null;
+    target.item2 = null;
+    target.item3 = null;
+    target.item4 = null;
     target.exp_bar = null;
     target.profile_img = null;
   }

@@ -84,6 +84,14 @@ public class MainActivity extends Activity {
     TextView item3_cnt;
     @Bind(R.id.item4_cnt)
     TextView item4_cnt;
+    @Bind(R.id.item1)
+    ImageButton item1;
+    @Bind(R.id.item2)
+    ImageButton item2;
+    @Bind(R.id.item3)
+    ImageButton item3;
+    @Bind(R.id.item4)
+    ImageButton item4;
     @Bind(R.id.profile_progressbar)
     ProgressBar exp_bar;
 
@@ -137,6 +145,36 @@ public class MainActivity extends Activity {
         });
 
         appClass.bgmPlay(R.raw.jellyfish_in_space);
+
+        item1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "가수 이름 보여주기 아이템", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        item2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "생명력 증가 아이템", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        item3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "한 글자 보여주기 아이템", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        item4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "3초 듣기", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
 /*
         Button btn_friend = (Button) findViewById(R.id.btn_friend);

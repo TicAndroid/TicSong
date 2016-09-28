@@ -321,7 +321,7 @@ public class GameActivity extends Activity {
                     SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
                             pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
                             pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
-                    item1_cnt.setText(pref.getValue("item3Cnt", 0) + "");
+                    item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
                     fxPlay(R.raw.wind_chimes);
                     itemUsed = 3;
                     Toast.makeText(view.getContext(), "곡 제목의 첫 글자는 '" +
@@ -351,7 +351,7 @@ public class GameActivity extends Activity {
                     SQLiteAccessModule.getInstance(GameActivity.this.getApplicationContext()).gameFinished(userId, userExp, userLevel,
                             pref.getValue("item1Cnt", 0), pref.getValue("item2Cnt", 0),
                             pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
-                    item1_cnt.setText(pref.getValue("item4Cnt", 0) + "");
+                    item4_cnt.setText(pref.getValue("item4Cnt", 0) + "");
                     Toast.makeText(view.getContext(), "3초 재생 적용!", Toast.LENGTH_SHORT).show();
                     rotate.startAnimation(start_click_third);
                     tictac.startAnimation(tic_click_third);
@@ -459,7 +459,7 @@ public class GameActivity extends Activity {
                 rotate.startAnimation(start_click);
                 tictac.startAnimation(tic_click);
                 // 문제 1초 재생
-                musicPlay(1000);
+                musicPlay(1550);
                 item1.setBackgroundResource(R.drawable.item_artist);
                 item2.setBackgroundResource(R.drawable.item_onemore);
                 item3.setBackgroundResource(R.drawable.item_onechar);
@@ -477,11 +477,11 @@ public class GameActivity extends Activity {
                 if (itemUsed == 2) {
                     rotate.startAnimation(start_click_third);
                     tictac.startAnimation(tic_click_third);
-                    musicPlay(3000);
+                    musicPlay(3500);
                 } else {
                     rotate.startAnimation(start_click);
                     tictac.startAnimation(tic_click);
-                    musicPlay(1000);
+                    musicPlay(1550);
                 }
                 break;
             case 3:

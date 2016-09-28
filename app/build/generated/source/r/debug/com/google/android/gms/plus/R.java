@@ -8,9 +8,9 @@ package com.google.android.gms.plus;
 
 public final class R {
 	public static final class attr {
-		public static final int circleCrop = 0x7f010040;
-		public static final int imageAspectRatio = 0x7f01003f;
-		public static final int imageAspectRatioAdjust = 0x7f01003e;
+		public static final int circleCrop = 0x7f0100af;
+		public static final int imageAspectRatio = 0x7f0100ae;
+		public static final int imageAspectRatioAdjust = 0x7f0100ad;
 	}
 	public static final class color {
 		public static final int common_action_bar_splitter = 0x7f0c002f;
@@ -27,43 +27,43 @@ public final class R {
 		public static final int common_signin_btn_text_light = 0x7f0c0081;
 	}
 	public static final class drawable {
-		public static final int common_full_open_on_phone = 0x7f020085;
-		public static final int common_ic_googleplayservices = 0x7f020086;
-		public static final int common_signin_btn_icon_dark = 0x7f020087;
-		public static final int common_signin_btn_icon_disabled_dark = 0x7f020088;
-		public static final int common_signin_btn_icon_disabled_focus_dark = 0x7f020089;
-		public static final int common_signin_btn_icon_disabled_focus_light = 0x7f02008a;
-		public static final int common_signin_btn_icon_disabled_light = 0x7f02008b;
-		public static final int common_signin_btn_icon_focus_dark = 0x7f02008c;
-		public static final int common_signin_btn_icon_focus_light = 0x7f02008d;
-		public static final int common_signin_btn_icon_light = 0x7f02008e;
-		public static final int common_signin_btn_icon_normal_dark = 0x7f02008f;
-		public static final int common_signin_btn_icon_normal_light = 0x7f020090;
-		public static final int common_signin_btn_icon_pressed_dark = 0x7f020091;
-		public static final int common_signin_btn_icon_pressed_light = 0x7f020092;
-		public static final int common_signin_btn_text_dark = 0x7f020093;
-		public static final int common_signin_btn_text_disabled_dark = 0x7f020094;
-		public static final int common_signin_btn_text_disabled_focus_dark = 0x7f020095;
-		public static final int common_signin_btn_text_disabled_focus_light = 0x7f020096;
-		public static final int common_signin_btn_text_disabled_light = 0x7f020097;
-		public static final int common_signin_btn_text_focus_dark = 0x7f020098;
-		public static final int common_signin_btn_text_focus_light = 0x7f020099;
-		public static final int common_signin_btn_text_light = 0x7f02009a;
-		public static final int common_signin_btn_text_normal_dark = 0x7f02009b;
-		public static final int common_signin_btn_text_normal_light = 0x7f02009c;
-		public static final int common_signin_btn_text_pressed_dark = 0x7f02009d;
-		public static final int common_signin_btn_text_pressed_light = 0x7f02009e;
-		public static final int ic_plusone_medium_off_client = 0x7f0200ab;
-		public static final int ic_plusone_small_off_client = 0x7f0200ac;
-		public static final int ic_plusone_standard_off_client = 0x7f0200ad;
-		public static final int ic_plusone_tall_off_client = 0x7f0200ae;
+		public static final int common_full_open_on_phone = 0x7f02008b;
+		public static final int common_ic_googleplayservices = 0x7f02008c;
+		public static final int common_signin_btn_icon_dark = 0x7f02008d;
+		public static final int common_signin_btn_icon_disabled_dark = 0x7f02008e;
+		public static final int common_signin_btn_icon_disabled_focus_dark = 0x7f02008f;
+		public static final int common_signin_btn_icon_disabled_focus_light = 0x7f020090;
+		public static final int common_signin_btn_icon_disabled_light = 0x7f020091;
+		public static final int common_signin_btn_icon_focus_dark = 0x7f020092;
+		public static final int common_signin_btn_icon_focus_light = 0x7f020093;
+		public static final int common_signin_btn_icon_light = 0x7f020094;
+		public static final int common_signin_btn_icon_normal_dark = 0x7f020095;
+		public static final int common_signin_btn_icon_normal_light = 0x7f020096;
+		public static final int common_signin_btn_icon_pressed_dark = 0x7f020097;
+		public static final int common_signin_btn_icon_pressed_light = 0x7f020098;
+		public static final int common_signin_btn_text_dark = 0x7f020099;
+		public static final int common_signin_btn_text_disabled_dark = 0x7f02009a;
+		public static final int common_signin_btn_text_disabled_focus_dark = 0x7f02009b;
+		public static final int common_signin_btn_text_disabled_focus_light = 0x7f02009c;
+		public static final int common_signin_btn_text_disabled_light = 0x7f02009d;
+		public static final int common_signin_btn_text_focus_dark = 0x7f02009e;
+		public static final int common_signin_btn_text_focus_light = 0x7f02009f;
+		public static final int common_signin_btn_text_light = 0x7f0200a0;
+		public static final int common_signin_btn_text_normal_dark = 0x7f0200a1;
+		public static final int common_signin_btn_text_normal_light = 0x7f0200a2;
+		public static final int common_signin_btn_text_pressed_dark = 0x7f0200a3;
+		public static final int common_signin_btn_text_pressed_light = 0x7f0200a4;
+		public static final int ic_plusone_medium_off_client = 0x7f0200b1;
+		public static final int ic_plusone_small_off_client = 0x7f0200b2;
+		public static final int ic_plusone_standard_off_client = 0x7f0200b3;
+		public static final int ic_plusone_tall_off_client = 0x7f0200b4;
 	}
 	public static final class id {
-		public static final int adjust_height = 0x7f0d0024;
-		public static final int adjust_width = 0x7f0d0025;
+		public static final int adjust_height = 0x7f0d0025;
+		public static final int adjust_width = 0x7f0d0026;
 		public static final int none = 0x7f0d0017;
 		public static final int normal = 0x7f0d0013;
-		public static final int wrap_content = 0x7f0d002e;
+		public static final int wrap_content = 0x7f0d001c;
 	}
 	public static final class integer {
 		public static final int google_play_services_version = 0x7f0a0004;
@@ -109,7 +109,7 @@ public final class R {
 	public static final class style {
 	}
 	public static final class styleable {
-		public static final int[] LoadingImageView = { 0x7f01003e, 0x7f01003f, 0x7f010040 };
+		public static final int[] LoadingImageView = { 0x7f0100ad, 0x7f0100ae, 0x7f0100af };
 		public static final int LoadingImageView_circleCrop = 2;
 		public static final int LoadingImageView_imageAspectRatio = 1;
 		public static final int LoadingImageView_imageAspectRatioAdjust = 0;
