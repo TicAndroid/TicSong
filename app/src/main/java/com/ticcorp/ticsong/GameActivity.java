@@ -355,9 +355,9 @@ public class GameActivity extends Activity {
                     Toast.makeText(view.getContext(), "3초 재생 적용!", Toast.LENGTH_SHORT).show();
                     rotate.startAnimation(start_click_third);
                     tictac.startAnimation(tic_click_third);
-                    musicPlay(3000);
-                    fxPlay(R.raw.wind_chimes);
-                    itemUsed = 4;
+                    musicPlay(3550); // 2016/09/29/ by jeon 2-2. 3초아이템 쓰면 3550으로 재생
+                    //fxPlay(R.raw.wind_chimes); 2016/09/29/ by jeon 4. 3초아이템사용시 효과음삭제함
+                    //itemUsed = 4; 태호형이 지우래여
                     item1.setEnabled(false);
                     item2.setEnabled(false);
                     item3.setEnabled(false);
@@ -459,7 +459,7 @@ public class GameActivity extends Activity {
                 rotate.startAnimation(start_click);
                 tictac.startAnimation(tic_click);
                 // 문제 1초 재생
-                musicPlay(1550);
+                musicPlay(1550); // 2016/09/29/ by jeon 2-1. 기본 노래재생 1550으로 수정
                 item1.setBackgroundResource(R.drawable.item_artist);
                 item2.setBackgroundResource(R.drawable.item_onemore);
                 item3.setBackgroundResource(R.drawable.item_onechar);
@@ -477,8 +477,8 @@ public class GameActivity extends Activity {
                 if (itemUsed == 2) {
                     rotate.startAnimation(start_click_third);
                     tictac.startAnimation(tic_click_third);
-                    musicPlay(3500);
-                } else {
+                    musicPlay(1550);
+                } else { //2016/09/29/ by jeon 날려주세요~
                     rotate.startAnimation(start_click);
                     tictac.startAnimation(tic_click);
                     musicPlay(1550);
@@ -810,6 +810,7 @@ public class GameActivity extends Activity {
         if (pref.getValue("setting_fx", true)) {
             MediaPlayer fxPlayer = new MediaPlayer();
             fxPlayer = MediaPlayer.create(GameActivity.this, target);
+            fxPlayer.setVolume(0.7f,0.7f); // 2016/09/29/ by jeon 3. 70%로 소리 줄임 테스트 해봐야하고 안되면 숫자를 0.07f로 수정하거나 start()뒤로 보내거나 audiostream setvvolume을 사용해야함 구글링바람!
             fxPlayer.start();
             fxPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
