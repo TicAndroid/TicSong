@@ -64,7 +64,11 @@ public class GameActivity extends Activity {
 
     public int MAX_QUIZ_NUM = 5; // 한 게임의 문제 개수
     public int MAX_LIFE = 3; // 한 문제의 정답 기회
-    public int MAX_TRACK_COUNT = 250; // 트랙 개수
+    public int MAX_TRACK_COUNT = 318; // 트랙 개수
+    public int TRACK_PREPARED_INDEX = 0; // quizSettingHandler Class의 i 인덱스를 대체
+
+    final private int PLAYING_DURATION = 1550; // 재생시간 : 1550ms
+    final private int ITEM_DURATION = 3550; // 3초 아이템 적용시 재생시간 : 3550ms
 
     public String userId;
     public int userLevel;
@@ -355,9 +359,7 @@ public class GameActivity extends Activity {
                     Toast.makeText(view.getContext(), "3초 재생 적용!", Toast.LENGTH_SHORT).show();
                     rotate.startAnimation(start_click_third);
                     tictac.startAnimation(tic_click_third);
-                    musicPlay(3550); // 2016/09/29/ by jeon 2-2. 3초아이템 쓰면 3550으로 재생
-                    //fxPlay(R.raw.wind_chimes); 2016/09/29/ by jeon 4. 3초아이템사용시 효과음삭제함
-                    //itemUsed = 4; 태호형이 지우래여
+                    musicPlay(ITEM_DURATION); // Item사용시 재생시간
                     item1.setEnabled(false);
                     item2.setEnabled(false);
                     item3.setEnabled(false);
@@ -459,7 +461,7 @@ public class GameActivity extends Activity {
                 rotate.startAnimation(start_click);
                 tictac.startAnimation(tic_click);
                 // 문제 1초 재생
-                musicPlay(1550); // 2016/09/29/ by jeon 2-1. 기본 노래재생 1550으로 수정
+                musicPlay(PLAYING_DURATION);
                 item1.setBackgroundResource(R.drawable.item_artist);
                 item2.setBackgroundResource(R.drawable.item_onemore);
                 item3.setBackgroundResource(R.drawable.item_onechar);
@@ -477,11 +479,11 @@ public class GameActivity extends Activity {
                 if (itemUsed == 2) {
                     rotate.startAnimation(start_click_third);
                     tictac.startAnimation(tic_click_third);
-                    musicPlay(1550);
+                    musicPlay(PLAYING_DURATION);
                 } else { //2016/09/29/ by jeon 날려주세요~
                     rotate.startAnimation(start_click);
                     tictac.startAnimation(tic_click);
-                    musicPlay(1550);
+                    musicPlay(PLAYING_DURATION);
                 }
                 break;
             case 3:
@@ -583,19 +585,17 @@ public class GameActivity extends Activity {
     public class quizSettingHandler implements Runnable {
         public void run () {
             // 문제 준비 및 유저 정보 받아오기
-            for (int i = 0; i < MAX_QUIZ_NUM; i++) { // 문제와 답 정해진 개수만큼 설정
+            for (TRACK_PREPARED_INDEX = 0; TRACK_PREPARED_INDEX < MAX_QUIZ_NUM; TRACK_PREPARED_INDEX++) { // 문제와 답 정해진 개수만큼 설정
                 boolean isNumUsed = false; // 번호 중복 확인 여부
 
                 final String CLIENT_ID = "59eb0488cc28a2c558ecbf47ed19f787";
                 int soundNum = 1 + (int) (Math.random() * MAX_TRACK_COUNT);
 
                 String[] track_data = getResources().getStringArray(getResources().getIdentifier("track" + soundNum, "array", GameActivity.this.getPackageName()));
-
                 String track_id = track_data[0];
-
                 String soundUrl = "https://api.soundcloud.com/tracks/" + track_id + "/stream?client_id=" + CLIENT_ID;
 
-                for (int j = 0; j < i; j++) {
+                for (int j = 0; j < TRACK_PREPARED_INDEX; j++) {
                     if (soundUrl.equals(addressArray.get(j))) {
                         // 문제 중복
                         isNumUsed = true;
@@ -604,7 +604,7 @@ public class GameActivity extends Activity {
 
                 if (isNumUsed) { // 문제 중복 시 다시 받아오게 함
                     Log.i("ticlog", "quizNum reset");
-                    i--;
+                    TRACK_PREPARED_INDEX--;
                 } else {
                     addressArray.add(soundUrl);
 
@@ -612,33 +612,33 @@ public class GameActivity extends Activity {
                     artistArray.add(track_data[2]);
                     timeArray.add(Integer.parseInt(track_data[3]));
                     playerArray.add(new MediaPlayer());
-                    playerArray.get(i).setAudioStreamType(AudioManager.STREAM_MUSIC);
+                    playerArray.get(TRACK_PREPARED_INDEX).setAudioStreamType(AudioManager.STREAM_MUSIC);
                     try {
-                        playerArray.get(i).setDataSource(addressArray.get(i));
+                        playerArray.get(TRACK_PREPARED_INDEX).setDataSource(addressArray.get(TRACK_PREPARED_INDEX));
                         try {
-                            playerArray.get(i).prepare();
-                            playerArray.get(i).seekTo(timeArray.get(i));
+
+                            playerArray.get(TRACK_PREPARED_INDEX).prepare();
                             //prepare 하는데 시간이 많이 걸림
-                            Log.i("ticlog", "prepare success / soundNum : " + soundNum + " / Time : " + playerArray.get(i).getDuration());
+                            Log.i("ticlog", "prepare success / soundNum : " + soundNum + " / Time : " + playerArray.get(TRACK_PREPARED_INDEX).getDuration());
                         } catch (Exception e) { // prepare가 안되면 삭제된 파일이므로 이번 Array를 삭제하고 다시 받아오게 함
                             e.printStackTrace();
                             Log.i("ticlog", "prepare catch, removed trackNum : " + soundNum);
-                            answerArray.remove(i);
-                            artistArray.remove(i);
-                            addressArray.remove(i);
-                            timeArray.remove(i);
-                            playerArray.remove(i);
-                            i--;
+                            answerArray.remove(TRACK_PREPARED_INDEX);
+                            artistArray.remove(TRACK_PREPARED_INDEX);
+                            addressArray.remove(TRACK_PREPARED_INDEX);
+                            timeArray.remove(TRACK_PREPARED_INDEX);
+                            playerArray.remove(TRACK_PREPARED_INDEX);
+                            TRACK_PREPARED_INDEX--;
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
                         Log.i("ticlog", "setDataSource catch, removed trackNum : " + soundNum);
-                        answerArray.remove(i);
-                        artistArray.remove(i);
-                        addressArray.remove(i);
-                        timeArray.remove(i);
-                        playerArray.remove(i);
-                        i--;
+                        answerArray.remove(TRACK_PREPARED_INDEX);
+                        artistArray.remove(TRACK_PREPARED_INDEX);
+                        addressArray.remove(TRACK_PREPARED_INDEX);
+                        timeArray.remove(TRACK_PREPARED_INDEX);
+                        playerArray.remove(TRACK_PREPARED_INDEX);
+                        TRACK_PREPARED_INDEX--;
                     }
                 }
             }
@@ -649,7 +649,9 @@ public class GameActivity extends Activity {
     }
 
 
+
     public void nextQuiz() {
+
         // 다음 문제 초기화
         /*try {
             if (mPlayer != null) {// 음악 재생 중일 경우 음악 종료
@@ -665,14 +667,10 @@ public class GameActivity extends Activity {
         for(int i = 0; i < MAX_QUIZ_NUM; i++) {
             if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
                 playerArray.get(i).stop();
-                try {
-                    playerArray.get(i).prepare();
-                    playerArray.get(i).seekTo(timeArray.get(i));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
             }
         }
+
+
         rotate.clearAnimation();
         tictac.clearAnimation();
         edit_ans.setHint("정답을 입력하세요!");
@@ -688,6 +686,7 @@ public class GameActivity extends Activity {
                     playerArray.get(i).release();
                 }
             }
+
             playerArray.clear();
             pref.put("score", score);
             Intent intent = new Intent(this, ResultActivity.class);
@@ -697,7 +696,7 @@ public class GameActivity extends Activity {
         } else {
             life = MAX_LIFE; // 라이프 초기화
             lifeRefresh();
-            txt_msg.setText(quizNum + "번째 문제입니다!\n문제를 먼저 들어주세요!");
+            txt_msg.setText(quizNum + " 번 문제입니다!\n문제를 먼저 들어주세요!");
         }
         edit_ans.setText(""); // EditText 초기화
         btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
@@ -741,24 +740,53 @@ public class GameActivity extends Activity {
         item4_cnt.setText(pref.getValue("item4Cnt", 0) + " ");
     }
 
-    public void musicPlay(int time) {
+    public void musicPlay(final int time) {
         // time ms만큼 음악 재생, time = -1일 경우 계속 재생
         if (time >= 0) {
             gameMode = 1; // 문제 내는 중 모드로 변경
             btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
-            /*mPlayer = new MediaPlayer();
-            mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-            try {
-                mPlayer.setDataSource(addressArray.get(quizNum - 1));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            try {
-                mPlayer.prepare();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }*/
-            playerArray.get(quizNum - 1).start();
+
+            playerArray.get(quizNum-1).seekTo(timeArray.get(quizNum-1));
+            // setOnSeekCompleteListener -> seekTo 가 완료된 후에 재생
+            playerArray.get(quizNum-1).setOnSeekCompleteListener(new MediaPlayer.OnSeekCompleteListener() {
+                @Override
+                public void onSeekComplete(MediaPlayer mediaPlayer) {
+
+
+                        Log.e("Playing from ?", "Time : " +  playerArray.get(quizNum-1).getCurrentPosition());
+
+                        playerArray.get(quizNum - 1).start();
+
+                        Handler mHandler = new Handler();
+                        mHandler.postDelayed(new Runnable() { // time ms 후 음악 정지
+                            @Override
+                            public void run() {
+                                playerArray.get(quizNum-1).pause();
+
+                                //프로그레스 바 초기화
+                                gameMode = 2;
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        btn_pass.setVisibility(View.VISIBLE); // 패스 버튼 드러내기
+                                        frame_ans.setVisibility(View.VISIBLE); // 정답창 드러내기
+                                        space.setVisibility(View.GONE);
+                                        // 문제를 한 번 들어야 정답창이 드러나도록 함
+                                        txt_msg.setText(quizNum + " 번 문제입니다!\n곡명을 한글로 맞춰주세요!");
+                                    }
+                                });
+                            }
+
+                        }, time);
+
+
+
+                }
+            });
+
+
+            // 태호
+            /*playerArray.get(quizNum - 1).start();
 
             Handler mHandler = new Handler();
             mHandler.postDelayed(new Runnable() { // time ms 후 음악 정지
@@ -784,8 +812,21 @@ public class GameActivity extends Activity {
                         }
                     });
                 }
-            }, time);
+            }, time);*/
+
         } else {
+
+            playerArray.get(quizNum-1).seekTo(timeArray.get(quizNum-1));
+            // setOnSeekCompleteListener -> seekTo 가 완료된 후에 재생
+            playerArray.get(quizNum-1).setOnSeekCompleteListener(new MediaPlayer.OnSeekCompleteListener() {
+                @Override
+                public void onSeekComplete(MediaPlayer mediaPlayer) {
+                    if (pref.getValue("setting_music", true)) {
+                        playerArray.get(quizNum - 1).start();
+                    }
+                }
+            });
+
             btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
             frame_ans.setVisibility(View.GONE); // 정답창 숨기기
             space.setVisibility(View.VISIBLE);
@@ -799,9 +840,6 @@ public class GameActivity extends Activity {
             item4.setEnabled(false);
             rotate.startAnimation(start_click_infinite);
             tictac.startAnimation(tic_click_infinite);
-            if (pref.getValue("setting_music", true)) {
-                playerArray.get(quizNum - 1).start();
-            }
         }
     }
 

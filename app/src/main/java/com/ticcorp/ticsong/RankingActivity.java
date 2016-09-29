@@ -89,7 +89,7 @@ public class RankingActivity extends Activity {
         }
         */
 
-        txt_friend.setText(pref.getValue("friendCnt", 1) + " 친구 ");
+        // txt_friend.setText(pref.getValue("friendCnt", 1) + " 친구 "); // 2016.09.29 대섭 삭제
         txt_yourRank.setText("TOP 20 "); //자기가 몇 등인지 확인하는 방법이 없어 임시로 현재 랭킹 모드 표시
 
     }

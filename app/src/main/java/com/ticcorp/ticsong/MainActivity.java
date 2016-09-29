@@ -171,7 +171,7 @@ public class MainActivity extends Activity {
         item4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "3초 듣기", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "노래 3초 듣기 아이템", Toast.LENGTH_SHORT).show();
             }
         });
 
