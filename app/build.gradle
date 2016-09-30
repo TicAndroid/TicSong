@@ -1,4 +1,14 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 23
@@ -21,6 +31,7 @@ android {
 repositories {
     mavenCentral()
     maven { url "https://jitpack.io" }
+    maven { url 'https://maven.fabric.io/public' }
 }
 
 dependencies {
@@ -44,4 +55,7 @@ dependencies {
     compile 'com.github.ParkSangGwon:TedPermission:v1.0.12'
     compile 'jp.wasabeef:glide-transformations:1.0.6@aar'
     compile 'com.tsengvn:typekit:1.0.1'
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.4@aar') {
+        transitive = true;
+    }
 }

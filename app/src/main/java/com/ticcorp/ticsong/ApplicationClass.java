@@ -6,9 +6,11 @@ import android.content.res.Configuration;
 import android.media.MediaPlayer;
 import android.util.Log;
 
+import com.crashlytics.android.Crashlytics;
 import com.ticcorp.ticsong.model.CustomPreference;
 import com.tsengvn.typekit.Typekit;
 import com.tsengvn.typekit.TypekitContextWrapper;
+import io.fabric.sdk.android.Fabric;
 
 
 public class ApplicationClass extends Application {
@@ -21,6 +23,7 @@ public class ApplicationClass extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
         Typekit.getInstance().addNormal(Typekit.createFromAsset(this, "NanumBarunGothicBold.otf"))
                 .addNormal(Typekit.createFromAsset(this, "Exo-BlackItalic.otf"))
                 .addBoldItalic(Typekit.createFromAsset(this, "Exo-BoldItalic.otf"))

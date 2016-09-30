@@ -80,12 +80,12 @@
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/custom_progress.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/txt_sound.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/txt_sound.png"
-    },
-    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_send.png",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_send.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/txt_sound.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/txt_sound.png"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/background_base.png",

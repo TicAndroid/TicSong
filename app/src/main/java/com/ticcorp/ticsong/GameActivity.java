@@ -400,7 +400,7 @@ public class GameActivity extends Activity {
                     @Override
                     public void onClick(SweetAlertDialog sDialog) {
                         try {
-                            for(int i = 0; i < MAX_QUIZ_NUM; i++) {
+                            for(int i = 0; i < playerArray.size(); i++) {
                                 if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
                                     playerArray.get(i).stop();
                                     playerArray.get(i).release();
@@ -463,7 +463,14 @@ public class GameActivity extends Activity {
             case 3:
                 // 다음 문제로
                 fxPlay(R.raw.btn_touch);
-                nextQuiz();
+                if (track_loaded_count > quizNum || quizNum == MAX_QUIZ_NUM) { // 문제 로딩이 충분히 되었을 경우
+                    nextQuiz();
+                } else { // 아직 로딩 중일 경우
+                    new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                            .setTitleText("Now Loading...")
+                            .setContentText("다음 문제를 불러오는 중입니다!\n잠시 후 다시 시도해주세요!")
+                            .setConfirmText("확인").show();
+                }
                 break;
         }
 
@@ -594,14 +601,15 @@ public class GameActivity extends Activity {
                     public void onPrepared(MediaPlayer mediaPlayer) {
                         //Log.i("ticlog", "prepared, TRACK_PREPARED_INDEX " + track_prepared_index);
                         track_loaded_count++;
-                        if (track_loaded_count < MAX_QUIZ_NUM) { // 아직 로딩 중일 때
-                            txt_msg.setText("문제를 로딩 중입니다!\n" + track_loaded_count + " / " + MAX_QUIZ_NUM + " ...");
-                            track_prepared_index++;
-                            trackSetting(); // 다음 문제 로딩
-                        } else { // 전 곡 로딩 완료
-                            txt_msg.setText("모든 곡이 로딩 완료 되었습니다!");
+                        if (track_loaded_count == 1) { // 첫 곡 로딩 됐을 때
                             setUserData();
                             nextQuiz();
+                        }
+                        if (track_loaded_count < MAX_QUIZ_NUM) {
+                            // 다음 문제는 백그라운드에서 로딩
+                            //txt_msg.setText("문제를 로딩 중입니다!\n" + track_loaded_count + " / " + MAX_QUIZ_NUM + " ...");
+                            track_prepared_index++;
+                            trackSetting(); // 다음 문제 로딩
                         }
                     }
                 });
@@ -633,7 +641,7 @@ public class GameActivity extends Activity {
     }
 
     public void nextQuiz() {
-        for(int i = 0; i < MAX_QUIZ_NUM; i++) {
+        for(int i = 0; i < playerArray.size(); i++) {
             if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
                 playerArray.get(i).stop();
             }
@@ -646,7 +654,7 @@ public class GameActivity extends Activity {
         quizNum++; // 문제 번호 증가
         if (quizNum > MAX_QUIZ_NUM) {
             // 마지막 문제 완료 시 결과 화면으로 전환
-            for(int i = 0; i < MAX_QUIZ_NUM; i++) {
+            for(int i = 0; i < playerArray.size(); i++) {
                 if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
                     playerArray.get(i).stop();
                     playerArray.get(i).release();
@@ -683,7 +691,7 @@ public class GameActivity extends Activity {
     }
 
     public void musicPlay(final int time) {
-        // time ms만큼 음악 재생, time = -1일 경우 계속 재생
+        // time ms만큼 음악 재생, time = -1일 경우 계속 재생, time = -2일 경우 강제 중단
         final MediaPlayer mPlayer = playerArray.get(quizNum - 1);
         if (time >= 0) {
             gameMode = 1; // 문제 내는 중 모드로 변경
@@ -727,7 +735,7 @@ public class GameActivity extends Activity {
                 }
             });
 
-        } else {
+        } else if (time == -1) {
 
             mPlayer.seekTo(timeArray.get(quizNum-1));
             // setOnSeekCompleteListener -> seekTo 가 완료된 후에 재생
@@ -753,6 +761,16 @@ public class GameActivity extends Activity {
             item4.setEnabled(false);
             rotate.startAnimation(start_click_infinite);
             tictac.startAnimation(tic_click_infinite);
+        } else {
+            mPlayer.seekTo(timeArray.get(quizNum-1));
+            mPlayer.setOnSeekCompleteListener(new MediaPlayer.OnSeekCompleteListener() {
+                @Override
+                public void onSeekComplete(MediaPlayer mediaPlayer) {
+                    if (pref.getValue("setting_music", true)) {
+                        mPlayer.pause();
+                    }
+                }
+            });
         }
     }
 
@@ -875,10 +893,11 @@ public class GameActivity extends Activity {
         voiceRunning = false;
         //이상 음성인식 부분, 이하 음원 정지 부분
         if(!playerArray.isEmpty()) {
-            for (int i = 0; i < MAX_QUIZ_NUM; i++) {
+            for (int i = 0; i < playerArray.size(); i++) {
                 if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
                     playerArray.get(i).pause();
                     playerArray.get(i).seekTo(timeArray.get(i));
+                    musicPlay(-2);
                 }
             }
         }
