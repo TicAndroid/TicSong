@@ -28,12 +28,12 @@
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/raw/result_good.ogg"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/raw/right_answer.ogg",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/raw/right_answer.ogg"
-    },
-    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/raw/result_excellent.ogg",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/raw/result_excellent.ogg"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/raw/right_answer.ogg",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/raw/right_answer.ogg"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/raw/result_great.ogg",

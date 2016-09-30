@@ -176,92 +176,6 @@ public class MainActivity extends Activity {
         });
 
 
-/*
-        Button btn_friend = (Button) findViewById(R.id.btn_friend);
-
-        btn_friend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new GraphRequest(
-                        AccessToken.getCurrentAccessToken(),
-                        "/me/friends",
-                        null,
-                        HttpMethod.GET,
-                        new GraphRequest.Callback() {
-                            public void onCompleted(GraphResponse response) {
-            // handle the result
-                                Log.i("ticlog", "MainActivity" + response.toString());
-                            }
-                        }
-                ).executeAsync();
-            }
-        });
-/*
-        /*final DBHelper dbHelper = new DBHelper(getApplicationContext(), "MoneyBook.db", null, 1);
-
-        // 테이블에 있는 모든 데이터 출력
-        final TextView result = (TextView) findViewById(R.id.result);
-
-        final EditText etDate = (EditText) findViewById(R.id.date);
-        final EditText etItem = (EditText) findViewById(R.id.item);
-        final EditText etPrice = (EditText) findViewById(R.id.price);
-
-        // 날짜는 현재 날짜로 고정
-        // 현재 시간 구하기
-        long now = System.currentTimeMillis();
-        Date date = new Date(now);
-        // 출력될 포맷 설정
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy년 MM월 dd일");
-        etDate.setText(simpleDateFormat.format(date));
-
-        // DB에 데이터 추가
-        Button insert = (Button) findViewById(R.id.insert);
-        insert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String date = etDate.getText().toString();
-                String item = etItem.getText().toString();
-                int price = Integer.parseInt(etPrice.getText().toString());
-
-                dbHelper.insert(date, item, price);
-                result.setText(dbHelper.getResult());
-            }
-        });
-
-        // DB에 있는 데이터 수정
-        Button update = (Button) findViewById(R.id.update);
-        update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String item = etItem.getText().toString();
-                int price = Integer.parseInt(etPrice.getText().toString());
-
-                dbHelper.update(item, price);
-                result.setText(dbHelper.getResult());
-            }
-        });
-
-        // DB에 있는 데이터 삭제
-        Button delete = (Button) findViewById(R.id.delete);
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String item = etItem.getText().toString();
-
-                dbHelper.delete(item);
-                result.setText(dbHelper.getResult());
-            }
-        });
-
-        // DB에 있는 데이터 조회
-        Button select = (Button) findViewById(R.id.select);
-        select.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                result.setText(dbHelper.getResult());
-            }
-        });*/
-
     }
 
     // 폰트 적용
@@ -272,7 +186,6 @@ public class MainActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
         backPressCloseHandler.onBackPressed();
     }
 
@@ -285,27 +198,6 @@ public class MainActivity extends Activity {
 
         pref.put("tutorial", 2); // 약관 동의 후 튜토리얼까지 봄 확인(임시로 프리퍼런스에 대입)
 
-
-        //강제 레벨/경험치 주입
-        /*
-        ServerAccessModule.getInstance().gameFinished(pref.getValue("userId", "userId"), 22, 2, 3, 3, 3, 3);
-        SQLiteAccessModule.getInstance(MainActivity.this.getApplicationContext()).gameFinished(pref.getValue("userId", "userId"), 22, 2, 3, 3, 3, 3);
-        */
-
-        /*DBManager db = new DBManager(this.getApplicationContext(), StaticSQLite.TICSONG_DB, null, 1 );
-        Cursor cursor = null;
-        cursor = db.retrieve(StaticSQLite.retrieveUserSQL(pref.getValue("userId", "userId")));
-        while(cursor.moveToNext()) {
-            user_name = cursor.getString(1);
-        }
-
-        cursor = db.retrieve(StaticSQLite.retrieveMyScoreSQL(pref.getValue("userId", "userId")));
-        while(cursor.moveToNext()) {
-            user_exp = cursor.getInt(1);
-            user_lv = cursor.getInt(2);
-        }
-        cursor.close();
-        db.close();*/
 
         user_name = pref.getValue("name", "name");
         user_lv = pref.getValue("userLevel", 1);
@@ -346,37 +238,6 @@ public class MainActivity extends Activity {
 
     }
 
-    /*public static Bitmap getBitmapFromURL (String target) {
-        // 이미지 URL에서 불러오는 함수
-        try {
-            URL url = new URL(target);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setDoInput(true);
-            conn.connect();
-            InputStream is = conn.getInputStream();
-            Bitmap picBitmap = BitmapFactory.decodeStream(is);
-            Log.i("ticlog", "Img load success");
-            return picBitmap;
-        } catch (Exception e) {
-            e.printStackTrace();
-            Log.i("ticlog", "Img load fail");
-            return null;
-        }
-    }*/
-
-    /*public static Bitmap getBitmapFromURL (String target) {
-        try {
-            URL url = new URL(target);
-            Bitmap picBitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-            Log.i("ticlog", "Img load success");
-            return picBitmap;
-        } catch (Exception e) {
-            e.printStackTrace();
-            Log.i("ticlog", "Img load fail");
-            return null;
-        }
-    } */
-
     public void fxPlay(int target) {
         // 효과음 설정이 되어있을 경우 효과음 재생
         if (pref.getValue("setting_fx", true)) {
@@ -397,8 +258,6 @@ public class MainActivity extends Activity {
     void mainJokeBoxClicked() {
         fxPlay(R.raw.btn_touch);
         Intent intent = new Intent(this, GameActivity.class);
-        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         appClass.bgmStop();
         startActivity(intent);
         this.finish();

@@ -213,7 +213,7 @@
     <string-array name='track208'>	<item>	224843049	</item>	<item>	실연	</item>	<item>	코요태	</item>	<item>	1500	</item>	</string-array>
     <string-array name='track209'>	<item>	150073829	</item>	<item>	촛불하나	</item>	<item>	지오디	</item>	<item>	0	</item>	</string-array>
     <string-array name='track210'>	<item>	197242640	</item>	<item>	거짓말	</item>	<item>	지오디	</item>	<item>	0	</item>	</string-array>
-    <string-array name='track211'>	<item>	197787291	</item>	<item>	길	</item>	<item>	지오디	</item>	<item>	500	</item>	</string-array>
+    <string-array name='track211'>	<item>	197787291	</item>	<item>	길	</item>	<item>	지오디	</item>	<item>	1000	</item>	</string-array>
     <string-array name='track212'>	<item>	160441574	</item>	<item>	반대가 끌리는 이유	</item>	<item>	지오디	</item>	<item>	0	</item>	</string-array>
     <string-array name='track213'>	<item>	58101265	</item>	<item>	해바라기	</item>	<item>	박상민	</item>	<item>	800	</item>	</string-array>
     <string-array name='track214'>	<item>	157634221	</item>	<item>	너를 위해	</item>	<item>	임재범	</item>	<item>	0	</item>	</string-array>
@@ -251,7 +251,7 @@
     <string-array name='track246'>	<item>	55173422	</item>	<item>	하늘을 달리다	</item>	<item>	허각	</item>	<item>	0	</item>	</string-array>
     <string-array name='track247'>	<item>	86683771	</item>	<item>	나는 나비	</item>	<item>	윤도현밴드(YB)	</item>	<item>	0	</item>	</string-array>
     <string-array name='track248'>	<item>	279911933	</item>	<item>	너를 보내고	</item>	<item>	윤도현밴드(YB)	</item>	<item>	500	</item>	</string-array>
-    <string-array name='track249'>	<item>	278361187	</item>	<item>	보고싶다	</item>	<item>	김범수	</item>	<item>	1000	</item>	</string-array>
+    <string-array name='track249'>	<item>	278361187	</item>	<item>	보고싶다	</item>	<item>	김범수	</item>	<item>	1300	</item>	</string-array>
     <string-array name='track250'>	<item>	10436470	</item>	<item>	여전히 아름다운지	</item>	<item>	김연우	</item>	<item>	500	</item>	</string-array>
     <string-array name='track251'>	<item>	280667732	</item>	<item>	취중진담	</item>	<item>	김동률	</item>	<item>	500	</item>	</string-array>
     <string-array name='track252'>	<item>	27452476	</item>	<item>	눈의 꽃	</item>	<item>	박효신	</item>	<item>	0	</item>	</string-array>
@@ -311,4 +311,4 @@
     <string-array name='track306'>	<item>	163698369	</item>	<item>	유리 심장	</item>	<item>	린	</item>	<item>	100	</item>	</string-array>
     <string-array name='track307'>	<item>	228296592	</item>	<item>	자기야 여보야 사랑아	</item>	<item>	린	</item>	<item>	800	</item>	</string-array>
     <string-array name='track308'>	<item>	41208902	</item>	<item>	곰인형	</item>	<item>	린	</item>	<item>	0	</item>	</string-array>
-    </resources>
+</resources>

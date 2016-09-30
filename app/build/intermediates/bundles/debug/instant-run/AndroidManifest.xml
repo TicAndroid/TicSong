@@ -50,23 +50,28 @@
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.GameActivity"
-            android:label="게임화면" >
+            android:label="게임화면"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.SettingActivity"
-            android:label="셋팅화면" >
+            android:label="셋팅화면"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.TutorialActivity"
-            android:label="튜토리얼화면" >
+            android:label="튜토리얼화면"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.InfoActivity"
-            android:label="개인정보화면" >
+            android:label="개인정보화면"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.OpenSourceActivity"
-            android:label="오픈소스화면" >
+            android:label="오픈소스화면"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.ticcorp.ticsong.RankingActivity"
@@ -87,7 +92,8 @@
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

@@ -364,12 +364,12 @@
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_ratingbar_full_material.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_like_background.xml",
-        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_button_like_background.xml"
-    },
-    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/badge_gift.png",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/badge_gift.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_like_background.xml",
+        "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_button_like_background.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/fab_label_background.xml",

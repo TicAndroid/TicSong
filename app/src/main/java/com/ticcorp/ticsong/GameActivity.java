@@ -66,8 +66,8 @@ public class GameActivity extends Activity {
     public int MAX_LIFE = 3; // 한 문제의 정답 기회
     public int MAX_TRACK_COUNT = 308; // 트랙 개수
 
-    final private int PLAYING_DURATION = 1550; // 재생시간 : 1550ms
-    final private int ITEM_DURATION = 3550; // 3초 아이템 적용시 재생시간 : 3550ms
+    final private int PLAYING_DURATION = 1200; // 재생시간 : 1550ms
+    final private int ITEM_DURATION = 3200; // 3초 아이템 적용시 재생시간 : 3550ms
 
     public int track_prepared_index = 0; // quizSettingHandler Class의 i 인덱스를 대체
     public int track_loaded_count = 0; // 로딩 된 트랙 개수
@@ -77,10 +77,6 @@ public class GameActivity extends Activity {
     public int userExp;
 
     public int gameMode = 1; // 0 : 문제 대기 중, 1 : 문제 내는 중 또는 로딩 중, 2 : 맞추는 중, 3 : 정답 확인 중
-    public ArrayList<Integer> itemArray = new ArrayList<Integer>(); // 아이템 개수 리스트
-    // 아티스트 보여주기, 3초 듣기, 정답 1회 증가, 제목 한 글자 보여주기
-    public int itemUsed = 0; // 한 노래에서 아이템은 한 번 사용 가능
-    // 0 : 아이템 사용하지 않음, 1 : 아티스트 보여주기, 2 : 3초 듣기, 3 : 정답 1회 증가, 4 : 제목 한 글자 보여주기
     public int quizNum = 0; // 문제 번호
     public int life = MAX_LIFE; // 현재 정답 기회
     public int score = 0; // 누적 획득 점수
@@ -91,13 +87,9 @@ public class GameActivity extends Activity {
     public ArrayList<String> addressArray = new ArrayList<String>(); // 트랙 주소 리스트
     public ArrayList<Integer> timeArray = new ArrayList<Integer>(); // 트랙 시작 지점(Millisec) 리스트
     public ArrayList<MediaPlayer> playerArray = new ArrayList<MediaPlayer>(); // MediaPlayer 리스트
-    //public ArrayList<Integer> correctArray = new ArrayList<Integer>(); // 정답 여부 리스트, 맞출 때의 남은 기회 기록(pref로 전환)
 
-    public MediaPlayer mPlayer;
     public TextWatcher textWatcher;
 
-    public ScrollView scrollView;
-    public ImageView recordImage;
     public Animation btn_click;
     public Animation start_click;
     public Animation tic_click;
@@ -110,8 +102,6 @@ public class GameActivity extends Activity {
 
     public ImageView tictac;
     public ImageView rotate;
-
-    public int item_selected = 0; // 0 = 일반상태, 1 = 아티스트, 2 = 생명회복, 3 = 한 글자, 4 = 3초 듣기
 
     private static final String item1_tag = "아티스트 공개";
     private static final String item2_tag = "생명력 회복";
@@ -274,7 +264,6 @@ public class GameActivity extends Activity {
                     Toast.makeText(view.getContext(), "이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
                             + "'입니다.", Toast.LENGTH_SHORT).show();
                     fxPlay(R.raw.wind_chimes);
-                    itemUsed = 1;
                     edit_ans.setHint("이 곡의 아티스트는 '" + artistArray.get(quizNum - 1)
                             + "'입니다.");
                     item1.setEnabled(false);
@@ -301,7 +290,6 @@ public class GameActivity extends Activity {
                                 pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
                         item2_cnt.setText(pref.getValue("item2Cnt", 0) + "");
                         fxPlay(R.raw.wind_chimes);
-                        itemUsed = 2;
                         life++;
                         lifeRefresh();
                         item1.setEnabled(false);
@@ -328,7 +316,6 @@ public class GameActivity extends Activity {
                             pref.getValue("item3Cnt", 0), pref.getValue("item4Cnt", 0));
                     item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
                     fxPlay(R.raw.wind_chimes);
-                    itemUsed = 3;
                     Toast.makeText(view.getContext(), "곡 제목의 첫 글자는 '" +
                             textChanger(answerArray.get(quizNum - 1)).charAt(0) + "'입니다.", Toast.LENGTH_SHORT).show();
                     edit_ans.setHint("곡 제목의 첫 글자는 '" +
@@ -386,7 +373,6 @@ public class GameActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
         // 뒤로 가기 버튼 터치 시 지금 메인화면으로 돌아가면 경험치를 얻을 수 없다는 알림을 띄우고 다시 확인
         fxPlay(R.raw.btn_touch);
         downKeyboard(this, edit_ans);
@@ -414,12 +400,6 @@ public class GameActivity extends Activity {
                     @Override
                     public void onClick(SweetAlertDialog sDialog) {
                         try {
-                            /*if (mPlayer != null) {// 음악 재생 중일 경우 음악 종료
-                                if (mPlayer.isPlaying()) {
-                                    mPlayer.stop();
-                                    mPlayer.release();
-                                }
-                            }*/
                             for(int i = 0; i < MAX_QUIZ_NUM; i++) {
                                 if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
                                     playerArray.get(i).stop();
@@ -449,7 +429,6 @@ public class GameActivity extends Activity {
         fxPlay(R.raw.btn_touch);
         gameMode = 3;
         txt_msg.setText("정답은 " + artistArray.get(quizNum - 1) + "의 " + answerArray.get(quizNum - 1) + "입니다!");
-        //correctArray.add((quizNum - 1), 0); // 오답 문제 기록
         pref.put("correct" + quizNum, 0); // 오답 문제 기록
         musicPlay(-1);
     }
@@ -477,15 +456,9 @@ public class GameActivity extends Activity {
                 break;
             case 2:
                 // 문제 재생
-                if (itemUsed == 2) {
-                    rotate.startAnimation(start_click_third);
-                    tictac.startAnimation(tic_click_third);
-                    musicPlay(PLAYING_DURATION);
-                } else { //2016/09/29/ by jeon 날려주세요~
-                    rotate.startAnimation(start_click);
-                    tictac.startAnimation(tic_click);
-                    musicPlay(PLAYING_DURATION);
-                }
+                rotate.startAnimation(start_click);
+                tictac.startAnimation(tic_click);
+                musicPlay(PLAYING_DURATION);
                 break;
             case 3:
                 // 다음 문제로
@@ -584,7 +557,7 @@ public class GameActivity extends Activity {
     }
 
     public void trackSetting() { // return은 문제 중복 여부
-        Log.i("ticlog", "track_prepared_index : " + track_prepared_index);
+        //Log.i("ticlog", "track_prepared_index : " + track_prepared_index);
         boolean isNumUsed = false; // 번호 중복 확인 여부
 
         final String CLIENT_ID = "59eb0488cc28a2c558ecbf47ed19f787";
@@ -602,10 +575,10 @@ public class GameActivity extends Activity {
         }
 
         if (isNumUsed) { // 문제 중복 시 다시 받아오게 함
-            Log.i("ticlog", "quizNum reset");
+            //Log.i("ticlog", "quizNum reset");
             trackSetting();
         } else {
-            Log.i("ticlog", "MediaPlayer soundNum " + soundNum);
+            //Log.i("ticlog", "MediaPlayer soundNum " + soundNum);
             addressArray.add(soundUrl);
 
             answerArray.add(track_data[1]);
@@ -619,7 +592,7 @@ public class GameActivity extends Activity {
                 playerArray.get(track_prepared_index).setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mediaPlayer) {
-                        Log.i("ticlog", "prepared, TRACK_PREPARED_INDEX " + track_prepared_index);
+                        //Log.i("ticlog", "prepared, TRACK_PREPARED_INDEX " + track_prepared_index);
                         track_loaded_count++;
                         if (track_loaded_count < MAX_QUIZ_NUM) { // 아직 로딩 중일 때
                             txt_msg.setText("문제를 로딩 중입니다!\n" + track_loaded_count + " / " + MAX_QUIZ_NUM + " ...");
@@ -635,7 +608,7 @@ public class GameActivity extends Activity {
                 playerArray.get(track_prepared_index).setOnErrorListener(new MediaPlayer.OnErrorListener() {
                     @Override
                     public boolean onError(MediaPlayer mediaPlayer, int i, int i1) { // prepare가 안되면 삭제된 파일이므로 이번 Array를 삭제하고 다시 받아오게 함
-                        Log.i("ticlog", "prepare catch, removed TRACK_LOADED_COUNT " + track_loaded_count);
+                        //Log.i("ticlog", "prepare catch, removed TRACK_LOADED_COUNT " + track_loaded_count);
                         answerArray.remove(track_loaded_count);
                         artistArray.remove(track_loaded_count);
                         addressArray.remove(track_loaded_count);
@@ -648,7 +621,7 @@ public class GameActivity extends Activity {
                 playerArray.get(track_prepared_index).prepareAsync();
             } catch (Exception e) {
                 e.printStackTrace();
-                Log.i("ticlog", "setDataSource catch, removed");// trackNum : " + soundNum);
+                //Log.i("ticlog", "setDataSource catch, removed");// trackNum : " + soundNum);
                 answerArray.remove(track_prepared_index);
                 artistArray.remove(track_prepared_index);
                 addressArray.remove(track_prepared_index);
@@ -660,19 +633,6 @@ public class GameActivity extends Activity {
     }
 
     public void nextQuiz() {
-
-        // 다음 문제 초기화
-        /*try {
-            if (mPlayer != null) {// 음악 재생 중일 경우 음악 종료
-                if (mPlayer.isPlaying()) {
-                    mPlayer.stop();
-                    mPlayer.release();
-
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
         for(int i = 0; i < MAX_QUIZ_NUM; i++) {
             if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
                 playerArray.get(i).stop();
@@ -684,11 +644,8 @@ public class GameActivity extends Activity {
         tictac.clearAnimation();
         edit_ans.setHint("정답을 입력하세요!");
         quizNum++; // 문제 번호 증가
-        itemUsed = 0; // 아이템 사용 초기화
-        // btn_item.setText("ITEM");
         if (quizNum > MAX_QUIZ_NUM) {
             // 마지막 문제 완료 시 결과 화면으로 전환
-            //Toast.makeText(this, "게임 끝! " + score + "점 획득!", Toast.LENGTH_SHORT).show();
             for(int i = 0; i < MAX_QUIZ_NUM; i++) {
                 if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
                     playerArray.get(i).stop();
@@ -716,30 +673,6 @@ public class GameActivity extends Activity {
 
     public void setUserData() {
         // 유저 정보 받아오기
-        /*DBManager db = new DBManager(this.getApplicationContext(), StaticSQLite.TICSONG_DB, null, 1);
-        userId = pref.getValue("userId", "userId");
-        Cursor cursor = null;
-        cursor = db.retrieve(StaticSQLite.retrieveMyScoreSQL(userId));
-        while (cursor.moveToNext()) {
-            userExp = cursor.getInt(1);
-            userLevel = cursor.getInt(2);
-        }
-
-        cursor = db.retrieve(StaticSQLite.retrieveItemSQL(userId));
-
-        while (cursor.moveToNext()) {
-            itemArray.add(0, cursor.getInt(1));
-            itemArray.add(1, cursor.getInt(2));
-            itemArray.add(2, cursor.getInt(3));
-            itemArray.add(3, cursor.getInt(4));
-        }
-        cursor.close();
-        db.close();
-
-        item1_cnt.setText(itemArray.get(0) + "");
-        item2_cnt.setText(itemArray.get(1) + "");
-        item3_cnt.setText(itemArray.get(2) + "");
-        item4_cnt.setText(itemArray.get(3) + ""); */
 
         pref.put("score", 0);
 
@@ -751,26 +684,27 @@ public class GameActivity extends Activity {
 
     public void musicPlay(final int time) {
         // time ms만큼 음악 재생, time = -1일 경우 계속 재생
+        final MediaPlayer mPlayer = playerArray.get(quizNum - 1);
         if (time >= 0) {
             gameMode = 1; // 문제 내는 중 모드로 변경
             btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
 
-            playerArray.get(quizNum-1).seekTo(timeArray.get(quizNum-1));
+            mPlayer.seekTo(timeArray.get(quizNum-1));
             // setOnSeekCompleteListener -> seekTo 가 완료된 후에 재생
-            playerArray.get(quizNum-1).setOnSeekCompleteListener(new MediaPlayer.OnSeekCompleteListener() {
+            mPlayer.setOnSeekCompleteListener(new MediaPlayer.OnSeekCompleteListener() {
                 @Override
                 public void onSeekComplete(MediaPlayer mediaPlayer) {
 
 
                         Log.e("Playing from ?", "Time : " +  playerArray.get(quizNum-1).getCurrentPosition());
 
-                        playerArray.get(quizNum - 1).start();
+                        mPlayer.start();
 
                         Handler mHandler = new Handler();
                         mHandler.postDelayed(new Runnable() { // time ms 후 음악 정지
                             @Override
                             public void run() {
-                                playerArray.get(quizNum-1).pause();
+                                mPlayer.pause();
 
                                 //프로그레스 바 초기화
                                 gameMode = 2;
@@ -793,45 +727,15 @@ public class GameActivity extends Activity {
                 }
             });
 
-
-            // 태호
-            /*playerArray.get(quizNum - 1).start();
-
-            Handler mHandler = new Handler();
-            mHandler.postDelayed(new Runnable() { // time ms 후 음악 정지
-                @Override
-                public void run() {
-                    playerArray.get(quizNum - 1).stop();
-                    try {
-                        playerArray.get(quizNum - 1).prepare();
-                        playerArray.get(quizNum - 1).seekTo(timeArray.get(quizNum - 1));
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    //프로그레스 바 초기화
-                    gameMode = 2;
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            btn_pass.setVisibility(View.VISIBLE); // 패스 버튼 드러내기
-                            frame_ans.setVisibility(View.VISIBLE); // 정답창 드러내기
-                            space.setVisibility(View.GONE);
-                            // 문제를 한 번 들어야 정답창이 드러나도록 함
-                            txt_msg.setText(quizNum + "번째 문제입니다!\n곡명을 한글로 맞춰주세요!");
-                        }
-                    });
-                }
-            }, time);*/
-
         } else {
 
-            playerArray.get(quizNum-1).seekTo(timeArray.get(quizNum-1));
+            mPlayer.seekTo(timeArray.get(quizNum-1));
             // setOnSeekCompleteListener -> seekTo 가 완료된 후에 재생
-            playerArray.get(quizNum-1).setOnSeekCompleteListener(new MediaPlayer.OnSeekCompleteListener() {
+            mPlayer.setOnSeekCompleteListener(new MediaPlayer.OnSeekCompleteListener() {
                 @Override
                 public void onSeekComplete(MediaPlayer mediaPlayer) {
                     if (pref.getValue("setting_music", true)) {
-                        playerArray.get(quizNum - 1).start();
+                        mPlayer.start();
                     }
                 }
             });
@@ -973,13 +877,8 @@ public class GameActivity extends Activity {
         if(!playerArray.isEmpty()) {
             for (int i = 0; i < MAX_QUIZ_NUM; i++) {
                 if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
-                    playerArray.get(i).stop();
-                    try {
-                        playerArray.get(i).prepare();
-                        playerArray.get(i).seekTo(timeArray.get(i));
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    playerArray.get(i).pause();
+                    playerArray.get(i).seekTo(timeArray.get(i));
                 }
             }
         }

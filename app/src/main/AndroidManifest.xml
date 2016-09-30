@@ -53,27 +53,32 @@
 
         <activity
             android:name=".GameActivity"
-            android:label="게임화면">
+            android:label="게임화면"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".SettingActivity"
-            android:label="셋팅화면">
+            android:label="셋팅화면"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".TutorialActivity"
-            android:label="튜토리얼화면">
+            android:label="튜토리얼화면"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".InfoActivity"
-            android:label="개인정보화면">
+            android:label="개인정보화면"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".OpenSourceActivity"
-            android:label="오픈소스화면">
+            android:label="오픈소스화면"
+            android:screenOrientation="portrait">
        </activity>
 
         <activity
@@ -99,7 +104,8 @@
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"
             tools:replace="android:theme"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
