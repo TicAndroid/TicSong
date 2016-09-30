@@ -64,17 +64,19 @@ public class GameActivity extends Activity {
 
     public int MAX_QUIZ_NUM = 5; // 한 게임의 문제 개수
     public int MAX_LIFE = 3; // 한 문제의 정답 기회
-    public int MAX_TRACK_COUNT = 318; // 트랙 개수
-    public int TRACK_PREPARED_INDEX = 0; // quizSettingHandler Class의 i 인덱스를 대체
+    public int MAX_TRACK_COUNT = 6;//308; // 트랙 개수
 
     final private int PLAYING_DURATION = 1550; // 재생시간 : 1550ms
     final private int ITEM_DURATION = 3550; // 3초 아이템 적용시 재생시간 : 3550ms
+
+    public int track_prepared_index = 0; // quizSettingHandler Class의 i 인덱스를 대체
+    public int track_loaded_count = 0; // 로딩 된 트랙 개수
 
     public String userId;
     public int userLevel;
     public int userExp;
 
-    public int gameMode = 0; // 0 : 문제 대기 중, 1 : 문제 내는 중, 2 : 맞추는 중, 3 : 정답 확인 중
+    public int gameMode = 1; // 0 : 문제 대기 중, 1 : 문제 내는 중 또는 로딩 중, 2 : 맞추는 중, 3 : 정답 확인 중
     public ArrayList<Integer> itemArray = new ArrayList<Integer>(); // 아이템 개수 리스트
     // 아티스트 보여주기, 3초 듣기, 정답 1회 증가, 제목 한 글자 보여주기
     public int itemUsed = 0; // 한 노래에서 아이템은 한 번 사용 가능
@@ -250,8 +252,7 @@ public class GameActivity extends Activity {
 
         pref = pref.getInstance(this.getApplicationContext());
 
-        Handler hd = new Handler();
-        hd.postDelayed(new quizSettingHandler(), 100);
+        trackSetting();
         textWatching();
     }
 
@@ -472,7 +473,7 @@ public class GameActivity extends Activity {
                 item4.setEnabled(true);
                 break;
             case 1:
-                // 문제 재생 중이므로 반응 없음
+                // 문제 재생 또는 로딩 중이므로 반응 없음
                 break;
             case 2:
                 // 문제 재생
@@ -582,73 +583,81 @@ public class GameActivity extends Activity {
         }
     }
 
-    public class quizSettingHandler implements Runnable {
-        public void run () {
-            // 문제 준비 및 유저 정보 받아오기
-            for (TRACK_PREPARED_INDEX = 0; TRACK_PREPARED_INDEX < MAX_QUIZ_NUM; TRACK_PREPARED_INDEX++) { // 문제와 답 정해진 개수만큼 설정
-                boolean isNumUsed = false; // 번호 중복 확인 여부
+    public void trackSetting() { // return은 문제 중복 여부
+        Log.i("ticlog", "track_prepared_index : " + track_prepared_index);
+        boolean isNumUsed = false; // 번호 중복 확인 여부
 
-                final String CLIENT_ID = "59eb0488cc28a2c558ecbf47ed19f787";
-                int soundNum = 1 + (int) (Math.random() * MAX_TRACK_COUNT);
+        final String CLIENT_ID = "59eb0488cc28a2c558ecbf47ed19f787";
+        int soundNum = 1 + (int) (Math.random() * MAX_TRACK_COUNT);
 
-                String[] track_data = getResources().getStringArray(getResources().getIdentifier("track" + soundNum, "array", GameActivity.this.getPackageName()));
-                String track_id = track_data[0];
-                String soundUrl = "https://api.soundcloud.com/tracks/" + track_id + "/stream?client_id=" + CLIENT_ID;
+        String[] track_data = getResources().getStringArray(getResources().getIdentifier("track" + soundNum, "array", GameActivity.this.getPackageName()));
+        String track_id = track_data[0];
+        String soundUrl = "https://api.soundcloud.com/tracks/" + track_id + "/stream?client_id=" + CLIENT_ID;
 
-                for (int j = 0; j < TRACK_PREPARED_INDEX; j++) {
-                    if (soundUrl.equals(addressArray.get(j))) {
-                        // 문제 중복
-                        isNumUsed = true;
-                    }
-                }
-
-                if (isNumUsed) { // 문제 중복 시 다시 받아오게 함
-                    Log.i("ticlog", "quizNum reset");
-                    TRACK_PREPARED_INDEX--;
-                } else {
-                    addressArray.add(soundUrl);
-
-                    answerArray.add(track_data[1]);
-                    artistArray.add(track_data[2]);
-                    timeArray.add(Integer.parseInt(track_data[3]));
-                    playerArray.add(new MediaPlayer());
-                    playerArray.get(TRACK_PREPARED_INDEX).setAudioStreamType(AudioManager.STREAM_MUSIC);
-                    try {
-                        playerArray.get(TRACK_PREPARED_INDEX).setDataSource(addressArray.get(TRACK_PREPARED_INDEX));
-                        try {
-
-                            playerArray.get(TRACK_PREPARED_INDEX).prepare();
-                            //prepare 하는데 시간이 많이 걸림
-                            Log.i("ticlog", "prepare success / soundNum : " + soundNum + " / Time : " + playerArray.get(TRACK_PREPARED_INDEX).getDuration());
-                        } catch (Exception e) { // prepare가 안되면 삭제된 파일이므로 이번 Array를 삭제하고 다시 받아오게 함
-                            e.printStackTrace();
-                            Log.i("ticlog", "prepare catch, removed trackNum : " + soundNum);
-                            answerArray.remove(TRACK_PREPARED_INDEX);
-                            artistArray.remove(TRACK_PREPARED_INDEX);
-                            addressArray.remove(TRACK_PREPARED_INDEX);
-                            timeArray.remove(TRACK_PREPARED_INDEX);
-                            playerArray.remove(TRACK_PREPARED_INDEX);
-                            TRACK_PREPARED_INDEX--;
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                        Log.i("ticlog", "setDataSource catch, removed trackNum : " + soundNum);
-                        answerArray.remove(TRACK_PREPARED_INDEX);
-                        artistArray.remove(TRACK_PREPARED_INDEX);
-                        addressArray.remove(TRACK_PREPARED_INDEX);
-                        timeArray.remove(TRACK_PREPARED_INDEX);
-                        playerArray.remove(TRACK_PREPARED_INDEX);
-                        TRACK_PREPARED_INDEX--;
-                    }
-                }
+        for (int j = 0; j < track_prepared_index; j++) {
+            if (soundUrl.equals(addressArray.get(j))) {
+                // 문제 중복
+                isNumUsed = true;
             }
+        }
 
-            setUserData();
-            nextQuiz();
+        if (isNumUsed) { // 문제 중복 시 다시 받아오게 함
+            Log.i("ticlog", "quizNum reset");
+            trackSetting();
+        } else {
+            Log.i("ticlog", "MediaPlayer soundNum " + soundNum);
+            addressArray.add(soundUrl);
+
+            answerArray.add(track_data[1]);
+            artistArray.add(track_data[2]);
+            timeArray.add(Integer.parseInt(track_data[3]));
+            playerArray.add(new MediaPlayer());
+            playerArray.get(track_prepared_index).setAudioStreamType(AudioManager.STREAM_MUSIC);
+
+            try {
+                playerArray.get(track_prepared_index).setDataSource(addressArray.get(track_prepared_index));
+                playerArray.get(track_prepared_index).setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mediaPlayer) {
+                        Log.i("ticlog", "prepared, TRACK_PREPARED_INDEX " + track_prepared_index);
+                        track_loaded_count++;
+                        if (track_loaded_count < MAX_QUIZ_NUM) { // 아직 로딩 중일 때
+                            txt_msg.setText("문제를 로딩 중입니다!\n" + track_loaded_count + " / " + MAX_QUIZ_NUM + " ...");
+                            track_prepared_index++;
+                            trackSetting(); // 다음 문제 로딩
+                        } else { // 전 곡 로딩 완료
+                            txt_msg.setText("모든 곡이 로딩 완료 되었습니다!");
+                            setUserData();
+                            nextQuiz();
+                        }
+                    }
+                });
+                playerArray.get(track_prepared_index).setOnErrorListener(new MediaPlayer.OnErrorListener() {
+                    @Override
+                    public boolean onError(MediaPlayer mediaPlayer, int i, int i1) { // prepare가 안되면 삭제된 파일이므로 이번 Array를 삭제하고 다시 받아오게 함
+                        Log.i("ticlog", "prepare catch, removed TRACK_LOADED_COUNT " + track_loaded_count);
+                        answerArray.remove(track_loaded_count);
+                        artistArray.remove(track_loaded_count);
+                        addressArray.remove(track_loaded_count);
+                        timeArray.remove(track_loaded_count);
+                        playerArray.remove(track_loaded_count);
+                        trackSetting(); // 바로 다시 받아옴
+                        return false;
+                    }
+                });
+                playerArray.get(track_prepared_index).prepareAsync();
+            } catch (Exception e) {
+                e.printStackTrace();
+                Log.i("ticlog", "setDataSource catch, removed");// trackNum : " + soundNum);
+                answerArray.remove(track_prepared_index);
+                artistArray.remove(track_prepared_index);
+                addressArray.remove(track_prepared_index);
+                timeArray.remove(track_prepared_index);
+                playerArray.remove(track_prepared_index);
+                trackSetting();
+            }
         }
     }
-
-
 
     public void nextQuiz() {
 

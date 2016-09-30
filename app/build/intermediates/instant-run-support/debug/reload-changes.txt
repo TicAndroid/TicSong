@@ -1,0 +1,10 @@
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/GameActivity$11$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/GameActivity$9$1$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/GameActivity$9$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/GameActivity$8$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/GameActivity$10$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/GameActivity$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/GameActivity$RecognitionHandler$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/GameActivity$12$override.class
+CHANGED,/Users/yPeA/TicSong_Main/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/ticcorp/ticsong/GameActivity$9$1$1$override.class
