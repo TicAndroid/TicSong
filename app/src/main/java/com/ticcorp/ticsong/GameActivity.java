@@ -64,7 +64,7 @@ public class GameActivity extends Activity {
 
     public int MAX_QUIZ_NUM = 5; // 한 게임의 문제 개수
     public int MAX_LIFE = 3; // 한 문제의 정답 기회
-    public int MAX_TRACK_COUNT = 6;//308; // 트랙 개수
+    public int MAX_TRACK_COUNT = 308; // 트랙 개수
 
     final private int PLAYING_DURATION = 1550; // 재생시간 : 1550ms
     final private int ITEM_DURATION = 3550; // 3초 아이템 적용시 재생시간 : 3550ms

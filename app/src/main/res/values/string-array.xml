@@ -7,10 +7,7 @@
     <string-array name='track2'>	<item>	156044153	</item>	<item>	가슴 시린 이야기	</item>	<item>	휘성	</item>	<item>	0	</item>	</string-array>
     <string-array name='track3'>	<item>	242860826	</item>	<item>	너를	</item>	<item>	브라운아이드소울	</item>	<item>	0	</item>	</string-array>
     <string-array name='track4'>	<item>	164984508	</item>	<item>	짧은 치마	</item>	<item>	AOA	</item>	<item>	0	</item>	</string-array>
-    <string-array name='track6'>	<item>	3333	</item>	<item>	더미	</item>	<item>	더미	</item>	<item>	0	</item>	</string-array>
-
     <string-array name='track5'>	<item>	121047071	</item>	<item>	그리워해요	</item>	<item>	2NE1	</item>	<item>	0	</item>	</string-array>
-    <!--
     <string-array name='track6'>	<item>	125769478	</item>	<item>	너 밖에몰라	</item>	<item>	효린	</item>	<item>	0	</item>	</string-array>
     <string-array name='track7'>	<item>	119016730	</item>	<item>	허쉬	</item>	<item>	미스에이	</item>	<item>	0	</item>	</string-array>
     <string-array name='track8'>	<item>	102944877	</item>	<item>	으르렁	</item>	<item>	엑소	</item>	<item>	0	</item>	</string-array>
@@ -313,5 +310,5 @@
     <string-array name='track305'>	<item>	35697730	</item>	<item>	시간을 거슬러	</item>	<item>	린	</item>	<item>	400	</item>	</string-array>
     <string-array name='track306'>	<item>	163698369	</item>	<item>	유리 심장	</item>	<item>	린	</item>	<item>	100	</item>	</string-array>
     <string-array name='track307'>	<item>	228296592	</item>	<item>	자기야 여보야 사랑아	</item>	<item>	린	</item>	<item>	800	</item>	</string-array>
-    <string-array name='track308'>	<item>	41208902	</item>	<item>	곰인형	</item>	<item>	린	</item>	<item>	0	</item>	</string-array> -->
+    <string-array name='track308'>	<item>	41208902	</item>	<item>	곰인형	</item>	<item>	린	</item>	<item>	0	</item>	</string-array>
     </resources>
