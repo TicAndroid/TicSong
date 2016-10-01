@@ -232,8 +232,12 @@ public class MainActivity extends Activity {
         item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
         item4_cnt.setText(pref.getValue("item4Cnt", 0) + "");
 
+/*
         Glide.with(this).load("http://graph.facebook.com/" +
                 pref.getValue("userId", "userId") + "/picture?type=large").bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
+                error(R.drawable.profile_main_image).into(profile_img);
+*/
+        Glide.with(this).load("http://mud-kage.kakao.co.kr/14/dn/btqdhBA2f1Q/nvBaVQakk7MfFkw79Cu1UK/o.jpg").bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
                 error(R.drawable.profile_main_image).into(profile_img);
 
     }

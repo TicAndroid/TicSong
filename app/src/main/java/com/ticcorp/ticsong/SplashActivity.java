@@ -2,8 +2,12 @@ package com.ticcorp.ticsong;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -21,7 +25,11 @@ import com.gun0912.tedpermission.TedPermission;
 import com.ticcorp.ticsong.activitySupport.DBHelper;
 import com.ticcorp.ticsong.model.CustomPreference;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+
+import static com.kakao.util.helper.Utility.getPackageInfo;
 
 
 /**
@@ -78,6 +86,8 @@ public class SplashActivity extends Activity {
         */
 
 
+
+
         /* Init DB
         dbHelper = new DBHelper(this);
         Log.e("DBHelper",dbHelper.toString());
@@ -92,9 +102,11 @@ public class SplashActivity extends Activity {
 */
 
     }
+
     private class splashhandler implements Runnable {
         public void run() {
-            startActivity(new Intent(getApplication(), FBActivity.class)); // 로딩이 끝난후 이동할 Activity
+            //startActivity(new Intent(getApplication(), FBActivity.class)); // 로딩이 끝난후 이동할 Activity
+            startActivity(new Intent(getApplication(), KaKaoTalkActivity.class)); // 로딩이 끝난후 이동할 Activity
             SplashActivity.this.finish(); // 로딩페이지 Activity Stack에서 제거
         }
     }

@@ -7,6 +7,12 @@ buildscript {
         classpath 'io.fabric.tools:gradle:1.+'
     }
 }
+subprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
+    }
+}
 apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 
@@ -58,4 +64,6 @@ dependencies {
     compile('com.crashlytics.sdk.android:crashlytics:2.6.4@aar') {
         transitive = true;
     }
+    compile group: project.KAKAO_SDK_GROUP, name: 'kakaotalk', version: project.KAKAO_SDK_VERSION
+
 }

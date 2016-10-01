@@ -107,6 +107,12 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".KaKaoTalkActivity"
+            android:label="카카오톡"
+            android:screenOrientation="portrait">
+        </activity>
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -114,6 +120,11 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="57b1eed3403ebdc3ae1f6bfcf4e8fdf786e23e7b" />
+
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakaotalk_app_key" />
     </application>
 
 </manifest>

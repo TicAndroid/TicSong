@@ -5,6 +5,7 @@
     <string name="str_start">Start</string>
     <string name="str_listening">listening</string>
     <string name="facebook_app_id">1573118516326328</string>
+    <string name="kakaotalk_app_key">189eaaaa5883a59f527a745be30c1885</string>
 
     <string name="info_title"> 개인정보 취급방침</string>
     <string name="info_txt">
