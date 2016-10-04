@@ -142,6 +142,7 @@ public class KaKaoTalkActivity extends Activity {
 
         pref.put("userId", kakaoID);
         pref.put("name", kakaoNickname);
+        pref.put("profileImg", kakaoProfileImg);
 
         new Thread(new Runnable() {
             @Override
