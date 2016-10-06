@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:2:1-130:12
+ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:2:1-136:12
 	package
 		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:4:5-34
 		INJECTED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml
@@ -124,7 +124,7 @@ MERGED from [com.kakao.sdk:util:1.1.7] /Users/daesub/Desktop/TicSong/TicSong/app
 		INJECTED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:18:5-128:19
+ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:18:5-134:19
 MERGED from [com.google.android.gms:play-services-plus:7.8.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.8.0/AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
@@ -318,24 +318,32 @@ ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xm
 		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:112:13-33
 	android:name
 		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:111:13-46
+activity#com.ticcorp.ticsong.LoginTestActivity
+ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:116:9-120:20
+	android:screenOrientation
+		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:119:13-49
+	android:label
+		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:118:13-36
+	android:name
+		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:117:13-46
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:116:9-118:55
+ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:122:9-124:55
 	android:value
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:118:13-52
+		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:124:13-52
 	android:name
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:117:13-58
+		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:123:13-58
 meta-data#io.fabric.ApiKey
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:120:9-122:72
+ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:126:9-128:72
 	android:value
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:122:13-69
+		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:128:13-69
 	android:name
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:121:13-44
+		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:127:13-44
 meta-data#com.kakao.sdk.AppKey
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:125:9-127:57
+ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:131:9-133:57
 	android:value
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:127:13-54
+		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:133:13-54
 	android:name
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:126:13-48
+		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:132:13-48
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-base:7.8.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:21:9-23:69
 	android:value

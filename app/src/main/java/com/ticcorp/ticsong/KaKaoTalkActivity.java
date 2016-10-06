@@ -12,6 +12,7 @@ import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
 
 import com.kakao.network.ErrorResult;
+import com.kakao.usermgmt.LoginButton;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.LogoutResponseCallback;
 import com.kakao.usermgmt.callback.MeResponseCallback;
@@ -31,9 +32,6 @@ import butterknife.OnClick;
 
 public class KaKaoTalkActivity extends Activity {
 
-    @Bind(R.id.kakao_logout)
-    Button logout;
-
     ApplicationClass appClass;
     CustomPreference pref;
     Context mContext;
@@ -52,20 +50,13 @@ public class KaKaoTalkActivity extends Activity {
         pref = pref.getInstance(this.getApplicationContext());
 
 
+
         callback = new SessionCallback();                  // 이 두개의 함수 중요함
         Session.getCurrentSession().addCallback(callback);
 
     }
 
-    @OnClick(R.id.kakao_logout)
-    void logout() {
-        UserManagement.requestLogout(new LogoutResponseCallback() {
-            @Override
-            public void onCompleteLogout() {
-                redirectLoginActivity();
-            }
-        });
-    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -112,13 +103,13 @@ public class KaKaoTalkActivity extends Activity {
                 if (result == ErrorCode.CLIENT_ERROR_CODE) {
                     finish();
                 } else {
-                    redirectLoginActivity();
+                    redirectToLoginActivity();
                 }
             }
 
             @Override
             public void onSessionClosed(ErrorResult errorResult) {
-                redirectLoginActivity();
+                redirectToLoginActivity();
             }
 
             @Override
@@ -126,17 +117,16 @@ public class KaKaoTalkActivity extends Activity {
 
             @Override
             public void onSuccess(UserProfile userProfile) {  //성공 시 userProfile 형태로 반환
-                redirectMainActivity(userProfile); // 로그인 성공시 MainActivity로
+                redirectToMainActivity(userProfile); // 로그인 성공시 MainActivity로
             }
         });
     }
 
-    private void redirectMainActivity(UserProfile userProfile) {
+    private void redirectToMainActivity(UserProfile userProfile) {
 
         final String kakaoID = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
         final String kakaoNickname = userProfile.getNickname();     // Nickname 값을 가져옴
         final String kakaoProfileImg = userProfile.getProfileImagePath(); // ProfileImage 값을 가져옴
-
 
         Log.e("User", "UserProfile : " + kakaoID + " / " + kakaoNickname + " / "  + kakaoProfileImg);
 
@@ -152,10 +142,9 @@ public class KaKaoTalkActivity extends Activity {
                 finish();
             }
         }).start();
-
-
     }
-    protected void redirectLoginActivity() {
+
+    protected void redirectToLoginActivity() {
         final Intent intent = new Intent(this, KaKaoTalkActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);

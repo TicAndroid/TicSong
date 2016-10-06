@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
     ApplicationClass appClass;
 
     // 테스트를 위한 계정 데이터 변수 부분
-    public String user_name;//, user_profile_img;
+    public String user_name, user_profile_img;
     public int user_id, user_lv, user_exp, next_exp, now_exp, required_exp;
     public final int MAX_LEVEL = 99;
     public ArrayList<Integer> user_itemArray = new ArrayList<Integer>();
@@ -232,13 +232,13 @@ public class MainActivity extends Activity {
         item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
         item4_cnt.setText(pref.getValue("item4Cnt", 0) + "");
 
-        Glide.with(this).load("http://graph.facebook.com/" +
+        /*Glide.with(this).load("http://graph.facebook.com/" +
                 pref.getValue("userId", "userId") + "/picture?type=large").bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
                 error(R.drawable.profile_main_image).into(profile_img);
-
-        /*user_profile_img = pref.getValue("profileImg", "profileImg");
+*/
+        user_profile_img = pref.getValue("profileImg", "profileImg");
         Glide.with(this).load(user_profile_img).bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
-                error(R.drawable.profile_main_image).into(profile_img);*/
+                error(R.drawable.profile_main_image).into(profile_img);
 
     }
 
