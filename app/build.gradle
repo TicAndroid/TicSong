@@ -65,5 +65,6 @@ dependencies {
         transitive = true;
     }
     compile group: project.KAKAO_SDK_GROUP, name: 'kakaotalk', version: project.KAKAO_SDK_VERSION
+    compile 'com.github.d-max:spots-dialog:0.7@aar'
 
 }

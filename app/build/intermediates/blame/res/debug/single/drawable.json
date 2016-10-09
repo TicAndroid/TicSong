@@ -24,12 +24,12 @@
         "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/drawable/edix_style.xml"
     },
     {
-        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_out.png",
-        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_out.png"
-    },
-    {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/btn_pass.png",
         "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/drawable/btn_pass.png"
+    },
+    {
+        "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_out.png",
+        "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/btn_out.png"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_cancel_background.xml",
@@ -53,19 +53,19 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/kakao_login_button_background.9.png",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.7/res/drawable/kakao_login_button_background.9.png"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.14/res/drawable/kakao_login_button_background.9.png"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/about_us.png",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/about_us.png"
     },
     {
-        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/background_setting.png",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/drawable/background_setting.png"
-    },
-    {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/jukebox_bold.png",
         "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/drawable/jukebox_bold.png"
+    },
+    {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/background_setting.png",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/drawable/background_setting.png"
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
@@ -125,7 +125,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/kakao_account_logo.png",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.7/res/drawable/kakao_account_logo.png"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.14/res/drawable/kakao_account_logo.png"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/btn_privacy.png",
@@ -133,7 +133,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/kakao_close_button.png",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/auth/1.1.7/res/drawable/kakao_close_button.png"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/auth/1.1.14/res/drawable/kakao_close_button.png"
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/btn_gamestart.png",
@@ -265,7 +265,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_cancel_background.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_auth_dialog_cancel_background.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/com_facebook_auth_dialog_cancel_background.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/tutorial_1.jpg",
@@ -380,6 +380,10 @@
         "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/drawable/listen_back.png"
     },
     {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/dmax_spots_spot.xml",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.github.d-max/spots-dialog/0.7/res/drawable/dmax_spots_spot.xml"
+    },
+    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/tutorial_3.jpg",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/tutorial_3.jpg"
     },
@@ -389,7 +393,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/messenger_button_blue_bg_selector.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/messenger_button_blue_bg_selector.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/messenger_button_blue_bg_selector.xml"
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/badge_item_count.xml",
@@ -409,7 +413,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/kakao_login_bar.png",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.7/res/drawable/kakao_login_bar.png"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.14/res/drawable/kakao_login_bar.png"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
@@ -441,7 +445,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/com_facebook_favicon_blue.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_favicon_blue.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/com_facebook_favicon_blue.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/common_signin_btn_text_dark.xml",
@@ -453,7 +457,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/kakao_editable_profile.png",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.7/res/drawable/kakao_editable_profile.png"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.14/res/drawable/kakao_editable_profile.png"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/score_0.png",
@@ -517,7 +521,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_round.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/messenger_button_white_bg_round.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/messenger_button_white_bg_round.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/background_main_juke.png",
@@ -565,7 +569,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_background.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_button_background.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/com_facebook_button_background.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/warning_sigh.xml",
@@ -645,7 +649,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/kakao_account_button_background.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.7/res/drawable/kakao_account_button_background.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.14/res/drawable/kakao_account_button_background.xml"
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/tutorial_2.jpg",
@@ -685,11 +689,11 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_icon.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_button_icon.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/com_facebook_button_icon.xml"
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_send_background.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_button_send_background.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/com_facebook_button_send_background.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_round.xml",
@@ -713,7 +717,11 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_background.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_auth_dialog_background.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/com_facebook_auth_dialog_background.xml"
+    },
+    {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/login_facebook_btn.png",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/drawable/login_facebook_btn.png"
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/btn_privacy.png",
@@ -833,7 +841,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_login_silver_background.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_button_login_silver_background.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/com_facebook_button_login_silver_background.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
@@ -865,7 +873,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/messenger_button_blue_bg_round.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/messenger_button_blue_bg_round.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/messenger_button_blue_bg_round.xml"
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/btn_send.png",
@@ -881,7 +889,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/messenger_button_white_bg_selector.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/messenger_button_white_bg_selector.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/messenger_button_white_bg_selector.xml"
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/btn_record_style.xml",
@@ -924,6 +932,10 @@
         "source": "/Users/yPeA/TicSong_Main/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_button_send_background.xml"
     },
     {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/login_kakao_btn.png",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/drawable/login_kakao_btn.png"
+    },
+    {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/score_60.png",
         "source": "/Users/yPeA/TicSong_Main/app/src/main/res/drawable/score_60.png"
     },
@@ -953,7 +965,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/kakao_profile_boxbg.9.png",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.7/res/drawable/kakao_profile_boxbg.9.png"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.14/res/drawable/kakao_profile_boxbg.9.png"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/icon_character.png",
@@ -1061,7 +1073,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/com_facebook_button_like_background.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_button_like_background.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/com_facebook_button_like_background.xml"
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
@@ -1085,7 +1097,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/com_facebook_send_button_icon.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_send_button_icon.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/com_facebook_send_button_icon.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/success_circle.xml",
@@ -1097,7 +1109,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/kakao_default_profile_image.png",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.7/res/drawable/kakao_default_profile_image.png"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.14/res/drawable/kakao_default_profile_image.png"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/score_panel.png",
@@ -1157,11 +1169,11 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/kakao_cancel_button_background.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.7/res/drawable/kakao_cancel_button_background.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.14/res/drawable/kakao_cancel_button_background.xml"
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/kakao_login_symbol.png",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.7/res/drawable/kakao_login_symbol.png"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.14/res/drawable/kakao_login_symbol.png"
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/item_onechar_no.png",
@@ -1197,7 +1209,7 @@
     },
     {
         "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/debug/drawable/com_facebook_auth_dialog_header_background.xml",
-        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.0/res/drawable/com_facebook_auth_dialog_header_background.xml"
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/res/drawable/com_facebook_auth_dialog_header_background.xml"
     },
     {
         "merged": "/Users/yPeA/TicSong_Main/app/build/intermediates/res/merged/debug/drawable/background_spot.png",

@@ -12,6 +12,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.kakao.usermgmt.UserManagement;
+import com.kakao.usermgmt.callback.LogoutResponseCallback;
 import com.ticcorp.ticsong.model.CustomPreference;
 import com.ticcorp.ticsong.module.ServerAccessModule;
 import com.tsengvn.typekit.TypekitContextWrapper;
@@ -138,7 +140,43 @@ public class SettingActivity  extends Activity {
     void logoutClick() {
         // 로그아웃 임시 토스트 (후에 페이스북 버튼 로그아웃 기능 붙일 것)
         fxPlay(R.raw.btn_touch);
-        Toast.makeText(SettingActivity.this, "Facebook 앱에서 로그아웃 해주세요.", Toast.LENGTH_LONG).show();
+        new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText("로그아웃 하시겠습니까?")
+                .setCancelText("취소")
+                .setConfirmText("로그아웃")
+                .showCancelButton(true)
+                .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+                        fxPlay(R.raw.btn_touch);
+                        sDialog.cancel();
+                    }
+                })
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+                        fxPlay(R.raw.btn_touch);
+                        // 로그아웃 버튼 클릭시 플랫폼 확인 후 플랫폼 별 로그아웃 프로세스 진행.
+                        switch (pref.getValue("platform", 0)) {
+                            case 0 :
+                                Toast.makeText(SettingActivity.this, "Facebook 앱에서 로그아웃 해주세요.", Toast.LENGTH_LONG).show();
+                                break;
+                            case 1 :
+                                UserManagement.requestLogout(new LogoutResponseCallback() {
+                                    @Override
+                                    public void onCompleteLogout() {
+                                        redirectToLoginActivity();
+                                    }
+                                });
+                                break;
+                        }
+
+                    }
+                })
+                .show();
+
+
+
     }
 
     @OnClick (R.id.btn_out)
@@ -221,5 +259,13 @@ public class SettingActivity  extends Activity {
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+    }
+
+    protected void redirectToLoginActivity() {
+        final Intent intent = new Intent(this, LoginTestActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
     }
 }

@@ -1,6 +1,7 @@
 package com.ticcorp.ticsong;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
 import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
+import com.kakao.usermgmt.callback.LogoutResponseCallback;
 import com.kakao.usermgmt.callback.MeResponseCallback;
 import com.kakao.usermgmt.response.model.UserProfile;
 import com.kakao.util.exception.KakaoException;
@@ -39,6 +41,7 @@ import java.util.Arrays;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import dmax.dialog.SpotsDialog;
 
 /**
  * Created by daesub on 2016. 10. 5..
@@ -68,6 +71,9 @@ public class LoginTestActivity extends Activity {
     // for KakaoTalk
     private SessionCallback mKakaoCallback;
 
+    // Login Loading ...
+    private AlertDialog loginLoading;
+
     // Custom LoginButton binding.
     @Bind(R.id.kakao_login_btn_test)
     Button kakaoLogin;
@@ -91,8 +97,6 @@ public class LoginTestActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        super.onActivityResult(requestCode, resultCode, data);
-
         switch (LOGIN_PLATFORM_FLAG) {
             case 0 : // Facebook Login
                 callbackManager.onActivityResult(requestCode, resultCode, data);
@@ -103,6 +107,7 @@ public class LoginTestActivity extends Activity {
                 }
                 break;
         }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
@@ -161,6 +166,20 @@ public class LoginTestActivity extends Activity {
                         @Override
                         public void onSuccess(LoginResult loginResult) {
 
+                            new Thread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    runOnUiThread(new Runnable(){
+                                        @Override
+                                        public void run() {
+                                            // Login Loading ...
+                                            loginLoading = new SpotsDialog(LoginTestActivity.this, "로그인 중...");
+                                            loginLoading.show();
+                                        }
+                                    });
+                                }
+                            }).start();
+
                             AccessToken fbToken = loginResult.getAccessToken();
                             userId = loginResult.getAccessToken().getUserId();
 
@@ -175,11 +194,12 @@ public class LoginTestActivity extends Activity {
 
                         @Override
                         public void onCancel() {
-                            Log.e("Facebook Login", "로그인 취소");
+                            //Log.e("Facebook Login", "로그인 취소");
                         }
 
                         @Override
                         public void onError(FacebookException error) {
+                            Log.e("Facebook Login", "로그인 에러");
                             error.printStackTrace();
                         }
                     });
@@ -193,7 +213,7 @@ public class LoginTestActivity extends Activity {
                 new GraphRequest.GraphJSONObjectCallback(){
                     @Override
                     public void onCompleted(JSONObject object, GraphResponse response) {
-                        Log.d("Facebook Login", "로그인 결과 / "+ response.toString());
+                        //Log.d("Facebook Login", "로그인 결과 / "+ response.toString());
 
                         try {
                             userName = object.getString("name");
@@ -226,18 +246,31 @@ public class LoginTestActivity extends Activity {
             Session.getCurrentSession().close();
         }
 
+        /*UserManagement.requestLogout(new LogoutResponseCallback() {
+            @Override
+            public void onCompleteLogout() {
+                //로그아웃 성공 후 
+                mKakaoCallback = new SessionCallback();
+                com.kakao.auth.Session.getCurrentSession().addCallback(mKakaoCallback);
+                com.kakao.auth.Session.getCurrentSession().checkAndImplicitOpen();
+                com.kakao.auth.Session.getCurrentSession().open(AuthType.KAKAO_TALK_EXCLUDE_NATIVE_LOGIN, LoginTestActivity.this);
+
+            }
+        });*/
+
         // 카카오 세션을 오픈한다
         mKakaoCallback = new SessionCallback();
         com.kakao.auth.Session.getCurrentSession().addCallback(mKakaoCallback);
         com.kakao.auth.Session.getCurrentSession().checkAndImplicitOpen();
         com.kakao.auth.Session.getCurrentSession().open(AuthType.KAKAO_TALK_EXCLUDE_NATIVE_LOGIN, LoginTestActivity.this);
+
     }
     // 카카오톡 로그인을 위한 SessionCallback Inner 함수
     private class SessionCallback implements ISessionCallback {
 
         @Override
         public void onSessionOpened() {
-            Log.d("KakaoTalk Login", "Session Opened");
+            //Log.d("KakaoTalk Login", "Session Opened");
             // 카카오톡 프로필 요청 메소드 호출
             requestKaKaoProfile();
         }
@@ -282,6 +315,21 @@ public class LoginTestActivity extends Activity {
             @Override
             public void onSuccess(UserProfile userProfile) {  //성공 시 userProfile 형태로 반환
 
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        runOnUiThread(new Runnable(){
+                            @Override
+                            public void run() {
+                                // Login Loading ...
+                                loginLoading = new SpotsDialog(LoginTestActivity.this, "로그인 중...");
+                                loginLoading.show();
+                            }
+                        });
+                    }
+                }).start();
+
+
                 // 유저의 id, name, progileImg 세팅
                 userId = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
                 userName = userProfile.getNickname();     // Nickname 값을 가져옴
@@ -315,6 +363,10 @@ public class LoginTestActivity extends Activity {
 
                 appClass.bgmPlay(R.raw.jellyfish_in_space);
                 Log.v("test"," "+pref.getValue("tutorial",-1));
+
+                // dismiss Login Loading ...
+                loginLoading.dismiss();
+
                 switch (pref.getValue("tutorial", -1)) {
                     case 0: // 약관 동의를 하지 않은 경우
                         Log.v("test","test2");
