@@ -24718,15 +24718,7 @@
                     "endOffset": 171501
                 },
                 "from": {
-                    "file": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/values/styles.xml",
-                    "position": {
-                        "startLine": 28,
-                        "startColumn": 4,
-                        "startOffset": 1048,
-                        "endLine": 33,
-                        "endColumn": 12,
-                        "endOffset": 1330
-                    }
+                    "file": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/values/styles.xml"
                 }
             },
             {

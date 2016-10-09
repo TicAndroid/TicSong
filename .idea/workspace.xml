@@ -11,311 +11,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="003d1bb3-c456-4296-bb44-087e91975283" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Naverspeech_1_0_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/TedPermission_v1_0_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/answers_1_3_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/auth_1_1_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/beta_1_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/bolts_android_1_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/bolts_applinks_1_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/bolts_tasks_1_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/butterknife_7_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/cardview_v7_23_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/converter_gson_2_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/crashlytics_2_6_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/crashlytics_core_2_3_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/customtabs_23_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/fabric_1_3_14.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/facebook_android_sdk_4_16_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/friends_1_1_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/glide_3_6_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/glide_transformations_1_0_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/google_api_client_1_22_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/google_api_client_android_1_22_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/google_api_client_gson_1_22_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/google_api_services_youtube_v3_rev120_1_19_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/google_http_client_1_22_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/google_http_client_android_1_22_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/google_http_client_gson_1_22_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/google_http_client_jackson2_1_22_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/google_oauth_client_1_22_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/guava_jdk5_17_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/jackson_core_2_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/jsr305_1_3_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/kakaotalk_1_1_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/library_1_0_18.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/library_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/materialish_progress_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/network_1_1_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/okhttp_3_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/okio_1_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/otto_1_3_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_base_7_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_plus_7_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/retrofit_2_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/typekit_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/usermgmt_1_1_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/util_1_1_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-android-sdk-4.16.0_6a307442752d80f046a3952000971377b213781b.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-auth-1.1.7_de9a515956bfe91abb4f8b7861c3b995b384a8bd.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-friends-1.1.7_da6feab286d629332496d7affb295cb25fc0cbae.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-kakaotalk-1.1.7_e7b21f83264184c82be89913563fc1a56499628f.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-network-1.1.7_47b0e21059caca454bf31a791260bcebd0cf5426.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-usermgmt-1.1.7_792d7df3985215327e1c22775c9c6e5e7431d17e.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.kakao.sdk-util-1.1.7_8d4829ec9d29b2599cd28568ce1691f376b7de0d.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cn/pedant/SweetAlert/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cn/pedant/SweetAlert/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cn/pedant/SweetAlert/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cn/pedant/SweetAlert/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cn/pedant/SweetAlert/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cn/pedant/SweetAlert/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cn/pedant/SweetAlert/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cn/pedant/SweetAlert/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cn/pedant/SweetAlert/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cn/pedant/SweetAlert/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cn/pedant/SweetAlert/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cn/pedant/SweetAlert/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/plus/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/plus/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/plus/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/plus/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/plus/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/plus/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/plus/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/plus/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gun0912/tedpermission/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/auth/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/auth/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/auth/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/auth/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/auth/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/auth/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/friends/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/friends/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/friends/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/friends/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/friends/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/friends/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/kakaotalk/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/kakaotalk/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/kakaotalk/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/kakaotalk/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/kakaotalk/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/kakaotalk/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/network/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/network/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/network/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/network/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/network/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/network/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/usermgmt/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/usermgmt/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/usermgmt/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/usermgmt/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/usermgmt/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/usermgmt/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/util/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/util/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/util/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/util/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/util/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/kakao/util/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pnikosis/materialishprogress/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pnikosis/materialishprogress/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pnikosis/materialishprogress/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pnikosis/materialishprogress/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pnikosis/materialishprogress/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pnikosis/materialishprogress/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pnikosis/materialishprogress/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pnikosis/materialishprogress/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pnikosis/materialishprogress/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pnikosis/materialishprogress/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pnikosis/materialishprogress/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/pnikosis/materialishprogress/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/AboutUsDialog.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/AboutUsDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/GameActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/GameActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/ImageAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/ImageAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/ListViewAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/ListViewAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$$ViewBinder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$$ViewBinder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$SessionCallback.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$SessionCallback.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/MainActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/MainActivity$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$bool.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$bool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/ResultActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/ResultActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/SettingActivity$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/SettingActivity$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/SettingActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/SettingActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/SettingActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/SettingActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/SettingActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/SettingActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/SettingActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/SettingActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/utils/BackPressCloseHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/utils/BackPressCloseHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/tsengvn/typekit/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/tsengvn/typekit/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/tsengvn/typekit/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/tsengvn/typekit/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/tsengvn/typekit/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/tsengvn/typekit/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/tsengvn/typekit/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/tsengvn/typekit/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/tsengvn/typekit/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/tsengvn/typekit/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/Naverspeech-1.0.4_67eb27b3a1894c67baa600aaf581cc87dd174fd6.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/Naverspeech-1.0.4_67eb27b3a1894c67baa600aaf581cc87dd174fd6.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0_53ef2797f8d44ed22692ca509edd3535d7d9f53e.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0_53ef2797f8d44ed22692ca509edd3535d7d9f53e.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_8a1dc671d5cd6779fafad984c9daa48aa2a444f3.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_8a1dc671d5cd6779fafad984c9daa48aa2a444f3.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1_6556a2ce799a2ac2b91e7c579864f5aeddb0361b.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1_6556a2ce799a2ac2b91e7c579864f5aeddb0361b.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/cn.pedant.sweetalert-library-1.3_cbdf9215c526be1e54bd8e1244c93d707b2f1b74.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/cn.pedant.sweetalert-library-1.3_cbdf9215c526be1e54bd8e1244c93d707b2f1b74.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_230ab1feca30e054f9dd5444f0463a067c0fcbca.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_230ab1feca30e054f9dd5444f0463a067c0fcbca.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_ee3c4992942819b9930adcdaa68ba92d46404c10.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_ee3c4992942819b9930adcdaa68ba92d46404c10.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_d88c15e8f4c6b3bfcb5a5026d211a66ed12171bf.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_d88c15e8f4c6b3bfcb5a5026d211a66ed12171bf.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-customtabs-23.4.0_55f8fd5040b603914584e89bb681b10bf365b957.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-customtabs-23.4.0_55f8fd5040b603914584e89bb681b10bf365b957.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_a8f7276b576a8cdbf22fec5ac05feaed8b15859f.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_a8f7276b576a8cdbf22fec5ac05feaed8b15859f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_eb35e48fb7a3e6b854a010fd5a015fe893274c99.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_eb35e48fb7a3e6b854a010fd5a015fe893274c99.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.crashlytics.sdk.android-answers-1.3.10_570181a9973652efa187af032e8ff444bd97240d.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.crashlytics.sdk.android-answers-1.3.10_570181a9973652efa187af032e8ff444bd97240d.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.crashlytics.sdk.android-beta-1.2.2_662b19673e0ee6a1152c7069d1c3dc356030c18e.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.crashlytics.sdk.android-beta-1.2.2_662b19673e0ee6a1152c7069d1c3dc356030c18e.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.crashlytics.sdk.android-crashlytics-2.6.4_459b227b0e6fa565050fb35a18c0c71964604526.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.crashlytics.sdk.android-crashlytics-2.6.4_459b227b0e6fa565050fb35a18c0c71964604526.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.crashlytics.sdk.android-crashlytics-core-2.3.13_324f94845838d93ed0bb5c5e08b0f3b02ccc23dd.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.crashlytics.sdk.android-crashlytics-core-2.3.13_324f94845838d93ed0bb5c5e08b0f3b02ccc23dd.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.github.ParkSangGwon-TedPermission-v1.0.12_e407cd6eedc617bce7b085692a85e1f6df4d7cad.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.github.ParkSangGwon-TedPermission-v1.0.12_e407cd6eedc617bce7b085692a85e1f6df4d7cad.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-7.8.0_f5ff1420996d6fc82e87b21d84e3e81de34fc5d3.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-7.8.0_f5ff1420996d6fc82e87b21d84e3e81de34fc5d3.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-plus-7.8.0_6c91739cdf94be6d9fcb87cd911c88d931fbb737.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-plus-7.8.0_6c91739cdf94be6d9fcb87cd911c88d931fbb737.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.pnikosis-materialish-progress-1.0_1c458cd23fd43d87e85f48d4fb694c2cd5e741b3.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.pnikosis-materialish-progress-1.0_1c458cd23fd43d87e85f48d4fb694c2cd5e741b3.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.tsengvn-typekit-1.0.1_cae3044b898a025197a5d35844247fbde4bf89c4.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.tsengvn-typekit-1.0.1_cae3044b898a025197a5d35844247fbde4bf89c4.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_729d0d77a03ed696a3eb73fb863e9807c0993eb8.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_729d0d77a03ed696a3eb73fb863e9807c0993eb8.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_4cd99c63edd91fa5fcddfb50500cd73146df6904.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_4cd99c63edd91fa5fcddfb50500cd73146df6904.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/glide-3.6.0_3c566c8e73725fa2153aa7f49a84c0cc44ef0b3c.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/glide-3.6.0_3c566c8e73725fa2153aa7f49a84c0cc44ef0b3c.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-api-client-1.22.0_dba64735d64805794ca66f2b63aeaa71c4c1407f.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-api-client-1.22.0_dba64735d64805794ca66f2b63aeaa71c4c1407f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-api-client-android-1.22.0_d81ba34568219170f7e60b4a441f3607ec3494d6.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-api-client-android-1.22.0_d81ba34568219170f7e60b4a441f3607ec3494d6.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-api-client-gson-1.22.0_245a61ab9390e6e81015bc5cf0142129697aefc3.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-api-client-gson-1.22.0_245a61ab9390e6e81015bc5cf0142129697aefc3.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-api-services-youtube-v3-rev120-1.19.0_4013391623422a9333cc08d89a59ff020604a3bb.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-api-services-youtube-v3-rev120-1.19.0_4013391623422a9333cc08d89a59ff020604a3bb.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-http-client-1.22.0_4602645218760b4a238844dd28dfc58f555f2cae.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-http-client-1.22.0_4602645218760b4a238844dd28dfc58f555f2cae.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-http-client-android-1.22.0_e54db52a0643989b18c90581c2e181eae9ca7ff7.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-http-client-android-1.22.0_e54db52a0643989b18c90581c2e181eae9ca7ff7.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-http-client-gson-1.22.0_e70f8effb94dd6ab2fde7b0ba91165717253f2a2.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-http-client-gson-1.22.0_e70f8effb94dd6ab2fde7b0ba91165717253f2a2.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-http-client-jackson2-1.22.0_fede13467992bedafa711ebb981167b049f2954b.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-http-client-jackson2-1.22.0_fede13467992bedafa711ebb981167b049f2954b.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-oauth-client-1.22.0_b85a04d62471ea4241d433eeeff825759bf8d379.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/google-oauth-client-1.22.0_b85a04d62471ea4241d433eeeff825759bf8d379.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/gson-2.7_f0b0801e9692fd55f9b2b9d0addfab4677caac8a.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/gson-2.7_f0b0801e9692fd55f9b2b9d0addfab4677caac8a.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/guava-jdk5-17.0_02279cf9c892b41623bbba2a392cc8139d3c5bbb.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/guava-jdk5-17.0_02279cf9c892b41623bbba2a392cc8139d3c5bbb.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_f79f06eccb110e5ff65e363e27a08b00708cb178.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_f79f06eccb110e5ff65e363e27a08b00708cb178.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/io.fabric.sdk.android-fabric-1.3.14_a5b2069719300cc4dde1cce5df753b12ace16938.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/io.fabric.sdk.android-fabric-1.3.14_a5b2069719300cc4dde1cce5df753b12ace16938.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/jackson-core-2.1.3_31412e13fbc6432b8b2c03ec956c9211c81c57f2.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/jackson-core-2.1.3_31412e13fbc6432b8b2c03ec956c9211c81c57f2.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/jp.wasabeef-glide-transformations-1.0.6_c6c54fa8748b6ad17b7790c5a9380ad67aa7b0b0.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/jp.wasabeef-glide-transformations-1.0.6_c6c54fa8748b6ad17b7790c5a9380ad67aa7b0b0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/jsr305-1.3.9_33ac2ff97bba2f2001849939ae055f159fea2b1f.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/jsr305-1.3.9_33ac2ff97bba2f2001849939ae055f159fea2b1f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/library-1.0.18_164f461f0cdb08c38bb8ddee5efe3d54e2e274d6.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/library-1.0.18_164f461f0cdb08c38bb8ddee5efe3d54e2e274d6.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/okhttp-3.3.0_e7cef0a12da7d6447ad3913601c1d55c94fa3fb5.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/okhttp-3.3.0_e7cef0a12da7d6447ad3913601c1d55c94fa3fb5.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/okio-1.8.0_b9508ce8194330d00adbfc4dde5589466313ede1.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/okio-1.8.0_b9508ce8194330d00adbfc4dde5589466313ede1.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/otto-1.3.7_410e8006be80fdc7e4d4382b0cf12583e4484dc1.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/otto-1.3.7_410e8006be80fdc7e4d4382b0cf12583e4484dc1.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_2fcfdefd26de66a19aca55008adeeb0e0214ff72.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_2fcfdefd26de66a19aca55008adeeb0e0214ff72.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_c9e13ab2423f5942e429b7796b054c9c0374d19a.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_c9e13ab2423f5942e429b7796b054c9c0374d19a.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/fabric/res/debug/values/com_crashlytics_build_id.xml" afterPath="$PROJECT_DIR$/app/build/generated/fabric/res/debug/values/com_crashlytics_build_id.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/cardview/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/cardview/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/cn/pedant/SweetAlert/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/cn/pedant/SweetAlert/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/facebook/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/facebook/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/plus/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/plus/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/gun0912/tedpermission/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/gun0912/tedpermission/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/kakao/auth/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/kakao/auth/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/kakao/friends/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/kakao/friends/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/kakao/kakaotalk/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/kakao/kakaotalk/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/kakao/network/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/kakao/network/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/kakao/usermgmt/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/kakao/usermgmt/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/kakao/util/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/kakao/util/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/pnikosis/materialishprogress/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/pnikosis/materialishprogress/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/ticcorp/ticsong/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/ticcorp/ticsong/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/tsengvn/typekit/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/tsengvn/typekit/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/debug/crashlytics-build.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/debug/crashlytics-build.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-af.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-af.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ar.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-bn.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-bn.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-cs.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-cs.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-da.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-da.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-de.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-de.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-el.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-el.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-es-rES.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-es-rES.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-es.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-es.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-fi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-fi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-fr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-fr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-gu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-gu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-hu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-id.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-id.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-in.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-in.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-it.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-it.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ja.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ja.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-kn.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-kn.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ko.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ko.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ml.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ml.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-mr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-mr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ms.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ms.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-nb.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-nb.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-nl.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-nl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pa.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pa.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pl.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pt-rPT.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pt-rPT.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pt.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-pt.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ru.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sk.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sk.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sv.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-sv.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ta.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ta.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-te.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-te.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-th.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-th.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-tl.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-tl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-tr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-tr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v21.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v21.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-vi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-vi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rCN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rCN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rHK.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rHK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rTW.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rTW.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-small-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-small-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-v21.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-v21.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$$ViewBinder.java" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/ticcorp/ticsong/LoginTestActivity$$ViewBinder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/kakao_account_button_background.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/kakao_account_button_background.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/kakao_cancel_button_background.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable/kakao_cancel_button_background.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_login_test.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_login_test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/kakao_internal_login_activity.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/kakao_internal_login_activity.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/kakao_login_layout.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/kakao_login_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v21/values-v21.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v21/values-v21.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/LoginTestActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/LoginTestActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/SettingActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/SettingActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/utils/BackPressCloseHandler.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/utils/BackPressCloseHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_test.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle.properties" afterPath="$PROJECT_DIR$/gradle.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/MainActivity.java" />
     </list>
     <ignored path="TicSong.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -356,8 +78,8 @@
       <file leaf-file-name="LoginTestActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/LoginTestActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="344" column="0" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
+            <state relative-caret-position="203">
+              <caret line="349" column="10" selection-start-line="349" selection-start-column="10" selection-end-line="349" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#onCreate#0;class#LoginTestActivity#0" expanded="false" />
@@ -381,8 +103,17 @@
                 <element signature="e#11097#11460#0" expanded="true" />
                 <element signature="e#11459#11460#0" expanded="true" />
                 <element signature="e#11501#11502#0" expanded="true" />
-                <element signature="method#redirectToMainActivity#0;class#LoginTestActivity#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KaKaoTalkActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/KaKaoTalkActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -390,8 +121,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="146" column="27" selection-start-line="146" selection-start-column="27" selection-end-line="146" selection-end-column="27" />
+            <state relative-caret-position="-262">
+              <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -419,12 +150,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SettingActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SettingActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/SettingActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="190" column="16" selection-start-line="190" selection-start-column="16" selection-end-line="190" selection-end-column="16" />
+            <state relative-caret-position="238">
+              <caret line="170" column="38" selection-start-line="170" selection-start-column="38" selection-end-line="170" selection-end-column="38" />
               <folding>
+                <element signature="e#5744#6028#0" expanded="true" />
+                <element signature="e#6027#6028#0" expanded="true" />
                 <element signature="method#fxPlay#0;class#SettingActivity#0" expanded="false" />
               </folding>
             </state>
@@ -444,14 +177,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_login_test.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activity_login_test.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login_test.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -2430,7 +2163,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login_test_kakaotalk.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login_selector.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/LoginSelectorActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
@@ -2440,11 +2172,12 @@
         <option value="$PROJECT_DIR$/gradle.properties" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/SettingActivity.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/LoginTestActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/utils/BackPressCloseHandler.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login_test.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/LoginTestActivity.java" />
       </list>
     </option>
   </component>
@@ -3008,7 +2741,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3233,16 +2966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/KaKaoTalkActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradle.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -3297,48 +3020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/LoginTestActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="344" column="0" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#onCreate#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="method#onPause#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="method#attachBaseContext#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="method#fbBtnClicked#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="method#isFacebookLogin#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="e#5124#5798#0" expanded="true" />
-            <element signature="e#5285#5732#0" expanded="true" />
-            <element signature="e#5731#5732#0" expanded="true" />
-            <element signature="e#5797#5798#0" expanded="true" />
-            <element signature="method#requestFacebookProfile#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="method#kakaoBtnClicked#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="method#isKakaoLogin#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="class#SessionCallback#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="method#onSessionOpened#0;class#SessionCallback#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="method#requestKaKaoProfile#0;class#LoginTestActivity#0" expanded="false" />
-            <element signature="e#10972#11502#0" expanded="true" />
-            <element signature="e#11097#11460#0" expanded="true" />
-            <element signature="e#11459#11460#0" expanded="true" />
-            <element signature="e#11501#11502#0" expanded="true" />
-            <element signature="method#redirectToMainActivity#0;class#LoginTestActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="146" column="27" selection-start-line="146" selection-start-column="27" selection-end-line="146" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -3352,16 +3033,6 @@
         <state relative-caret-position="128">
           <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/SettingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="190" column="16" selection-start-line="190" selection-start-column="16" selection-end-line="190" selection-end-column="16" />
-          <folding>
-            <element signature="method#fxPlay#0;class#SettingActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3410,9 +3081,70 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-262">
+          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/LoginTestActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="349" column="10" selection-start-line="349" selection-start-column="10" selection-end-line="349" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#onCreate#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="method#onPause#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="method#attachBaseContext#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="method#fbBtnClicked#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="method#isFacebookLogin#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="e#5124#5798#0" expanded="true" />
+            <element signature="e#5285#5732#0" expanded="true" />
+            <element signature="e#5731#5732#0" expanded="true" />
+            <element signature="e#5797#5798#0" expanded="true" />
+            <element signature="method#requestFacebookProfile#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="method#kakaoBtnClicked#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="method#isKakaoLogin#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="class#SessionCallback#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="method#onSessionOpened#0;class#SessionCallback#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="method#requestKaKaoProfile#0;class#LoginTestActivity#0" expanded="false" />
+            <element signature="e#10972#11502#0" expanded="true" />
+            <element signature="e#11097#11460#0" expanded="true" />
+            <element signature="e#11459#11460#0" expanded="true" />
+            <element signature="e#11501#11502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/KaKaoTalkActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ticcorp/ticsong/SettingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="170" column="38" selection-start-line="170" selection-start-column="38" selection-end-line="170" selection-end-column="38" />
+          <folding>
+            <element signature="e#5744#6028#0" expanded="true" />
+            <element signature="e#6027#6028#0" expanded="true" />
+            <element signature="method#fxPlay#0;class#SettingActivity#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

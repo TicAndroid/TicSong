@@ -347,7 +347,7 @@ public class LoginTestActivity extends Activity {
     private void redirectToMainActivity() {
 
         // 이건 배포전에 지워야함 - 대섭
-        Log.e("User", "UserProfile : " + userId + " / " + userName + " / "  + userProfileImg);
+        //Log.e("User", "UserProfile : " + userId + " / " + userName + " / "  + userProfileImg);
 
         new Thread(new Runnable() {
             @Override

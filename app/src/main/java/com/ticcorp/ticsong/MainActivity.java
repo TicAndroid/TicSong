@@ -232,10 +232,6 @@ public class MainActivity extends Activity {
         item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
         item4_cnt.setText(pref.getValue("item4Cnt", 0) + "");
 
-        /*Glide.with(this).load("http://graph.facebook.com/" +
-                pref.getValue("userId", "userId") + "/picture?type=large").bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
-                error(R.drawable.profile_main_image).into(profile_img);
-*/
         user_profile_img = pref.getValue("profileImg", "profileImg");
         Glide.with(this).load(user_profile_img).bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
                 error(R.drawable.profile_main_image).into(profile_img);

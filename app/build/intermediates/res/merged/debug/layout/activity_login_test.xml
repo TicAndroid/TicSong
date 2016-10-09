@@ -50,14 +50,10 @@ android:layout_height="match_parent">
 
         <Button
             android:id="@+id/kakao_login_btn_test"
-            style="@style/KakaoLoginButton"
+            android:background="@drawable/login_kakao_btn"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
-            android:paddingBottom="13dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="13dp"
-            android:textStyle="normal"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             >
         </Button>
