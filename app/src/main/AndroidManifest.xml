@@ -113,6 +113,12 @@
             android:screenOrientation="portrait">
         </activity>
 
+        <activity
+            android:name=".LoginTestActivity"
+            android:label="로그인 테스트"
+            android:screenOrientation="portrait">
+        </activity>
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
