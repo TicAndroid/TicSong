@@ -80,6 +80,7 @@ public class GameActivity extends Activity {
     public int quizNum = 0; // 문제 번호
     public int life = MAX_LIFE; // 현재 정답 기회
     public int score = 0; // 누적 획득 점수
+    public int item3Status = 0; // 0 : 안쓰고있는 경우, 1 : 쓴 경우
 
     public CustomPreference pref;
     public ArrayList<String> answerArray = new ArrayList<String>(); // 정답 리스트
@@ -248,7 +249,7 @@ public class GameActivity extends Activity {
 
     //아이템 사용
     @OnClick({R.id.item1, R.id.item2, R.id.item3, R.id.item4})
-    public void onButtonClick(View view){
+    public void onButtonClick(View view) {
         switch (view.getId()) {
             case R.id.item1:
                 if (pref.getValue("item1Cnt", 0) > 0) {
@@ -274,7 +275,8 @@ public class GameActivity extends Activity {
                     item2.setBackgroundResource(R.drawable.item_onemore_no);
                     item3.setBackgroundResource(R.drawable.item_onechar_no);
                     item4.setBackgroundResource(R.drawable.item_thirdsecond_no);
-                }break;
+                }
+                break;
             case R.id.item2:
                 if (pref.getValue("item2Cnt", 0) > 0) {
                     if (life >= 3) {
@@ -304,7 +306,8 @@ public class GameActivity extends Activity {
                 } else {
                     fxPlay(R.raw.btn_touch);
                     Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                } break;
+                }
+                break;
             case R.id.item3:
                 if (pref.getValue("item3Cnt", 0) > 0) {
                     pref.put("item3Cnt", pref.getValue("item3Cnt", 0) - 1);
@@ -333,7 +336,8 @@ public class GameActivity extends Activity {
                 } else {
                     fxPlay(R.raw.btn_touch);
                     Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                } break;
+                }
+                break;
             case R.id.item4:
                 if (pref.getValue("item4Cnt", 0) > 0) {
                     pref.put("item4Cnt", pref.getValue("item4Cnt", 0) - 1);
@@ -348,6 +352,7 @@ public class GameActivity extends Activity {
                     rotate.startAnimation(start_click_third);
                     tictac.startAnimation(tic_click_third);
                     musicPlay(ITEM_DURATION); // Item사용시 재생시간
+                    item3Status = 1;
                     item1.setEnabled(false);
                     item2.setEnabled(false);
                     item3.setEnabled(false);
@@ -360,7 +365,8 @@ public class GameActivity extends Activity {
                 } else {
                     fxPlay(R.raw.btn_touch);
                     Toast.makeText(GameActivity.this, "아이템을 가지고 있지 않습니다!", Toast.LENGTH_SHORT).show();
-                } break;
+                }
+                break;
             default:
         }
     }
@@ -400,7 +406,7 @@ public class GameActivity extends Activity {
                     @Override
                     public void onClick(SweetAlertDialog sDialog) {
                         try {
-                            for(int i = 0; i < playerArray.size(); i++) {
+                            for (int i = 0; i < playerArray.size(); i++) {
                                 if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
                                     playerArray.get(i).stop();
                                     playerArray.get(i).release();
@@ -456,9 +462,15 @@ public class GameActivity extends Activity {
                 break;
             case 2:
                 // 문제 재생
-                rotate.startAnimation(start_click);
-                tictac.startAnimation(tic_click);
-                musicPlay(PLAYING_DURATION);
+                if (item3Status == 1) {
+                    musicPlay(ITEM_DURATION);
+                    rotate.startAnimation(start_click_third);
+                    tictac.startAnimation(tic_click_third);
+                } else {
+                    rotate.startAnimation(start_click);
+                    tictac.startAnimation(tic_click);
+                    musicPlay(PLAYING_DURATION);
+                }
                 break;
             case 3:
                 // 다음 문제로
@@ -641,20 +653,20 @@ public class GameActivity extends Activity {
     }
 
     public void nextQuiz() {
-        for(int i = 0; i < playerArray.size(); i++) {
+        for (int i = 0; i < playerArray.size(); i++) {
             if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
                 playerArray.get(i).stop();
             }
         }
 
-
         rotate.clearAnimation();
         tictac.clearAnimation();
         edit_ans.setHint("정답을 입력하세요!");
         quizNum++; // 문제 번호 증가
+        item3Status = 0;
         if (quizNum > MAX_QUIZ_NUM) {
             // 마지막 문제 완료 시 결과 화면으로 전환
-            for(int i = 0; i < playerArray.size(); i++) {
+            for (int i = 0; i < playerArray.size(); i++) {
                 if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
                     playerArray.get(i).stop();
                     playerArray.get(i).release();
@@ -697,39 +709,38 @@ public class GameActivity extends Activity {
             gameMode = 1; // 문제 내는 중 모드로 변경
             btn_pass.setVisibility(View.INVISIBLE); // 패스 버튼 숨기기
 
-            mPlayer.seekTo(timeArray.get(quizNum-1));
+            mPlayer.seekTo(timeArray.get(quizNum - 1));
             // setOnSeekCompleteListener -> seekTo 가 완료된 후에 재생
             mPlayer.setOnSeekCompleteListener(new MediaPlayer.OnSeekCompleteListener() {
                 @Override
                 public void onSeekComplete(MediaPlayer mediaPlayer) {
 
 
-                        Log.e("Playing from ?", "Time : " +  playerArray.get(quizNum-1).getCurrentPosition());
+                    Log.e("Playing from ?", "Time : " + playerArray.get(quizNum - 1).getCurrentPosition());
 
-                        mPlayer.start();
+                    mPlayer.start();
 
-                        Handler mHandler = new Handler();
-                        mHandler.postDelayed(new Runnable() { // time ms 후 음악 정지
-                            @Override
-                            public void run() {
-                                mPlayer.pause();
+                    Handler mHandler = new Handler();
+                    mHandler.postDelayed(new Runnable() { // time ms 후 음악 정지
+                        @Override
+                        public void run() {
+                            mPlayer.pause();
 
-                                //프로그레스 바 초기화
-                                gameMode = 2;
-                                runOnUiThread(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        btn_pass.setVisibility(View.VISIBLE); // 패스 버튼 드러내기
-                                        frame_ans.setVisibility(View.VISIBLE); // 정답창 드러내기
-                                        space.setVisibility(View.GONE);
-                                        // 문제를 한 번 들어야 정답창이 드러나도록 함
-                                        txt_msg.setText(quizNum + " 번 문제입니다!\n곡명을 한글로 맞춰주세요!");
-                                    }
-                                });
-                            }
+                            //프로그레스 바 초기화
+                            gameMode = 2;
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    btn_pass.setVisibility(View.VISIBLE); // 패스 버튼 드러내기
+                                    frame_ans.setVisibility(View.VISIBLE); // 정답창 드러내기
+                                    space.setVisibility(View.GONE);
+                                    // 문제를 한 번 들어야 정답창이 드러나도록 함
+                                    txt_msg.setText(quizNum + " 번 문제입니다!\n곡명을 한글로 맞춰주세요!");
+                                }
+                            });
+                        }
 
-                        }, time);
-
+                    }, time);
 
 
                 }
@@ -737,7 +748,7 @@ public class GameActivity extends Activity {
 
         } else if (time == -1) {
 
-            mPlayer.seekTo(timeArray.get(quizNum-1));
+            mPlayer.seekTo(timeArray.get(quizNum - 1));
             // setOnSeekCompleteListener -> seekTo 가 완료된 후에 재생
             mPlayer.setOnSeekCompleteListener(new MediaPlayer.OnSeekCompleteListener() {
                 @Override
@@ -762,7 +773,7 @@ public class GameActivity extends Activity {
             rotate.startAnimation(start_click_infinite);
             tictac.startAnimation(tic_click_infinite);
         } else {
-            mPlayer.seekTo(timeArray.get(quizNum-1));
+            mPlayer.seekTo(timeArray.get(quizNum - 1));
             mPlayer.setOnSeekCompleteListener(new MediaPlayer.OnSeekCompleteListener() {
                 @Override
                 public void onSeekComplete(MediaPlayer mediaPlayer) {
@@ -779,7 +790,7 @@ public class GameActivity extends Activity {
         if (pref.getValue("setting_fx", true)) {
             MediaPlayer fxPlayer = new MediaPlayer();
             fxPlayer = MediaPlayer.create(GameActivity.this, target);
-            fxPlayer.setVolume(0.7f,0.7f); // 2016/09/29/ by jeon 3. 70%로 소리 줄임 테스트 해봐야하고 안되면 숫자를 0.07f로 수정하거나 start()뒤로 보내거나 audiostream setvvolume을 사용해야함 구글링바람!
+            fxPlayer.setVolume(0.7f, 0.7f); // 2016/09/29/ by jeon 3. 70%로 소리 줄임 테스트 해봐야하고 안되면 숫자를 0.07f로 수정하거나 start()뒤로 보내거나 audiostream setvvolume을 사용해야함 구글링바람!
             fxPlayer.start();
             fxPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
@@ -892,7 +903,7 @@ public class GameActivity extends Activity {
         frame_voice.setVisibility(View.GONE); //팝업 제거
         voiceRunning = false;
         //이상 음성인식 부분, 이하 음원 정지 부분
-        if(!playerArray.isEmpty()) {
+        if (!playerArray.isEmpty()) {
             for (int i = 0; i < playerArray.size(); i++) {
                 if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
                     playerArray.get(i).pause();

@@ -1,10 +1,6 @@
 -- Merging decision tree log ---
 manifest
-<<<<<<< HEAD
-ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:2:1-130:12
-=======
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:2:1-136:12
->>>>>>> 96d355ce94e206e59bd26794c635d08d64de540f
+ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:2:1-136:12
 	package
 		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:4:5-34
 		INJECTED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml
@@ -60,12 +56,11 @@ ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:14:
 	android:name
 		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:14:22-78
 uses-sdk
-<<<<<<< HEAD
 ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:16:5-47
 MERGED from [com.google.android.gms:play-services-plus:7.8.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-base:7.8.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.facebook.android:facebook-android-sdk:4.16.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.0\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.16.1] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.1\AndroidManifest.xml:24:5-26:41
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:5:5-44
@@ -113,73 +108,13 @@ MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.13] C:\Users\JPark
 MERGED from [com.crashlytics.sdk.android:answers:1.3.10] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.crashlytics.sdk.android\answers\1.3.10\AndroidManifest.xml:7:5-43
 MERGED from [io.fabric.sdk.android:fabric:1.3.14] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.14\AndroidManifest.xml:23:5-43
 MERGED from [io.fabric.sdk.android:fabric:1.3.14] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.14\AndroidManifest.xml:23:5-43
-MERGED from [com.kakao.sdk:kakaotalk:1.1.7] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\kakaotalk\1.1.7\AndroidManifest.xml:11:5-13:41
-MERGED from [com.kakao.sdk:friends:1.1.7] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\friends\1.1.7\AndroidManifest.xml:8:5-10:41
-MERGED from [com.kakao.sdk:usermgmt:1.1.7] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\usermgmt\1.1.7\AndroidManifest.xml:11:5-13:41
-MERGED from [com.kakao.sdk:auth:1.1.7] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\auth\1.1.7\AndroidManifest.xml:11:5-13:41
-MERGED from [com.kakao.sdk:network:1.1.7] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\network\1.1.7\AndroidManifest.xml:8:5-10:41
-MERGED from [com.kakao.sdk:util:1.1.7] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\util\1.1.7\AndroidManifest.xml:11:5-13:41
-=======
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:16:5-47
-MERGED from [com.google.android.gms:play-services-plus:7.8.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.8.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.facebook.android:facebook-android-sdk:4.16.1] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/AndroidManifest.xml:24:5-26:41
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:customtabs:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/customtabs/23.4.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [cn.pedant.sweetalert:library:1.3] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/cn.pedant.sweetalert/library/1.3/AndroidManifest.xml:7:5-9:41
-MERGED from [com.pnikosis:materialish-progress:1.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.pnikosis/materialish-progress/1.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.github.ParkSangGwon:TedPermission:v1.0.12] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.github.ParkSangGwon/TedPermission/v1.0.12/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [jp.wasabeef:glide-transformations:1.0.6] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/jp.wasabeef/glide-transformations/1.0.6/AndroidManifest.xml:8:5-10:41
-MERGED from [com.tsengvn:typekit:1.0.1] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.tsengvn/typekit/1.0.1/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.4] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.6.4/AndroidManifest.xml:7:5-43
-MERGED from [com.crashlytics.sdk.android:beta:1.2.2] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/beta/1.2.2/AndroidManifest.xml:7:5-43
-MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.14/AndroidManifest.xml:23:5-43
-MERGED from [com.crashlytics.sdk.android:answers:1.3.10] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.10/AndroidManifest.xml:7:5-43
-MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.14/AndroidManifest.xml:23:5-43
-MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.14/AndroidManifest.xml:23:5-43
-MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.13] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics-core/2.3.13/AndroidManifest.xml:7:5-43
-MERGED from [com.crashlytics.sdk.android:answers:1.3.10] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.10/AndroidManifest.xml:7:5-43
-MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.14/AndroidManifest.xml:23:5-43
-MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.14/AndroidManifest.xml:23:5-43
-MERGED from [com.kakao.sdk:kakaotalk:1.1.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/kakaotalk/1.1.14/AndroidManifest.xml:11:5-13:41
-MERGED from [com.kakao.sdk:friends:1.1.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/friends/1.1.14/AndroidManifest.xml:8:5-10:41
-MERGED from [com.kakao.sdk:usermgmt:1.1.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/usermgmt/1.1.14/AndroidManifest.xml:11:5-13:41
-MERGED from [com.kakao.sdk:auth:1.1.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/auth/1.1.14/AndroidManifest.xml:11:5-13:41
-MERGED from [com.kakao.sdk:network:1.1.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/network/1.1.14/AndroidManifest.xml:8:5-10:41
-MERGED from [com.kakao.sdk:util:1.1.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.14/AndroidManifest.xml:11:5-13:41
-MERGED from [com.github.d-max:spots-dialog:0.7] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.github.d-max/spots-dialog/0.7/AndroidManifest.xml:8:5-10:41
->>>>>>> 96d355ce94e206e59bd26794c635d08d64de540f
+MERGED from [com.kakao.sdk:kakaotalk:1.1.14] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\kakaotalk\1.1.14\AndroidManifest.xml:11:5-13:41
+MERGED from [com.kakao.sdk:friends:1.1.14] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\friends\1.1.14\AndroidManifest.xml:8:5-10:41
+MERGED from [com.kakao.sdk:usermgmt:1.1.14] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\usermgmt\1.1.14\AndroidManifest.xml:11:5-13:41
+MERGED from [com.kakao.sdk:auth:1.1.14] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\auth\1.1.14\AndroidManifest.xml:11:5-13:41
+MERGED from [com.kakao.sdk:network:1.1.14] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\network\1.1.14\AndroidManifest.xml:8:5-10:41
+MERGED from [com.kakao.sdk:util:1.1.14] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\util\1.1.14\AndroidManifest.xml:11:5-13:41
+MERGED from [com.github.d-max:spots-dialog:0.7] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.github.d-max\spots-dialog\0.7\AndroidManifest.xml:8:5-10:41
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:23.4.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
@@ -190,12 +125,11 @@ MERGED from [com.github.d-max:spots-dialog:0.7] /Users/daesub/Desktop/TicSong/Ti
 		INJECTED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml
 application
-<<<<<<< HEAD
-ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:18:5-128:19
+ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:18:5-134:19
 MERGED from [com.google.android.gms:play-services-plus:7.8.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-base:7.8.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.facebook.android:facebook-android-sdk:4.16.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.0\AndroidManifest.xml:28:5-38:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.16.1] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.1\AndroidManifest.xml:28:5-38:19
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
@@ -242,60 +176,7 @@ MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.13] C:\Users\JPark
 MERGED from [com.crashlytics.sdk.android:answers:1.3.10] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.crashlytics.sdk.android\answers\1.3.10\AndroidManifest.xml:11:5-20
 MERGED from [io.fabric.sdk.android:fabric:1.3.14] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.14\AndroidManifest.xml:27:5-20
 MERGED from [io.fabric.sdk.android:fabric:1.3.14] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.14\AndroidManifest.xml:27:5-20
-=======
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:18:5-134:19
-MERGED from [com.google.android.gms:play-services-plus:7.8.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.8.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.facebook.android:facebook-android-sdk:4.16.1] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/AndroidManifest.xml:28:5-38:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:cardview-v7:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:customtabs:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/customtabs/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [cn.pedant.sweetalert:library:1.3] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/cn.pedant.sweetalert/library/1.3/AndroidManifest.xml:11:5-20
-MERGED from [com.pnikosis:materialish-progress:1.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.pnikosis/materialish-progress/1.0/AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.github.ParkSangGwon:TedPermission:v1.0.12] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.github.ParkSangGwon/TedPermission/v1.0.12/AndroidManifest.xml:9:5-13:19
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.tsengvn:typekit:1.0.1] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.tsengvn/typekit/1.0.1/AndroidManifest.xml:11:5-20
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.4] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics/2.6.4/AndroidManifest.xml:11:5-20
-MERGED from [com.crashlytics.sdk.android:beta:1.2.2] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/beta/1.2.2/AndroidManifest.xml:11:5-20
-MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.14/AndroidManifest.xml:27:5-20
-MERGED from [com.crashlytics.sdk.android:answers:1.3.10] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.10/AndroidManifest.xml:11:5-20
-MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.14/AndroidManifest.xml:27:5-20
-MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.14/AndroidManifest.xml:27:5-20
-MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.13] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/crashlytics-core/2.3.13/AndroidManifest.xml:11:5-20
-MERGED from [com.crashlytics.sdk.android:answers:1.3.10] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.crashlytics.sdk.android/answers/1.3.10/AndroidManifest.xml:11:5-20
-MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.14/AndroidManifest.xml:27:5-20
-MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/io.fabric.sdk.android/fabric/1.3.14/AndroidManifest.xml:27:5-20
-MERGED from [com.github.d-max:spots-dialog:0.7] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.github.d-max/spots-dialog/0.7/AndroidManifest.xml:12:5-20
->>>>>>> 96d355ce94e206e59bd26794c635d08d64de540f
+MERGED from [com.github.d-max:spots-dialog:0.7] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.github.d-max\spots-dialog\0.7\AndroidManifest.xml:12:5-20
 	android:label
 		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:21:9-41
 	android:allowBackup
@@ -416,13 +297,8 @@ ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:96:
 	android:name
 		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:97:13-47
 activity#com.facebook.FacebookActivity
-<<<<<<< HEAD
 ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:102:9-108:51
-MERGED from [com.facebook.android:facebook-android-sdk:4.16.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.0\AndroidManifest.xml:29:9-32:66
-=======
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:102:9-108:51
-MERGED from [com.facebook.android:facebook-android-sdk:4.16.1] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/AndroidManifest.xml:29:9-32:66
->>>>>>> 96d355ce94e206e59bd26794c635d08d64de540f
+MERGED from [com.facebook.android:facebook-android-sdk:4.16.1] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.1\AndroidManifest.xml:29:9-32:66
 	android:screenOrientation
 		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:108:13-49
 	android:label
@@ -430,13 +306,8 @@ MERGED from [com.facebook.android:facebook-android-sdk:4.16.1] /Users/daesub/Des
 	android:configChanges
 		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:104:13-96
 	android:theme
-<<<<<<< HEAD
 		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:107:13-71
-		REJECTED from [com.facebook.android:facebook-android-sdk:4.16.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.0\AndroidManifest.xml:32:13-63
-=======
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:107:13-71
-		REJECTED from [com.facebook.android:facebook-android-sdk:4.16.1] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/AndroidManifest.xml:32:13-63
->>>>>>> 96d355ce94e206e59bd26794c635d08d64de540f
+		REJECTED from [com.facebook.android:facebook-android-sdk:4.16.1] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.1\AndroidManifest.xml:32:13-63
 	tools:replace
 		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:106:13-42
 	android:name
@@ -448,55 +319,33 @@ ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:110
 	android:label
 		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:112:13-33
 	android:name
-<<<<<<< HEAD
 		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:111:13-46
-meta-data#com.facebook.sdk.ApplicationId
-ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:116:9-118:55
-	android:value
-		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:118:13-52
-	android:name
-		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:117:13-58
-meta-data#io.fabric.ApiKey
-ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:120:9-122:72
-	android:value
-		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:122:13-69
-	android:name
-		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:121:13-44
-meta-data#com.kakao.sdk.AppKey
-ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:125:9-127:57
-	android:value
-		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:127:13-54
-	android:name
-		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:126:13-48
-=======
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:111:13-46
 activity#com.ticcorp.ticsong.LoginTestActivity
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:116:9-120:20
+ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:116:9-120:20
 	android:screenOrientation
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:119:13-49
+		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:119:13-49
 	android:label
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:118:13-36
+		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:118:13-36
 	android:name
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:117:13-46
+		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:117:13-46
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:122:9-124:55
+ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:122:9-124:55
 	android:value
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:124:13-52
+		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:124:13-52
 	android:name
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:123:13-58
+		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:123:13-58
 meta-data#io.fabric.ApiKey
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:126:9-128:72
+ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:126:9-128:72
 	android:value
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:128:13-69
+		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:128:13-69
 	android:name
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:127:13-44
+		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:127:13-44
 meta-data#com.kakao.sdk.AppKey
-ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:131:9-133:57
+ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:131:9-133:57
 	android:value
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:133:13-54
+		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:133:13-54
 	android:name
-		ADDED from /Users/daesub/Desktop/TicSong/TicSong/app/src/main/AndroidManifest.xml:132:13-48
->>>>>>> 96d355ce94e206e59bd26794c635d08d64de540f
+		ADDED from C:\Users\JPark\Documents\TicSong\app\src\main\AndroidManifest.xml:132:13-48
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-base:7.8.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:21:9-23:69
 	android:value
@@ -504,27 +353,15 @@ ADDED from [com.google.android.gms:play-services-base:7.8.0] C:\Users\JPark\Docu
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:7.8.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\AndroidManifest.xml:22:13-58
 activity#com.facebook.CustomTabActivity
-<<<<<<< HEAD
-ADDED from [com.facebook.android:facebook-android-sdk:4.16.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.0\AndroidManifest.xml:33:9-36:20
+ADDED from [com.facebook.android:facebook-android-sdk:4.16.1] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.1\AndroidManifest.xml:33:9-36:20
 	android:exported
-		ADDED from [com.facebook.android:facebook-android-sdk:4.16.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.0\AndroidManifest.xml:35:13-36
+		ADDED from [com.facebook.android:facebook-android-sdk:4.16.1] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.1\AndroidManifest.xml:35:13-36
 	android:name
-		ADDED from [com.facebook.android:facebook-android-sdk:4.16.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.0\AndroidManifest.xml:34:13-58
+		ADDED from [com.facebook.android:facebook-android-sdk:4.16.1] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.1\AndroidManifest.xml:34:13-58
 activity#com.facebook.CustomTabMainActivity
-ADDED from [com.facebook.android:facebook-android-sdk:4.16.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.0\AndroidManifest.xml:37:9-71
+ADDED from [com.facebook.android:facebook-android-sdk:4.16.1] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.1\AndroidManifest.xml:37:9-71
 	android:name
-		ADDED from [com.facebook.android:facebook-android-sdk:4.16.0] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.0\AndroidManifest.xml:37:19-68
-=======
-ADDED from [com.facebook.android:facebook-android-sdk:4.16.1] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/AndroidManifest.xml:33:9-36:20
-	android:exported
-		ADDED from [com.facebook.android:facebook-android-sdk:4.16.1] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/AndroidManifest.xml:35:13-36
-	android:name
-		ADDED from [com.facebook.android:facebook-android-sdk:4.16.1] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/AndroidManifest.xml:34:13-58
-activity#com.facebook.CustomTabMainActivity
-ADDED from [com.facebook.android:facebook-android-sdk:4.16.1] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/AndroidManifest.xml:37:9-71
-	android:name
-		ADDED from [com.facebook.android:facebook-android-sdk:4.16.1] /Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.16.1/AndroidManifest.xml:37:19-68
->>>>>>> 96d355ce94e206e59bd26794c635d08d64de540f
+		ADDED from [com.facebook.android:facebook-android-sdk:4.16.1] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.1\AndroidManifest.xml:37:19-68
 activity#com.gun0912.tedpermission.TedPermissionActivity
 ADDED from [com.github.ParkSangGwon:TedPermission:v1.0.12] C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.github.ParkSangGwon\TedPermission\v1.0.12\AndroidManifest.xml:10:9-12:56
 	android:theme

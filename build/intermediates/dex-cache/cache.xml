@@ -65,6 +65,13 @@
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-23.4.0_e902e137c4e28023aafdaace54333385e4c5b2fe.jar" />
     </item>
     <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\auth\1.1.14\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="95abe36f141adcf4096017eb8833b1833697c8df">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.kakao.sdk-auth-1.1.14_646acf08ccafa6e82ddce37617b19294b22e1fee.jar" />
+    </item>
+    <item
         jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\io.fabric.sdk.android\fabric\1.3.14\jars\classes.jar"
         jumboMode="false"
         revision="23.0.3"
@@ -93,11 +100,11 @@
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\guava-jdk5-17.0_d62b206bccf2d3c70214fa388e74d5a27de5a934.jar" />
     </item>
     <item
-        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\usermgmt\1.1.7\jars\classes.jar"
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\network\1.1.14\jars\classes.jar"
         jumboMode="false"
         revision="23.0.3"
-        sha1="db5778b91fccdd64b42bf28eaf7bf3c2c6cad256">
-        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.kakao.sdk-usermgmt-1.1.7_c6998973128b465deed6b59b1ad6d181ff503c1e.jar" />
+        sha1="dd263c3744187eb20144df321f4db9dd203fe167">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.kakao.sdk-network-1.1.14_5e1f87abcd15e8f186667f29aa39d404a6f7cca0.jar" />
     </item>
     <item
         jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-gson\1.22.0\826b874fa410a8135b7094c469951bf0dadb0c10\google-http-client-gson-1.22.0.jar"
@@ -114,6 +121,20 @@
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.crashlytics.sdk.android-answers-1.3.10_c86bacb7c9550d6b99765bdc49e91ca45a8ebfda.jar" />
     </item>
     <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\kakaotalk\1.1.14\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="83f5fb25fab20db01be2b113e5b2bbbb3ca1a493">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.kakao.sdk-kakaotalk-1.1.14_f3b43918d3c2ff47becf4edc391331cf4c580b9d.jar" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.github.d-max\spots-dialog\0.7\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="bf94678214d9ab43a8deb5df90d0b3e6d619ff1e">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.github.d-max-spots-dialog-0.7_96f7800d9af634ab44feadec3ac983fbb5b95e9e.jar" />
+    </item>
+    <item
         jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.crashlytics.sdk.android\crashlytics-core\2.3.13\jars\classes.jar"
         jumboMode="false"
         revision="23.0.3"
@@ -126,13 +147,6 @@
         revision="23.0.3"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.android.support-support-vector-drawable-23.4.0_b9b007f5fb586253f9e7ff0cbd93c5a6fcf1fb17.jar" />
-    </item>
-    <item
-        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\kakaotalk\1.1.7\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="718b18113a82af949ac7ccb280663dcedaf7838a">
-        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.kakao.sdk-kakaotalk-1.1.7_16506be2b9f164c504bf8d5e5c0c83e592cb2c53.jar" />
     </item>
     <item
         jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.8.0\jars\classes.jar"
@@ -177,13 +191,6 @@
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\bolts-applinks-1.4.0_242f43e7204dfb7710e2f9327bec17348b1df48c.jar" />
     </item>
     <item
-        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\network\1.1.7\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="83d318091bcf5a6599895cfd210c09ec5d5e99f7">
-        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.kakao.sdk-network-1.1.7_125584973914d1d5ab9ae82a7dee928570931756.jar" />
-    </item>
-    <item
         jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client-android\1.22.0\7a0fe12b7d8189a821934d6f9d6586d00180e461\google-api-client-android-1.22.0.jar"
         jumboMode="false"
         revision="23.0.3"
@@ -205,11 +212,11 @@
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-base-7.8.0_b1216f39f568802a33d4e858995209fcf56a84c2.jar" />
     </item>
     <item
-        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\auth\1.1.7\jars\classes.jar"
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.3"
-        sha1="35708bf7ef298d7d79c22fe0e6d7dce4a5d8805f">
-        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.kakao.sdk-auth-1.1.7_46ca60bb38ce1e762ae4f5bacf4407c942feea6c.jar" />
+        sha1="99d79164a8f983161bdb59b1403b9e4a1127aae1">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.facebook.android-facebook-android-sdk-4.16.1_9039d43100ae81e48e2fed217d416b3a1f912941.jar" />
     </item>
     <item
         jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
@@ -219,25 +226,11 @@
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\retrofit-2.1.0_1ec2cc3300c7221ecb13222b3fb23640a9583655.jar" />
     </item>
     <item
-        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\util\1.1.7\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="cd274d51f5c8edd33f90cd59439813f1b8e0da6a">
-        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.kakao.sdk-util-1.1.7_579283cc1b79cfbecf8d4d8364a93276654f7407.jar" />
-    </item>
-    <item
         jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.google.oauth-client\google-oauth-client\1.22.0\1d63f369ac78e4838a3197147012026e791008cb\google-oauth-client-1.22.0.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="1d63f369ac78e4838a3197147012026e791008cb">
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\google-oauth-client-1.22.0_0b8df04d90744766632e32db9b34bb1c44fb1f49.jar" />
-    </item>
-    <item
-        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\friends\1.1.7\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="f05003d1c70f11e61a06c996621f2904f157be7f">
-        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.kakao.sdk-friends-1.1.7_510fb71f7b7d5339e95f737aca3fea22287e551e.jar" />
     </item>
     <item
         jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.0\2b802460eea20f8f2ad9c08c74e0f14718e88aa9\okhttp-3.3.0.jar"
@@ -261,11 +254,11 @@
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\google-api-services-youtube-v3-rev120-1.19.0_9f84ea5568b44cf3ba359539edb31f9d94664010.jar" />
     </item>
     <item
-        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.16.0\jars\classes.jar"
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\friends\1.1.14\jars\classes.jar"
         jumboMode="false"
         revision="23.0.3"
-        sha1="df6791bb4f5402ed138d3dd1385f8e2bc3ac8728">
-        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.facebook.android-facebook-android-sdk-4.16.0_cbefaea9f5dd3b9d1a46aeebdc9ede1708c36036.jar" />
+        sha1="7d6e47b3aa01f9f52d83808ff5c90d849d09ca7a">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.kakao.sdk-friends-1.1.14_0842a009d8a9556ab634bec2f521b2ea47743bbf.jar" />
     </item>
     <item
         jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.tsengvn\typekit\1.0.1\jars\classes.jar"
@@ -273,6 +266,13 @@
         revision="23.0.3"
         sha1="ebfb8784f12b4f1e00026c373ed30c0f7b74ca68">
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.tsengvn-typekit-1.0.1_5297810b9ac89b0eb7008dd229847fed2134db76.jar" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\usermgmt\1.1.14\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="7bd0043b029199b5e2d9ead912982578fa05c3ee">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.kakao.sdk-usermgmt-1.1.14_f930068e1f5c3dd1036a94ce69c660ca417cc93d.jar" />
     </item>
     <item
         jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
@@ -294,6 +294,13 @@
         revision="23.0.3"
         sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
         <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\butterknife-7.0.1_8f18611832400bc38d0bc941a18957f10180e9e1.jar" />
+    </item>
+    <item
+        jar="C:\Users\JPark\Documents\TicSong\app\build\intermediates\exploded-aar\com.kakao.sdk\util\1.1.14\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3ed1b888309cf77dd049b3c0f729246913967ffa">
+        <dex dex="C:\Users\JPark\Documents\TicSong\app\build\intermediates\pre-dexed\release\com.kakao.sdk-util-1.1.14_b709faf4d9c9e22326d9fd10a13da042521e7a8e.jar" />
     </item>
     <item
         jar="C:\Users\JPark\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.6.0\a7537446a030da8eb0da4c71424d16c2589f6c4a\glide-3.6.0.jar"

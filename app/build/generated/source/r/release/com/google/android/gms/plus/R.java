@@ -8,9 +8,9 @@ package com.google.android.gms.plus;
 
 public final class R {
 	public static final class attr {
-		public static final int circleCrop = 0x7f0100af;
-		public static final int imageAspectRatio = 0x7f0100ae;
-		public static final int imageAspectRatioAdjust = 0x7f0100ad;
+		public static final int circleCrop = 0x7f0100b3;
+		public static final int imageAspectRatio = 0x7f0100b2;
+		public static final int imageAspectRatioAdjust = 0x7f0100b1;
 	}
 	public static final class color {
 		public static final int common_action_bar_splitter = 0x7f0c0034;
@@ -23,8 +23,8 @@ public final class R {
 		public static final int common_signin_btn_light_text_disabled = 0x7f0c003b;
 		public static final int common_signin_btn_light_text_focused = 0x7f0c003c;
 		public static final int common_signin_btn_light_text_pressed = 0x7f0c003d;
-		public static final int common_signin_btn_text_dark = 0x7f0c0085;
-		public static final int common_signin_btn_text_light = 0x7f0c0086;
+		public static final int common_signin_btn_text_dark = 0x7f0c0086;
+		public static final int common_signin_btn_text_light = 0x7f0c0087;
 	}
 	public static final class drawable {
 		public static final int common_full_open_on_phone = 0x7f02008b;
@@ -53,10 +53,10 @@ public final class R {
 		public static final int common_signin_btn_text_normal_light = 0x7f0200a2;
 		public static final int common_signin_btn_text_pressed_dark = 0x7f0200a3;
 		public static final int common_signin_btn_text_pressed_light = 0x7f0200a4;
-		public static final int ic_plusone_medium_off_client = 0x7f0200b1;
-		public static final int ic_plusone_small_off_client = 0x7f0200b2;
-		public static final int ic_plusone_standard_off_client = 0x7f0200b3;
-		public static final int ic_plusone_tall_off_client = 0x7f0200b4;
+		public static final int ic_plusone_medium_off_client = 0x7f0200b3;
+		public static final int ic_plusone_small_off_client = 0x7f0200b4;
+		public static final int ic_plusone_standard_off_client = 0x7f0200b5;
+		public static final int ic_plusone_tall_off_client = 0x7f0200b6;
 	}
 	public static final class id {
 		public static final int adjust_height = 0x7f0d0025;
@@ -109,7 +109,7 @@ public final class R {
 	public static final class style {
 	}
 	public static final class styleable {
-		public static final int[] LoadingImageView = { 0x7f0100ad, 0x7f0100ae, 0x7f0100af };
+		public static final int[] LoadingImageView = { 0x7f0100b1, 0x7f0100b2, 0x7f0100b3 };
 		public static final int LoadingImageView_circleCrop = 2;
 		public static final int LoadingImageView_imageAspectRatio = 1;
 		public static final int LoadingImageView_imageAspectRatioAdjust = 0;

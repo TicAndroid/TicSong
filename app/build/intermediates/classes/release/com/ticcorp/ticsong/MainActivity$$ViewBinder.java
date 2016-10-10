@@ -18,8 +18,8 @@ public class MainActivity$$ViewBinder<T extends com.ticcorp.ticsong.MainActivity
           target.mainJokeBoxClicked();
         }
       });
-    view = finder.findRequiredView(source, 2131558556, "field 'btn_ranking' and method 'rankingClicked'");
-    target.btn_ranking = finder.castView(view, 2131558556, "field 'btn_ranking'");
+    view = finder.findRequiredView(source, 2131558557, "field 'btn_ranking' and method 'rankingClicked'");
+    target.btn_ranking = finder.castView(view, 2131558557, "field 'btn_ranking'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -28,12 +28,12 @@ public class MainActivity$$ViewBinder<T extends com.ticcorp.ticsong.MainActivity
           target.rankingClicked();
         }
       });
-    view = finder.findRequiredView(source, 2131558557, "field 'btn_setting'");
-    target.btn_setting = finder.castView(view, 2131558557, "field 'btn_setting'");
-    view = finder.findRequiredView(source, 2131558559, "field 'img_juke_bold'");
-    target.img_juke_bold = finder.castView(view, 2131558559, "field 'img_juke_bold'");
-    view = finder.findRequiredView(source, 2131558558, "field 'img_juke_sport'");
-    target.img_juke_sport = finder.castView(view, 2131558558, "field 'img_juke_sport'");
+    view = finder.findRequiredView(source, 2131558558, "field 'btn_setting'");
+    target.btn_setting = finder.castView(view, 2131558558, "field 'btn_setting'");
+    view = finder.findRequiredView(source, 2131558560, "field 'img_juke_bold'");
+    target.img_juke_bold = finder.castView(view, 2131558560, "field 'img_juke_bold'");
+    view = finder.findRequiredView(source, 2131558559, "field 'img_juke_sport'");
+    target.img_juke_sport = finder.castView(view, 2131558559, "field 'img_juke_sport'");
     view = finder.findRequiredView(source, 2131558526, "field 'item1_cnt'");
     target.item1_cnt = finder.castView(view, 2131558526, "field 'item1_cnt'");
     view = finder.findRequiredView(source, 2131558528, "field 'item2_cnt'");
@@ -50,10 +50,10 @@ public class MainActivity$$ViewBinder<T extends com.ticcorp.ticsong.MainActivity
     target.item3 = finder.castView(view, 2131558529, "field 'item3'");
     view = finder.findRequiredView(source, 2131558531, "field 'item4'");
     target.item4 = finder.castView(view, 2131558531, "field 'item4'");
-    view = finder.findRequiredView(source, 2131558555, "field 'exp_bar'");
-    target.exp_bar = finder.castView(view, 2131558555, "field 'exp_bar'");
-    view = finder.findRequiredView(source, 2131558551, "field 'profile_img'");
-    target.profile_img = finder.castView(view, 2131558551, "field 'profile_img'");
+    view = finder.findRequiredView(source, 2131558556, "field 'exp_bar'");
+    target.exp_bar = finder.castView(view, 2131558556, "field 'exp_bar'");
+    view = finder.findRequiredView(source, 2131558552, "field 'profile_img'");
+    target.profile_img = finder.castView(view, 2131558552, "field 'profile_img'");
   }
 
   @Override public void unbind(T target) {

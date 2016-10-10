@@ -1,66 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent">
-
-<FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/ani_background"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/splash_background" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/ani_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/splash_background" />
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="100">
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="70" />
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="30"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
+        android:weightSum="100">
 
-        <Button
-            android:id="@+id/fb_login_btn_test"
-            style="@style/FacebookLoginButton"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/selector_facebook_sign_in_button"
-            android:paddingBottom="13dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="13dp"
-            android:textStyle="normal"
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="65" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
             android:gravity="center"
-            >
-        </Button>
+            android:orientation="horizontal"
+            android:weightSum="100">
 
-        <Button
-            android:id="@+id/kakao_login_btn_test"
-            android:background="@drawable/login_kakao_btn"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            >
-        </Button>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="73"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="100">
 
+                <Button
+                    android:id="@+id/fb_login_btn_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="25"
+                    android:background="@drawable/facebook_login"
+                    android:gravity="center"></Button>
 
+                <Button
+                    android:id="@+id/kakao_login_btn_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="25"
+                    android:background="@drawable/kakao_login"
+                    android:gravity="center"></Button>
+
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 
 
 </FrameLayout>

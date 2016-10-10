@@ -99,6 +99,11 @@
             android:label="카카오톡"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.LoginTestActivity"
+            android:label="로그인 테스트"
+            android:screenOrientation="portrait" >
+        </activity>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

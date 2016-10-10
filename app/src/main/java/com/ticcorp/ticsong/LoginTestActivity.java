@@ -403,6 +403,8 @@ public class LoginTestActivity extends Activity {
     protected void redirectToLoginActivity() {
         final Intent intent = new Intent(this, LoginTestActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
     }

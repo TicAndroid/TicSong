@@ -1,13 +1,8 @@
 <component name="libraryTable">
   <library name="auth-1.1.14">
     <CLASSES>
-<<<<<<< HEAD:.idea/libraries/util_1_1_7.xml
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.7/res" />
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.kakao.sdk/util/1.1.7/jars/classes.jar!/" />
-=======
       <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.kakao.sdk/auth/1.1.14/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.kakao.sdk/auth/1.1.14/res" />
->>>>>>> 96d355ce94e206e59bd26794c635d08d64de540f:.idea/libraries/auth_1_1_14.xml
     </CLASSES>
     <JAVADOC />
     <SOURCES>
