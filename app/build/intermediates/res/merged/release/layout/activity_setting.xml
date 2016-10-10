@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_base" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_exit"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_x" />
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/txt_setting" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="74"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_weight="97"
+                android:background="@drawable/background_star">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_setting"
+                    android:orientation="vertical"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#aaFFFFFF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="13"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="5"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <ImageButton
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="19"
+                                android:background="@drawable/btn_sound"
+                                android:gravity="center_vertical" />
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="66" />
+
+                            <ImageButton android:id="@+id/setting_music"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="15"
+                                android:background="@drawable/btn_on" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="13"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="5"
+                            android:orientation="horizontal"
+                            android:weightSum="100">
+
+                            <ImageButton
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="25"
+                                android:background="@drawable/txt_sound"
+                                android:gravity="center_vertical" />
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="60" />
+
+                            <ImageButton android:id="@+id/setting_fx"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="15"
+                                android:background="@drawable/btn_on" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="11" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="64"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="66"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:weightSum="125">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="23"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="100">
+
+                                <ImageButton
+                                    android:id="@+id/btn_tutorial"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="20"
+                                    android:background="@drawable/btn_tutorial" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="3dp"
+                                android:layout_height="3dp"
+                                android:layout_marginBottom="13dp"
+                                android:layout_marginTop="13dp"
+                                android:background="#ffffff" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="25"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="100">
+
+                                <ImageButton android:id="@+id/btn_info"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="60"
+                                    android:background="@drawable/btn_privacy" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="3dp"
+                                android:layout_height="3dp"
+                                android:layout_marginBottom="13dp"
+                                android:layout_marginTop="13dp"
+                                android:background="#ffffff" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="25"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="100">
+
+                                <ImageButton android:id="@+id/btn_ask"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="18"
+                                    android:background="@drawable/btn_ask" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="3dp"
+                                android:layout_height="3dp"
+                                android:layout_marginBottom="13dp"
+                                android:layout_marginTop="13dp"
+                                android:background="#ffffff" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="23"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="100">
+
+                                <ImageButton
+                                    android:id="@+id/btn_aboutus"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="20"
+                                    android:background="@drawable/btn_about_us" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="3dp"
+                                android:layout_height="3dp"
+                                android:layout_marginBottom="13dp"
+                                android:layout_marginTop="13dp"
+                                android:background="#ffffff" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="25"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="100">
+
+                                <ImageButton
+                                    android:id="@+id/btn_opensource"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="24"
+                                    android:background="@drawable/btn_open_source" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="19"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="13"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btn_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_logout" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="16" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="12"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btn_out"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_out" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

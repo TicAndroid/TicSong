@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ticcorp.ticsong"
+    android:versionCode="2"
+    android:versionName="1.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.ticcorp.ticsong.ApplicationClass"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.ticcorp.ticsong.SplashActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.FBActivity"
+            android:label="페북테스트"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.ResultActivity"
+            android:label="결과화면"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.MainActivity"
+            android:label="메인화면"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.GameActivity"
+            android:label="게임화면"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.SettingActivity"
+            android:label="셋팅화면"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.TutorialActivity"
+            android:label="튜토리얼화면"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.InfoActivity"
+            android:label="개인정보화면"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.OpenSourceActivity"
+            android:label="오픈소스화면"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.RankingActivity"
+            android:label="랭킹화면"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.AgreementActivity"
+            android:label="약관동의화면"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ticcorp.ticsong.ServerTestActivity"
+            android:label="서버 테스트"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.ticcorp.ticsong.KaKaoTalkActivity"
+            android:label="카카오톡"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="57b1eed3403ebdc3ae1f6bfcf4e8fdf786e23e7b" />
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakaotalk_app_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true" >
+        </activity>
+        <activity android:name="com.facebook.CustomTabMainActivity" />
+        <activity
+            android:name="com.gun0912.tedpermission.TedPermissionActivity"
+            android:theme="@style/Theme.Transparent" />
+    </application>
+
+</manifest>

@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\release\\raw\\applause.ogg",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\raw\\applause.ogg"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\release\\raw\\btn_touch.ogg",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\raw\\btn_touch.ogg"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\release\\raw\\result_good.ogg",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\raw\\result_good.ogg"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\release\\raw\\jellyfish_in_space.ogg",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\raw\\jellyfish_in_space.ogg"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\release\\raw\\wrong_answer.ogg",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\raw\\wrong_answer.ogg"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\release\\raw\\result_bad.ogg",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\raw\\result_bad.ogg"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\release\\raw\\wind_chimes.ogg",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\raw\\wind_chimes.ogg"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\release\\raw\\result_excellent.ogg",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\raw\\result_excellent.ogg"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\release\\raw\\result_great.ogg",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\raw\\result_great.ogg"
+    },
+    {
+        "merged": "C:\\Users\\JPark\\Documents\\TicSong\\app\\build\\intermediates\\res\\merged\\release\\raw\\right_answer.ogg",
+        "source": "C:\\Users\\JPark\\Documents\\TicSong\\app\\src\\main\\res\\raw\\right_answer.ogg"
+    }
+]
