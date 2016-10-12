@@ -22,16 +22,8 @@ public class RankingActivity$$ViewBinder<T extends com.ticcorp.ticsong.RankingAc
     target.txt_friend = finder.castView(view, 2131558561, "field 'txt_friend'");
     view = finder.findRequiredView(source, 2131558562, "field 'txt_yourRank'");
     target.txt_yourRank = finder.castView(view, 2131558562, "field 'txt_yourRank'");
-    view = finder.findRequiredView(source, 2131558563, "field 'img_profile' and method 'changeClick'");
+    view = finder.findRequiredView(source, 2131558563, "field 'img_profile'");
     target.img_profile = finder.castView(view, 2131558563, "field 'img_profile'");
-    view.setOnClickListener(
-      new butterknife.internal.DebouncingOnClickListener() {
-        @Override public void doClick(
-          android.view.View p0
-        ) {
-          target.changeClick();
-        }
-      });
     view = finder.findRequiredView(source, 2131558564, "field 'ranking_standby'");
     target.ranking_standby = finder.castView(view, 2131558564, "field 'ranking_standby'");
   }
