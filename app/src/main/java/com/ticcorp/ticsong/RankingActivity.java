@@ -20,6 +20,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.ticcorp.ticsong.activitySupport.CustomBitmapPool;
 import com.ticcorp.ticsong.model.CustomPreference;
 import com.ticcorp.ticsong.module.ServerAccessModule;
 import com.tsengvn.typekit.TypekitContextWrapper;
@@ -30,6 +32,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 public class RankingActivity extends Activity {
 
@@ -38,7 +41,7 @@ public class RankingActivity extends Activity {
     private ListView mListView, aListView;
     private ListViewAdapter mAdapter, aAdapter; //가상
     private CustomPreference pref;
-    private String userId;
+    private String userId, user_profile_img;
     private boolean isLoaded = false; // 랭킹 로딩 확인
 
     public Animation btn_click;
@@ -92,6 +95,14 @@ public class RankingActivity extends Activity {
         // txt_friend.setText(pref.getValue("friendCnt", 1) + " 친구 "); // 2016.09.29 대섭 삭제
         txt_yourRank.setText("TOP 20 "); //자기가 몇 등인지 확인하는 방법이 없어 임시로 현재 랭킹 모드 표시
 
+        // TOP20 문구 옆, 본인 프로필 이미지  // 2016.10.12 대섭 추가
+        user_profile_img = pref.getValue("profileImg", "profileImg");
+
+
+        Glide.with(this).load(user_profile_img).bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
+                error(R.drawable.profile_main_image).into(img_profile);
+
+
     }
 
     // 폰트 적용
@@ -143,7 +154,8 @@ public class RankingActivity extends Activity {
         RankingActivity.this.finish();
     }
 
-    @OnClick(R.id.img_profile)
+    // 친구목록보기 화면으로 전환을 막아놓음. // 2016.10.12 대섭
+    //@OnClick(R.id.img_profile)
     void changeClick() {
         fxPlay(R.raw.btn_touch);
         if(modeFriend) {
