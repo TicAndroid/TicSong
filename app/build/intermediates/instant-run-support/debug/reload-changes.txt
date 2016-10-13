@@ -1,5 +1,0 @@
-CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\RankingActivity$$ViewBinder$override.class
-CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\RankingActivity$override.class
-CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\RankingActivity$1$override.class
-CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ticcorp\ticsong\RankingActivity$rankinghandler$override.class
-CHANGED,C:\Users\JPark\Documents\TicSong\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
