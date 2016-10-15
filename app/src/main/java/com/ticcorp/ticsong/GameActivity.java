@@ -76,8 +76,6 @@ public class GameActivity extends Activity {
     public int userLevel;
     public int userExp;
 
-    public boolean activityFinished = false; // 문제 로딩 중 액티비티 종료 시를 위한 변수
-
     public int gameMode = 1; // 0 : 문제 대기 중, 1 : 문제 내는 중 또는 로딩 중, 2 : 맞추는 중, 3 : 정답 확인 중
     public int quizNum = 0; // 문제 번호
     public int life = MAX_LIFE; // 현재 정답 기회
@@ -407,7 +405,6 @@ public class GameActivity extends Activity {
                 .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override
                     public void onClick(SweetAlertDialog sDialog) {
-                        activityFinished = true;
                         fxPlay(R.raw.btn_touch);
                         Intent intent = new Intent(getApplication(), MainActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -580,7 +577,7 @@ public class GameActivity extends Activity {
 
     public void trackSetting() { // return은 문제 중복 여부
         //Log.i("ticlog", "track_prepared_index : " + track_prepared_index);
-        if (!activityFinished) { // 로딩 중 액티비티 종료 되었으면 실행하지 않음
+        try {
             boolean isNumUsed = false; // 번호 중복 확인 여부
 
             final String CLIENT_ID = "59eb0488cc28a2c558ecbf47ed19f787";
@@ -654,6 +651,8 @@ public class GameActivity extends Activity {
                     trackSetting();
                 }
             }
+        } catch (IndexOutOfBoundsException e) {
+            Log.i("ticlog", "IndexOutOfBoundsException(Activity Finished)");
         }
     }
 

@@ -76,6 +76,9 @@ public class ResultActivity extends Activity {
     @Bind(R.id.level)
     TextView level;
 
+    @Bind(R.id.txt_exp)
+    TextView txt_exp;
+
     @OnClick(R.id.btn_share)
     void shareClick() {
 
@@ -230,6 +233,7 @@ public class ResultActivity extends Activity {
             profile_progressbar.setMax(100);
             profile_progressbar.setProgress(100);
         }
+        txt_exp.setText(nowExp + " / " + requiredExp + " ");
     }
 
     public void setLevel() { // 경험치 보고 레벨 업 처리

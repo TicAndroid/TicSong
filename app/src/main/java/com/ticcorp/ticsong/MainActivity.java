@@ -94,6 +94,8 @@ public class MainActivity extends Activity {
     ImageButton item4;
     @Bind(R.id.profile_progressbar)
     ProgressBar exp_bar;
+    @Bind(R.id.txt_exp)
+    TextView txt_exp;
 
     Animation button_anim, background_anim, juke_bold, juke_sport;
     @Bind(R.id.profile_img)
@@ -231,6 +233,7 @@ public class MainActivity extends Activity {
         item2_cnt.setText(pref.getValue("item2Cnt", 0) + "");
         item3_cnt.setText(pref.getValue("item3Cnt", 0) + "");
         item4_cnt.setText(pref.getValue("item4Cnt", 0) + "");
+        txt_exp.setText(now_exp + " / " + required_exp + " ");
 
         user_profile_img = pref.getValue("profileImg", "profileImg");
         Glide.with(this).load(user_profile_img).bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).

@@ -18,14 +18,14 @@ public class RankingActivity$$ViewBinder<T extends com.ticcorp.ticsong.RankingAc
           target.exitClick();
         }
       });
-    view = finder.findRequiredView(source, 2131558561, "field 'txt_friend'");
-    target.txt_friend = finder.castView(view, 2131558561, "field 'txt_friend'");
-    view = finder.findRequiredView(source, 2131558562, "field 'txt_yourRank'");
-    target.txt_yourRank = finder.castView(view, 2131558562, "field 'txt_yourRank'");
-    view = finder.findRequiredView(source, 2131558563, "field 'img_profile'");
-    target.img_profile = finder.castView(view, 2131558563, "field 'img_profile'");
-    view = finder.findRequiredView(source, 2131558564, "field 'ranking_standby'");
-    target.ranking_standby = finder.castView(view, 2131558564, "field 'ranking_standby'");
+    view = finder.findRequiredView(source, 2131558562, "field 'txt_friend'");
+    target.txt_friend = finder.castView(view, 2131558562, "field 'txt_friend'");
+    view = finder.findRequiredView(source, 2131558563, "field 'txt_yourRank'");
+    target.txt_yourRank = finder.castView(view, 2131558563, "field 'txt_yourRank'");
+    view = finder.findRequiredView(source, 2131558564, "field 'img_profile'");
+    target.img_profile = finder.castView(view, 2131558564, "field 'img_profile'");
+    view = finder.findRequiredView(source, 2131558565, "field 'ranking_standby'");
+    target.ranking_standby = finder.castView(view, 2131558565, "field 'ranking_standby'");
   }
 
   @Override public void unbind(T target) {
