@@ -76,6 +76,8 @@ public class GameActivity extends Activity {
     public int userLevel;
     public int userExp;
 
+    public boolean activityFinished = false; // 문제 로딩 중 액티비티 종료 시를 위한 변수
+
     public int gameMode = 1; // 0 : 문제 대기 중, 1 : 문제 내는 중 또는 로딩 중, 2 : 맞추는 중, 3 : 정답 확인 중
     public int quizNum = 0; // 문제 번호
     public int life = MAX_LIFE; // 현재 정답 기회
@@ -405,6 +407,12 @@ public class GameActivity extends Activity {
                 .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override
                     public void onClick(SweetAlertDialog sDialog) {
+                        activityFinished = true;
+                        fxPlay(R.raw.btn_touch);
+                        Intent intent = new Intent(getApplication(), MainActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
                         try {
                             for (int i = 0; i < playerArray.size(); i++) {
                                 if (playerArray.get(i).isPlaying()) { // 음악 재생 중일 경우 음악 종료
@@ -416,11 +424,6 @@ public class GameActivity extends Activity {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-                        fxPlay(R.raw.btn_touch);
-                        Intent intent = new Intent(getApplication(), MainActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
                     }
                 })
                 .show();
@@ -577,77 +580,79 @@ public class GameActivity extends Activity {
 
     public void trackSetting() { // return은 문제 중복 여부
         //Log.i("ticlog", "track_prepared_index : " + track_prepared_index);
-        boolean isNumUsed = false; // 번호 중복 확인 여부
+        if (!activityFinished) { // 로딩 중 액티비티 종료 되었으면 실행하지 않음
+            boolean isNumUsed = false; // 번호 중복 확인 여부
 
-        final String CLIENT_ID = "59eb0488cc28a2c558ecbf47ed19f787";
-        int soundNum = 1 + (int) (Math.random() * MAX_TRACK_COUNT);
+            final String CLIENT_ID = "59eb0488cc28a2c558ecbf47ed19f787";
+            int soundNum = 1 + (int) (Math.random() * MAX_TRACK_COUNT);
 
-        String[] track_data = getResources().getStringArray(getResources().getIdentifier("track" + soundNum, "array", GameActivity.this.getPackageName()));
-        String track_id = track_data[0];
-        String soundUrl = "https://api.soundcloud.com/tracks/" + track_id + "/stream?client_id=" + CLIENT_ID;
+            String[] track_data = getResources().getStringArray(getResources().getIdentifier("track" + soundNum, "array", GameActivity.this.getPackageName()));
+            String track_id = track_data[0];
+            String soundUrl = "https://api.soundcloud.com/tracks/" + track_id + "/stream?client_id=" + CLIENT_ID;
 
-        for (int j = 0; j < track_prepared_index; j++) {
-            if (soundUrl.equals(addressArray.get(j))) {
-                // 문제 중복
-                isNumUsed = true;
+            for (int j = 0; j < track_prepared_index; j++) {
+                if (soundUrl.equals(addressArray.get(j))) {
+                    // 문제 중복
+                    isNumUsed = true;
+                }
             }
-        }
 
-        if (isNumUsed) { // 문제 중복 시 다시 받아오게 함
-            //Log.i("ticlog", "quizNum reset");
-            trackSetting();
-        } else {
-            //Log.i("ticlog", "MediaPlayer soundNum " + soundNum);
-            addressArray.add(soundUrl);
-
-            answerArray.add(track_data[1]);
-            artistArray.add(track_data[2]);
-            timeArray.add(Integer.parseInt(track_data[3]));
-            playerArray.add(new MediaPlayer());
-            playerArray.get(track_prepared_index).setAudioStreamType(AudioManager.STREAM_MUSIC);
-
-            try {
-                playerArray.get(track_prepared_index).setDataSource(addressArray.get(track_prepared_index));
-                playerArray.get(track_prepared_index).setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                    @Override
-                    public void onPrepared(MediaPlayer mediaPlayer) {
-                        //Log.i("ticlog", "prepared, TRACK_PREPARED_INDEX " + track_prepared_index);
-                        track_loaded_count++;
-                        if (track_loaded_count == 1) { // 첫 곡 로딩 됐을 때
-                            setUserData();
-                            nextQuiz();
-                        }
-                        if (track_loaded_count < MAX_QUIZ_NUM) {
-                            // 다음 문제는 백그라운드에서 로딩
-                            //txt_msg.setText("문제를 로딩 중입니다!\n" + track_loaded_count + " / " + MAX_QUIZ_NUM + " ...");
-                            track_prepared_index++;
-                            trackSetting(); // 다음 문제 로딩
-                        }
-                    }
-                });
-                playerArray.get(track_prepared_index).setOnErrorListener(new MediaPlayer.OnErrorListener() {
-                    @Override
-                    public boolean onError(MediaPlayer mediaPlayer, int i, int i1) { // prepare가 안되면 삭제된 파일이므로 이번 Array를 삭제하고 다시 받아오게 함
-                        //Log.i("ticlog", "prepare catch, removed TRACK_LOADED_COUNT " + track_loaded_count);
-                        answerArray.remove(track_loaded_count);
-                        artistArray.remove(track_loaded_count);
-                        addressArray.remove(track_loaded_count);
-                        timeArray.remove(track_loaded_count);
-                        playerArray.remove(track_loaded_count);
-                        trackSetting(); // 바로 다시 받아옴
-                        return false;
-                    }
-                });
-                playerArray.get(track_prepared_index).prepareAsync();
-            } catch (Exception e) {
-                e.printStackTrace();
-                //Log.i("ticlog", "setDataSource catch, removed");// trackNum : " + soundNum);
-                answerArray.remove(track_prepared_index);
-                artistArray.remove(track_prepared_index);
-                addressArray.remove(track_prepared_index);
-                timeArray.remove(track_prepared_index);
-                playerArray.remove(track_prepared_index);
+            if (isNumUsed) { // 문제 중복 시 다시 받아오게 함
+                //Log.i("ticlog", "quizNum reset");
                 trackSetting();
+            } else {
+                //Log.i("ticlog", "MediaPlayer soundNum " + soundNum);
+                addressArray.add(soundUrl);
+
+                answerArray.add(track_data[1]);
+                artistArray.add(track_data[2]);
+                timeArray.add(Integer.parseInt(track_data[3]));
+                playerArray.add(new MediaPlayer());
+                playerArray.get(track_prepared_index).setAudioStreamType(AudioManager.STREAM_MUSIC);
+
+                try {
+                    playerArray.get(track_prepared_index).setDataSource(addressArray.get(track_prepared_index));
+                    playerArray.get(track_prepared_index).setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mediaPlayer) {
+                            //Log.i("ticlog", "prepared, TRACK_PREPARED_INDEX " + track_prepared_index);
+                            track_loaded_count++;
+                            if (track_loaded_count == 1) { // 첫 곡 로딩 됐을 때
+                                setUserData();
+                                nextQuiz();
+                            }
+                            if (track_loaded_count < MAX_QUIZ_NUM) {
+                                // 다음 문제는 백그라운드에서 로딩
+                                //txt_msg.setText("문제를 로딩 중입니다!\n" + track_loaded_count + " / " + MAX_QUIZ_NUM + " ...");
+                                track_prepared_index++;
+                                trackSetting(); // 다음 문제 로딩
+                            }
+                        }
+                    });
+                    playerArray.get(track_prepared_index).setOnErrorListener(new MediaPlayer.OnErrorListener() {
+                        @Override
+                        public boolean onError(MediaPlayer mediaPlayer, int i, int i1) { // prepare가 안되면 삭제된 파일이므로 이번 Array를 삭제하고 다시 받아오게 함
+                            //Log.i("ticlog", "prepare catch, removed TRACK_LOADED_COUNT " + track_loaded_count);
+                            answerArray.remove(track_loaded_count);
+                            artistArray.remove(track_loaded_count);
+                            addressArray.remove(track_loaded_count);
+                            timeArray.remove(track_loaded_count);
+                            playerArray.remove(track_loaded_count);
+                            trackSetting(); // 바로 다시 받아옴
+                            return false;
+                        }
+                    });
+                    playerArray.get(track_prepared_index).prepareAsync();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    //Log.i("ticlog", "setDataSource catch, removed");// trackNum : " + soundNum);
+                    answerArray.remove(track_prepared_index);
+                    artistArray.remove(track_prepared_index);
+                    addressArray.remove(track_prepared_index);
+                    timeArray.remove(track_prepared_index);
+                    playerArray.remove(track_prepared_index);
+                    trackSetting();
+                }
             }
         }
     }
