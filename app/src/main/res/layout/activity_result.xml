@@ -99,7 +99,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/boom_upstair"/>
+                android:background="@drawable/boom_upstair" />
 
 
         </FrameLayout>
@@ -126,8 +126,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="40"
-                    android:visibility="invisible"
-                    android:background="@drawable/background_lvlup" />
+                    android:background="@drawable/background_lvlup"
+                    android:visibility="invisible" />
 
             </LinearLayout>
 
@@ -188,7 +188,8 @@
                         android:layout_marginTop="10dp"
                         android:layout_weight="47">
 
-                        <ImageView android:id="@+id/profile_img"
+                        <ImageView
+                            android:id="@+id/profile_img"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_gravity="center"
@@ -211,7 +212,7 @@
                         android:text="Lv. "
                         android:textColor="#FFFFFF"
                         android:textSize="28sp"
-                        android:textStyle="italic"/>
+                        android:textStyle="italic" />
 
                     <TextView
                         android:id="@+id/level"
@@ -220,29 +221,38 @@
                         android:text="100"
                         android:textColor="#FFFFFF"
                         android:textSize="28sp"
-                        android:textStyle="italic"/>
+                        android:textStyle="italic" />
 
                 </LinearLayout>
 
-                <ProgressBar
-                    android:id="@+id/profile_progressbar"
-                    style="?android:attr/progressBarStyleHorizontal"
+                <FrameLayout
                     android:layout_width="250dp"
                     android:layout_height="0dp"
-                    android:layout_weight="9"
-                    android:max="100"
-                    android:padding="15dp"
-                    android:progress="40"
-                    android:progressDrawable="@drawable/custom_progress" />
+                    android:layout_weight="9">
 
-                <TextView android:id="@+id/txt_exp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="100dp"
-                    android:layout_gravity="right"
-                    android:text="0 / 0 "
-                    android:textColor="#FFFFFF"
-                    android:textSize="10sp" />
+                    <ProgressBar
+                        android:id="@+id/profile_progressbar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:max="100"
+                        android:padding="15dp"
+                        android:progress="40"
+                        android:progressDrawable="@drawable/custom_progress" />
+
+                    <TextView
+                        android:id="@+id/txt_exp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="1dp"
+                        android:text="0 / 0 "
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp" />
+
+                </FrameLayout>
+
 
                 <RelativeLayout
                     android:id="@+id/item_gift"

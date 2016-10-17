@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="19"
-    density="xhdpi"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="23"
+    density="xxxhdpi"
     format="7"
-    timestamp="435554311238940"
-    token="-3161456651158814014" >
+    timestamp="259958106575832"
+    token="-8719231681308812603" >
 
     <task
         name="javac"
-        duration="1684" />
+        duration="7842" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="49" />
+        duration="3422" />
     <task
         name="verifier"
-        duration="21" />
+        duration="1525" />
 
     <artifact
-        location="/Users/yPeA/TicSong_Main/app/build/outputs/apk/app-debug.apk"
+        location="C:\Users\JPark\Documents\TicSong\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="435554311238940" >
+    <build timestamp="259958106575832" >
         <artifact
-            location="/Users/yPeA/TicSong_Main/app/build/outputs/apk/app-debug.apk"
+            location="C:\Users\JPark\Documents\TicSong\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
 

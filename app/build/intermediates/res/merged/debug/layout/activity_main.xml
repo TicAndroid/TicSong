@@ -113,28 +113,35 @@
                             android:textColor="#FFFFFF"
                             android:textSize="15sp" />
 
-                        <ProgressBar
-                            android:id="@+id/profile_progressbar"
-                            style="?android:attr/progressBarStyleHorizontal"
-                            android:progressDrawable="@drawable/custom_progress"
+                        <FrameLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:max="100"
-                            android:progress="30"
-                            android:padding="8dp" />
+                            android:layout_height="match_parent">
+
+                            <ProgressBar
+                                android:id="@+id/profile_progressbar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:progressDrawable="@drawable/custom_progress"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:max="100"
+                                android:progress="30"
+                                android:padding="8dp" />
+
+                            <TextView android:id="@+id/txt_exp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:text="0 / 0 "
+                                android:textColor="#FFFFFF"
+                                android:textSize="10sp" />
+
+                        </FrameLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
-
-                <TextView android:id="@+id/txt_exp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="right"
-                    android:text="0 / 0 "
-                    android:textColor="#FFFFFF"
-                    android:textSize="10sp" />
 
             </LinearLayout>
 
