@@ -55,7 +55,7 @@ public class ResultActivity extends Activity {
 
     public CustomPreference pref;
     public int userExp, userLevel, nextExp, nowExp, requiredExp;
-    public String userId;
+    public String userId, user_profile_img;
 
     //public ArrayList<Integer> itemArray = new ArrayList<Integer>(); // 아이템 개수 리스트
     // 아티스트 보여주기, 3초 듣기, 정답 1회 증가, 제목 한 글자 보여주기
@@ -117,11 +117,11 @@ public class ResultActivity extends Activity {
         profile_progressbar = (ProgressBar) findViewById(R.id.profile_progressbar);
 
         pref = pref.getInstance(this.getApplicationContext());
+        user_profile_img = pref.getValue("profileImg", "profileImg");
 
         setResult(); // 게임 결과 처리하기
 
-        Glide.with(this).load("http://graph.facebook.com/" +
-                userId + "/picture?type=large").bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
+        Glide.with(this).load(user_profile_img).bitmapTransform(new CropCircleTransformation(new CustomBitmapPool())).
                 error(R.drawable.profile_main_image).into(profile_img);
     }
 

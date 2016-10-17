@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/release/raw/result_good.ogg",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/raw/result_good.ogg"
+    },
+    {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/release/raw/right_answer.ogg",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/raw/right_answer.ogg"
+    },
+    {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/release/raw/jellyfish_in_space.ogg",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/raw/jellyfish_in_space.ogg"
+    },
+    {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/release/raw/btn_touch.ogg",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/raw/btn_touch.ogg"
+    },
+    {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/release/raw/result_excellent.ogg",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/raw/result_excellent.ogg"
+    },
+    {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/release/raw/applause.ogg",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/raw/applause.ogg"
+    },
+    {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/release/raw/wind_chimes.ogg",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/raw/wind_chimes.ogg"
+    },
+    {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/release/raw/result_bad.ogg",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/raw/result_bad.ogg"
+    },
+    {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/release/raw/result_great.ogg",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/raw/result_great.ogg"
+    },
+    {
+        "merged": "/Users/daesub/Desktop/TicSong/TicSong/app/build/intermediates/res/merged/release/raw/wrong_answer.ogg",
+        "source": "/Users/daesub/Desktop/TicSong/TicSong/app/src/main/res/raw/wrong_answer.ogg"
+    }
+]
