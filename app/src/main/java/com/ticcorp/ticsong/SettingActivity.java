@@ -1,11 +1,14 @@
 package com.ticcorp.ticsong;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -41,6 +44,7 @@ public class SettingActivity  extends Activity {
     ImageButton setting_fx;
 
     public Animation btn_click;
+    private SweetAlertDialog mDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -140,8 +144,8 @@ public class SettingActivity  extends Activity {
     void logoutClick() {
         // 로그아웃 임시 토스트 (후에 페이스북 버튼 로그아웃 기능 붙일 것)
         fxPlay(R.raw.btn_touch);
-        new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
-                .setTitleText("로그아웃 하시겠습니까?")
+        mDialog = new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE);
+        mDialog.setTitleText("로그아웃 하시겠습니까?")
                 .setCancelText("취소")
                 .setConfirmText("로그아웃")
                 .showCancelButton(true)
@@ -182,8 +186,8 @@ public class SettingActivity  extends Activity {
     @OnClick (R.id.btn_out)
     void withdrawClick() {
         // 탈퇴 버튼
-        new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
-                .setTitleText("정말 탈퇴하시겠습니까?")
+        mDialog = new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE);
+        mDialog.setTitleText("정말 탈퇴하시겠습니까?")
                 .setContentText("삭제된 정보는 복구되지 않습니다. 그래도 괜찮습니까?")
                 .setCancelText("취소")
                 .setConfirmText("탈퇴하기")
@@ -193,23 +197,38 @@ public class SettingActivity  extends Activity {
                     public void onClick(SweetAlertDialog sDialog) {
                         fxPlay(R.raw.btn_touch);
                         sDialog.cancel();
+                        sDialog.dismiss();
                     }
                 })
                 .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override
-                    public void onClick(SweetAlertDialog sDialog) {
+                    public void onClick(final SweetAlertDialog sDialog) {
                         fxPlay(R.raw.btn_touch);
-                        new Thread(new Runnable() {
+
+                        Handler mHandler = new Handler(Looper.getMainLooper());
+                        mHandler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 ServerAccessModule.getInstance().deleteUser(pref.getValue("userId", "userId"));
                                 pref.remove("userId");
                                 Toast.makeText(SettingActivity.this, "탈퇴가 완료되었습니다.", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(getApplication(), FBActivity.class);
-                                startActivity(intent);
-                                SettingActivity.this.finish();
+                                sDialog.dismiss();
+
+                                redirectToLoginActivity();
                             }
-                        }).start();
+                        }, 0);
+
+                        /*new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ServerAccessModule.getInstance().deleteUser(pref.getValue("userId", "userId"));
+                                pref.remove("userId");
+                                Toast.makeText(SettingActivity.this, "탈퇴가 완료되었습니다.", Toast.LENGTH_LONG).show();
+                                sDialog.dismiss();
+
+                                redirectToLoginActivity();
+                            }
+                        }).start();*/
                     }
                 })
                 .show();
@@ -255,6 +274,15 @@ public class SettingActivity  extends Activity {
         appClass.bgmResume();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        appClass.bgmStop();
+
+        if(mDialog != null)
+            mDialog.dismiss();
+    }
+
     // 폰트 적용
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -262,6 +290,10 @@ public class SettingActivity  extends Activity {
     }
 
     protected void redirectToLoginActivity() {
+
+        if(mDialog != null)
+            mDialog.dismiss();
+
         final Intent intent = new Intent(this, LoginTestActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
