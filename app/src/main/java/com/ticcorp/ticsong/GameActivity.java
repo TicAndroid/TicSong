@@ -224,6 +224,9 @@ public class GameActivity extends Activity {
             }
         });
 
+        // Pass 버튼 처음에 안보이게
+        btn_pass.setVisibility(View.INVISIBLE);
+
 
         tictac = (ImageView) findViewById(R.id.tictac);
         rotate = (ImageView) findViewById(R.id.rotate);
@@ -441,6 +444,11 @@ public class GameActivity extends Activity {
 
     @OnClick(R.id.btn_play)
     void playClick() {
+
+        if (quizNum >= 1)
+            btn_pass.setVisibility(View.VISIBLE);
+
+
         downKeyboard(this, edit_ans);
         switch (gameMode) {
             case 0:
