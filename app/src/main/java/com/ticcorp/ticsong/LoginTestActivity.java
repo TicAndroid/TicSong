@@ -23,6 +23,9 @@ import com.kakao.auth.AuthType;
 import com.kakao.auth.ErrorCode;
 import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
+import com.kakao.kakaotalk.KakaoTalkService;
+import com.kakao.kakaotalk.callback.TalkResponseCallback;
+import com.kakao.kakaotalk.response.KakaoTalkProfile;
 import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.LogoutResponseCallback;
@@ -332,11 +335,42 @@ public class LoginTestActivity extends Activity {
 
                 // 유저의 id, name, progileImg 세팅
                 userId = String.valueOf(userProfile.getId()); // userProfile에서 ID값을 가져옴
-                userName = userProfile.getNickname();     // Nickname 값을 가져옴
-                userProfileImg = userProfile.getProfileImagePath(); // ProfileImage 값을 가져옴
+                //userName = userProfile.getNickname();     // Nickname 값을 가져옴
+                //userProfileImg = userProfile.getProfileImagePath(); // ProfileImage 값을 가져옴
 
-                // 카카오톡 유저의 프로필 세팅을 완료 후에 호출.
-                redirectToMainActivity();
+                //KakaoTalkService.requestProfile(new KakaoTalkResponseCallback, true);
+
+
+                KakaoTalkService.requestProfile(new TalkResponseCallback<KakaoTalkProfile>() {
+
+                    @Override
+                    public void onSuccess(KakaoTalkProfile talkProfile) {
+                        userName = talkProfile.getNickName();
+                        userProfileImg = talkProfile.getProfileImageUrl();
+
+                        // 카카오톡 유저의 프로필 세팅을 완료 후에 호출.
+                        redirectToMainActivity();
+                    }
+
+                    @Override
+                    public void onSessionClosed(ErrorResult errorResult) {
+                        Log.e("KakaoProfile", "Session Closed");
+                        redirectToLoginActivity();
+                    }
+
+                    @Override
+                    public void onNotSignedUp() {
+                        Log.e("KakaoProfile", "Not Signed Up");
+                        redirectToLoginActivity();
+                    } // 카카오톡 회원이 아닐 시 showSignup(); 호출해야함
+
+                    @Override
+                    public void onNotKakaoTalkUser() {
+                        Log.e("KakaoProfile", "Not KakaoTalk User");
+                        redirectToLoginActivity();
+                    } // 카카오톡 회원이 아닐 시 showSignup(); 호출해야함
+                });
+
             }
         });
     }
